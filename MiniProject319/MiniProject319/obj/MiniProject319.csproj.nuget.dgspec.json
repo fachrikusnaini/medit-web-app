@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\MiniProject319.csproj": {}
+    "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319\\MiniProject319.csproj": {}
   },
   "projects": {
-    "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj": {
+    "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
+        "projectUniqueName": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
         "projectName": "MiniProject319.DataModels",
-        "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
-        "packagesPath": "C:\\Users\\fachr\\.nuget\\packages\\",
-        "outputPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\obj\\",
+        "projectPath": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\fachr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,21 +71,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj": {
+    "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
+        "projectUniqueName": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
         "projectName": "MiniProject319.ViewModels",
-        "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
-        "packagesPath": "C:\\Users\\fachr\\.nuget\\packages\\",
-        "outputPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\obj\\",
+        "projectPath": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\fachr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,21 +136,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\MiniProject319.csproj": {
+    "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319\\MiniProject319.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\MiniProject319.csproj",
+        "projectUniqueName": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319\\MiniProject319.csproj",
         "projectName": "MiniProject319",
-        "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\MiniProject319.csproj",
-        "packagesPath": "C:\\Users\\fachr\\.nuget\\packages\\",
-        "outputPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\obj\\",
+        "projectPath": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319\\MiniProject319.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\fachr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -150,18 +162,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj": {
-                "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj"
+              "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj": {
+                "projectPath": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj"
               },
-              "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj": {
-                "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj"
+              "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj": {
+                "projectPath": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj"
               }
             }
           }
@@ -224,7 +236,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
