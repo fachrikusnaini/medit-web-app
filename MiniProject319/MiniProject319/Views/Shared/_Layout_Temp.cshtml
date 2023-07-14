@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"] - MiniProject319</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MiniProject319.styles.css" asp-append-version="true" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/temp/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/temp/assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="~/temp/assets/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="~/temp/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="~/temp/assets/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/temp/assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="~/temp/assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="~/temp/assets/images/favicon.png" />
+</head>
+<body>
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+         data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+
+        <partial name="_Header" />
+        <partial name="_Sidebar" />
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center text-muted">
+                Copyright 2023 
+                <a href="#">Mini Project 319</a>.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title display-5" id="exampleModalLabel">XPOS 319</h5>
+                </div>
+                <div class="modal-body" id="modal_body">
+                    ...
+                </div>
+                @*                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>*@
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SM -->
+    <div class="modal fade" id="modal_sm" tabindex="-1"
+         aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal_title_sm">XPOS 319</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal_body_sm">
+                    ...
+                </div>
+                <div class="modal-footer" id="modal_footer_sm">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Large-->
+    <div class="modal fade" id="modal_lg">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-body" id="modal_body_lg">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*@spinner@*@
+    <div class="modal fade" id="modal_load">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center" id="modal_load_body">
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <h3>Please wait..</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/temp/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/temp/assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="~/temp/assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="~/temp/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="~/temp/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="~/temp/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="~/temp/assets/js/off-canvas.js"></script>
+    <script src="~/temp/assets/js/hoverable-collapse.js"></script>
+    <script src="~/temp/assets/js/misc.js"></script>
+    <script src="~/temp/assets/js/settings.js"></script>
+    <script src="~/temp/assets/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="~/temp/assets/js/dashboard.js"></script>
+    <!-- End custom js for this page -->
+</body>
+</html>
