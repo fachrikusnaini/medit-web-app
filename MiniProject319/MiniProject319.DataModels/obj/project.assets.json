@@ -2012,19 +2012,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fachr\\.nuget\\packages\\": {}
+    "C:\\Users\\Fika Shofi Zeannisa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
+      "projectUniqueName": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
       "projectName": "MiniProject319.DataModels",
-      "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
-      "packagesPath": "C:\\Users\\fachr\\.nuget\\packages\\",
-      "outputPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\obj\\",
+      "projectPath": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
+      "packagesPath": "C:\\Users\\Fika Shofi Zeannisa\\.nuget\\packages\\",
+      "outputPath": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319.DataModels\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\fachr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Fika Shofi Zeannisa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
