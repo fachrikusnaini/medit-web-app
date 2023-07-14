@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj": {}
+    "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj": {}
   },
   "projects": {
-    "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj": {
+    "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj",
+        "projectUniqueName": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj",
         "projectName": "MiniProject319.api",
-        "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj",
-        "packagesPath": "C:\\Users\\fachr\\.nuget\\packages\\",
-        "outputPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.api\\obj\\",
+        "projectPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj",
+        "packagesPath": "C:\\Users\\XSIS User\\.nuget\\packages\\",
+        "outputPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fachr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XSIS User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,30 +41,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[6.2.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.20, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.20, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.20, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[6.0.15, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "g6defpMFIJay6IgHEAK6Jo8wgBUkSlZxbj1Rjw63UYpjh4AduhwxpJaqCmQYLL3GBkq5CUtqWK2j5IEnNLtDCA==",
+  "dgSpecHash": "E6RHlmGtGnOdwFQuSPeCzkEBzDC5qyYFHbRnoe9F0FucWVfQjcUyfo9DbJI1GgNOf4HImqpcpk6yQUyGwF4ABw==",
   "success": true,
-  "projectFilePath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
+  "projectFilePath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\fachr\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
-    "C:\\Users\\fachr\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
-    "C:\\Users\\fachr\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+    "C:\\Users\\XSIS User\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\XSIS User\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\XSIS User\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
   ],
   "logs": []
 }

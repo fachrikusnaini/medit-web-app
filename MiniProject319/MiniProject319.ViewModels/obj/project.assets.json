@@ -122,19 +122,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fachr\\.nuget\\packages\\": {}
+    "C:\\Users\\XSIS User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
+      "projectUniqueName": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
       "projectName": "MiniProject319.ViewModels",
-      "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
-      "packagesPath": "C:\\Users\\fachr\\.nuget\\packages\\",
-      "outputPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\obj\\",
+      "projectPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
+      "packagesPath": "C:\\Users\\XSIS User\\.nuget\\packages\\",
+      "outputPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\fachr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\XSIS User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
