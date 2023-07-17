@@ -248,3 +248,35 @@ E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\obj\Debug\net6.0\ref
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.pdb
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.genruntimeconfig.cache
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\obj\Debug\net6.0\ref\MiniProject319.api.dll
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\appsettings.Development.json
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\appsettings.json
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.api.exe
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.api.deps.json
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.api.runtimeconfig.json
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.api.dll
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.api.pdb
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.csproj.AssemblyReference.cache
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.GeneratedMSBuildEditorConfig.editorconfig
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.AssemblyInfoInputs.cache
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.AssemblyInfo.cs
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.csproj.CoreCompileInputs.cache
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.MvcApplicationPartsAssemblyInfo.cs
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.MvcApplicationPartsAssemblyInfo.cache
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets\msbuild.MiniProject319.api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets\msbuild.build.MiniProject319.api.props
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MiniProject319.api.props
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MiniProject319.api.props
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets.pack.json
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets.build.json
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets.development.json
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\scopedcss\bundle\MiniProject319.api.styles.css
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.csproj.CopyComplete
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.dll
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\refint\MiniProject319.api.dll
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.pdb
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.genruntimeconfig.cache
+C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\ref\MiniProject319.api.dll
