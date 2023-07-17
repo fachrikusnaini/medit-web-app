@@ -248,3 +248,35 @@ E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\obj\Debug\net6.0\ref
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.pdb
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.genruntimeconfig.cache
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\obj\Debug\net6.0\ref\MiniProject319.api.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\appsettings.Development.json
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\appsettings.json
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.api.exe
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.api.deps.json
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.api.runtimeconfig.json
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.api.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.api.pdb
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.csproj.AssemblyReference.cache
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.GeneratedMSBuildEditorConfig.editorconfig
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.AssemblyInfoInputs.cache
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.AssemblyInfo.cs
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.csproj.CoreCompileInputs.cache
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.MvcApplicationPartsAssemblyInfo.cs
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.MvcApplicationPartsAssemblyInfo.cache
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets\msbuild.MiniProject319.api.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets\msbuild.build.MiniProject319.api.props
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MiniProject319.api.props
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MiniProject319.api.props
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets.pack.json
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets.build.json
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\staticwebassets.development.json
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\scopedcss\bundle\MiniProject319.api.styles.css
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.csproj.CopyComplete
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\refint\MiniProject319.api.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.pdb
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\MiniProject319.api.genruntimeconfig.cache
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.api\obj\Debug\net6.0\ref\MiniProject319.api.dll

@@ -12,3 +12,17 @@ E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\ref\MiniProject319.DataModels.dll
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.runtimeconfig.json
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.genruntimeconfig.cache
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.deps.json
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.runtimeconfig.json
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.pdb
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.csproj.AssemblyReference.cache
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.GeneratedMSBuildEditorConfig.editorconfig
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.AssemblyInfoInputs.cache
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.AssemblyInfo.cs
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.csproj.CoreCompileInputs.cache
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\refint\MiniProject319.DataModels.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.pdb
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.genruntimeconfig.cache
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\ref\MiniProject319.DataModels.dll
