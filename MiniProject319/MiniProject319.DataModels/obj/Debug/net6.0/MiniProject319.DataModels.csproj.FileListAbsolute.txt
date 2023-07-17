@@ -12,3 +12,17 @@ E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\ref\MiniProject319.DataModels.dll
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.runtimeconfig.json
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.genruntimeconfig.cache
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.deps.json
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.runtimeconfig.json
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.dll
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.pdb
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.csproj.AssemblyReference.cache
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.AssemblyInfoInputs.cache
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.AssemblyInfo.cs
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.csproj.CoreCompileInputs.cache
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.dll
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\refint\MiniProject319.DataModels.dll
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.pdb
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.genruntimeconfig.cache
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\ref\MiniProject319.DataModels.dll
