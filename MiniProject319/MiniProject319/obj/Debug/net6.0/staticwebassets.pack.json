@@ -1941,6 +1941,366 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\css\\theme-rtl.css",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\css\\theme-rtl.css"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\css\\theme-rtl.css.map",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\css\\theme-rtl.css.map"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\css\\theme-rtl.min.css",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\css\\theme-rtl.min.css"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\css\\theme-rtl.min.css.map",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\css\\theme-rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\css\\theme.css",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\css\\theme.css"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\css\\theme.css.map",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\css\\theme.css.map"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\css\\theme.min.css",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\css\\theme.min.css"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\css\\theme.min.css.map",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\css\\theme.min.css.map"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Black.eot",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Black.eot"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Black.ttf",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Black.ttf"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Black.woff",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Black.woff"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Black.woff2",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Black.woff2"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BlackItalic.eot",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BlackItalic.eot"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BlackItalic.ttf"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BlackItalic.woff",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BlackItalic.woff"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BlackItalic.woff2",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BlackItalic.woff2"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Bold.eot",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Bold.eot"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Bold.ttf",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Bold.ttf"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Bold.woff",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Bold.woff"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Bold.woff2",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Bold.woff2"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BoldItalic.eot",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BoldItalic.eot"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BoldItalic.woff",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BoldItalic.woff"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BoldItalic.woff2",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BoldItalic.woff2"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Book.eot",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Book.eot"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Book.ttf",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Book.ttf"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Book.woff",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Book.woff"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Book.woff2",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Book.woff2"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BookItalic.eot",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BookItalic.eot"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BookItalic.ttf",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BookItalic.ttf"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BookItalic.woff",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BookItalic.woff"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-BookItalic.woff2",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-BookItalic.woff2"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Medium.eot",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Medium.eot"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Medium.ttf",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Medium.ttf"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Medium.woff",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Medium.woff"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-Medium.woff2",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-Medium.woff2"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-MediumItalic.eot",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-MediumItalic.eot"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-MediumItalic.ttf"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-MediumItalic.woff",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-MediumItalic.woff"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\fonts\\CircularStd-MediumItalic.woff2",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\fonts\\CircularStd-MediumItalic.woff2"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\.gitkeep",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\.gitkeep"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\favicons\\android-chrome-192x192.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\favicons\\android-chrome-192x192.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\favicons\\android-chrome-512x512.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\favicons\\android-chrome-512x512.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\favicons\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\favicons\\apple-touch-icon.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\favicons\\browserconfig.xml",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\favicons\\browserconfig.xml"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\favicons\\favicon-16x16.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\favicons\\favicon-16x16.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\favicons\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\favicons\\favicon-32x32.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\favicons\\favicon.ico",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\favicons\\favicon.ico"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\favicons\\manifest.json",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\favicons\\manifest.json"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\favicons\\mstile-150x150.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\favicons\\mstile-150x150.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\favicons\\site.webmanifest",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\favicons\\site.webmanifest"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\gallery\\article-1.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\gallery\\article-1.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\gallery\\article-2.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\gallery\\article-2.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\gallery\\article-3.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\gallery\\article-3.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\gallery\\user-1.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\gallery\\user-1.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\gallery\\user-2.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\gallery\\user-2.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\gallery\\user-3.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\gallery\\user-3.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\icons\\footer-logo.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\icons\\footer-logo.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\icons\\logo.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\icons\\logo.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\about-1.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\about-1.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\about-2.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\about-2.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\article-bg.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\article-bg.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\consultation.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\consultation.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\details-info.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\details-info.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\dot-2.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\dot-2.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\dot.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\dot.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\emergency-care.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\emergency-care.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\footer-bg.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\footer-bg.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\hero-header.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\hero-header.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\online-pharmacy.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\online-pharmacy.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\search.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\search.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\services-bg.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\services-bg.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\test.jpg",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\test.jpg"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\testimonial-bg.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\testimonial-bg.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\illustrations\\tracking.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\illustrations\\tracking.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\img\\logo.png",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\js\\bootstrap-navbar.js",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\js\\bootstrap-navbar.js"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\js\\theme.js",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\js\\theme.js"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\js\\theme.js.map",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\js\\theme.js.map"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\js\\theme.min.js",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\js\\theme.min.js"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\js\\theme.min.js.map",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\js\\theme.min.js.map"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\video\\.gitkeep",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\video\\.gitkeep"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\video\\beach.jpg",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\video\\beach.jpg"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\video\\beach.mp4",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\video\\beach.mp4"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\assets\\video\\beach.webm",
+      "PackagePath": "staticwebassets\\trafalgar\\assets\\video\\beach.webm"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\vendors\\bootstrap\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\trafalgar\\vendors\\bootstrap\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\vendors\\bootstrap\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\trafalgar\\vendors\\bootstrap\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\vendors\\fontawesome\\all.min.js",
+      "PackagePath": "staticwebassets\\trafalgar\\vendors\\fontawesome\\all.min.js"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\vendors\\is\\is.min.js",
+      "PackagePath": "staticwebassets\\trafalgar\\vendors\\is\\is.min.js"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\trafalgar\\vendors\\popperjs\\popper.min.js",
+      "PackagePath": "staticwebassets\\trafalgar\\vendors\\popperjs\\popper.min.js"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MiniProject319.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -1,5 +1,5 @@
 ﻿@{
-    int idLogin = 1;
+    int idLogin = 0;
 }
 
 <!DOCTYPE html>
@@ -15,6 +15,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon-medit.png" rel="icon" style="height:10">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -47,12 +48,15 @@
     {
         <body>
 
-            <partial name="_Header" />
-
+           <partial name="_Header" />
            <partial name="_Sidebar" />
-           
 
-            
+            <main id="main" class="main">
+
+                @RenderBody()
+
+            </main><!-- End #main -->
+
 
             <!-- ======= Footer ======= -->
             <footer id="footer" class="footer">
@@ -90,7 +94,17 @@
                     &copy; 2023 - MiniProject319 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                 </div>
             </footer>
-            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+            <div class="modal fade" id="verticalycentered" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" id="modal-body">
+                        ...
+                    </div>
+                </div>
+            </div><!-- End Vertically centered Modal-->
+
+
+            
             <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
             <script src="~/js/site.js" asp-append-version="true"></script>
             @await RenderSectionAsync("Scripts", required: false)

@@ -24,25 +24,11 @@ namespace MiniProject319.DataModels
         [StringLength(255)]
         [Unicode(false)]
         public string? Password { get; set; }
-        [Column("login_attempt")]
-        public int? LoginAttempt { get; set; }
-        [Column("is_locked")]
-        public bool? IsLocked { get; set; }
+        [Column("login_attemp")]
+        public int? LoginAttemp { get; set; }
+        [Column("is_looked")]
+        public bool? IsLooked { get; set; }
         [Column("last_login", TypeName = "datetime")]
         public DateTime? LastLogin { get; set; }
-        [Column("created_by")]
-        public long CreatedBy { get; set; }
-        [Column("created_on", TypeName = "datetime")]
-        public DateTime CreatedOn { get; set; }
-        [Column("modified_by")]
-        public long? ModifiedBy { get; set; }
-        [Column("modified_on", TypeName = "datetime")]
-        public DateTime? ModifiedOn { get; set; }
-        [Column("deleted_by")]
-        public long? DeletedBy { get; set; }
-        [Column("deleted_on", TypeName = "datetime")]
-        public DateTime? DeletedOn { get; set; }
-        [Column("is_delete")]
-        public bool IsDelete { get; set; }
     }
 }

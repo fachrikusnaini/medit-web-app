@@ -45,7 +45,6 @@ namespace MiniProject319.DataModels
         public virtual DbSet<MSpecialization> MSpecializations { get; set; } = null!;
         public virtual DbSet<MUser> MUsers { get; set; } = null!;
         public virtual DbSet<MWalletDefaultNominal> MWalletDefaultNominals { get; set; } = null!;
-        public virtual DbSet<TAppointment> TAppointments { get; set; } = null!;
         public virtual DbSet<TAppointmentCancellation> TAppointmentCancellations { get; set; } = null!;
         public virtual DbSet<TAppointmentDone> TAppointmentDones { get; set; } = null!;
         public virtual DbSet<TAppointmentRescheduleHistory> TAppointmentRescheduleHistories { get; set; } = null!;
@@ -77,7 +76,7 @@ namespace MiniProject319.DataModels
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-V1KH7UT\\SQLEXPRESS;Initial Catalog=DB_Specification;Trusted_Connection=True");
+                optionsBuilder.UseSqlServer("Server=ETG-XALNV00021-;Initial Catalog=DB_Specification; Trusted_Connection=True");
             }
         }
 

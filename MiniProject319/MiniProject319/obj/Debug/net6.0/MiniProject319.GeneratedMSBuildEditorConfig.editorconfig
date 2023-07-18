@@ -16,12 +16,40 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Dokter/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Faskes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFza2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Home/Faq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGYXEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Home/IndexOld.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleE9sZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Pasien/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzaWVuXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Profile/Profile_Dokter.cshtml]

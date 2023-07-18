@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -24,6 +24,11 @@
   <ItemGroup>
     <ProjectReference Include="..\MiniProject319.DataModels\MiniProject319.DataModels.csproj" />
     <ProjectReference Include="..\MiniProject319.ViewModels\MiniProject319.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\trafalgar\vendors\%40popper\" />
+    <Folder Include="wwwroot\trafalgar\vendors\popper\" />
   </ItemGroup>
 
 </Project>
