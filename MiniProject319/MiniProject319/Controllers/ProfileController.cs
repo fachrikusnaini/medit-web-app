@@ -2,7 +2,7 @@
 
 namespace MiniProject319.Controllers
 {
-    public class PofileController : Controller
+    public class ProfileController : Controller
     {
         public IActionResult Index()
         {

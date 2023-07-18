@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace MiniProject319.DataModels
 {
     [Table("m_biodata")]
-    public partial class MBiodatum
+    public partial class MBiodata
     {
         [Key]
         [Column("id")]

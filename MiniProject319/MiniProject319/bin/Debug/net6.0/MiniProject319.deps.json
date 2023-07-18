@@ -12,7 +12,6 @@
           "Microsoft.EntityFrameworkCore.Design": "6.0.20",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.20",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.20",
-          "Microsoft.VisualStudio.Web.CodeGeneration": "6.0.15",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.15",
           "MiniProject319.DataModels": "1.0.0",
           "MiniProject319.ViewModels": "1.0.0"
