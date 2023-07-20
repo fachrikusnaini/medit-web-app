@@ -15,17 +15,30 @@ namespace MiniProject319.Controllers
             this.dataService = _dataService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            List<VMUser> data = await dataService.GetAllData();
+            return View(data);
         }
 
-        //public IActionResult Edit(int id)
-        //{
-        //    VMUser data = new VMUser();
-        //    data = profileService.GetDataById(id);
-        //    MUser 
-        //}
+        public async Task<IActionResult> Edit(int id)
+        {
+            VMUser data = new VMUser();
+            data = await dataService.GetDataById(id);
+            return PartialView(data);   
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(VMUser dataparam)
+        {
+            dataparam.ModifiedBy = dataparam.Id;
+            VMResponse respon = await dataService.Edit(dataparam);
+            if (respon.Success)
+            {
+                return Json(new { dataRespon = respon });
+            }
+            return PartialView(dataparam);
+        }
 
     }
 }

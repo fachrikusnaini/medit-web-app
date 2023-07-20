@@ -25,7 +25,7 @@ namespace MiniProject319.api.Controllers
             List<VMUser> data = (from u in db.MUsers
                                  join b in db.MBiodata on u.BiodataId equals b.Id
                                  join c in db.MCustomers on b.Id equals c.BiodataId
-                                 join r in db.MRoles on u.Id equals r.Id
+                                 join r in db.MRoles on u.RoleId equals r.Id
                                  where u.IsDelete == false
                                  select new VMUser
                                  {
@@ -37,6 +37,9 @@ namespace MiniProject319.api.Controllers
                                      Fullname = b.Fullname,
                                      Dob = c.Dob,
                                      MobilePhone = b.MobilePhone,
+
+                                     Email = u.Email,
+                                     Password = u.Password,
 
                                      CreatedOn = u.CreatedOn,
                                      IsDelete = u.IsDelete
@@ -52,7 +55,7 @@ namespace MiniProject319.api.Controllers
             VMUser data = (from u in db.MUsers
                            join b in db.MBiodata on u.BiodataId equals b.Id
                            join c in db.MCustomers on b.Id equals c.BiodataId
-                           join r in db.MRoles on u.Id equals r.Id
+                           join r in db.MRoles on u.RoleId equals r.Id
                            where u.IsDelete == false && u.Id == id
                            select new VMUser
                            {
@@ -65,6 +68,9 @@ namespace MiniProject319.api.Controllers
                                Fullname = b.Fullname,
                                Dob = c.Dob,
                                MobilePhone = b.MobilePhone,
+
+                               Email = u.Email,
+                               Password = u.Password,
 
                                CreatedOn = u.CreatedOn
 
