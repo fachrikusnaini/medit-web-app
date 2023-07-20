@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MiniProject319.api\MiniProject319.api.csproj" />
     <ProjectReference Include="..\MiniProject319.DataModels\MiniProject319.DataModels.csproj" />
     <ProjectReference Include="..\MiniProject319.ViewModels\MiniProject319.ViewModels.csproj" />
   </ItemGroup>

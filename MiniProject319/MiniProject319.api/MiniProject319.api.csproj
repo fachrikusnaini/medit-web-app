@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MiniProject319.DataModels\MiniProject319.DataModels.csproj" />
+    <ProjectReference Include="..\MiniProject319.ViewModels\MiniProject319.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>

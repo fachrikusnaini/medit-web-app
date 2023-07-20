@@ -253,3 +253,13 @@ E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\MiniPro
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\MiniProject319.ViewModels.pdb
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout_Temp.cshtml.rz.scp.css
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\MiniProject319.api.deps.json
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\MiniProject319.api.runtimeconfig.json
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\MiniProject319.api.exe
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\Microsoft.OpenApi.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\MiniProject319.api.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\MiniProject319.api.pdb
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\obj\Debug\net6.0\MiniProject319.MvcApplicationPartsAssemblyInfo.cs

@@ -1,10 +1,25 @@
 using Microsoft.EntityFrameworkCore;
 using MiniProject319.DataModels;
+using MiniProject319.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<RoleServices>();
+builder.Services.AddScoped<AuthServices>();
+
+//Add Session
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddSession(option =>
+{
+    option.IdleTimeout = TimeSpan.FromHours(1);
+    option.Cookie.HttpOnly = true;
+    option.Cookie.IsEssential = true;
+
+});
 
 
 //Add connection string

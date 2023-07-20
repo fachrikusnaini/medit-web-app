@@ -4,6 +4,78 @@
     "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\MiniProject319.csproj": {}
   },
   "projects": {
+    "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj",
+        "projectName": "MiniProject319.api",
+        "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj",
+        "packagesPath": "C:\\Users\\fachr\\.nuget\\packages\\",
+        "outputPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\fachr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj": {
+                "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj"
+              },
+              "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj": {
+                "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -157,6 +229,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj": {
+                "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.api\\MiniProject319.api.csproj"
+              },
               "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj": {
                 "projectPath": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj"
               },
