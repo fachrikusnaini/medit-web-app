@@ -113,6 +113,1082 @@
       "PackagePath": "staticwebassets\\NiceAdmin\\assets\\js\\main.js"
     },
     {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\chart.js\\dist\\Chart.bundle.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\chart.js\\dist\\Chart.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\chart.js\\dist\\Chart.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\chart.js\\dist\\Chart.min.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\chart.js\\dist\\Chart.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\chart.js\\dist\\Chart.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\chartist-plugin-tooltips\\dist\\chartist-plugin-tooltip.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\chartist\\dist\\chartist.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\chartist\\dist\\chartist.min.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\chartist\\dist\\chartist.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\chartist\\dist\\chartist.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\datatables.net-bs4\\css\\dataTables.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\datatables.net-bs4\\css\\dataTables.bootstrap4.min.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\datatables.net-bs4\\js\\dataTables.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\datatables.net-bs4\\js\\dataTables.bootstrap4.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\fullcalendar.print.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\fullcalendar.print.min.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\gcal.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\gcal.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale-all.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale-all.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\af.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\af.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-dz.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-dz.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-kw.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-kw.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-ly.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-ly.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-ma.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-ma.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-sa.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-sa.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-tn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar-tn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ar.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\be.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\be.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\bg.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\bg.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\bs.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\bs.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ca.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ca.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\cs.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\cs.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\da.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\da.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\de-at.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\de-at.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\de-ch.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\de-ch.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\de.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\de.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\el.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\el.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\en-au.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\en-au.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\en-ca.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\en-ca.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\en-gb.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\en-gb.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\en-ie.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\en-ie.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\en-nz.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\en-nz.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\es-do.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\es-do.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\es-us.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\es-us.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\es.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\es.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\et.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\et.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\eu.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\eu.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\fa.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\fa.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\fi.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\fi.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\fr-ca.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\fr-ca.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\fr-ch.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\fr-ch.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\fr.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\fr.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\gl.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\gl.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\he.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\he.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\hi.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\hi.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\hr.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\hr.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\hu.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\hu.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\id.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\id.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\is.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\is.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\it.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\it.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ja.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ja.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ka.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ka.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\kk.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\kk.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ko.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ko.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\lb.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\lb.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\lt.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\lt.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\lv.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\lv.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\mk.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\mk.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ms-my.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ms-my.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ms.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ms.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\nb.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\nb.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\nl-be.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\nl-be.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\nl.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\nl.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\nn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\nn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\pl.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\pl.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\pt-br.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\pt-br.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\pt.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\pt.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ro.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ro.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ru.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\ru.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sk.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sk.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sl.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sl.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sq.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sq.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sr-cyrl.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sr-cyrl.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sr.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sr.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sv.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\sv.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\th.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\th.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\tr.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\tr.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\uk.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\uk.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\vi.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\vi.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\zh-cn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\zh-cn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\zh-hk.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\zh-hk.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\zh-tw.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\fullcalendar\\dist\\locale\\zh-tw.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\jquery\\dist\\core.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\jquery\\dist\\core.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\ender.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\ender.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\af.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\af.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-dz.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-dz.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-kw.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-kw.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-ly.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-ly.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-ma.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-ma.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-sa.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-sa.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-tn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ar-tn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ar.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ar.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\az.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\az.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\be.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\be.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\bg.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\bg.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\bm.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\bm.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\bn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\bn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\bo.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\bo.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\br.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\br.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\bs.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\bs.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ca.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ca.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\cs.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\cs.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\cv.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\cv.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\cy.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\cy.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\da.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\da.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\de-at.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\de-at.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\de-ch.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\de-ch.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\de.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\de.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\dv.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\dv.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\el.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\el.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\en-SG.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\en-SG.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\en-au.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\en-au.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\en-ca.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\en-ca.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\en-gb.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\en-gb.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\en-ie.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\en-ie.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\en-il.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\en-il.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\en-nz.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\en-nz.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\eo.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\eo.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\es-do.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\es-do.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\es-us.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\es-us.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\es.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\es.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\et.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\et.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\eu.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\eu.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\fa.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\fa.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\fi.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\fi.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\fo.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\fo.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\fr-ca.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\fr-ca.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\fr-ch.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\fr-ch.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\fr.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\fr.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\fy.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\fy.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ga.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ga.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\gd.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\gd.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\gl.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\gl.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\gom-latn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\gom-latn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\gu.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\gu.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\he.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\he.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\hi.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\hi.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\hr.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\hr.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\hu.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\hu.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\hy-am.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\hy-am.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\id.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\id.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\is.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\is.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\it-ch.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\it-ch.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\it.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\it.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ja.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ja.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\jv.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\jv.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ka.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ka.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\kk.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\kk.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\km.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\km.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\kn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\kn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ko.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ko.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ku.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ku.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ky.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ky.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\lb.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\lb.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\lo.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\lo.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\lt.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\lt.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\lv.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\lv.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\me.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\me.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\mi.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\mi.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\mk.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\mk.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ml.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ml.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\mn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\mn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\mr.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\mr.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ms-my.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ms-my.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ms.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ms.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\mt.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\mt.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\my.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\my.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\nb.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\nb.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ne.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ne.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\nl-be.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\nl-be.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\nl.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\nl.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\nn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\nn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\pa-in.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\pa-in.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\pl.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\pl.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\pt-br.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\pt-br.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\pt.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\pt.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ro.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ro.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ru.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ru.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\sd.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\sd.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\se.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\se.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\si.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\si.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\sk.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\sk.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\sl.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\sl.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\sq.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\sq.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\sr-cyrl.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\sr-cyrl.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\sr.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\sr.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ss.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ss.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\sv.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\sv.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\sw.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\sw.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ta.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ta.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\te.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\te.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\tet.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\tet.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\tg.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\tg.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\th.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\th.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\tl-ph.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\tl-ph.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\tlh.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\tlh.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\tr.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\tr.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\tzl.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\tzl.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\tzm-latn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\tzm-latn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\tzm.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\tzm.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ug-cn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ug-cn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\uk.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\uk.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\ur.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\ur.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\uz-latn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\uz-latn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\uz.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\uz.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\vi.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\vi.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\x-pseudo.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\x-pseudo.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\yo.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\yo.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\zh-cn.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\zh-cn.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\zh-hk.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\zh-hk.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\locale\\zh-tw.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\locale\\zh-tw.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\min\\locales.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\min\\locales.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\min\\moment-with-locales.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\min\\moment-with-locales.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\min\\moment.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\min\\moment.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\moment.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\moment.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\moment\\package.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\moment\\package.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\morris.js\\bower.travis.json",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\morris.js\\bower.travis.json"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\morris.js\\morris.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\morris.js\\morris.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\morris.js\\morris.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\morris.js\\morris.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\css\\perfect-scrollbar.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\css\\perfect-scrollbar.min.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\js\\perfect-scrollbar.jquery.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\js\\perfect-scrollbar.jquery.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\js\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\js\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.common.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.common.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.esm.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.esm.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.jquery.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.jquery.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\perfect-scrollbar\\dist\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\popper.js\\dist\\esm\\popper-utils.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\popper.js\\dist\\esm\\popper-utils.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\popper.js\\dist\\esm\\popper.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\popper.js\\dist\\esm\\popper.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\popper.js\\dist\\popper-utils.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\popper.js\\dist\\popper-utils.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\popper.js\\dist\\popper.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\popper.js\\dist\\popper.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\popper.js\\dist\\umd\\popper-utils.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\popper.js\\dist\\umd\\popper-utils.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\popper.js\\dist\\umd\\popper.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\popper.js\\dist\\umd\\popper.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\popper.js\\dist\\umd\\poppper.js.flow",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\popper.js\\dist\\umd\\poppper.js.flow"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\raphael\\dev\\banner.txt",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\raphael\\dev\\banner.txt"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\raphael\\dev\\raphael.amd.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\raphael\\dev\\raphael.amd.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\raphael\\dev\\raphael.core.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\raphael\\dev\\raphael.core.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\raphael\\dev\\raphael.svg.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\raphael\\dev\\raphael.svg.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\raphael\\dev\\raphael.vml.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\raphael\\dev\\raphael.vml.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\raphael\\dev\\raphaelTest.html",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\raphael\\dev\\raphaelTest.html"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\raphael\\license.txt",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\raphael\\license.txt"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\raphael\\raphael.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\raphael\\raphael.min.js"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\libs\\raphael\\raphael.no-deps.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\libs\\raphael\\raphael.no-deps.min.js"
+    },
+    {
       "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\scss\\Readme.txt",
       "PackagePath": "staticwebassets\\NiceAdmin\\assets\\scss\\Readme.txt"
     },

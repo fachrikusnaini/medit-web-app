@@ -1,0 +1,130 @@
+﻿@using MiniProject319.ViewModels;
+@model VMMUser
+
+<div class="card card-outline card-primary">
+
+    <div class="card-body">
+        <p class="login-box-msg">Register a new membership</p>
+        <form asp-action="Register" id="form_register" method="post">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="RoleName" id="RoleName" placeholder="Full name">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-user"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="Code" name="Code" placeholder="Code">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fa-code-fork"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="Email" name="Email" placeholder="Email">
+                <span id="validate_email" class="text-danger"></span>
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" id="Password" name="Password" placeholder="Password">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" id="re_password" name="re_password" placeholder="Retype password">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <div class="icheck-primary">
+                        <input type="checkbox" id="agreeTerms" name="agreeTerms" value="agree">
+                        <label for="agreeTerms">
+                            I agree to the <a href="#">terms</a>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <button type="submit" id="btn_register" class="btn btn-primary btn-block">Register</button>
+                </div>
+
+            </div>
+        </form>
+        <div class="social-auth-links text-center">
+            <a id="btn_membership" class="btn btn-block btn-success">
+                <i class="fab fa-google-plus mr-2"></i>
+                I already have a membership
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    $("#form_register").validate({
+        errorClass: "text-danger",
+        rules: {
+            RoleName: {
+                required: true,
+                minlength: 5,
+            },
+            Code: {
+                required: true,
+                
+            },
+            Email: {
+                required: true,
+                email: true,
+            }
+            Password: {
+                required: true,
+                strong_password: true
+            },
+            re_password: {
+                equalTo: "#Password",
+                required: true,
+            },
+            agreeTerms: "required",
+           
+        },
+        messages: {
+            RoleName: {
+                required: "Please fill Name Customer",
+                minlength: "The name must consist of at least 5 characters",
+            },
+            Code: {
+                required: "Please fill Code",              
+            },
+            Email: {
+                required: "Please fill Email",
+                email: "Please enter a valid email address",
+            Password: {
+                required: "Please fill password"
+            },
+            re_password: {
+                equalTo: "Please fill the same value again.",
+                required: "Please fill re-password",
+            },
+            agreeTerms: "Please check agree Term",
+            
+            },
+            
+        },
+
+
+</script>

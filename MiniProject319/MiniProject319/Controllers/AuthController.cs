@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MiniProject319.DataModels;
 using MiniProject319.services;
 using MiniProject319.Services;
 using MiniProject319.viewmodels;
+using MiniProject319.ViewModels;
+
 
 namespace MiniProject319.Controllers
 {
@@ -20,6 +23,40 @@ namespace MiniProject319.Controllers
         public IActionResult Login()
         {
             return PartialView();
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public async Task<JsonResult> LoginSubmit(string email, string password)
+        {
+            VMMUser user = await authService.CheckLogin(email, password);
+            if (user != null)
+            {
+                respon.Message = $"Hello, {user.NameRole} Welcome to Medit";
+                HttpContext.Session.SetString("email", user.Email);
+            }
+            else
+            {
+                respon.Success = false;
+                respon.Message = $"Oops, {email} not found email is wrong, please check it !";
+            }
+            return Json(new { dataRespon = respon });
+        }
+
+        public async Task<IActionResult> Register()
+        {
+            VMMUser data = new VMMUser();
+
+            List<VMMrole> listRole = await roleService.GetAllData();
+            ViewBag.ListRole = listRole;
+
+            return PartialView(data);
+
         }
     }
 }

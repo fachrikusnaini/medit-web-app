@@ -1,5 +1,7 @@
 ﻿
 using MiniProject319.viewmodels;
+using MiniProject319.ViewModels;
+using Newtonsoft.Json;
 
 namespace MiniProject319.services
 {
@@ -15,15 +17,15 @@ namespace MiniProject319.services
             this.RouteAPI = this.configuration["RouteAPI"];
         }
 
-        //public async Task<VMTblCustomer> CheckLogin(string email, string password)
-        //{
-        //    VMTblCustomer data = new VMTblCustomer();
+        public async Task<VMMUser> CheckLogin(string email, string password)
+        {
+            VMMUser data = new VMMUser();
 
-        //    string apiResponse = await client.GetStringAsync(RouteAPI + $"apiAuth/CheckLogin/{email}/{password}");
-        //    data = JsonConvert.DeserializeObject<VMTblCustomer>(apiResponse)!;
+            string apiResponse = await client.GetStringAsync(RouteAPI + $"apiAuth/CheckLogin/{email}/{password}");
+            data = JsonConvert.DeserializeObject<VMMUser>(apiResponse)!;
 
-        //    return data;
-        //}
+            return data;
+        }
 
 
         //public async Task<List<VMMenuAccess>> MenuAccess(int IdRole)
