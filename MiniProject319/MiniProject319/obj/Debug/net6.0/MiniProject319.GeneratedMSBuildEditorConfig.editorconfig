@@ -24,8 +24,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdGVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Dokter/ListDokter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdGVyXExpc3REb2t0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Faskes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFza2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Faskes/Obat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFza2VzXE9iYXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/BATCH_319/medit_web_app/medi-web/medit-web-app/MiniProject319/MiniProject319/Views/Home/Faq.cshtml]

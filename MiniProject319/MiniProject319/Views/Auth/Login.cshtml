@@ -6,10 +6,10 @@
     <form class="row g-3 needs-validation" novalidate id="form-login">
 
         <div class="col-12">
-            <label for="yourUsername" class="form-label">Username</label>
+            <label for="email" class="form-label">Email</label>
             <div class="input-group has-validation">
-                <input type="text" name="username" class="form-control" id="yourUsername" required>
-                <div class="invalid-feedback">Please enter your username.</div>
+                <input type="email" name="email" class="form-control" id="email" required>
+                <div class="invalid-feedback">Please enter your email.</div>
             </div>
         </div>
 
@@ -28,9 +28,9 @@
     </form>
 </div>
 
-<script>
+@*<script>
     $("#form-login").click(function(){
         let username = sessionStorage.getItem("username");
         console.log(username);
     })
-</script>
+</script>*@

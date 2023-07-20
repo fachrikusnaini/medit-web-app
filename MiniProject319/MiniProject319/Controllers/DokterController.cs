@@ -8,5 +8,10 @@ namespace MiniProject319.Controllers
         {
             return View();
         }
+
+        public IActionResult ListDokter()
+        {
+            return View();
+        }
     }
 }

@@ -29,7 +29,7 @@
   --bs-gray: #C3C1C8;
   --bs-gray-dark: #4B5D68;
   --bs-primary: #458FF6;
-  --bs-secondary: #4F5665;
+  --bs-secondary: btn;
   --bs-success: #45f6ad;
   --bs-info: #ad45f6;
   --bs-warning: #FFBA49;
@@ -3450,7 +3450,7 @@ textarea.form-control-lg {
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.56rem 0.8rem;
+  padding: 20px 0.8rem;
   font-size: 1rem;
   border-radius: 0.313rem;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;

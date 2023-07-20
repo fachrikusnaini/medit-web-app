@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\favicon.png"
     },
     {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\image.png",
+      "PackagePath": "staticwebassets\\assets\\img\\image.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\logo-medit.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-medit.png"
     },
@@ -43,6 +47,14 @@
     {
       "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\messages-3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\messages-3.jpg"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\new-favicon-medit.png",
+      "PackagePath": "staticwebassets\\assets\\img\\new-favicon-medit.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\new-logo-medit.png",
+      "PackagePath": "staticwebassets\\assets\\img\\new-logo-medit.png"
     },
     {
       "Id": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\news-1.jpg",

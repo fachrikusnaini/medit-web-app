@@ -8,13 +8,13 @@ namespace MiniProject319.Controllers
 {
     public class AuthController : Controller
     {
-        private AuthService authService;
-        VMResponse respon = new VMResponse();
+        //private AuthService authService;
+        //VMResponse respon = new VMResponse();
 
-        public AuthController(AuthService _authService)
-        {
-            this.authService = _authService;
-        }
+        //public AuthController(AuthService _authService)
+        //{
+        //    this.authService = _authService;
+        //}
         public IActionResult Login()
         {
             return PartialView();
@@ -26,24 +26,24 @@ namespace MiniProject319.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [HttpPost]
-        public async Task<JsonResult> LoginSubmit(string email)
-        {
-            VMTblUsers user = await authService.CheckLogin(email);
+        //[HttpPost]
+        //public async Task<JsonResult> LoginSubmit(string email)
+        //{
+        //    VMTblUsers user = await authService.CheckLogin(email);
 
-            if (user != null)
-            {
-                respon.Message = $"Hello, {user.Email} welcome to medit";
-                HttpContext.Session.SetString("email", user.Email);
-                //HttpContext.Session.SetInt32("IdRole", user.RoleId);
+        //    if (user != null)
+        //    {
+        //        respon.Message = $"Hello, {user.Email} welcome to medit";
+        //        HttpContext.Session.SetString("email", user.Email);
+        //        //HttpContext.Session.SetInt32("IdRole", user.RoleId);
 
-            }
-            else
-            {
-                respon.Message = $"Ooops, {email} not found, please check your mail";
-            }
+        //    }
+        //    else
+        //    {
+        //        respon.Message = $"Ooops, {email} not found, please check your mail";
+        //    }
 
-            return Json(new { dataRespon = respon });
-        }
+        //    return Json(new { dataRespon = respon });
+        //}
     }
 }

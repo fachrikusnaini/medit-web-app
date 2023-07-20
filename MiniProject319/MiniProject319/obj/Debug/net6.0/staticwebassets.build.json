@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vlC2UPtsHH2TzuSVMZ8RO2l/Ppp7LWcAydoWzFU8Lyg=",
+  "Hash": "k6zF47Rax+qIjE0otmYC2qwjHJiVh3g2ASjFBUrkLXA=",
   "Source": "MiniProject319",
   "BasePath": "_content/MiniProject319",
   "Mode": "Default",
@@ -136,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\favicon-medit.png"
     },
     {
+      "Identity": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\image.png",
+      "SourceId": "MiniProject319",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\",
+      "BasePath": "_content/MiniProject319",
+      "RelativePath": "assets/img/image.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\image.png"
+    },
+    {
       "Identity": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\logo.png",
       "SourceId": "MiniProject319",
       "SourceType": "Discovered",
@@ -219,6 +236,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\messages-3.jpg"
+    },
+    {
+      "Identity": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\new-favicon-medit.png",
+      "SourceId": "MiniProject319",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\",
+      "BasePath": "_content/MiniProject319",
+      "RelativePath": "assets/img/new-favicon-medit.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\new-favicon-medit.png"
+    },
+    {
+      "Identity": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\new-logo-medit.png",
+      "SourceId": "MiniProject319",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\",
+      "BasePath": "_content/MiniProject319",
+      "RelativePath": "assets/img/new-logo-medit.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\new-logo-medit.png"
     },
     {
       "Identity": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\news-1.jpg",
