@@ -68,3 +68,7 @@ E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Min
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.ViewModels.dll
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.DataModels.pdb
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MiniProject319.ViewModels.pdb
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\System.Web.Http.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

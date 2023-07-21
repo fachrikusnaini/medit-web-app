@@ -30,5 +30,9 @@ namespace MiniProject319.ViewModels
         public long? DeletedBy { get; set; }
         public DateTime? DeletedOn { get; set; }
         public bool IsDelete { get; set; }
+        public string? Token { get; set; }
+        public DateTime? ExpiredOn { get; set; }
+        public bool? IsExpired { get; set; }
+        public long? UserId { get; set; }
     }
 }

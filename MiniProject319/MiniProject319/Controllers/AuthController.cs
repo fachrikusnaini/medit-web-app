@@ -48,5 +48,14 @@ namespace MiniProject319.Controllers
             return View(dataParam);
 
         }
+
+        public async Task<IActionResult> Verification()
+        {
+            VMm_user data = new VMm_user();
+            List<VMm_role> listRole = await roleServices.GetAllData();
+            ViewBag.ListRole = listRole;
+            return View(data);
+        }
+
     }
 }

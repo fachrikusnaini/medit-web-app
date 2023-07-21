@@ -1,0 +1,38 @@
+﻿@using MiniProject319.ViewModels;
+@model VMm_user
+<style>
+    .required:after {
+        content: "*";
+        color: red;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-8">
+            <h4 class="text-primary"><b>Verifikasi E-mail</b></h4>
+            <div class="container-fluid">
+                <div class="row">
+                    <form asp-action="Register" method="post" enctype="multipart/form-data" id="form_register">
+                        <span class="text-secondary mb-3">Masukkan kode OTP yang telah dikirimkan ke email Anda.</span>
+                        <div class="form-group">
+                            <label hidden class="text-secondary required" for="Token"></label>
+                            <input type="text" class="form-control border-info" id="Token" name="Token">
+                            <span id="validate_Token" class="text-danger"></span>
+                        </div>
+                        <div class="clearfix mt-5 text-center">
+                            <label class="text-secondary">Kirim ulang kode OTP dalam</label>
+                        </div>
+                        <div class="clearfix mt-5 text-center">
+                            <button class="btn btn-primary btn-rounded" id="btn_verification">Konfirmasi OTP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+<script>

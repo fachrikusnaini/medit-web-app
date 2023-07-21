@@ -1,156 +1,53 @@
 ﻿@using MiniProject319.ViewModels;
 @model VMm_user
-
-
-<div class="preloader">
-    <div class="lds-ripple">
-        <div class="lds-pos"></div>
-        <div class="lds-pos"></div>
-    </div>
-</div>
-<!-- ============================================================== -->
-<!-- Main wrapper - style you can find in pages.scss -->
-<!-- ============================================================== -->
-<div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-     data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 col-sm-12 mx-auto">
-                <div class="card border-light pt-4">
-                    <div class="card-body">
-                        <div class="text-center mb-5">
-                            <img src="~/temp/assets/images/auth/logo-medit.png" height="48" class='mb-4'>
-                            <p>Please fill form Register..</p>
+<style>
+    .required:after {
+        content: "*";
+        color: red;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-8">
+            <h4 class="text-primary"><b>Daftar</b></h4>
+            <div class="container-fluid">
+                <div class="row">
+                    <form asp-action="Register" method="post" enctype="multipart/form-data" id="form_register">
+                        <span class="text-secondary mb-3">Masukkan email Anda. Kami akan melakukan pengecekan.</span>
+                        <div class="form-group">
+                            <label class="text-secondary required" for="Email">Email</label>
+                            <input type="text" class="form-control border-info" id="Email" name="Email">
+                            <span id="validate_Email" class="text-danger"></span>
                         </div>
-                        <form asp-action="Register" method="post" enctype="multipart/form-data" id="form_register">
-                            <div class="form-group position-relative has-icon-left">
-                                <label for="Fullname">Fullname:</label>
-                                <div class="position-relative">
-                                    <input type="text" class="form-control" id="Fullname" name="Fullname">
-                                </div>
-                            </div>
-                            <div class="form-group position-relative has-icon-left">
-                                <label for="Email">Email:</label>
-                                <div class="position-relative">
-                                    <input type="text" class="form-control" id="Email" name="Email">
-                                    <span id="validate_Email" class="text-danger"></span>
-                                </div>
-                            </div>
-                            <div class="form-group position-relative has-icon-left">
-                                <div class="clearfix">
-                                    <label for="Password">Password:</label>
-                                </div>
-                                <div class="position-relative">
-                                    <input type="password" class="form-control" id="Password" name="Password">
-                                </div>
-                            </div>
-                            <div class="form-group position-relative has-icon-left">
-                                <div class="clearfix">
-                                    <label for="re_password">Confirmation Password:</label>
-                                </div>
-                                <div class="position-relative">
-                                    <input type="password" class="form-control" id="re_password" name="re_password">
-                                </div>
-                            </div>
-                            <div class="form-group position-relative has-icon-left">
-                                <div class="clearfix">
-                                    <label for="MobilePhone">MobilePhone:</label>
-                                </div>
-                                <div class="position-relative">
-                                    <input type="text" class="form-control" id="MobilePhone" name="MobilePhone">
-                                </div>
-                            </div>
-                            <div class="form-group position-relative has-icon-left">
-                                <div class="clearfix">
-                                    <label for="RoleId">Register as:</label>
-                                </div>
-                                <div class="position-relative">
-                                    @Html.DropDownList("RoleId",
-                                    new SelectList(ViewBag.ListRole, "Id", "Name"),
-                                    "---Choose Role---",
-                                    new { @class = "form-control"}
-                                    )
-                                </div>
-                            </div>
-@*                            <div class="form-group position-relative has-icon-left">
-                                <div class="clearfix">
-                                    <label for="ImageFile">ImagePath:</label>
-                                </div>
-                                <div class="position-relative">
-                                    <input type="file" class="form-control" id="ImageFile" name="ImageFile" accept='image/*'>
-                                </div>
-                            </div>*@
-                            <div class="clearfix mt-3">
-                                <button class="btn btn-primary btn-rounded">Submit</button>
-                            </div>
-                        </form>
-                    </div>
+                        <div class="clearfix mt-5 text-center">
+                            <button class="btn btn-primary btn-rounded" id="btn_verification">Kirim OTP</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="page-wrapper">
-
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
-        <footer class="footer text-center text-muted">
-            Copyright 2023
-            <a href="#">Mini Project 319</a>.
-        </footer>
-        <!-- ============================================================== -->
-        <!-- End footer -->
-        <!-- ============================================================== -->
+        <div class="col">      
+        </div>
     </div>
 </div>
 <script>
     $("#form_register").validate({
         errorClass: "text-danger",
         rules: {
-            Fulllname: {
-                required: true,
-            },
             Email: {
                 required: true,
                 email: true,
             },
-            Password: {
-                required: true,
-                strong_password: true,
-            },
-            re_password: {
-                equalTo: "#Password",
-                required: true,
-            },
-            MobilePhone: {
-                required: true,
-                number: true,
-            },
-            RoleId: "required",
         },
         messages: {
-            Fulllname: {
-                required: "Please fill Fullname",
-            },
             Email: {
                 required: "Please fill Email",
                 email: "Please enter a valid email address",
             },
-            Password: {
-                required: "Please fill password",
-            },
-            re_password: {
-                equalTo: "Please fill the same value again.",
-                required: "Please fill re-password",
-            },
-            MobilePhone: {
-                required: "Please fill Mobile Phone",
-                number: "Please input valid request Phone (number)",
-            },
-            RoleId: "Please select role",
-        },
 
+        },
         submitHandler: function (form) {
 
             var email = $("#Email").val()
@@ -180,32 +77,6 @@
         }
     })
 
-    $.validator.addMethod("strong_password", function (value, element) {
-        let password = value;
-        if (!(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@@#$%&])(.{8,20}$)/.test(password))) {
-            return false;
-        }
-        return true;
-    }, function (value, element) {
-        let password = $(element).val();
-        if (!(/^(.{8,20}$)/.test(password))) {
-            return 'Password must be between 8 to 20 characters long.';
-        }
-        else if (!(/^(?=.*[A-Z])/.test(password))) {
-            return 'Password must contain at least one uppercase.';
-        }
-        else if (!(/^(?=.*[a-z])/.test(password))) {
-            return 'Password must contain at least one lowercase.';
-        }
-        else if (!(/^(?=.*[0-9])/.test(password))) {
-            return 'Password must contain at least one digit.';
-        }
-        else if (!(/^(?=.*[@@#$%&])/.test(password))) {
-            return "Password must contain special characters from @@#$%&.";
-        }
-        return false;
-    });
-
     function functionSubmit(form) {
 
         var formData = new FormData();
@@ -226,18 +97,30 @@
             success: function (response) {
                 var data = response.dataResponse
                 if (data.success) {
-                    $("#modal").modal("hide")
+                    $(document).ready(function() {
+                        var emailData = {
+                            To: @Model.Email,
+                            Subject: "Registration User",
+                            Body: "This your code OTP : " + @Model.Token
+                         };
 
-                    toastr.success(
-                        data.message,
-                        '', {
-                        timeOut: 1500,
-                        fadeOut: 1500,
-                        onHidden: function () {
-                            window.location.reload();
-                        }
-                    }
-                    )
+                         $.ajax({
+                            url: "/Auth/SendEmail",
+                            type: "POST",
+                            contentType: "application/json",
+                            data: JSON.stringify(emailData),
+                            success: function (response) {
+                                $("#modal_body").empty()
+                                $("#modal_body").load("/Auth/Verification")
+                                $("#modal").modal("show")
+                            },
+                            error: function (xhr, status, error) {
+                                console.log(xhr.responseText);
+                            }
+
+                         });
+                    });
+
                 } else {
                     toastr.errorClass(data.message)
                 }

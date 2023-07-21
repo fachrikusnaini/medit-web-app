@@ -263,3 +263,6 @@ E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\Swashbu
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\MiniProject319.api.dll
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\MiniProject319.api.pdb
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\obj\Debug\net6.0\MiniProject319.MvcApplicationPartsAssemblyInfo.cs
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\System.Web.Http.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
