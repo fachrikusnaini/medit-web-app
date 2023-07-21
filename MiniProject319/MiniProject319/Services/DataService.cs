@@ -32,7 +32,7 @@ namespace MiniProject319.Services
         {
             VMUser data = new VMUser();
             string apiResponse = await client.GetStringAsync(RouteAPI + $"apiProfile/GetDataById/{id}");
-            data = JsonConvert.DeserializeObject<VMUser>(apiResponse);
+            data = JsonConvert.DeserializeObject<VMUser>(apiResponse)!;
 
             return data;
         }

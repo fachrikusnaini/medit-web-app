@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Xpos319.ViewModels
+namespace MiniProject319.ViewModels
 {
     public class PaginatedList<T> : List<T>
     {

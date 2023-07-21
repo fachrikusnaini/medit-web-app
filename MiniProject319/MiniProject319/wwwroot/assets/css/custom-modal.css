@@ -1,0 +1,17 @@
+/* Apply styles to the modal header, body, and footer */
+.modal-header,
+.modal-body,
+.modal-footer {
+    background-color: #004176; /* Your desired background color for the header, body, and footer */
+    color: #06889A; /* Your desired text color for the header, body, and footer */
+}
+
+/* Additional styles for the modal body */
+.modal-body {
+    /* Add any specific styles for the modal body here */
+}
+
+/* Additional styles for the modal footer */
+.modal-footer {
+    /* Add any specific styles for the modal footer here */
+}

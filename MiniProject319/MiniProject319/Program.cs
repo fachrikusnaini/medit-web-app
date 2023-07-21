@@ -1,10 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using MiniProject319.DataModels;
+using MiniProject319.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<PasienService>();
+builder.Services.AddScoped<DataService>();
 
 
 //Add connection string

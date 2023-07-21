@@ -15,9 +15,9 @@ namespace MiniProject319.Controllers
             this.dataService = _dataService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int id)
         {
-            List<VMUser> data = await dataService.GetAllData();
+            VMUser data = await dataService.GetDataById(2);
             return View(data);
         }
 
