@@ -1,0 +1,142 @@
+﻿@{
+    string roleName = "Pasien"; //menu diatur sesuai role name, join dengan tabel menu.
+}
+
+@{
+    switch (roleName)
+    {
+
+        case "Admin":
+            <!-- ======= Sidebar Admin ======= -->
+            <aside id="sidebar" class="sidebar">
+
+                <ul class="sidebar-nav" id="sidebar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">
+                            <i class="bi bi-grid"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li><!-- End Dashboard Nav -->
+
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-controller="Dokter" asp-action="Index">
+                            <i class="bi bi-menu-button-wide"></i><span>Dokter</span><i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li><!-- End Data Dokter Nav -->
+
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-controller="Pasien" asp-action="Index">
+                            <i class="bi bi-journal-text"></i><span>Pasien</span><i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li><!-- End Data Pasien Nav -->
+
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-controller="Faskes" asp-action="Index">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>Faskes</span><i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li><!-- End Data Faskes Nav -->
+
+                    <li><hr class="nav-divider" /></li>
+
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-controller="Home" asp-action="Faq">
+                            <i class="bi bi-question-circle"></i>
+                            <span>F.A.Q</span>
+                        </a>
+                    </li><!-- End F.A.Q Page Nav -->
+
+                </ul>
+
+            </aside>
+            <!-- End Sidebar-->
+            break;
+        case "Pasien":
+            <!-- ======= Sidebar Pasien ======= -->
+            <aside id="sidebar" class="sidebar">
+
+                <ul class="sidebar-nav" id="sidebar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">
+                            <i class="bi bi-grid"></i>
+                            <span>Home</span>
+                        </a>
+                    </li><!-- End Dashboard Nav -->
+
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-controller="Dokter" asp-action="ListDokter">
+                            <i class="bi bi-journal-text"></i><span>Dokter</span><i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-controller="Faskes" asp-action="Obat">
+                            <i class="bi bi-journal-text"></i><span>Obat/ Vitamin</span><i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-controller="Faskes" asp-action="Index">
+                            <i class="bi bi-journal-text"></i><span>Faskes</span><i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+
+
+                    <li><hr class="nav-divider" /></li>
+
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-controller="Home" asp-action="Faq">
+                            <i class="bi bi-question-circle"></i>
+                            <span>F.A.Q</span>
+                        </a>
+                    </li><!-- End F.A.Q Page Nav -->
+
+                </ul>
+
+            </aside>
+            <!-- End Sidebar-->
+            break;
+        case "Dokter":
+            <!-- ======= Sidebar Dokter ======= -->
+            <aside id="sidebar" class="sidebar">
+
+                <ul class="sidebar-nav" id="sidebar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">
+                            <i class="bi bi-grid"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li><!-- End Dashboard Nav -->
+
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-controller="Pasien" asp-action="Index">
+                            <i class="bi bi-journal-text"></i><span>Data Pasien</span><i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li><!-- End Data Pasien Nav -->
+
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-controller="Faskes" asp-action="Index">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>Data Faskes</span><i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li><!-- End Data Faskes Nav -->
+
+                    <hr>
+
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-controller="Home" asp-action="Faq">
+                            <i class="bi bi-question-circle"></i>
+                            <span>F.A.Q</span>
+                        </a>
+                    </li><!-- End F.A.Q Page Nav -->
+
+                </ul>
+
+            </aside>
+            <!-- End Sidebar-->
+            break;
+        
+
+    }
+}
+       
+

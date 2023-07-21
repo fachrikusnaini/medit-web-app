@@ -22,3 +22,15 @@ C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.
 C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\refint\MiniProject319.ViewModels.dll
 C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\MiniProject319.ViewModels.pdb
 C:\BATCH_319\medit_web_app\medi-web\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\ref\MiniProject319.ViewModels.dll
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\bin\Debug\net6.0\MiniProject319.ViewModels.deps.json
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\bin\Debug\net6.0\MiniProject319.ViewModels.dll
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\bin\Debug\net6.0\MiniProject319.ViewModels.pdb
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\MiniProject319.ViewModels.csproj.AssemblyReference.cache
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\MiniProject319.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\MiniProject319.ViewModels.AssemblyInfoInputs.cache
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\MiniProject319.ViewModels.AssemblyInfo.cs
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\MiniProject319.ViewModels.csproj.CoreCompileInputs.cache
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\MiniProject319.ViewModels.dll
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\refint\MiniProject319.ViewModels.dll
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\MiniProject319.ViewModels.pdb
+C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\ref\MiniProject319.ViewModels.dll
