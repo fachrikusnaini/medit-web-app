@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj": {}
+    "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj": {}
   },
   "projects": {
-    "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj": {
+    "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
+        "projectUniqueName": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
         "projectName": "MiniProject319.ViewModels",
-        "projectPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
+        "projectPath": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj",
         "packagesPath": "C:\\Users\\XSIS User\\.nuget\\packages\\",
-        "outputPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\obj\\",
+        "outputPath": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\XSIS User\\AppData\\Roaming\\NuGet\\NuGet.Config",

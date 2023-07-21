@@ -11465,11 +11465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\MiniProject319.csproj",
+      "projectUniqueName": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\MiniProject319.csproj",
       "projectName": "MiniProject319",
-      "projectPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\MiniProject319.csproj",
+      "projectPath": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\MiniProject319.csproj",
       "packagesPath": "C:\\Users\\XSIS User\\.nuget\\packages\\",
-      "outputPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319\\obj\\",
+      "outputPath": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\XSIS User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11487,11 +11487,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj": {
-              "projectPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj"
+            "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj": {
+              "projectPath": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj"
             },
-            "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj": {
-              "projectPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj"
+            "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj": {
+              "projectPath": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.ViewModels\\MiniProject319.ViewModels.csproj"
             }
           }
         }

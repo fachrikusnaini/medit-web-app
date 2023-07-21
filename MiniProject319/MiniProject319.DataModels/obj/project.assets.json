@@ -2017,11 +2017,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
+      "projectUniqueName": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
       "projectName": "MiniProject319.DataModels",
-      "projectPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
+      "projectPath": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\MiniProject319.DataModels.csproj",
       "packagesPath": "C:\\Users\\XSIS User\\.nuget\\packages\\",
-      "outputPath": "C:\\BATCH_319\\medit_web_app\\medi-web\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\obj\\",
+      "outputPath": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319.DataModels\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\XSIS User\\AppData\\Roaming\\NuGet\\NuGet.Config",
