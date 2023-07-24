@@ -1,0 +1,36 @@
+﻿@using MiniProject319.ViewModels;
+
+
+@model VMUser
+
+<!--Start Form-->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Ubah E-mail</h5>
+
+        <!-- General Form Elements -->
+        <form>
+            <input type="hidden" id="Id" name="Id" value="@Model.Id" />
+            <div class="row mb-3">
+                <p>Masukkan alamat E-mail yang baru</p>
+                <label for="Email" class="col-sm-8 col-form-label">Email</label>
+                <div class="col-sm-13">
+                    <input type="text" class="form-control" id="Email" name="Email" value="@Model.Email">
+                </div>
+            </div>
+
+
+            <br />
+
+            <div class="row mb-3">
+                <div class="col-sm-10">
+                    <button class="btn btn-dark=" asp-controller="Profile" asp-action="Index">Batal</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+        </form><!-- End General Form Elements -->
+
+    </div>
+</div>
+<!--END FORM-->

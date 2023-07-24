@@ -19,6 +19,15 @@
     <link href="~/assets/img/logo-medit.png" rel="icon">
     <link href="~/assets/img/logo-medit.png" rel="apple-touch-icon">
 
+    <!-- Your other CSS and JS imports -->
+
+    <link rel="stylesheet" href="~/assets/css/custom-modal.css">
+
+    <!-- JQUERY -->
+    @*    <script src="~/adminmart/assets/libs/jquery/dist/jquery.min.js"></script>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -278,7 +287,7 @@
                                             <div class="col-lg-6 col-md-8 d-flex align-items-center">
                                                 <input type="text" class="form-control flex-grow-1" value="@Model.Email">
                                                   
-                                                        <i id="editdata" class="bi bi-pencil-square bi-lg ms-2 "></i>
+                                                        <a  class="bi bi-pencil-square bi-lg ms-2 editemail "></a>
                                                     
                                             </div>
                                         </div>
@@ -288,7 +297,7 @@
                                             <div class="col-lg-6 col-md-8 d-flex align-items-center">
                                                 <input type="password" class="form-control flex-grow-1" value="@Model.Password">
                                                    
-                                                        <i id="editdata" class="bi bi-pencil-square bi-lg ms-2 "></i>
+                                                        <a class="bi bi-pencil-square bi-lg ms-2 editpass "></a>
                                                     
                                         </div>
                                     </div>
@@ -309,6 +318,25 @@
     </section>
 
   </main><!-- End #main -->
+
+    <!-- Modal SM -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg custom-modal-content">
+            <div class="modal-content">
+                <div class="modal-header custom-modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">@ViewData["Title"]</h5>
+                  
+                </div>
+                <div class="modal-body" id="modal_body">
+                    . . .
+                </div>
+                @*                <div class="modal-footer custom-modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>*@
+            </div>
+        </div>
+    </div>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -345,11 +373,29 @@
 
   <script>
     $(".editdat").click(function () {
-        alert("TES")
+      
         var id = $(this).attr("dataid")
 
         $("#modal_body").empty()
         $("#modal_body").load("/Profile/Edit?id=" + id)
+        $("#modal").modal("show")
+    })
+
+    $(".editemail").click(function () {
+
+        var id = $(this).attr("dataid")
+
+        $("#modal_body").empty()
+        $("#modal_body").load("/Profile/EditEmail?id=" + id)
+        $("#modal").modal("show")
+    })
+
+    $(".editpass").click(function () {
+
+        var id = $(this).attr("dataid")
+
+        $("#modal_body").empty()
+        $("#modal_body").load("/Profile/EditPass?id=" + id)
         $("#modal").modal("show")
     })
 

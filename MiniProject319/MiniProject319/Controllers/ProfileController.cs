@@ -38,5 +38,20 @@ namespace MiniProject319.Controllers
             }
             return PartialView(dataparam);
         }
+
+        public async Task<IActionResult> EditEmail(int id)
+        {
+            VMUser data = new VMUser();
+            data = await dataService.GetDataById(1);
+            return PartialView(data);
+        }
+
+        public async Task<IActionResult> EditPass(int id)
+        {
+            VMUser data = new VMUser();
+            data = await dataService.GetDataById(1);
+            return PartialView(data);
+        }
+
     }
 }

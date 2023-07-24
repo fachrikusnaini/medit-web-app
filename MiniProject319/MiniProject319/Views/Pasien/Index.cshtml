@@ -20,6 +20,15 @@
     <link href="assets/img/logo-medit.png" rel="icon">
     <link href="assets/img/logo-medit.png" rel="apple-touch-icon">
 
+    <!-- Your other CSS and JS imports -->
+
+    <link rel="stylesheet" href="~/assets/css/custom-modal.css">
+
+    <!-- JQUERY -->
+    @*    <script src="~/adminmart/assets/libs/jquery/dist/jquery.min.js"></script>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -546,6 +555,28 @@
 
 
     </main><!-- End #main -->
+    <!-- Modal SM -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg custom-modal-content">
+            <div class="modal-content">
+                <div class="modal-header custom-modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">@ViewData["Title"]</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal_body">
+                    . . .
+                </div>
+                @*                <div class="modal-footer custom-modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>*@
+            </div>
+        </div>
+    </div>
+
+
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
@@ -585,8 +616,7 @@
     <script>
    
         $("#btn_create").click(function () {
-            alert("TES")
-
+       
             $("#modal_body").empty()
             $("#modal_body").load("/Profile/Edit")
             $("#modal").modal("show")

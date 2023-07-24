@@ -1,4 +1,8 @@
-﻿
+﻿@using MiniProject319.ViewModels;
+
+
+@model VMUser
+
             <!--Start Form-->
           <div class="card">
             <div class="card-body">
@@ -6,29 +10,48 @@
 
               <!-- General Form Elements -->
               <form>
+            <input type="hidden" id="Id" name="Id" value="@Model.Id" />
                 <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Nama Lengkap</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                  <label for="NameUser" class="col-sm-8 col-form-label">Nama Lengkap</label>
+                  <div class="col-sm-13">
+                    <input type="text" class="form-control" id="NameUser" name="NameUser" value="@Model.Fullname">
                   </div>
                 </div>
-                                <div class="row mb-3">
-                                    <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+
+
+                             @*   <div class="row mb-3">
+                                    <label for="DoBUser" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                     <div class="col-sm-10">
-                                        <input type="date" class="form-control">
+                    <input type="text" class="form-control" id="DoBUser" name="DoBUser" value="@Model.Dob?.ToString("dd MMMM yyyy")" placeholder="23 Juli 2023">
+                    <input type="date" class="form-control" id="DoBUser" name="DoBUser">@Model.Dob?.ToString("dd MMMM yyyy")</input>
                                     </div>
-                                </div>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-2 col-form-label">Number</label>
-                  <div class="col-sm-10">
-                    <input type="number" class="form-control">
-                  </div>
+                                </div>*@
+
+            <div class="row mb-3">
+                <label for="DoBUser" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                <div class="col-sm-10 input-group">
+                    @{
+                        string formattedDate = Model.Dob?.ToString("yyyy-MM-dd"); // Format the date as "2000-10-02" for input field
+                        string displayedDate = Model.Dob?.ToString("dd MMMM yyyy"); // Format the date as "02 October 2000" for display
+                    }
+                    <input type="text" class="form-control" id="DoBUserDisplay" value="@displayedDate" readonly>
+                    <input type="date" class="form-control d-none" id="DoBUser" name="DoBUser" value="@formattedDate">
+                    <span class="input-group-text" onclick="toggleDatePicker()"><i class="bi bi-calendar"></i></span>
                 </div>
-         
+            </div>
+
+                <div class="row mb-3">
+                  <label for="NoHP" class="col-sm-2 col-form-label">Number</label>
+                  <div class="col-sm-13">
+                    <input type="number" class="form-control" id="NoHP" name="NoHP" value="@Model.MobilePhone">
+                </div>
+                </div>
+         <br />
             
                 <div class="row mb-3">
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Submit Form</button>
+                    <button class="btn btn-dark=" asp-controller="Profile" asp-action="Index">Batal</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
 
@@ -37,6 +60,20 @@
             </div>
           </div>
           <!--END FORM-->
-       
 
 
+
+<script>
+    function toggleDatePicker() {
+        var inputDate = document.getElementById("DoBUser");
+        var inputDateDisplay = document.getElementById("DoBUserDisplay");
+
+        if (inputDateDisplay.classList.contains("d-none")) {
+            inputDateDisplay.classList.remove("d-none");
+            inputDate.classList.add("d-none");
+        } else {
+            inputDateDisplay.classList.add("d-none");
+            inputDate.classList.remove("d-none");
+        }
+    }
+</script>

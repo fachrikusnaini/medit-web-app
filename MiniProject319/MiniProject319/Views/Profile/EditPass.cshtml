@@ -1,0 +1,43 @@
+﻿@using MiniProject319.ViewModels;
+
+
+@model VMUser
+
+<!--Start Form-->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Ubah Password</h5>
+
+        <!-- General Form Elements -->
+        <form>
+            <input type="hidden" id="Id" name="Id" value="@Model.Id" />
+            <div class="row mb-3">
+                <p>Masukkan Password anda saat ini untuk mengubah password</p>
+                <label for="Pass" class="col-sm-8 col-form-label">Password</label>
+                <div class="col-sm-13">
+                    <input type="password" class="form-control" id="Pass" name="Pass" >
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="Re-Pass" class="col-sm-8 col-form-label">Masukan ulang Password</label>
+                <div class="col-sm-13">
+                    <input type="password" class="form-control" id="Re-Pass" name="Re-Pass" >
+                </div>
+            </div>
+
+
+            <br />
+
+            <div class="row mb-3">
+                <div class="col-sm-10">
+                    <button class="btn btn-dark=" asp-controller="Profile" asp-action="Index">Batal</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+        </form><!-- End General Form Elements -->
+
+    </div>
+</div>
+<!--END FORM-->
