@@ -1,7 +1,6 @@
 ﻿@{
-    int idLogin = 1; 
+    int IdRole = 1; 
 }
-
 
 <!-- ======= Header Start======= -->
 <header id="header" class="header fixed-top d-flex align-items-center">
@@ -10,7 +9,7 @@
             <img src="~/assets/img/new-logo-medit.png" alt="logo-medit" style="height:max-content">
         </a>
         @{
-            if(idLogin != 0)
+            if(IdRole != 0)
             {
                 <i class="bi bi-list toggle-sidebar-btn"></i>
             }
@@ -34,7 +33,7 @@
             </li><!-- End Search Icon-->
 
             @{
-                if(idLogin != 0)
+                if(IdRole != 0)
                 {
                     <li class="nav-item dropdown pe-3">
 
@@ -46,7 +45,7 @@
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                             
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" asp-controller="Profile" asp-action="Profile_Dokter">
+                                <a class="dropdown-item d-flex align-items-center" asp-controller="DoctorProfile" asp-action="Index">
                                     <i class="bi bi-person"></i>
                                     <span>My Profile</span>
                                 </a>
@@ -70,7 +69,7 @@
                 else
                 {
                     <li class="nav-item pe-3">
-                        <button class="btn btn-outline-secondary">Daftar</button>
+                        <button class="btn btn-outline-secondary" asp-controller="Menu" asp-action="Index">Masuk(cek)</button>
                         <button type="button" class="btn btn-primary" id="btn-login">Masuk</button>
                     </li>
                 }

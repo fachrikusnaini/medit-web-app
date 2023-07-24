@@ -16,13 +16,13 @@ namespace MiniProject319.Services
             this.RouteApi = this.configuration["RouteAPI"];
         }
 
-        //public async Task<VMTblUsers> CheckLogin(string email)
-        //{
-        //    VMTblUsers data = new VMTblUsers();
-        //    string apiRespon = await client.GetStringAsync(RouteApi + $"apiAuth/CheckLogin/{email}");
-        //    data = JsonConvert.DeserializeObject<VMTblUsers>(apiRespon)!;
+        public async Task<VMTblUsers> CheckLogin(string email)
+        {
+            VMTblUsers data = new VMTblUsers();
+            string apiRespon = await client.GetStringAsync(RouteApi + $"apiAuth/CheckLogin/{email}");
+            data = JsonConvert.DeserializeObject<VMTblUsers>(apiRespon)!;
 
-        //    return data;
-        //}
+            return data;
+        }
     }
 }

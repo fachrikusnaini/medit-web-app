@@ -1,0 +1,42 @@
+﻿@using MiniProject319.Services;
+@inject MenuService menuService
+
+@{
+    int IdRole = 1;
+    var menu = await menuService.GetListMenu(IdRole);
+
+}
+
+    <aside id="sidebar" class="sidebar">
+         
+        <ul class="sidebar-nav" id="sidebar-nav">
+         
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-grid"></i>
+                    <span>List Menu</span>
+                </a>
+            </li>
+                @foreach (var item in menu)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link collapsed">
+                            <i class="bi bi-menu-button-wide"></i><span>@item.MenuName</span><i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                    </li>
+                }
+
+            <li><hr class="nav-divider" /></li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" asp-controller="Home" asp-action="Faq">
+                    <i class="bi bi-question-circle"></i>
+                    <span>F.A.Q</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+

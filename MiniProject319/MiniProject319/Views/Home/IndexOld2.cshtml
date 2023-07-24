@@ -1,0 +1,1163 @@
+﻿@{
+    int idLogin = 1;
+    string role = "Pasien";
+}
+
+@{
+    if(idLogin != 0)
+    {
+        switch (role)
+        {
+            case "Admin":
+                <div class="pagetitle">
+                    <h1>Dashboard Admin</h1>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <!-- End Page Title -->
+
+                <section class="section dashboard">
+                    <div class="row">
+
+                        <!-- Left side columns -->
+                        <div class="col-lg-8">
+                            <div class="row">
+
+                                <!-- Sales Card -->
+                                <div class="col-xxl-4 col-md-6">
+                                    <div class="card info-card sales-card">
+
+                                        <div class="filter">
+                                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                                <li class="dropdown-header text-start">
+                                                    <h6>Filter</h6>
+                                                </li>
+
+                                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sales <span>| Today</span></h5>
+
+                                            <div class="d-flex align-items-center">
+                                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                                    <i class="bi bi-cart"></i>
+                                                </div>
+                                                <div class="ps-3">
+                                                    <h6>145</h6>
+                                                    <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- End Sales Card -->
+                                <!-- Revenue Card -->
+                                <div class="col-xxl-4 col-md-6">
+                                    <div class="card info-card revenue-card">
+
+                                        <div class="filter">
+                                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                                <li class="dropdown-header text-start">
+                                                    <h6>Filter</h6>
+                                                </li>
+
+                                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">Revenue <span>| This Month</span></h5>
+
+                                            <div class="d-flex align-items-center">
+                                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                                    <i class="bi bi-currency-dollar"></i>
+                                                </div>
+                                                <div class="ps-3">
+                                                    <h6>$3,264</h6>
+                                                    <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- End Revenue Card -->
+                                <!-- Customers Card -->
+                                <div class="col-xxl-4 col-xl-12">
+
+                                    <div class="card info-card customers-card">
+
+                                        <div class="filter">
+                                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                                <li class="dropdown-header text-start">
+                                                    <h6>Filter</h6>
+                                                </li>
+
+                                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">Customers <span>| This Year</span></h5>
+
+                                            <div class="d-flex align-items-center">
+                                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                                    <i class="bi bi-people"></i>
+                                                </div>
+                                                <div class="ps-3">
+                                                    <h6>1244</h6>
+                                                    <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div><!-- End Customers Card -->
+                                <!-- Reports -->
+                                <div class="col-12">
+                                    <div class="card">
+
+                                        <div class="filter">
+                                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                                <li class="dropdown-header text-start">
+                                                    <h6>Filter</h6>
+                                                </li>
+
+                                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">Reports <span>/Today</span></h5>
+
+                                            <!-- Line Chart -->
+                                            <div id="reportsChart"></div>
+
+                                            <script>
+                                                document.addEventListener("DOMContentLoaded", () => {
+                                                    new ApexCharts(document.querySelector("#reportsChart"), {
+                                                        series: [{
+                                                            name: 'Sales',
+                                                            data: [31, 40, 28, 51, 42, 82, 56],
+                                                        }, {
+                                                            name: 'Revenue',
+                                                            data: [11, 32, 45, 32, 34, 52, 41]
+                                                        }, {
+                                                            name: 'Customers',
+                                                            data: [15, 11, 32, 18, 9, 24, 11]
+                                                        }],
+                                                        chart: {
+                                                            height: 350,
+                                                            type: 'area',
+                                                            toolbar: {
+                                                                show: false
+                                                            },
+                                                        },
+                                                        markers: {
+                                                            size: 4
+                                                        },
+                                                        colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                                                        fill: {
+                                                            type: "gradient",
+                                                            gradient: {
+                                                                shadeIntensity: 1,
+                                                                opacityFrom: 0.3,
+                                                                opacityTo: 0.4,
+                                                                stops: [0, 90, 100]
+                                                            }
+                                                        },
+                                                        dataLabels: {
+                                                            enabled: false
+                                                        },
+                                                        stroke: {
+                                                            curve: 'smooth',
+                                                            width: 2
+                                                        },
+                                                        xaxis: {
+                                                            type: 'datetime',
+                                                            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                                                        },
+                                                        tooltip: {
+                                                            x: {
+                                                                format: 'dd/MM/yy HH:mm'
+                                                            },
+                                                        }
+                                                    }).render();
+                                                });
+                                            </script>
+                                            <!-- End Line Chart -->
+
+                                        </div>
+
+                                    </div>
+                                </div><!-- End Reports -->
+                                <!-- Recent Sales -->
+                                <div class="col-12">
+                                    <div class="card recent-sales overflow-auto">
+
+                                        <div class="filter">
+                                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                                <li class="dropdown-header text-start">
+                                                    <h6>Filter</h6>
+                                                </li>
+
+                                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+
+                                            <table class="table table-borderless datatable">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Customer</th>
+                                                        <th scope="col">Product</th>
+                                                        <th scope="col">Price</th>
+                                                        <th scope="col">Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row"><a href="#">#2457</a></th>
+                                                        <td>Brandon Jacob</td>
+                                                        <td><a href="#" class="text-primary">At praesentium minu</a></td>
+                                                        <td>$64</td>
+                                                        <td><span class="badge bg-success">Approved</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"><a href="#">#2147</a></th>
+                                                        <td>Bridie Kessler</td>
+                                                        <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
+                                                        <td>$47</td>
+                                                        <td><span class="badge bg-warning">Pending</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"><a href="#">#2049</a></th>
+                                                        <td>Ashleigh Langosh</td>
+                                                        <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
+                                                        <td>$147</td>
+                                                        <td><span class="badge bg-success">Approved</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"><a href="#">#2644</a></th>
+                                                        <td>Angus Grady</td>
+                                                        <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
+                                                        <td>$67</td>
+                                                        <td><span class="badge bg-danger">Rejected</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"><a href="#">#2644</a></th>
+                                                        <td>Raheem Lehner</td>
+                                                        <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
+                                                        <td>$165</td>
+                                                        <td><span class="badge bg-success">Approved</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+
+                                    </div>
+                                </div><!-- End Recent Sales -->
+                                <!-- Top Selling -->
+                                <div class="col-12">
+                                    <div class="card top-selling overflow-auto">
+
+                                        <div class="filter">
+                                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                                <li class="dropdown-header text-start">
+                                                    <h6>Filter</h6>
+                                                </li>
+
+                                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="card-body pb-0">
+                                            <h5 class="card-title">Top Selling <span>| Today</span></h5>
+
+                                            <table class="table table-borderless">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Preview</th>
+                                                        <th scope="col">Product</th>
+                                                        <th scope="col">Price</th>
+                                                        <th scope="col">Sold</th>
+                                                        <th scope="col">Revenue</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row"><a href="#"><img src="~/assets/img/product-1.jpg" alt=""></a></th>
+                                                        <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
+                                                        <td>$64</td>
+                                                        <td class="fw-bold">124</td>
+                                                        <td>$5,828</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"><a href="#"><img src="~/assets/img/product-2.jpg" alt=""></a></th>
+                                                        <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
+                                                        <td>$46</td>
+                                                        <td class="fw-bold">98</td>
+                                                        <td>$4,508</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"><a href="#"><img src="~/assets/img/product-3.jpg" alt=""></a></th>
+                                                        <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
+                                                        <td>$59</td>
+                                                        <td class="fw-bold">74</td>
+                                                        <td>$4,366</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"><a href="#"><img src="~/assets/img/product-4.jpg" alt=""></a></th>
+                                                        <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
+                                                        <td>$32</td>
+                                                        <td class="fw-bold">63</td>
+                                                        <td>$2,016</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"><a href="#"><img src="~/assets/img/product-5.jpg" alt=""></a></th>
+                                                        <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a></td>
+                                                        <td>$79</td>
+                                                        <td class="fw-bold">41</td>
+                                                        <td>$3,239</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+
+                                    </div>
+                                </div><!-- End Top Selling -->
+
+                            </div>
+                        </div><!-- End Left side columns -->
+                        <!-- Right side columns -->
+                        <div class="col-lg-4">
+
+                            <!-- Recent Activity -->
+                            <div class="card">
+                                <div class="filter">
+                                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                        <li class="dropdown-header text-start">
+                                            <h6>Filter</h6>
+                                        </li>
+
+                                        <li><a class="dropdown-item" href="#">Today</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Recent Activity <span>| Today</span></h5>
+
+                                    <div class="activity">
+
+                                        <div class="activity-item d-flex">
+                                            <div class="activite-label">32 min</div>
+                                            <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                                            <div class="activity-content">
+                                                Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae
+                                            </div>
+                                        </div><!-- End activity item-->
+
+                                        <div class="activity-item d-flex">
+                                            <div class="activite-label">56 min</div>
+                                            <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
+                                            <div class="activity-content">
+                                                Voluptatem blanditiis blanditiis eveniet
+                                            </div>
+                                        </div><!-- End activity item-->
+
+                                        <div class="activity-item d-flex">
+                                            <div class="activite-label">2 hrs</div>
+                                            <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
+                                            <div class="activity-content">
+                                                Voluptates corrupti molestias voluptatem
+                                            </div>
+                                        </div><!-- End activity item-->
+
+                                        <div class="activity-item d-flex">
+                                            <div class="activite-label">1 day</div>
+                                            <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
+                                            <div class="activity-content">
+                                                Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore
+                                            </div>
+                                        </div><!-- End activity item-->
+
+                                        <div class="activity-item d-flex">
+                                            <div class="activite-label">2 days</div>
+                                            <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
+                                            <div class="activity-content">
+                                                Est sit eum reiciendis exercitationem
+                                            </div>
+                                        </div><!-- End activity item-->
+
+                                        <div class="activity-item d-flex">
+                                            <div class="activite-label">4 weeks</div>
+                                            <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
+                                            <div class="activity-content">
+                                                Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
+                                            </div>
+                                        </div><!-- End activity item-->
+
+                                    </div>
+
+                                </div>
+                            </div><!-- End Recent Activity -->
+                            <!-- Budget Report -->
+                            <div class="card">
+                                <div class="filter">
+                                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                        <li class="dropdown-header text-start">
+                                            <h6>Filter</h6>
+                                        </li>
+
+                                        <li><a class="dropdown-item" href="#">Today</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-body pb-0">
+                                    <h5 class="card-title">Budget Report <span>| This Month</span></h5>
+
+                                    <div id="budgetChart" style="min-height: 400px;" class="echart"></div>
+
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", () => {
+                                            var budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({
+                                                legend: {
+                                                    data: ['Allocated Budget', 'Actual Spending']
+                                                },
+                                                radar: {
+                                                    // shape: 'circle',
+                                                    indicator: [{
+                                                        name: 'Sales',
+                                                        max: 6500
+                                                    },
+                                                    {
+                                                        name: 'Administration',
+                                                        max: 16000
+                                                    },
+                                                    {
+                                                        name: 'Information Technology',
+                                                        max: 30000
+                                                    },
+                                                    {
+                                                        name: 'Customer Support',
+                                                        max: 38000
+                                                    },
+                                                    {
+                                                        name: 'Development',
+                                                        max: 52000
+                                                    },
+                                                    {
+                                                        name: 'Marketing',
+                                                        max: 25000
+                                                    }
+                                                    ]
+                                                },
+                                                series: [{
+                                                    name: 'Budget vs spending',
+                                                    type: 'radar',
+                                                    data: [{
+                                                        value: [4200, 3000, 20000, 35000, 50000, 18000],
+                                                        name: 'Allocated Budget'
+                                                    },
+                                                    {
+                                                        value: [5000, 14000, 28000, 26000, 42000, 21000],
+                                                        name: 'Actual Spending'
+                                                    }
+                                                    ]
+                                                }]
+                                            });
+                                        });
+                                    </script>
+
+                                </div>
+                            </div><!-- End Budget Report -->
+                            <!-- Website Traffic -->
+                            <div class="card">
+                                <div class="filter">
+                                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                        <li class="dropdown-header text-start">
+                                            <h6>Filter</h6>
+                                        </li>
+
+                                        <li><a class="dropdown-item" href="#">Today</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-body pb-0">
+                                    <h5 class="card-title">Website Traffic <span>| Today</span></h5>
+
+                                    <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
+
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", () => {
+                                            echarts.init(document.querySelector("#trafficChart")).setOption({
+                                                tooltip: {
+                                                    trigger: 'item'
+                                                },
+                                                legend: {
+                                                    top: '5%',
+                                                    left: 'center'
+                                                },
+                                                series: [{
+                                                    name: 'Access From',
+                                                    type: 'pie',
+                                                    radius: ['40%', '70%'],
+                                                    avoidLabelOverlap: false,
+                                                    label: {
+                                                        show: false,
+                                                        position: 'center'
+                                                    },
+                                                    emphasis: {
+                                                        label: {
+                                                            show: true,
+                                                            fontSize: '18',
+                                                            fontWeight: 'bold'
+                                                        }
+                                                    },
+                                                    labelLine: {
+                                                        show: false
+                                                    },
+                                                    data: [{
+                                                        value: 1048,
+                                                        name: 'Search Engine'
+                                                    },
+                                                    {
+                                                        value: 735,
+                                                        name: 'Direct'
+                                                    },
+                                                    {
+                                                        value: 580,
+                                                        name: 'Email'
+                                                    },
+                                                    {
+                                                        value: 484,
+                                                        name: 'Union Ads'
+                                                    },
+                                                    {
+                                                        value: 300,
+                                                        name: 'Video Ads'
+                                                    }
+                                                    ]
+                                                }]
+                                            });
+                                        });
+                                    </script>
+
+                                </div>
+                            </div><!-- End Website Traffic -->
+                            <!-- News & Updates Traffic -->
+                            <div class="card">
+                                <div class="filter">
+                                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                        <li class="dropdown-header text-start">
+                                            <h6>Filter</h6>
+                                        </li>
+
+                                        <li><a class="dropdown-item" href="#">Today</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-body pb-0">
+                                    <h5 class="card-title">News &amp; Updates <span>| Today</span></h5>
+
+                                    <div class="news">
+                                        <div class="post-item clearfix">
+                                            <img src="~/assets/img/news-1.jpg" alt="">
+                                            <h4><a href="#">Nihil blanditiis at in nihil autem</a></h4>
+                                            <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
+                                        </div>
+
+                                        <div class="post-item clearfix">
+                                            <img src="~/assets/img/news-2.jpg" alt="">
+                                            <h4><a href="#">Quidem autem et impedit</a></h4>
+                                            <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...</p>
+                                        </div>
+
+                                        <div class="post-item clearfix">
+                                            <img src="~/assets/img/news-3.jpg" alt="">
+                                            <h4><a href="#">Id quia et et ut maxime similique occaecati ut</a></h4>
+                                            <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...</p>
+                                        </div>
+
+                                        <div class="post-item clearfix">
+                                            <img src="~/assets/img/news-4.jpg" alt="">
+                                            <h4><a href="#">Laborum corporis quo dara net para</a></h4>
+                                            <p>Qui enim quia optio. Eligendi aut asperiores enim repellendusvel rerum cuder...</p>
+                                        </div>
+
+                                        <div class="post-item clearfix">
+                                            <img src="~/assets/img/news-5.jpg" alt="">
+                                            <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>
+                                            <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos eius...</p>
+                                        </div>
+
+                                    </div><!-- End sidebar recent posts-->
+
+                                </div>
+                            </div><!-- End News & Updates -->
+
+                        </div><!-- End Right side columns -->
+
+                    </div>
+                </section>
+                break;
+            default:
+                <!-- start ============================-->
+                <head>
+                    <!-- ===============================================-->
+                    <!--    Favicons-->
+                    <!-- ===============================================-->
+                    <link rel="apple-touch-icon" sizes="180x180" href="~/trafalgar/assets/img/favicons/apple-touch-icon.png">
+                    <link rel="icon" type="image/png" sizes="32x32" href="~/trafalgar/assets/img/favicons/favicon-32x32.png">
+                    <link rel="icon" type="image/png" sizes="16x16" href="~/trafalgar/assets/img/favicons/favicon-16x16.png">
+                    <link rel="shortcut icon" type="image/x-icon" href="~/trafalgar/assets/img/favicons/favicon.ico">
+                    <link rel="manifest" href="~/trafalgar/assets/img/favicons/manifest.json">
+                    <meta name="msapplication-TileImage" content="~/trafalgar/assets/img/favicons/mstile-150x150.png">
+                    <meta name="theme-color" content="#ffffff">
+
+                    <!-- ===============================================-->
+                    <!--    Stylesheets-->
+                    <!-- ===============================================-->
+                    <link href="~/trafalgar/assets/css/theme.css" rel="stylesheet" />
+                </head>
+
+                <!-- Hero Section ============================-->
+                <section class="py-0 px-0">
+                    <div class="container position-relative">
+                        <div class="row align-items-center">
+                            <div class="col-md-5 col-lg-6 order-md-1 pt-4"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/hero-header.png" alt="hero-image" /></div>
+                            <div class="col-md-7 col-lg-6 text-center text-md-start pt-2 pt-md-4">
+                                <h1 class="mb-4 display-3 fw-bold lh-sm">Medical Internet <span class="py-2">(Medit)</span><br class="d-block d-lg-none d-xl-block" />Solution For You</h1>
+                                <p class="mt-3 mb-4 fs-1">Medit provides progressive, and affordable<br class="d-none d-lg-block" />healthcare, accessible on mobile and online<br class="d-none d-lg-block" />for everyone</p><a class="btn btn-lg btn-primary rounded-pill hover-top" href="#" role="button">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Services Section ============================-->
+                <section class="py-8">
+                    <div class="bg-holder" style="background-image:url(trafalgar/assets/img/illustrations/services-bg.png);background-position:center left;background-size:auto;">
+                    </div>
+                    <!--/.bg-holder-->
+
+                    <div class="bg-holder" style="background-image:url(~/trafalgar/assets/img/illustrations/dot-2.png);background-position:center right;background-size:auto;margin-left:-180px;margin-top:20px;">
+                    </div>
+                    <!--/.bg-holder-->
+
+                    <div class="container-lg">
+                        <div class="row justify-content-center">
+                            <div class="col-3 text-center">
+                                <h2 class="fw-bold">Our services</h2>
+                                <hr class="w-25 mx-auto text-dark" style="height:2px;" />
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-sm-9 col-xl-8 text-center">
+                                <p>We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center h-100 pt-7 g-4">
+                            <div class="col-sm-9 col-md-4">
+                                <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                                    <div class="card-body text-center text-md-start">
+                                        <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/search.png" height="90" alt="" /></div>
+                                        <div class="py-3">
+                                            <h4 class="fw-bold card-title">Search doctor</h4>
+                                            <p class="card-text">Choose your doctor from thousands of specialist, general, and trusted hospitals</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-md-4">
+                                <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                                    <div class="card-body text-center text-md-start">
+                                        <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/online-pharmacy.png" height="90" alt="" /></div>
+                                        <div class="py-3">
+                                            <h4 class="fw-bold card-title">Online pharmacy</h4>
+                                            <p class="card-text">Buy your medicines with our mobile application with a simple delivery system</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-md-4">
+                                <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                                    <div class="card-body text-center text-md-start">
+                                        <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/consultation.png" height="90" alt="" /></div>
+                                        <div class="py-3">
+                                            <h4 class="fw-bold card-title">Consultation</h4>
+                                            <p class="card-text">Free consultation with our trusted doctors and get the best recomendations</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-md-4">
+                                <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                                    <div class="card-body text-center text-md-start">
+                                        <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/details-info.png" height="90" alt="" /></div>
+                                        <div class="py-3">
+                                            <h4 class="fw-bold card-title">Details info</h4>
+                                            <p class="card-text">You can get 24/7 urgent care for yourself or your children and your lovely family</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-md-4">
+                                <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                                    <div class="card-body text-center text-md-start">
+                                        <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/emergency-care.png" height="90" alt="" /></div>
+                                        <div class="py-3">
+                                            <h4 class="fw-bold card-title">Emergency care</h4>
+                                            <p class="card-text">Providing Critical Emergency Care When Every Second Counts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-md-4">
+                                <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                                    <div class="card-body text-center text-md-start">
+                                        <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/tracking.png" height="90" alt="" /></div>
+                                        <div class="py-3">
+                                            <h4 class="fw-bold card-title">Tracking</h4>
+                                            <p class="card-text">Track and save your medical history and health data </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <button class="btn btn-lg btn-outline-primary rounded-pill" type="submit">Learn more </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About us Section ============================-->
+                <section class="py-6 py-lg-8" id="about">
+                    <!-- <div class="bg-holder" style="background-image:url(/trafalgar/assets/img/illustrations/dot.png); background-position:right bottom;background-size:auto;margin-top:50px"></div> -->
+                    <!--/.bg-holder-->
+
+                    <div class="container">
+                        <div class="row g-xl-0 align-items-center">
+                            <div class="col-md-6"><img class="img-fluid mb-5 mb-md-0" src="~/trafalgar/assets/img/illustrations/about-1.png" width="480" alt="" /></div>
+                            <div class="col-md-6 text-center text-md-start">
+                                <h2 class="fw-bold lh-base">Leading healthcare <br />providers</h2>
+                                <hr class="text-dark mx-auto mx-md-0" style="height:2px;width:50px" />
+                                <p class="pt-3">Medit provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver</p>
+                                <div class="py-3">
+                                    <button class="btn btn-lg btn-outline-primary rounded-pill" type="submit">Learn more </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Testimoni Section ============================-->
+                <section class="py-8" id="testimonial">
+                    <div class="container">
+                        <div class="bg-holder z-index-1" style="background-image:url(~/trafalgar/assets/img/illustrations/dot.png);background-position:right top;background-size:auto;margin-left:-30px;margin-top:10px;filter:contrast(1.5);">
+                        </div>
+                        <!--/.bg-holder-->
+                        <!-- <div class="bg-holder z-index-1" style="background-image:url(~/trafalgar/assets/img/illustrations/dot-2.png);background-position:left bottom;background-size:auto;margin-left:-35px;margin-top:-65px;filter:contrast(1.5);">
+                        </div> -->
+                        <!--/.bg-holder-->
+
+                        <div class="carousel slide" id="carouselExampleDark" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <div class="row h-100">
+                                        <div class="col-12">
+                                            <div class="card text-white bg-primary-gradient">
+                                                <div class="card-body p-4 p-md-4 p-lg-7">
+                                                    <h2 class="fw-bold text-white text-center">What our customer are saying</h2>
+                                                    <hr class="mx-auto" style="height:2px;width:50px" />
+                                                    <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start">
+                                                        <img class="img-fluid me-4 me-md-3 me-lg-4" src="~/trafalgar/assets/img/gallery/user-1.png" width="100" alt="" />
+                                                        <div class="w-md-25 my-3">
+                                                            <h5 class="mb-0 fw-medium text-white">Edward Newgate</h5>
+                                                            <p class="fw-normal mb-0">Founder Circle</p>
+                                                        </div>
+                                                        <div class="w-md-75">
+                                                            <p class="card-text ms-md-5">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <div class="row h-100">
+                                        <div class="col-12">
+                                            <div class="card text-white bg-primary-gradient">
+                                                <div class="card-body p-4 p-md-4 p-lg-7">
+                                                    <h2 class="fw-bold text-white text-center">Our dear customers said about us</h2>
+                                                    <hr class="mx-auto" style="height:2px;width:50px" />
+                                                    <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start">
+                                                        <img class="img-fluid me-4 me-md-3 me-lg-4" src="~/trafalgar/assets/img/gallery/user-2.png" width="100" alt="" />
+                                                        <div class="w-md-25 my-3">
+                                                            <h5 class="mb-0 fw-medium text-white">Jhon Doe</h5>
+                                                            <p class="fw-normal mb-0">UI/UX Designer</p>
+                                                        </div>
+                                                        <div class="w-md-75">
+                                                            <p class="card-text ms-md-5">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row h-100">
+                                        <div class="col-12">
+                                            <div class="card text-white bg-primary-gradient">
+                                                <div class="card-body p-4 p-md-4 p-lg-7">
+                                                    <h2 class="fw-bold text-white text-center">Our dear customers said about us</h2>
+                                                    <hr class="mx-auto" style="height:2px;width:50px" />
+                                                    <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start">
+                                                        <img class="img-fluid me-4 me-md-3 me-lg-4" src="~/trafalgar/assets/img/gallery/user-3.png" width="100" alt="" />
+                                                        <div class="w-md-25 my-3">
+                                                            <h5 class="mb-0 fw-medium text-white">Jeny Doe</h5>
+                                                            <p class="fw-normal mb-0">Web Designer</p>
+                                                        </div>
+                                                        <div class="w-md-75">
+                                                            <p class="card-text ms-md-5">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4 flex-center">
+                                <div class="col-4 col-sm-5 text-end position-relative z-index-2"><a class="carousel-control-prev carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></a></div>
+                                <div class="col-auto position-relative z-index-2">
+                                    <ol class="carousel-indicators">
+                                        <li class="active" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"></li>
+                                        <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+                                        <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+                                    </ol>
+                                </div>
+                                <div class="col-4 col-sm-5 position-relative z-index-2"><a class="carousel-control-next carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                <script src="~/js/site.js" asp-append-version="true"></script>
+                <script src="~/trafalgar/vendors/popperjs/popper.min.js"></script>
+                <script src="~/trafalgar/vendors/bootstrap/bootstrap.min.js"></script>
+                <script src="~/trafalgar/vendors/is/is.min.js"></script>
+                <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+                <script src="~/trafalgar/assets/js/theme.js"></script>
+
+                <!-- end ============================-->
+                break;
+        }
+    }
+    else 
+    {
+        @*--index before login--*@
+
+        <!-- start ============================-->
+        <head>
+            <!-- ===============================================-->
+            <!--    Favicons-->
+            <!-- ===============================================-->
+            <link rel="apple-touch-icon" sizes="180x180" href="~/trafalgar/assets/img/favicons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="~/trafalgar/assets/img/favicons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="~/trafalgar/assets/img/favicons/favicon-16x16.png">
+            <link rel="shortcut icon" type="image/x-icon" href="~/trafalgar/assets/img/favicons/favicon.ico">
+            <link rel="manifest" href="~/trafalgar/assets/img/favicons/manifest.json">
+            <meta name="msapplication-TileImage" content="~/trafalgar/assets/img/favicons/mstile-150x150.png">
+            <meta name="theme-color" content="#ffffff">
+
+
+            <!-- ===============================================-->
+            <!--    Stylesheets-->
+            <!-- ===============================================-->
+            <link href="~/trafalgar/assets/css/theme.css" rel="stylesheet" />
+        </head>
+
+        <!-- Hero Section ============================-->
+        <section class="py-0 px-0">
+            <div class="container position-relative">
+                <div class="row align-items-center">
+                    <div class="col-md-5 col-lg-6 order-md-1 pt-4"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/hero-header.png" alt="hero-image" /></div>
+                    <div class="col-md-7 col-lg-6 text-center text-md-start pt-2 pt-md-4">
+                        <h1 class="mb-4 display-3 fw-bold lh-sm">Medical Internet <span class="py-2">(Medit)</span><br class="d-block d-lg-none d-xl-block" />Solution For You</h1>
+                        <p class="mt-3 mb-4 fs-1">Medit provides progressive, and affordable<br class="d-none d-lg-block" />healthcare, accessible on mobile and online<br class="d-none d-lg-block" />for everyone</p><a class="btn btn-lg btn-primary rounded-pill hover-top" href="#" role="button">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section ============================-->
+        <section class="py-8">
+            <div class="bg-holder" style="background-image:url(trafalgar/assets/img/illustrations/services-bg.png);background-position:center left;background-size:auto;">
+            </div>
+            <!--/.bg-holder-->
+
+            <div class="bg-holder" style="background-image:url(~/trafalgar/assets/img/illustrations/dot-2.png);background-position:center right;background-size:auto;margin-left:-180px;margin-top:20px;">
+            </div>
+            <!--/.bg-holder-->
+
+            <div class="container-lg">
+                <div class="row justify-content-center">
+                    <div class="col-3 text-center">
+                        <h2 class="fw-bold">Our services</h2>
+                        <hr class="w-25 mx-auto text-dark" style="height:2px;" />
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-9 col-xl-8 text-center">
+                        <p>We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center h-100 pt-7 g-4">
+                    <div class="col-sm-9 col-md-4">
+                        <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                            <div class="card-body text-center text-md-start">
+                                <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/search.png" height="90" alt="" /></div>
+                                <div class="py-3">
+                                    <h4 class="fw-bold card-title">Search doctor</h4>
+                                    <p class="card-text">Choose your doctor from thousands of specialist, general, and trusted hospitals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-md-4">
+                        <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                            <div class="card-body text-center text-md-start">
+                                <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/online-pharmacy.png" height="90" alt="" /></div>
+                                <div class="py-3">
+                                    <h4 class="fw-bold card-title">Online pharmacy</h4>
+                                    <p class="card-text">Buy your medicines with our mobile application with a simple delivery system</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-md-4">
+                        <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                            <div class="card-body text-center text-md-start">
+                                <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/consultation.png" height="90" alt="" /></div>
+                                <div class="py-3">
+                                    <h4 class="fw-bold card-title">Consultation</h4>
+                                    <p class="card-text">Free consultation with our trusted doctors and get the best recomendations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-md-4">
+                        <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                            <div class="card-body text-center text-md-start">
+                                <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/details-info.png" height="90" alt="" /></div>
+                                <div class="py-3">
+                                    <h4 class="fw-bold card-title">Details info</h4>
+                                    <p class="card-text">You can get 24/7 urgent care for yourself or your children and your lovely family</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-md-4">
+                        <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                            <div class="card-body text-center text-md-start">
+                                <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/emergency-care.png" height="90" alt="" /></div>
+                                <div class="py-3">
+                                    <h4 class="fw-bold card-title">Emergency care</h4>
+                                    <p class="card-text">Providing Critical Emergency Care When Every Second Counts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-md-4">
+                        <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                            <div class="card-body text-center text-md-start">
+                                <div class="py-3"><img class="img-fluid" src="~/trafalgar/assets/img/illustrations/tracking.png" height="90" alt="" /></div>
+                                <div class="py-3">
+                                    <h4 class="fw-bold card-title">Tracking</h4>
+                                    <p class="card-text">Track and save your medical history and health data </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <button class="btn btn-lg btn-outline-primary rounded-pill" type="submit">Learn more </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About us Section ============================-->
+        <section class="py-6 py-lg-8" id="about">
+            <!-- <div class="bg-holder" style="background-image:url(/trafalgar/assets/img/illustrations/dot.png); background-position:right bottom;background-size:auto;margin-top:50px"></div> -->
+            <!--/.bg-holder-->
+
+            <div class="container">
+                <div class="row g-xl-0 align-items-center">
+                    <div class="col-md-6"><img class="img-fluid mb-5 mb-md-0" src="~/trafalgar/assets/img/illustrations/about-1.png" width="480" alt="" /></div>
+                    <div class="col-md-6 text-center text-md-start">
+                        <h2 class="fw-bold lh-base">Leading healthcare <br />providers</h2>
+                        <hr class="text-dark mx-auto mx-md-0" style="height:2px;width:50px" />
+                        <p class="pt-3">Medit provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver</p>
+                        <div class="py-3">
+                            <button class="btn btn-lg btn-outline-primary rounded-pill" type="submit">Learn more </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimoni Section ============================-->
+        <section class="py-8" id="testimonial">
+            <div class="container">
+                <div class="bg-holder z-index-1" style="background-image:url(~/trafalgar/assets/img/illustrations/dot.png);background-position:right top;background-size:auto;margin-left:-30px;margin-top:10px;filter:contrast(1.5);">
+                </div>
+                <!--/.bg-holder-->
+
+                <!-- <div class="bg-holder z-index-1" style="background-image:url(~/trafalgar/assets/img/illustrations/dot-2.png);background-position:left bottom;background-size:auto;margin-left:-35px;margin-top:-65px;filter:contrast(1.5);">
+                </div> -->
+                <!--/.bg-holder-->
+
+                <div class="carousel slide" id="carouselExampleDark" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <div class="row h-100">
+                                <div class="col-12">
+                                    <div class="card text-white bg-primary-gradient">
+                                        <div class="card-body p-4 p-md-4 p-lg-7">
+                                            <h2 class="fw-bold text-white text-center">What our customer are saying</h2>
+                                            <hr class="mx-auto" style="height:2px;width:50px" />
+                                            <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start">
+                                                <img class="img-fluid me-4 me-md-3 me-lg-4" src="~/trafalgar/assets/img/gallery/user-1.png" width="100" alt="" />
+                                                <div class="w-md-25 my-3">
+                                                    <h5 class="mb-0 fw-medium text-white">Edward Newgate</h5>
+                                                    <p class="fw-normal mb-0">Founder Circle</p>
+                                                </div>
+                                                <div class="w-md-75">
+                                                    <p class="card-text ms-md-5">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <div class="row h-100">
+                                <div class="col-12">
+                                    <div class="card text-white bg-primary-gradient">
+                                        <div class="card-body p-4 p-md-4 p-lg-7">
+                                            <h2 class="fw-bold text-white text-center">Our dear customers said about us</h2>
+                                            <hr class="mx-auto" style="height:2px;width:50px" />
+                                            <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start">
+                                                <img class="img-fluid me-4 me-md-3 me-lg-4" src="~/trafalgar/assets/img/gallery/user-2.png" width="100" alt="" />
+                                                <div class="w-md-25 my-3">
+                                                    <h5 class="mb-0 fw-medium text-white">Jhon Doe</h5>
+                                                    <p class="fw-normal mb-0">UI/UX Designer</p>
+                                                </div>
+                                                <div class="w-md-75">
+                                                    <p class="card-text ms-md-5">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row h-100">
+                                <div class="col-12">
+                                    <div class="card text-white bg-primary-gradient">
+                                        <div class="card-body p-4 p-md-4 p-lg-7">
+                                            <h2 class="fw-bold text-white text-center">Our dear customers said about us</h2>
+                                            <hr class="mx-auto" style="height:2px;width:50px" />
+                                            <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start">
+                                                <img class="img-fluid me-4 me-md-3 me-lg-4" src="~/trafalgar/assets/img/gallery/user-3.png" width="100" alt="" />
+                                                <div class="w-md-25 my-3">
+                                                    <h5 class="mb-0 fw-medium text-white">Jeny Doe</h5>
+                                                    <p class="fw-normal mb-0">Web Designer</p>
+                                                </div>
+                                                <div class="w-md-75">
+                                                    <p class="card-text ms-md-5">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 flex-center">
+                        <div class="col-4 col-sm-5 text-end position-relative z-index-2"><a class="carousel-control-prev carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></a></div>
+                        <div class="col-auto position-relative z-index-2">
+                            <ol class="carousel-indicators">
+                                <li class="active" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"></li>
+                                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+                                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+                            </ol>
+                        </div>
+                        <div class="col-4 col-sm-5 position-relative z-index-2"><a class="carousel-control-next carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     
+
+        <script src="~/trafalgar/vendors/popperjs/popper.min.js"></script>
+        <script src="~/trafalgar/vendors/bootstrap/bootstrap.min.js"></script>
+        <script src="~/trafalgar/vendors/is/is.min.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+        <script src="~/trafalgar/assets/js/theme.js"></script>
+
+        <!-- end ============================-->
+    }
+}
+
+

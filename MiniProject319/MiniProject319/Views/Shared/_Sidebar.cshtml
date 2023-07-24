@@ -1,11 +1,12 @@
-﻿@using MiniProject319.ViewModels;
-@model List<VMListMenu>
-@{
-    int idLogin = 1;
-}
+﻿@*@using MiniProject319.Services;
+@inject MenuService menuService
 
-@if(idLogin != 0)
-{
+@{
+    int IdRole = 1;
+    var menu = await menuService.GetListMenu(IdRole);
+
+}*@
+
     <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
@@ -16,17 +17,14 @@
                     <span>List Menu</span>
                 </a>
             </li>
-            @if (Model.Count != 0)
-            {
-                @foreach (var item in Model)
-                {
+              @*  @foreach (var item in menu)
+                {*@
                     <li class="nav-item">
                         <a class="nav-link collapsed">
-                            <i class="bi bi-menu-button-wide"></i><span>@item.MenuName</span><i class="bi bi-chevron-right ms-auto"></i>
+                            <i class="bi bi-menu-button-wide"></i><span>Menu 1</span><i class="bi bi-chevron-right ms-auto"></i>
                         </a>
                     </li>
-                }
-            }
+              @*  }*@
 
             <li><hr class="nav-divider" /></li>
 

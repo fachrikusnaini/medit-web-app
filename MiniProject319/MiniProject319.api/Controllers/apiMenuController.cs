@@ -36,8 +36,6 @@ namespace MiniProject319.api.Controllers
 
                                      }).ToList();
 
-
-
             return data;
         }
     }

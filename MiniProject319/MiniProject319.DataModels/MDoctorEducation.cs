@@ -33,7 +33,7 @@ namespace MiniProject319.DataModels
         [Unicode(false)]
         public string? EndYear { get; set; }
         [Column("is_last_education")]
-        public bool? IsLastEducation { get; set; }
+        public bool IsLastEducation { get; set; }
         [Column("created_by")]
         public long CreatedBy { get; set; }
         [Column("created_on", TypeName = "datetime")]

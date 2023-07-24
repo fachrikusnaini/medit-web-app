@@ -1,17 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MiniProject319.Models;
 using MiniProject319.Services;
+using MiniProject319.ViewModels;
 using System.Diagnostics;
 
 namespace MiniProject319.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private MenuService menuService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(MenuService _menuService)
         {
-            _logger = logger;
+            this.menuService = _menuService;
         }
 
         public IActionResult Index()

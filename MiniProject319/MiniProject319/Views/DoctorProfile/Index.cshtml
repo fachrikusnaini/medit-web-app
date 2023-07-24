@@ -1,0 +1,154 @@
+﻿@using MiniProject319.ViewModels;
+@{
+    VMDoctorSpecialist vMDoctorSpecialist = Model;
+}
+
+<div class="pagetitle">
+    <h1>Profile</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item active">Profile</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section profile">
+    <div class="row">
+        <div class="col-xl-4">
+
+            <div class="card">
+                <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+                    <div class="position-relative">
+                        <img src="~/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light">
+                            <i class="bi bi-pencil" style="color:black" href="#"></i>
+
+                        </span>
+                    </div>
+                    <h2>@vMDoctorSpecialist.Fullname</h2>
+                    <h3>@vMDoctorSpecialist.SpecialistName</h3>
+
+                    <div class="mb-3">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+
+                    <ul class="list-group" style="width:100%">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Janji
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item">Obrolan/ Konsultasi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header h6 bg-primary text-white">Tentang Saya</div>
+                <div class="card-body">
+                    <div class="card-title" style="font-size:medium">Tindakan Medis</div>
+                    <ul>
+                        @foreach (var item in vMDoctorSpecialist.ListTindakan)
+                        {
+                            
+                        <li>@item.Name</li>
+                        }
+                    </ul>
+
+                    <div class="card-title" style="font-size:medium">Riwayat Praktek</div>
+                    <ul>
+                        @foreach(var item in vMDoctorSpecialist.RiwayatPraktek)
+                        {
+                            <li class="mb-2">
+                                @item.MedicalFacilityName, @item.Location
+                                <br />
+                                <small>@item.Specialization | 2019 - Sekarang</small>
+                            </li>
+                        }
+
+                    <div class="card-title" style="font-size:medium">Pendidikan</div>
+
+                    <ul>
+                        @foreach(var item in vMDoctorSpecialist.PendidikanDokter)
+                        {
+                            <li class="mb-2">
+                                @item.InstitutionName
+                                <br />
+                                <small>@item.EndYear - @item.Major</small>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xl-8">
+
+            <div class="card">
+                <div class="card-body pt-3">
+                    <!-- Bordered Tabs -->
+                    <ul class="nav nav-tabs nav-tabs-bordered">
+
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tindakan">Tindakan</button>
+                        </li>
+
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#aktifitas">Aktifitas</button>
+                        </li>
+
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#konsultasi">Konsultasi</button>
+                        </li>
+
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#pengaturan">Pengaturan</button>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content pt-2">
+
+                        <div class="tab-pane fade show active profile-overview" id="tindakan">
+                            <h5 class="card-title">Tindakan</h5>
+                            <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
+
+                        </div>
+
+                        <div class="tab-pane fade profile-edit pt-3" id="aktifitas">
+
+                            <h5 class="card-title">Aktifitas</h5>
+                            <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
+
+                        </div>
+
+                        <div class="tab-pane fade pt-3" id="konsultasi">
+
+                            <h5 class="card-title">Konsultasi</h5>
+                            <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
+
+                        </div>
+
+                        <div class="tab-pane fade pt-3" id="pengaturan">
+                            <h5 class="card-title">Pengaturan</h5>
+                            <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
+
+                        </div>
+
+                    </div><!-- End Bordered Tabs -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+

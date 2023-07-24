@@ -8,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<MenuService>();
+builder.Services.AddScoped<DoctorService>();
+
 
 
 //Add connection string

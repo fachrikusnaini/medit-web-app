@@ -16,10 +16,10 @@ namespace MiniProject319.Services
             this.RouteApi = this.configuration["RouteAPI"];
         }
 
-        public async Task<List<VMListMenu>> GetListMenu()
+        public async Task<List<VMListMenu>> GetListMenu(int IdRole)
         {
             List<VMListMenu> data = new List<VMListMenu> ();
-            string apiRespon = await client.GetStringAsync(RouteApi + "apiMenu/GetListMenu");
+            string apiRespon = await client.GetStringAsync(RouteApi + "apiMenu/GetListMenu/{IdRole}");
             data = JsonConvert.DeserializeObject<List<VMListMenu>>(apiRespon)!;
 
             return data;
