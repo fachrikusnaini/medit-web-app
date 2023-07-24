@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\NiceAdmin\\assets\\css\\style.css"
     },
     {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\css\\style.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\css\\style.min.css"
+    },
+    {
       "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\img\\apple-touch-icon.png",
       "PackagePath": "staticwebassets\\NiceAdmin\\assets\\img\\apple-touch-icon.png"
     },
@@ -47,6 +51,10 @@
     {
       "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\img\\messages-3.jpg",
       "PackagePath": "staticwebassets\\NiceAdmin\\assets\\img\\messages-3.jpg"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\img\\new-logo-medit.png",
+      "PackagePath": "staticwebassets\\NiceAdmin\\assets\\img\\new-logo-medit.png"
     },
     {
       "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\assets\\img\\news-1.jpg",
@@ -2849,6 +2857,14 @@
       "PackagePath": "staticwebassets\\NiceAdmin\\components-tooltips.html"
     },
     {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\dist\\style.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\dist\\style.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\dist\\style.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\dist\\style.min.css"
+    },
+    {
       "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\forms-editors.html",
       "PackagePath": "staticwebassets\\NiceAdmin\\forms-editors.html"
     },
@@ -2911,6 +2927,22 @@
     {
       "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\pages-register.html",
       "PackagePath": "staticwebassets\\NiceAdmin\\pages-register.html"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\plugins\\toastr\\toastr.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\plugins\\toastr\\toastr.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\plugins\\toastr\\toastr.js.map",
+      "PackagePath": "staticwebassets\\NiceAdmin\\plugins\\toastr\\toastr.js.map"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\plugins\\toastr\\toastr.min.css",
+      "PackagePath": "staticwebassets\\NiceAdmin\\plugins\\toastr\\toastr.min.css"
+    },
+    {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\plugins\\toastr\\toastr.min.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\plugins\\toastr\\toastr.min.js"
     },
     {
       "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\tables-data.html",

@@ -1,5 +1,159 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@*@using MiniProject319.DataModels;
+@using MiniProject319.ViewModels;
+@model PaginatedList<VMMRole>*@
+
 @{
+    ViewData["Title"] = "Spesialisasi Dokter";
 }
+
+<div class="card">
+    <div class="card-body">
+
+        <h1 class="card-title">@ViewData["Title"]</h1>
+
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="d-flex justify-content-between">
+
+                    <button id="btn_create" class="btn btn-primary">Create</button>
+
+                    <form asp-action="Index" asp-route-pageSize="@ViewBag.CurrentPageSize">
+                        <div class="input-group w-100">
+                            <input type="text" name="searchString" value="@ViewBag.CurrentFilter" class="form-control" placeholder="Search..">
+                            <div class="input-group-prepend">
+                                <button type="submit" class="input-group-text" title="search">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="input-group-prepend">
+                                <a class="input-group-text" asp-action="Index" title="reset">
+                                    <i class="fas fa-redo"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-hover mb-3">
+            <thead>
+                <tr>
+                    <th>
+                        <a asp-action="Index" asp-route-sortOrder="@ViewBag.NameSort">
+                            <i class="fas fa-sort"></i>
+                            Role Name
+                        </a>
+                    </th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Count != 0)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.RoleName</td>
+
+                            <td>
+                                <a class="btn btn-warning btn_detail" dataid="@item.Id">Detail</a>
+                                <a class="btn btn-success btn_edit" dataid="@item.Id">Edit</a>
+                                <a class="btn btn-danger btn_delete" dataid="@item.Id">Delete</a>
+                            </td>
+
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="3">
+                            <i>Data not found</i>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card-footer">
+        @{
+            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+        }
+        <div class="row">
+            <div class="col-2">
+
+                <form asp-action="Index" id="form_pagesize">
+                    <select name="PageSize" id="PageSize"
+                            class="form-control">
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                    </select>
+                </form>
+            </div>
+            <div class="col-10">
+                Page @Model.PageIndex of @Model.TotalPages
+                <a asp-action="Index"
+                   asp-route-sortOrder="@ViewBag.CurrentSort"
+                   asp-route-pageNumber="@(Model.PageIndex + 1)"
+                   asp-route-currentFilter="@ViewBag.CurrentFilter"
+                   asp-route-pageSize="@ViewBag.CurrentPageSize"
+                   class="btn btn-info float-right @nextDisabled">
+                    Next
+                </a>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@ViewBag.CurrentSort"
+                   asp-route-pageNumber="@(Model.PageIndex - 1)"
+                   asp-route-currentFilter="@ViewBag.CurrentFilter"
+                   asp-route-pageSize="@ViewBag.CurrentPageSize"
+                   class="btn btn-info float-right @prevDisabled">
+                    Previous
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    $("#PageSize").val(@ViewBag.CurrentPageSize)
+
+    $("#PageSize").change(function () {
+        $("#form_pagesize").submit();
+    })
+
+    $("#btn_create").click(function () {
+        $("#modal_body").empty()
+        $("#modal_body").load("/Role/Create")
+        $("#modal").modal("show")
+    })
+
+    $(".btn_edit").click(function () {
+        var id = $(this).attr("dataid")
+        $("#modal_body").empty()
+        $("#modal_body").load("/Role/Edit?id=" + id)
+        $("#modal").modal("show")
+    })
+
+    $(".btn_detail").click(function () {
+        var id = $(this).attr("dataid")
+        $("#modal_body").empty()
+        $("#modal_body").load("/Role/Detail?id=" + id)
+        $("#modal").modal("show")
+    })
+
+    $(".btn_delete").click(function () {
+        var id = $(this).attr("dataid")
+        $("#modal_body").empty()
+        $("#modal_body").load("/Role/Delete?id=" + id)
+        $("#modal").modal("show")
+    })
+
+
+</script>
+

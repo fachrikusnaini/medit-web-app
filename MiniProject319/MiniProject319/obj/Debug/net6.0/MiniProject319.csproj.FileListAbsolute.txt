@@ -506,3 +506,5 @@ D:\Batch_319\MiniProject\MiniProject319\MiniProject319\obj\Debug\net6.0\refint\M
 D:\Batch_319\MiniProject\MiniProject319\MiniProject319\obj\Debug\net6.0\MiniProject319.pdb
 D:\Batch_319\MiniProject\MiniProject319\MiniProject319\obj\Debug\net6.0\MiniProject319.genruntimeconfig.cache
 D:\Batch_319\MiniProject\MiniProject319\MiniProject319\obj\Debug\net6.0\ref\MiniProject319.dll
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319\bin\Debug\net6.0\Select.Html.dep
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319\bin\Debug\net6.0\Select.HtmlToPdf.dll

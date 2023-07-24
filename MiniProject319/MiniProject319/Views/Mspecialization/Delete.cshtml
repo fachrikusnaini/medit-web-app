@@ -1,0 +1,65 @@
+﻿@using MiniProject319.DataModels;
+
+@model MSpecialization
+@{
+    Layout = null;
+    ViewData["Title"] = "Delete Spesialis Dokter";
+}
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="h4 mb-4">@ViewData["Title"]</div>
+
+        <form asp-action="SureDelete" method="post" id="form_delete">
+
+            <input type="hidden" class="form-control" id="Id" name="Id" value="@Model.Id">
+
+            <h5>Are you sure want deleted @Model.Name ?</h5>
+            <div class="modal-footer mt-3">
+                <button type="submit" class="btn btn-primary">Yes</button>
+                <a asp-controller="Mspecialization" asp-action="Index" class="btn btn-light">No</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    $("#form_delete").validate({
+
+        submitHandler: function (form) {
+            var id = $("#Id").val()
+            //var dataParam = $(form).serialize()
+
+            $.ajax({
+
+                url: '/Mspecialization/SureDelete',
+                type: "post",
+                data: { id: id },
+                dataType: "json",
+                success: function (respon) {
+                    var data = respon.dataRespon
+                    if (data.success) {
+                        $("#modal").modal("hide")
+
+                        toastr.success(
+                            data.message,
+                            '',
+                            {
+                                timeOut: 1000,
+                                fadeOut: 1000,
+                                onHidden: function () {
+                                    window.location.reload()
+                                }
+                            }
+                        )
+                    }
+                    else {
+                        toastr.errorClass(data.message)
+                    }
+                }
+            })
+        }
+
+    })
+</script>

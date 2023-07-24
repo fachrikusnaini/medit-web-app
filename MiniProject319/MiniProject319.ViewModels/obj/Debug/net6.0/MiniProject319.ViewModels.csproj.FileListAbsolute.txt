@@ -22,3 +22,4 @@ D:\Batch_319\MiniProject\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6
 D:\Batch_319\MiniProject\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\refint\MiniProject319.ViewModels.dll
 D:\Batch_319\MiniProject\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\MiniProject319.ViewModels.pdb
 D:\Batch_319\MiniProject\MiniProject319\MiniProject319.ViewModels\obj\Debug\net6.0\ref\MiniProject319.ViewModels.dll
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.ViewModels\bin\Debug\net6.0\Select.Html.dep

@@ -6,20 +6,20 @@
 <div class="col-lg-12">
     <div class="p-3">
         <div class="text-center">
-            <img src="~/NiceAdmin/assets/img/apple-touch-icon.png" alt="wrapkit">
+            <img src="~/NiceAdmin/assets/img/new-logo-medit.png" alt="wrapkit" width="200">
         </div>
-        <h2 class="mt-3 text-center">Sign In</h2>
+        <h4 class="mt-3 text-center">Sign In</h3>
         <p class="text-center">Enter your email address and password to access Medit .</p>
         <form class="mt-4" id="form_login">
-            <div class="row">
-                <div class="col-lg-12">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 mb-3">
                     <div class="form-group">
                         <label class="text-dark" for="Email">Email</label>
                         <input class="form-control" id="Email" name="Email" type="email"
                                placeholder="enter your email">
                     </div>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-9 mb-3">
                     <div class="form-group">
                         <label class="text-dark" for="pwd">Password</label>
                         <input class="form-control" id="Password" name="Password" type="password"
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <br />
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 mt-3 text-center">
                     <button type="submit" id="btn_Submit" class="btn btn-block btn-dark">Submit</button>
                 </div>
                 <div class="col-lg-12 text-center mt-5">
@@ -62,12 +62,13 @@
         },
         messages: {
             Email: {
-                required: "Isi email",
-                email: "Isi dengan benar",
+                required: "Please enter your email address",
+                email: "IPlease fill in correctly",
             },
-            Password: "Isi password",
+            Password: "Please enter your password",
         },
         submitHandler: function (form) {
+            //console.log("Submit button clicked");
             var email = $("#Email").val()
             var password = $("#Password").val()
 

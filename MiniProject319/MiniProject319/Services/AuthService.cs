@@ -17,25 +17,25 @@ namespace MiniProject319.services
             this.RouteAPI = this.configuration["RouteAPI"];
         }
 
-        public async Task<VMMUser> CheckLogin(string email, string password)
+        public async Task<VMMUser> CheckLogin(string email)
         {
             VMMUser data = new VMMUser();
 
-            string apiResponse = await client.GetStringAsync(RouteAPI + $"apiAuth/CheckLogin/{email}/{password}");
+            string apiResponse = await client.GetStringAsync(RouteAPI + $"apiAuth/CheckLogin/{email}");
             data = JsonConvert.DeserializeObject<VMMUser>(apiResponse)!;
 
             return data;
         }
 
 
-        //public async Task<List<VMMenuAccess>> MenuAccess(int IdRole)
-        //{
-        //    List<VMMenuAccess> data = new List<VMMenuAccess>();
+        public async Task<List<VMMenu>> MenuAccess(int RoleId)
+        {
+            List<VMMenu> data = new List<VMMenu>();
 
-        //    string apiResponse = await client.GetStringAsync(RouteAPI + $"apiAuth/MenuAccess/{IdRole}");
-        //    data = JsonConvert.DeserializeObject<List<VMMenuAccess>>(apiResponse)!;
+            string apiResponse = await client.GetStringAsync(RouteAPI + $"apiAuth/MenuAccess/{RoleId}");
+            data = JsonConvert.DeserializeObject<List<VMMenu>>(apiResponse)!;
 
-        //    return data;
-        //}
+            return data;
+        }
     }
 }

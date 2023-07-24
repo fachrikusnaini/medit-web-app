@@ -24,6 +24,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,12 +36,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Role/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
+[D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Mspecialization/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXNwZWNpYWxpemF0aW9uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Mspecialization/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXNwZWNpYWxpemF0aW9uXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Mspecialization/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXNwZWNpYWxpemF0aW9uXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Mspecialization/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXNwZWNpYWxpemF0aW9uXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Mspecialization/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXNwZWNpYWxpemF0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Pasien/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzaWVuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Role/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Batch_319/MiniProject/MiniProject319/MiniProject319/Views/Shared/_Header.cshtml]

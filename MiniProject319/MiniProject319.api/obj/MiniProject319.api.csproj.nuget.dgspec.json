@@ -68,6 +68,10 @@
               "target": "Package",
               "version": "[6.0.15, )"
             },
+            "Select.HtmlToPdf.NetCore": {
+              "target": "Package",
+              "version": "[23.1.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -141,6 +145,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.20, )"
+            },
+            "Select.HtmlToPdf.NetCore": {
+              "target": "Package",
+              "version": "[23.1.0, )"
             }
           },
           "imports": [
@@ -202,6 +210,10 @@
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Select.HtmlToPdf.NetCore": {
+              "target": "Package",
+              "version": "[23.1.0, )"
             }
           },
           "imports": [

@@ -26,3 +26,4 @@ D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6
 D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.pdb
 D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.genruntimeconfig.cache
 D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\ref\MiniProject319.DataModels.dll
+D:\Batch_319\MiniProject\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\Select.Html.dep

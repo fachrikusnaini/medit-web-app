@@ -1,0 +1,112 @@
+﻿@using MiniProject319.DataModels;
+@model MSpecialization
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Create Spesialis Dokter";
+}
+
+
+<div class="card">
+    <div class="card-body">
+
+        <div class="h4 mb-4">@ViewData["Title"]</div>
+
+        <form asp-action="Create" method="post" id="form_input">
+            <div class="form-group row">
+                <label for="Name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name">
+                    <span id="validate_Name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row mt-3">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a asp-controller="Mspecialization" asp-action="Index" class="btn btn-light"> Back To List</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+<script>
+    $("#form_input").validate({
+        errorClass: "text-danger",
+        rules: {
+            Name: {
+                required: true,
+                minlength: 5,
+            },
+        },
+        messages: {
+            Name: {
+                required: "Please fill name ",
+                minlength: "The name must consist at least 5 characters",
+            },
+
+        },
+        submitHandler: function (form) {
+            //console.log('test')
+
+            var dataForm = $(form).serialize()
+
+            var Name = $("#Name").val()
+            var id = $("#Id").val()
+
+            $.ajax({
+
+                url: "/Mspecialization/CheckNameIsExist",
+                type: "get",
+                //method : "get",//samaaja
+                data: { Name: Name, id: id },
+                dataType: "json",
+                success: function (respon) {
+                    if (respon) {
+                        $("#validate_Name").text("Name is already exist")
+                        return true;
+                    }
+                    else {
+                        fungsiSubmit(dataForm)
+                    }
+                }
+            })
+        }
+
+    })
+
+    function fungsiSubmit(dataParam) {
+        $.ajax({
+            url: "/Mspecialization/Create",
+            type: "post",
+            data: dataParam,
+            dataType: "json",
+            success: function (respon) {
+                var data = respon.dataRespon
+                if (data.success) {
+                    $("#modal").modal("hide")
+
+
+                    toastr.success(
+                        data.message,
+                        '',
+                        {
+                            timeOut: 500,
+                            fadeOut: 500,
+                            onHidden: function () {
+                                window.location.reload()
+                            }
+                        }
+                    )
+                }
+                else {
+                    toastr.errorClass(data.message)
+                }
+            }
+
+        })
+    }
+</script>

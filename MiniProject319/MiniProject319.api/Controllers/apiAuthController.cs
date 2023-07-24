@@ -20,23 +20,46 @@ namespace MiniProject319.api.Controllers
             this.db = _db;
         }
 
-        [HttpGet("CheckLogin/{email}/{password}")]
-        public VMMUser CheckLogin(string email, string password)
+        [HttpGet("CheckLogin/{email}")]
+        public VMMUser CheckLogin(string email)
         {
             VMMUser data = (from u in db.MUsers
                             join r in db.MRoles on u.RoleId equals r.Id
-                            where u.Email == email
+                            where u.IsDelete == false && u.Email == email 
                             select new VMMUser
                             {
                                 Id = u.Id,
                                 Email = u.Email,
 
                                 RoleId = r.Id,
-                                //NameRole = r.Name,
+                                NameRole = r.Name,
                             }).FirstOrDefault()!;
             return data;
         }
 
-    }
+        [HttpGet("MenuAccess/{RoleId}")]
+        public List<VMMenu> MenuAccess(int RoleId)
+        {
+            List<VMMenu> data = (from mmr in db.MMenuRoles
+                                 join mm in db.MMenus on mmr.MenuId equals mm.Id
+                                 join mr in db.MRoles on mmr.RoleId equals mr.Id
+                                 where mm.ParentId != 0 && mm.IsDelete == false
+                                 && mmr.IsDelete == false && mmr.RoleId == RoleId
+                                 select new VMMenu
+                                 {
+                                     MenuId = mm.Id,
+                                     MenuName = mm.Name,
 
+                                     RoleId = mr.Id,
+                                     RoleName = mr.Name,
+
+                                     ParentId = mm.Id
+
+                                 }).ToList();
+
+
+
+            return data;
+        }
+    }
 }
