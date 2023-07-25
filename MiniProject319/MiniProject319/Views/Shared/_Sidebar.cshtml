@@ -31,12 +31,12 @@
             <li><hr class="nav-divider" /></li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed">
+                <a class="nav-link collapsed" asp-controller="Dokter" asp-action="ListDokter">
                     <i class="bi bi-menu-button-wide"></i><span>Detail Dokter</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed">
+                <a class="nav-link collapsed" id="cari_dokter">
                     <i class="bi bi-menu-button-wide"></i><span>Cari Dokter</span>
                 </a>
             </li>
@@ -59,6 +59,14 @@
         </ul>
 
     </aside>
+
+    <script>
+        $("#cari_dokter").click(function () {
+            $("#modal-body").empty()
+            $("#modal-body").load("/Dokter/ModalCariDokter")
+            $("#verticalycentered").modal("show")
+        });
+    </script>
 }
 
 

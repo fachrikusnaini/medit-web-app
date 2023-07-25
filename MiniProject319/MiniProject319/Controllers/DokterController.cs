@@ -13,5 +13,10 @@ namespace MiniProject319.Controllers
         {
             return View();
         }
+
+        public IActionResult ModalCariDokter()
+        {
+            return PartialView();
+        }
     }
 }
