@@ -41,6 +41,26 @@ namespace MiniProject319.api.Controllers
                                                  CreatedBy = a.CreatedBy,
                                                  CreatedOn = a.CreatedOn,
 
+                                                 CountAppointment = (from a in db.TAppointments
+                                                                     join b in db.MCustomers on a.CustomerId equals b.Id into tc from tcustomer in tc.DefaultIfEmpty()
+                                                                     join c in db.TDoctorOffices on a.DoctorOfficeId equals c.Id
+                                                                     join d in db.TDoctorOfficeSchedules on a.DoctorOfficeScheduleId equals d.Id
+                                                                     join e in db.TDoctorOfficeTreatments on a.DoctorOfficeTreatmentId equals e.Id
+                                                                     where a.IsDelete == false && b.IsDelete == false && c.IsDelete == false && d.IsDelete == false && e.IsDelete == false
+                                                                     && c.DoctorId == IdDoctor
+                                                                     select new VMAppointment
+                                                                     {
+                                                                         CustomerId = b.Id,
+                                                                         DoctorOfficeId = c.Id,
+                                                                         DoctorOfficeScheduleId = d.Id,
+                                                                         DoctorOfficeTreatmentId = e.Id,
+
+                                                                         AppointmentDate = a.AppointmentDate,
+
+                                                                         CreatedBy = a.CreatedBy,
+                                                                         CreatedOn = a.CreatedOn,
+                                                                     }).Count(),
+
                                                  ListTindakan = (from a in db.TDoctorTreatments
                                                                  join b in db.MDoctors on a.DoctorId equals b.Id
                                                                  where a.IsDelete == false && b.IsDelete == false

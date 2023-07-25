@@ -21,6 +21,5 @@ namespace MiniProject319.ViewModels
         public long? DeletedBy { get; set; }
         public DateTime? DeletedOn { get; set; }
         public bool IsDelete { get; set; }
-        //public List<VMListMenu> listMenus { get; set; }
     }
 }

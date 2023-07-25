@@ -125,6 +125,22 @@
       "PackagePath": "staticwebassets\\assets\\scss\\Readme.txt"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\toastr\\toastr.css",
+      "PackagePath": "staticwebassets\\assets\\toastr\\toastr.css"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\toastr\\toastr.js.map",
+      "PackagePath": "staticwebassets\\assets\\toastr\\toastr.js.map"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\toastr\\toastr.min.css",
+      "PackagePath": "staticwebassets\\assets\\toastr\\toastr.min.css"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\toastr\\toastr.min.js",
+      "PackagePath": "staticwebassets\\assets\\toastr\\toastr.min.js"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\vendor\\apexcharts\\apexcharts.amd.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\apexcharts\\apexcharts.amd.js"
     },

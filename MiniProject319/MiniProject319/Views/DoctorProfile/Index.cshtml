@@ -23,24 +23,25 @@
                         <img src="~/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light">
                             <i class="bi bi-pencil" style="color:black" href="#"></i>
-
                         </span>
                     </div>
+
                     <h2>@vMDoctorSpecialist.Fullname</h2>
                     <h3>@vMDoctorSpecialist.SpecialistName</h3>
 
+                    @*star*@
                     <div class="mb-3">
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
-                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-half text-warning"></i>
                     </div>
 
                     <ul class="list-group" style="width:100%">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Janji
-                            <span class="badge bg-primary rounded-pill">14</span>
+                            <span class="badge bg-primary rounded-pill">@vMDoctorSpecialist.CountAppointment</span>
                         </li>
                         <li class="list-group-item">Obrolan/ Konsultasi</li>
                     </ul>
@@ -49,40 +50,46 @@
 
             <div class="card">
                 <div class="card-header h6 bg-primary text-white">Tentang Saya</div>
-                <div class="card-body">
-                    <div class="card-title" style="font-size:medium">Tindakan Medis</div>
-                    <ul>
-                        @foreach (var item in vMDoctorSpecialist.ListTindakan)
-                        {
+
+                    <div class="card-body">
+                        <div class="card-title" style="font-size:medium">Tindakan Medis</div>
+                        <ul>
+                            @foreach (var item in vMDoctorSpecialist.ListTindakan)
+                            {
                             
-                        <li>@item.Name</li>
-                        }
-                    </ul>
+                            <li>@item.Name</li>
+                            }
+                        </ul>
+                    </div>
 
-                    <div class="card-title" style="font-size:medium">Riwayat Praktek</div>
-                    <ul>
-                        @foreach(var item in vMDoctorSpecialist.RiwayatPraktek)
-                        {
-                            <li class="mb-2">
-                                @item.MedicalFacilityName, @item.Location
-                                <br />
-                                <small>@item.Specialization | 2019 - Sekarang</small>
-                            </li>
-                        }
+                    <div class="card-body">   
+                        <div class="card-title" style="font-size:medium">Riwayat Praktek</div>
+                        <ul>
+                            @foreach(var item in vMDoctorSpecialist.RiwayatPraktek)
+                            {
+                                <li class="mb-2">
+                                    @item.MedicalFacilityName, @item.Location
+                                    <br />
+                                    <small>@item.Specialization | 2019 - Sekarang</small>
+                                </li>
+                            }
+                        </ul>
+                    </div>
 
-                    <div class="card-title" style="font-size:medium">Pendidikan</div>
+                    <div class="card-body">
+                        <div class="card-title" style="font-size:medium">Pendidikan</div>
+                        <ul>
+                            @foreach(var item in vMDoctorSpecialist.PendidikanDokter)
+                            {
+                                <li class="mb-2">
+                                    @item.InstitutionName
+                                    <br />
+                                    <small>@item.EndYear - @item.Major</small>
+                                </li>
+                            }
+                        </ul>
+                    </div>
 
-                    <ul>
-                        @foreach(var item in vMDoctorSpecialist.PendidikanDokter)
-                        {
-                            <li class="mb-2">
-                                @item.InstitutionName
-                                <br />
-                                <small>@item.EndYear - @item.Major</small>
-                            </li>
-                        }
-                    </ul>
-                </div>
             </div>
 
         </div>
@@ -148,7 +155,11 @@
     </div>
 </section>
 
-
+<script>
+    //$(document).ready(function () {
+    //    $('#rateMe2').mdbRate();
+    //});
+</script>
 
 
 

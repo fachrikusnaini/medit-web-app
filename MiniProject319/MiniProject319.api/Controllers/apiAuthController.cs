@@ -29,6 +29,7 @@ namespace MiniProject319.api.Controllers
                                   {
                                       Id = u.Id,
                                       Email = u.Email,
+                                      BiodataId = u.BiodataId,
 
                                       RoleId = r.Id,
                                       RoleName = r.Name,

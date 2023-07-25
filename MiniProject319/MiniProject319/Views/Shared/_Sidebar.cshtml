@@ -1,30 +1,45 @@
-﻿@*@using MiniProject319.Services;
-@inject MenuService menuService
+﻿@using MiniProject319.Services;
+@using MiniProject319.ViewModels;
 
+@inject MenuService menuService;
 @{
-    int IdRole = 1;
-    var menu = await menuService.GetListMenu(IdRole);
+    int IdRole = Context.Session.GetInt32("RoleId") ?? 0;
+    List<VMListMenu> vMListMenu = await menuService.GetListMenu(IdRole);
+}
 
-}*@
-
+@if(IdRole != 0)
+{
     <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
-         
+
             <li class="nav-item">
                 <a class="nav-link" asp-controller="Home" asp-action="Index">
                     <i class="bi bi-grid"></i>
                     <span>List Menu</span>
                 </a>
             </li>
-              @*  @foreach (var item in menu)
-                {*@
-                    <li class="nav-item">
-                        <a class="nav-link collapsed">
-                            <i class="bi bi-menu-button-wide"></i><span>Menu 1</span><i class="bi bi-chevron-right ms-auto"></i>
-                        </a>
-                    </li>
-              @*  }*@
+            @foreach (var item in vMListMenu)
+            {
+                <li class="nav-item">
+                    <a class="nav-link collapsed">
+                        <i class="bi bi-menu-button-wide"></i><span>@item.MenuName</span>
+                    </a>
+                </li>
+            }
+
+            <li><hr class="nav-divider" /></li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed">
+                    <i class="bi bi-menu-button-wide"></i><span>Detail Dokter</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed">
+                    <i class="bi bi-menu-button-wide"></i><span>Cari Dokter</span>
+                </a>
+            </li>
 
             <li><hr class="nav-divider" /></li>
 
@@ -34,10 +49,18 @@
                     <span>F.A.Q</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" asp-controller="Auth" asp-action="Logout">
+                    <i class="bi bi-question-circle"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
 
         </ul>
 
     </aside>
 }
+
+
 
 

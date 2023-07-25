@@ -12,11 +12,11 @@ namespace MiniProject319.Controllers
         {
             this.menuService = _menuService;
         }
-        public async Task<IActionResult> Index(int IdRole)
+        public async Task<IActionResult> Index()
         {
-            IdRole = 1;
+            int IdRole = 1;
             List<VMListMenu> data = await menuService.GetListMenu(IdRole);
-            return PartialView(data);
+            return View(data);
         }
     }
 }

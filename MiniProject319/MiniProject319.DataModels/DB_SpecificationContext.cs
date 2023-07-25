@@ -45,6 +45,7 @@ namespace MiniProject319.DataModels
         public virtual DbSet<MSpecialization> MSpecializations { get; set; } = null!;
         public virtual DbSet<MUser> MUsers { get; set; } = null!;
         public virtual DbSet<MWalletDefaultNominal> MWalletDefaultNominals { get; set; } = null!;
+        public virtual DbSet<TAppointment> TAppointments { get; set; } = null!;
         public virtual DbSet<TAppointmentCancellation> TAppointmentCancellations { get; set; } = null!;
         public virtual DbSet<TAppointmentDone> TAppointmentDones { get; set; } = null!;
         public virtual DbSet<TAppointmentRescheduleHistory> TAppointmentRescheduleHistories { get; set; } = null!;

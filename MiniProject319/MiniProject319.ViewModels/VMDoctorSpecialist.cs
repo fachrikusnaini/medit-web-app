@@ -15,6 +15,7 @@ namespace MiniProject319.ViewModels
         public string? SpecialistName { get; set; }
         public string? Fullname { get; set; }
         public string? MobilePhone { get; set; }
+        public int? CountAppointment { get; set; }
         public byte[]? Image { get; set; }
         public string? ImagePath { get; set; }
         public long CreatedBy { get; set; }

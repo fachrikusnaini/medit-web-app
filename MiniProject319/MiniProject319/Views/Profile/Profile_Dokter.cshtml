@@ -24,13 +24,11 @@
                             <h2>Anderson</h2>
                             <h3>Spesialis Anak</h3>
 
-                            <div class="mb-3">
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                            </div>
+                        <div class="container">
+                            @*<span class="empty-stars" id="ratestars"></span>*@
+                        <input id="input-1" name="input-1" value="4.3" class="rating-loading">
+                        
+                        </div>
 
                             <ul class="list-group" style="width:100%">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -143,6 +141,17 @@
                 </div>
             </div>
         </section>
+
+<script>
+    //$(document).ready(function () {
+    //    $('#ratestars').mdbRate();
+    //});
+
+    $(document).ready(function () {
+        $('#input-1').rating({ min: 0, max: 8, step: 0.1, stars: 8 });
+    });
+
+</script>
 
 
 

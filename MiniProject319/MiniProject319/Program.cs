@@ -9,7 +9,18 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<MenuService>();
 builder.Services.AddScoped<DoctorService>();
+builder.Services.AddScoped<AuthService>();
 
+
+//add session
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddSession(option =>
+{
+    option.IdleTimeout = TimeSpan.FromHours(1);
+    option.Cookie.HttpOnly = true;
+    option.Cookie.IsEssential = true;
+});
 
 
 //Add connection string
@@ -35,6 +46,9 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+//add session
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

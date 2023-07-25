@@ -1,12 +1,10 @@
-﻿<div>Login</div>
-
-
-@*<div class="modal-header">
+﻿
+<div class="modal-header">
     <h3 class="modal-title">Login</h3>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-    <form class="row g-3 needs-validation" novalidate id="form-login">
+    <form class="row g-3 needs-validation" id="form_login">
 
         <div class="col-12">
             <label for="email" class="form-label">Email</label>
@@ -29,11 +27,42 @@
             <p class="small mb-0">Don't have account? <a href="pages-register.html">Create an account</a></p>
         </div>
     </form>
-</div>*@
+</div>
 
-@*<script>
-    $("#form-login").click(function(){
-        let username = sessionStorage.getItem("username");
-        console.log(username);
+<script>
+    $("#form_login").validate({
+        submitHandler: function(form) {
+
+            var email = $("#email").val()
+
+            $.ajax({
+                url: "/Auth/LoginSubmit",
+                data: { email: email },
+                type: "post",
+                dataType: "json",
+                success: function (respon) {
+                    var data = respon.dataRespon
+                    //debugger;
+
+                    if (data.success) {
+                        $("#verticalycentered").modal("hide")
+                        toastr.success(
+                            data.message,
+                            '',
+                            {
+                                timeOut: 2000,
+                                fadeOut: 2000,
+                                onHidden: function () {
+                                        window.location.reload()
+                                    }
+                            }
+                        )
+                        }else{
+                            
+                            toastr.errorClass(data.message)
+                        }
+                    }
+            })
+        }
     })
-</script>*@
+</script>

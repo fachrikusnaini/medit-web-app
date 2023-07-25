@@ -35,11 +35,12 @@ namespace MiniProject319.Controllers
             {
                 respon.Message = $"Hello, {user.Email} welcome to medit";
                 HttpContext.Session.SetString("Email", user.Email);
-                HttpContext.Session.SetInt32("RoleId", Convert.ToInt32(user.RoleId ?? 0));
+                HttpContext.Session.SetInt32("RoleId", user.RoleId == null ? 0 : Convert.ToInt32(user.RoleId));
 
             }
             else
             {
+                respon.Success = false;
                 respon.Message = $"Ooops, {email} not found, please check your mail";
             }
 

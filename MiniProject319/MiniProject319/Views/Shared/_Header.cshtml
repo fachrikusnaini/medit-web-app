@@ -1,5 +1,6 @@
 ﻿@{
-    int IdRole = 1; 
+    int RoleId = Context.Session.GetInt32("RoleId") ?? 0;
+    string Email = Context.Session.GetString("Email") ?? "";
 }
 
 <!-- ======= Header Start======= -->
@@ -9,7 +10,7 @@
             <img src="~/assets/img/new-logo-medit.png" alt="logo-medit" style="height:max-content">
         </a>
         @{
-            if(IdRole != 0)
+            if(RoleId != 0)
             {
                 <i class="bi bi-list toggle-sidebar-btn"></i>
             }
@@ -33,7 +34,7 @@
             </li><!-- End Search Icon-->
 
             @{
-                if(IdRole != 0)
+                if(RoleId != 0)
                 {
                     <li class="nav-item dropdown pe-3">
 
@@ -79,11 +80,12 @@
     </nav><!-- End Icons Navigation -->
 </header><!-- End Header -->
 
+
 <script>
     $("#btn-login").click(function(){
         $("#modal-body").empty()
         $("#modal-body").load("/Auth/Login")
         $("#verticalycentered").modal("show")
-    })
+    });
 </script>
     
