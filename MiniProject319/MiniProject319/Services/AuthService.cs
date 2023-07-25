@@ -17,11 +17,11 @@ namespace MiniProject319.services
             this.RouteAPI = this.configuration["RouteAPI"];
         }
 
-        public async Task<VMMUser> CheckLogin(string email)
+        public async Task<VMMUser> CheckLogin(string email, string password)
         {
             VMMUser data = new VMMUser();
 
-            string apiResponse = await client.GetStringAsync(RouteAPI + $"apiAuth/CheckLogin/{email}");
+            string apiResponse = await client.GetStringAsync(RouteAPI + $"apiAuth/CheckLogin/{email}/{password}");
             data = JsonConvert.DeserializeObject<VMMUser>(apiResponse)!;
 
             return data;

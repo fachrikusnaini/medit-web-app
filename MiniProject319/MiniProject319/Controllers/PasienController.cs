@@ -58,5 +58,7 @@ namespace MiniProject319.Controllers
 
             return PartialView(PaginatedList<VMMPasien>.CreateAsync(data, pageNumber ?? 1, pageSize ?? 3));
         }
+
+        
     }
 }

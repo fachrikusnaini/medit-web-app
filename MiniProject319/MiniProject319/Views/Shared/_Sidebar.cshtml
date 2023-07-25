@@ -1,70 +1,38 @@
 ﻿@using MiniProject319.ViewModels;
 @using MiniProject319.services;
-@inject AuthService authservice
-@model List<VMMenu>
+@inject AuthService authService
+
+
 @{
-    int idUser = 0;
+    int IdRole = Context.Session.GetInt32("RoleId") ?? 0;
+    List<VMMenu> vMMenus = await authService.MenuAccess(IdRole);
 }
 
-
-@*
-@if (idUser != 0)
-{
-    <aside id="sidebar" class="sidebar">
-
-        <ul class="sidebar-nav" id="sidebar-nav">
-
-            <li class="nav-item">
-                <a class="nav-link" asp-controller="Home" asp-action="Index">
-                    <i class="bi bi-grid"></i>
-                    <span> Menu Access</span>
-                </a>
-            </li>
-            @if (Model.Count != 0)
-            {
-                @foreach (var item in Model)
-                {
-                    <li class="nav-item">
-                        <a class="nav-link collapsed">
-                            <i class="bi bi-menu-button-wide"></i><span>@item.MenuName</span><i class="bi bi-chevron-right ms-auto"></i>
-                        </a>
-                    </li>
-                }
-            }
-
-            <li><hr class="nav-divider" /></li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-controller="Home" asp-action="Faq">
-                    <i class="bi bi-question-circle"></i>
-                    <span>F.A.Q</span>
-                </a>
-            </li>
-
-        </ul>
-
-    </aside>
-}*@
 
 
 
  <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar">
 
-    @*@{
-        if(idUser != 0)
-        {*@
+    @{
+        if(IdRole != 0)
+        {
             <ul class="sidebar-nav" id="sidebar-nav">
 
                 <li class="nav-item">
                      <a class="nav-link as-toggle " href="index.html">
                         <i class="bi bi-grid"></i>
-                        <span>Dashboard</span>
+                        <span>Menu</span>
                     </a>
                 </li><!-- End Dashboard Nav -->
-
-                <li class="nav-heading">Pages</li>
-
+                @foreach (var item in vMMenus)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link collapsed">
+                            <i class="bi bi-menu-button-wide"></i><span>@item.MenuName</span>
+                        </a>
+                    </li>
+                }
                 <li class="nav-item">
                     <a class="nav-link collapsed as-toggle" asp-controller="Pasien" asp-action="Index">
                         <i class="bi bi-person"></i>
@@ -73,58 +41,30 @@
 
                 </li><!-- End Profile Page Nav -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed as-toggle" asp-controller="Mspecialization" asp-action="Index" >
+                    <a class="nav-link collapsed as-toggle" asp-controller="Mspecialization" asp-action="Index">
                         <i class="bi bi-person"></i>
                         <span>Spesialisasi Dokter</span>
                     </a>
                 </li><!-- End Profile Page Nav -->
 
+                <li><hr class="nav-divider" /></li>
 
                 <li class="nav-item">
-                     <a class="nav-link collapsed as-toggle" href="pages-faq.html">
+                    <a class="nav-link collapsed" asp-controller="Home" asp-action="Faq">
                         <i class="bi bi-question-circle"></i>
                         <span>F.A.Q</span>
                     </a>
-                </li><!-- End F.A.Q Page Nav -->
-
+                </li>
                 <li class="nav-item">
-                      <a class="nav-link collapsed as-toggle" href="pages-contact.html">
-                        <i class="bi bi-envelope"></i>
-                        <span>Contact</span>
+                    <a class="nav-link collapsed" asp-controller="Auth" asp-action="Logout">
+                        <i class="bi bi-question-circle"></i>
+                        <span>Logout</span>
                     </a>
-                </li><!-- End Contact Page Nav -->
-
-                <li class="nav-item">
-                      <a class="nav-link collapsed as-toggle" href="pages-register.html">
-                        <i class="bi bi-card-list"></i>
-                        <span>Register</span>
-                    </a>
-                </li><!-- End Register Page Nav -->
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed as-toggle" href="pages-login.html">
-                        <i class="bi bi-box-arrow-in-right"></i>
-                        <span>Login</span>
-                    </a>
-                </li><!-- End Login Page Nav -->
-
-                <li class="nav-item">
-                      <a class="nav-link collapsed as-toggle" href="pages-error-404.html">
-                        <i class="bi bi-dash-circle"></i>
-                        <span>Error 404</span>
-                    </a>
-                </li><!-- End Error 404 Page Nav -->
-
-                <li class="nav-item">
-                      <a class="nav-link collapsed as-toggle" href="pages-blank.html">
-                        <i class="bi bi-file-earmark"></i>
-                        <span>Blank</span>
-                    </a>
-                </li><!-- End Blank Page Nav -->
+                </li>
 
             </ul>
-@*       }
-    }*@
+       }
+    }
 
     
 

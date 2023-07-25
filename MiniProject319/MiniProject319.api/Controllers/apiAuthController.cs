@@ -20,12 +20,12 @@ namespace MiniProject319.api.Controllers
             this.db = _db;
         }
 
-        [HttpGet("CheckLogin/{email}")]
-        public VMMUser CheckLogin(string email)
+        [HttpGet("CheckLogin/{email}/{password}")]
+        public VMMUser CheckLogin(string email,string password)
         {
             VMMUser data = (from u in db.MUsers
                             join r in db.MRoles on u.RoleId equals r.Id
-                            where u.IsDelete == false && u.Email == email 
+                            where u.IsDelete == false && u.Email == email && u.Password == password
                             select new VMMUser
                             {
                                 Id = u.Id,

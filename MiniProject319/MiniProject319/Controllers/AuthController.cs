@@ -32,14 +32,14 @@ namespace MiniProject319.Controllers
         }
 
         [HttpPost]
-        public async Task<JsonResult> LoginSubmit(string email)
+        public async Task<JsonResult> LoginSubmit(string email,string password)
         {
-            VMMUser user = await authService.CheckLogin(email);
+            VMMUser user = await authService.CheckLogin(email,password);
             if (user != null)
             {
                 respon.Message = $"Hello, {user.Email} Welcome to Medical.IT";
                 HttpContext.Session.SetString("email", user.Email);
-                HttpContext.Session.SetInt32("RoleId", Convert.ToInt32(user.RoleId));
+                HttpContext.Session.SetInt32("RoleId", user.RoleId == null ? 0 : Convert.ToInt32(user.RoleId));
 
             }
             else
