@@ -72,3 +72,11 @@ E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Sys
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\System.Web.Http.dll
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Newtonsoft.Json.dll
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MailKit.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\MimeKit.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\System.Formats.Asn1.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.api\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll

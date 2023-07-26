@@ -20,11 +20,11 @@ namespace MiniProject319.api.Controllers
         }
 
         [HttpGet("GetAllData")]
-        public List<VMm_role> GetAllData()
+        public List<MRole> GetAllData()
         {
-            List<VMm_role> data = (from MRole r in db.MRoles
+            List<MRole> data = (from MRole r in db.MRoles
                                    where r.IsDelete == false
-                                   select new VMm_role
+                                   select new MRole
                                    {
                                        Id = r.Id,
                                        Name = r.Name,

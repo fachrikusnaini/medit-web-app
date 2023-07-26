@@ -14,7 +14,7 @@
             <h4 class="text-primary"><b>Verifikasi E-mail</b></h4>
             <div class="container-fluid">
                 <div class="row">
-                    <form asp-action="Register" method="post" enctype="multipart/form-data" id="form_register">
+                    <form asp-action="Register" method="post" enctype="multipart/form-data" id="form_verification">
                         <span class="text-secondary mb-3">Masukkan kode OTP yang telah dikirimkan ke email Anda.</span>
                         <div class="form-group">
                             <label hidden class="text-secondary required" for="Token"></label>
@@ -36,3 +36,72 @@
     </div>
 </div>
 <script>
+    $("#form_verification").validate({
+        errorClass: "text-danger",
+        rules: {
+            Token: {
+                required: true,
+            },
+        },
+        messages: {
+            Email: {
+                required: "Please fill Token",
+            },
+
+        },
+        submitHandler: function (form) {
+
+            var token = $("#Token").val()
+
+            $.ajax({
+                url: "/Auth/CheckOTP",
+                type: "get",
+                //method:"get"
+                data: {
+                    token: token,
+                },
+                dataType: "json",
+                success: function (response) {
+                    if (response) {
+                        $("#validate_Token").text("Token invalid, please check again!!")
+
+                        return true
+                    }
+                    else {
+                        $("#modal_body").empty()
+                        $("#modal_body").load("/Auth/SetPassword")
+                        $("#modal").modal("show")
+                    }
+                }
+            })
+        }
+    })
+
+    //function functionSubmit(form) {
+
+    //    var formData = new FormData();
+    //    var dataForm = $(form).serializeArray();
+
+    //    $.each(dataForm, function (key, input) {
+    //        formData.append(input.name, input.value)
+    //    })
+    //    $.ajax({
+    //        url: "/Auth/Biodata",
+    //        type: "post",
+    //        data: formData,
+    //        processData: false,
+    //        contentType: false,
+    //        dataType: "json",
+    //        success: function (response) {
+    //            var data = response.dataResponse
+    //            if (data.success) {
+    //                $("#modal_body").empty()
+    //                $("#modal_body").load("/Auth/Biodata")
+    //                $("#modal").modal("show")
+    //            } else {
+    //                toastr.errorClass(data.message)
+    //            }
+    //        }
+    //    })
+    //}
+</script>

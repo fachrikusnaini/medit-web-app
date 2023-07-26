@@ -1,8 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MailKit.Security;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using MimeKit.Text;
+using MimeKit;
 using MiniProject319.DataModels;
 using MiniProject319.ViewModels;
-using System.Net.Mail;
+using Org.BouncyCastle.Asn1.Ocsp;
+using static Org.BouncyCastle.Math.EC.ECCurve;
+using MailKit.Net.Smtp;
 
 namespace MiniProject319.api.Controllers
 {
@@ -11,11 +17,13 @@ namespace MiniProject319.api.Controllers
     public class apiAuthController : ControllerBase
     {
         private readonly DB_SpecificationContext db;
+        private readonly IConfiguration configuration;
         private int idUser = 1;
         private VMResponse response = new VMResponse();
-        public apiAuthController(DB_SpecificationContext _db)
+        public apiAuthController(DB_SpecificationContext _db, IConfiguration _configuration)
         {
             this.db = _db;
+            this.configuration = _configuration;
         }
 
         [HttpGet("GetAllData")]
@@ -194,14 +202,14 @@ namespace MiniProject319.api.Controllers
             {
                 data = db.MUsers.Where(
                     a =>
-                    a.IsDelete == false && a.Email == email
+                    a.IsDelete == false && a.Email == email && a.IsLocked == false
                     ).FirstOrDefault()!;
             }
             else
             {
                 data = db.MUsers.Where(
                     a =>
-                    a.IsDelete == false && a.Id != id && a.Email == email
+                    a.IsDelete == false && a.Id != id && a.Email == email && a.IsLocked == false
                     ).FirstOrDefault()!;
             }
 
@@ -213,7 +221,7 @@ namespace MiniProject319.api.Controllers
             return false;
         }
 
-        [HttpGet("GetAllData")]
+        [HttpGet("GetEmailVerification")]
         public List<VMm_user> GetEmailVerification()
         {
             List<VMm_user> data = (from MUser u in db.MUsers
@@ -251,6 +259,8 @@ namespace MiniProject319.api.Controllers
                 CreatedBy = idUser
             };
 
+
+
             TToken token = new TToken()
             {
                 Token = randomNumber.ToString(),
@@ -262,6 +272,22 @@ namespace MiniProject319.api.Controllers
 
             };
 
+            var emailVerif = new MimeMessage();
+            emailVerif.From.Add(MailboxAddress.Parse(configuration.GetSection("EmailUsername").Value));
+            emailVerif.To.Add(MailboxAddress.Parse(user?.Email));
+            emailVerif.Subject = "Register User";
+            emailVerif.Body = new TextPart(TextFormat.Html)
+            {
+                Text = @"This your Code OTP : " + token.Token
+            };
+
+            using var smtp = new SmtpClient();
+            smtp.Connect(configuration.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
+            smtp.Authenticate(configuration.GetSection("EmailUsername").Value, configuration.GetSection("EmailPassword").Value);
+            smtp.Send(emailVerif);
+            smtp.Disconnect(true);
+
+
             try
             {
                 db.MUsers.Add(user);
@@ -270,6 +296,8 @@ namespace MiniProject319.api.Controllers
                 token.UserId = user.Id;
                 db.TTokens.Add(token);
                 db.SaveChanges();
+
+
 
                 response.Message = "Data successfully added";
             }
@@ -281,33 +309,148 @@ namespace MiniProject319.api.Controllers
             return response;
         }
 
-        [HttpPost("SendEmail")]
-        public IActionResult SendEmail(EmailSend email)
+        [HttpPost("SetPassword")]
+        public VMResponse SetPassword(VMm_user data)
         {
-            string myEmail = "pokkiyu4@gmail.com";
-            string myPassword = "lapangan123";
+
             try
             {
-                // Replace with your SMTP server and credentials
-                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
-                smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new System.Net.NetworkCredential(myEmail, myPassword);
-                smtpClient.EnableSsl = true;
+                MUser user = db.MUsers.Where(a => a.Email == data.Email && a.IsDelete == false).FirstOrDefault()!;
 
-                MailMessage mailMessage = new MailMessage();
-                mailMessage.From = new MailAddress(myEmail);
-                mailMessage.To.Add(email.To);
-                mailMessage.Subject = email.Subject;
-                mailMessage.Body = email.Body;
+                user.Password = data.Password;
 
-                smtpClient.Send(mailMessage);
-
-                return Ok("Email sent successfully!");
+                db.MUsers.Update(user);
+                db.SaveChanges();
+                response.Message = "Data successfully added";
             }
             catch (Exception e)
             {
-                return StatusCode(500);
+                response.Success = false;
+                response.Message = "Failed saved : " + e.Message;
             }
+            return response;
+        }
+
+        [HttpPost("Biodata")]
+        public VMResponse Biodata(VMm_user data)
+        {
+
+            MBiodatum biodata = new MBiodatum()
+            {
+                Fullname = data.Fullname,
+                MobilePhone = data.MobilePhone,
+                CreatedBy = idUser,
+                CreatedOn = DateTime.Now,
+            };
+
+            MUser user = db.MUsers.Where(a => a.Email == data.Email && a.IsDelete == false).FirstOrDefault()!;
+            user.RoleId = data.RoleId;
+            user.IsLocked = false;
+
+            //db.MBiodata.Add(biodata);
+            //db.SaveChanges();
+            //user.BiodataId = biodata.Id;
+            //db.MUsers.Update(user);
+            //db.SaveChanges();
+
+            if (data.RoleId == 1)
+            {
+                MAdmin admin = new MAdmin()
+                {
+                    IsDelete = false,
+                    CreatedBy = idUser,
+                    CreatedOn = DateTime.Now
+                };
+
+                try
+                {
+                    db.MBiodata.Add(biodata);
+                    db.SaveChanges();
+                    user.BiodataId = biodata.Id;
+                    admin.BiodataId = biodata.Id;
+                    db.MUsers.Update(user);
+                    db.MAdmins.Add(admin);
+                    db.SaveChanges();
+
+                    response.Message = "Data successfully added";
+                }
+                catch (Exception e)
+                {
+
+                    response.Success = false;
+                    response.Message = "Failed saved : " + e.Message;
+                }
+            }
+            if (data.RoleId == 2)
+            {
+                MCustomer customer = new MCustomer()
+                {
+                    IsDelete = false,
+                    CreatedBy = idUser,
+                    CreatedOn = DateTime.Now
+                };
+
+                try
+                {
+                    db.MBiodata.Add(biodata);
+                    db.SaveChanges();
+                    user.BiodataId = biodata.Id;
+                    customer.BiodataId = biodata.Id;
+                    db.MUsers.Update(user);
+                    db.MCustomers.Add(customer);
+                    db.SaveChanges();
+
+                    response.Message = "Data successfully added";
+                }
+                catch (Exception e)
+                {
+
+                    response.Success = false;
+                    response.Message = "Failed saved : " + e.Message;
+                }
+            }
+            if (data.RoleId == 3)
+            {
+                MDoctor doctor = new MDoctor()
+                {
+                    IsDelete = false,
+                    CreatedBy = idUser,
+                    CreatedOn = DateTime.Now
+                };
+
+                try
+                {
+                    db.MBiodata.Add(biodata);
+                    db.SaveChanges();
+                    user.BiodataId = biodata.Id;
+                    doctor.BiodataId = biodata.Id;
+                    db.MUsers.Update(user);
+                    db.MDoctors.Add(doctor);
+                    db.SaveChanges();
+
+                    response.Message = "Data successfully added";
+                }
+                catch (Exception e)
+                {
+
+                    response.Success = false;
+                    response.Message = "Failed saved : " + e.Message;
+                }
+            }
+            return response;
+        }
+
+        [HttpGet("CheckOTP/{token}")]
+        public bool CheckOTP(string token)
+        {
+            TToken data = new TToken();
+
+            data = db.TTokens.Where(a =>a.IsDelete == false && a.Token == token).FirstOrDefault()!;
+            if (data == null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -86,7 +86,6 @@
             formData.append(input.name, input.value)
         })
 
-
         $.ajax({
             url: "/Auth/Register",
             type: "post",
@@ -97,30 +96,9 @@
             success: function (response) {
                 var data = response.dataResponse
                 if (data.success) {
-                    $(document).ready(function() {
-                        var emailData = {
-                            To: @Model.Email,
-                            Subject: "Registration User",
-                            Body: "This your code OTP : " + @Model.Token
-                         };
-
-                         $.ajax({
-                            url: "/Auth/SendEmail",
-                            type: "POST",
-                            contentType: "application/json",
-                            data: JSON.stringify(emailData),
-                            success: function (response) {
-                                $("#modal_body").empty()
-                                $("#modal_body").load("/Auth/Verification")
-                                $("#modal").modal("show")
-                            },
-                            error: function (xhr, status, error) {
-                                console.log(xhr.responseText);
-                            }
-
-                         });
-                    });
-
+                    $("#modal_body").empty()
+                    $("#modal_body").load("/Auth/Verification")
+                    $("#modal").modal("show")
                 } else {
                     toastr.errorClass(data.message)
                 }

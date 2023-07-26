@@ -1,0 +1,110 @@
+﻿@using MiniProject319.ViewModels;
+@model VMm_user
+<style>
+    .required:after {
+        content: "*";
+        color: red;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-8">
+            <h4 class="text-primary"><b>Daftar</b></h4>
+            <div class="container-fluid">
+                <div class="row">
+                    <form asp-action="Biodata" method="post" enctype="multipart/form-data" id="form_biodata">
+                        <div class="form-group mb-3">
+                            <label class="text-secondary required" for="Fullname">Nama Lengkap</label>
+                            <input type="text" class="form-control border-info" id="Fullname" name="Fullname">
+                        </div>
+                        <label class="text-secondary" for="MobilePhone">Nomor handphone</label>
+                        <div class="input-group flex-nowrap mb-2">
+                            <span class="input-group-text border-info bg-secondary" id="addon-wrapping">+62</span>
+                            <input type="text" class="form-control border-info" id="MobilePhone" name="MobilePhone" aria-describedby="addon-wrapping">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label class="text-secondary required" for="RoleId">Daftar Sebagai</label>
+                            <div class="form-group">
+                                @Html.DropDownList("RoleId",
+                                new SelectList(ViewBag.ListRole, "Id", "Name"),
+                                "---Pilih---",
+                                new { @class = "form-control border-info"}
+                                )
+                            </div>
+                        </div>
+                        <div class="clearfix mt-5 text-center">
+                            <button type="submit" class="btn btn-primary btn-rounded" id="btn_daftar">Daftar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+<script>
+    $("#form_biodata").validate({
+        errorClass: "text-danger",
+        rules: {
+            Fullname: {
+                required: true,
+            },
+            MobilePhone: {
+                number: true,
+            },
+            RoleId: {
+                required: true,
+            },
+        },
+        messages: {
+            Fullname: {
+                required: "Please fill password"
+            },
+            MobilePhone: {
+                number: "Please fill mobile phone with Number.",
+            },
+            RoleId: {
+                required: "Please fill re-password",
+            },
+        },
+        submitHandler: function (form) {
+            var formData = new FormData();
+            var dataForm = $(form).serializeArray();
+
+            $.each(dataForm, function (key, input) {
+                formData.append(input.name, input.value)
+            })
+
+
+            $.ajax({
+                url: "/Auth/Biodata",
+                type: "post",
+                data: formData,
+                processData: false,
+                contentType: false,
+                dataType: "json",
+                success: function (response) {
+                    var data = response.dataResponse
+                    if (data.success) {
+
+                        Swal.fire({
+                            position: 'top-center',
+                            icon: 'success',
+                            title: 'Your data has been saved',
+                            showConfirmButton: false,
+                            timer: 1500
+                        }).then(function () {
+                            location.reload();
+                        });
+                    } else {
+                        toastr.errorClass(data.message)
+                    }
+                }
+            })
+        }
+    })
+
+</script>

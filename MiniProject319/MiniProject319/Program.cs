@@ -1,3 +1,4 @@
+global using MiniProject319.api.Services.EmailService;
 using Microsoft.EntityFrameworkCore;
 using MiniProject319.DataModels;
 using MiniProject319.Services;
@@ -9,6 +10,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<RoleServices>();
 builder.Services.AddScoped<AuthServices>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 //Add Session
 builder.Services.AddDistributedMemoryCache();
@@ -45,6 +47,9 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+//Add session
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

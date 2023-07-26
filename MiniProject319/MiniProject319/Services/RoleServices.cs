@@ -1,4 +1,5 @@
-﻿using MiniProject319.ViewModels;
+﻿using MiniProject319.DataModels;
+using MiniProject319.ViewModels;
 using Newtonsoft.Json;
 
 namespace MiniProject319.Services
@@ -15,12 +16,12 @@ namespace MiniProject319.Services
             this.RouteAPI = this.configuration["RouteAPI"];
         }
 
-        public async Task<List<VMm_role>> GetAllData()
+        public async Task<List<MRole>> GetAllData()
         {
-            List<VMm_role> data = new List<VMm_role>();
+            List<MRole> data = new List<MRole>();
 
             string apiResponse = await _httpClient.GetStringAsync(RouteAPI + "apiRole/GetAllData");
-            data = JsonConvert.DeserializeObject<List<VMm_role>>(apiResponse)!;
+            data = JsonConvert.DeserializeObject<List<MRole>>(apiResponse)!;
 
             return data;
         }
