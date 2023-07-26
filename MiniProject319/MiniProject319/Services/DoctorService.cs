@@ -23,5 +23,14 @@ namespace MiniProject319.Services
 
             return data;
         }
+
+        public async Task<List<VMListDoctor>> GetAllDataDoctor()
+        {
+            List<VMListDoctor> data = new List<VMListDoctor>();
+            string apiRespon = await client.GetStringAsync(RouteApi + $"apiDoctorProfile/GetAllDataDoctor");
+            data = JsonConvert.DeserializeObject<List<VMListDoctor>>(apiRespon)!;
+
+            return data;
+        }
     }
 }

@@ -38,5 +38,6 @@ namespace MiniProject319.api.Controllers
 
             return data;
         }
+
     }
 }

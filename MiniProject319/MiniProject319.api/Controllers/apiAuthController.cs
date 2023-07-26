@@ -24,12 +24,15 @@ namespace MiniProject319.api.Controllers
 
                         data = (from u in db.MUsers
                                   join r in db.MRoles on u.RoleId equals r.Id
-                                  where u.Email == email
+                                  join b in db.MBiodata on u.BiodataId equals b.Id
+                                  where u.Email == email && u.IsDelete == false && r.IsDelete == false && b.IsDelete == false
                                   select new VMTblUsers
                                   {
                                       Id = u.Id,
                                       Email = u.Email,
-                                      BiodataId = u.BiodataId,
+                                      BiodataId = b.Id,
+                                      Name = b.Fullname,
+                                      
 
                                       RoleId = r.Id,
                                       RoleName = r.Name,

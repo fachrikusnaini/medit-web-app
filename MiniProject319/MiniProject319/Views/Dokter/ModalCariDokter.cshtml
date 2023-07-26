@@ -4,11 +4,16 @@
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-    <p class="text-secondary"><small>Masukan minimal 1 kata kunci untuk pencarian dokter anda!</small></p>
+    @*<p class="text-secondary"><small>Masukan minimal 1 kata kunci untuk pencarian dokter anda!</small></p>*@
 
     <form class="row g-3 needs-validation" id="form_login">
 
         <div class="col-12">
+            <label for="doctorname" class="form-label">Nama Dokter</label>
+            <input type="text" name="doctorname" class="form-control" id="doctorname" placeholder="select doctor name">
+        </div>
+
+        @*<div class="col-12">
             <label class="form-label">Location</label>
             <select class="form-select" aria-label="Default select example">
                 <option selected>Open this select menu</option>
@@ -16,22 +21,29 @@
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
-        </div>
+        </div>*@
 
         <div class="col-12">
-            <label for="yourPassword" class="form-label">Nama Dokter</label>
-            <input type="password" name="password" class="form-control" id="yourPassword" disabled placeholder="password">
-            <div class="invalid-feedback">Please enter your password!</div>
-        </div>
-
-        <div class="col-12">
-            <label class="form-label">Spesialisasi/ Sub-spesialisasi*</label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">Spesialisasi/ Sub-spesialisasi*</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label class="form-label">Location</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
         <div class="col-12 mb-4">
@@ -45,10 +57,14 @@
         </div>
 
         <div class="col-12">
-            <button class="btn btn-primary w-100" type="submit">Cari</button>
-        </div>
-        <div class="col-12">
-            <p class="small mb-0">Don't have account? <a href="pages-register.html">Atur Ulang</a></p>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-primary w-100" type="submit">Cari</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-outline-primary w-100" type="submit">Reset Pencarian</button>
+                </div>
+            </div>
         </div>
     </form>
 </div>

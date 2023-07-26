@@ -16,6 +16,28 @@ namespace MiniProject319.api.Controllers
             this.db = _db;
         }
 
+        [HttpGet("GetAllDataDoctor")]
+        public List<VMListDoctor> GetAllDataDoctor()
+        {
+            List<VMListDoctor> data = (from a in db.TCurrentDoctorSpecializations
+                                       join b in db.MDoctors on a.DoctorId equals b.Id
+                                       join c in db.MBiodata on b.BiodataId equals c.Id
+                                       join d in db.MSpecializations on a.SpecializationId equals d.Id
+                                       where a.IsDelete == false && b.IsDelete==false && c.IsDelete == false && d.IsDelete == false
+                                       select new VMListDoctor
+                                       {
+                                           DoctorId = b.Id,
+                                           NameDoctor = c.Fullname,
+
+                                           SpecializationId = d.Id,
+                                           NameSpecialist = d.Name
+
+                                       }).ToList();
+
+            return data;
+        }
+
+
         [HttpGet("GetProfileDoctor/{IdDoctor}")]
         public VMDoctorSpecialist GetProfileDoctor(int IdDoctor)
         {

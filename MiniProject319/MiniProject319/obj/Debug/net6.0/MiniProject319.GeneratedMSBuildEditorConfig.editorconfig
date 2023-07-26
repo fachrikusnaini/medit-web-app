@@ -20,8 +20,12 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/DoctorProfile/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yUHJvZmlsZVxJbmRleC5jc2h0bWw=
+[C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/DoctorProfile/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yUHJvZmlsZVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/Dokter/DetailDokter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdGVyXERldGFpbERva3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/Dokter/Index.cshtml]
@@ -30,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/Dokter/ListDokter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdGVyXExpc3REb2t0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/Dokter/ListDokterOld.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdGVyXExpc3REb2t0ZXJPbGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/Dokter/ModalCariDokter.cshtml]

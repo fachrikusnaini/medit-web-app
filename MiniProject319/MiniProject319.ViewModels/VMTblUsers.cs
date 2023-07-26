@@ -12,6 +12,7 @@ namespace MiniProject319.ViewModels
     {
         public long Id { get; set; }
         public long? BiodataId { get; set; }
+        public string? Name { get; set; }
         public long? RoleId { get; set; }
         public string? RoleName { get; set; }
         public string? Email { get; set; }
