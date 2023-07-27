@@ -13,6 +13,7 @@ namespace MiniProject319.ViewModels
         public string? NameDoctor { get; set; }
         public long? SpecializationId { get; set; }
         public string? NameSpecialist { get; set; }
+        public List<VMRiwayatPraktek>? RiwayatPraktek { get; set; }
 
     }
 }

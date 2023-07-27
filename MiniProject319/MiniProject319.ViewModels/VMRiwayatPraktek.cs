@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +15,13 @@ namespace MiniProject319.ViewModels
         public string? MedicalFacilityName { get; set; }
         public string Specialization { get; set; } = null!;
         public string? Location { get; set; }
+        public string? FullAddress { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
+        public int LamaBekerja { get; set; }
+        public decimal? Price { get; set; }
+        public decimal? PriceStartFrom { get; set; }
+        public decimal? PriceUntilFrom { get; set; }
         public long CreatedBy { get; set; }
         public DateTime CreatedOn { get; set; }
         public long? ModifiedBy { get; set; }

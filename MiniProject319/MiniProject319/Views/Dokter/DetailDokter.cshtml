@@ -1,6 +1,19 @@
-﻿@using MiniProject319.ViewModels;
+﻿ @using MiniProject319.ViewModels;
+@using System.Collections.Generic;
+
 @{
     VMDoctorSpecialist vMDoctorSpecialist = Model;
+
+    //int lamabekerja = 0;
+
+    //@foreach(var item in vMDoctorSpecialist.RiwayatPraktek)
+    //{
+    //    if (item.LamaBekerja > lamabekerja)
+    //    {
+    //        lamabekerja = item.LamaBekerja;
+    //    }
+    //}
+
 }
 
 <!-- Additional Style -->
@@ -39,12 +52,12 @@
                     style="margin-bottom:0; padding-bottom:0; font-size:24px; font-weight:600; padding:0">
                     @vMDoctorSpecialist.Fullname
                 </h2>
-                <p class="card-text"><small>@vMDoctorSpecialist.SpecialistName | 5 Tahun</small></p>
+                <p class="card-text"><small>@vMDoctorSpecialist.SpecialistName | @vMDoctorSpecialist.RiwayatPraktek.Max(a => a.LamaBekerja) Tahun</small></p>
             </div>
 
             <div class="col-auto">
                 <button class="btn btn-outline-primary">Chat</button>
-                <p><small>Rp30.0000</small></p>
+                <p><small>Rp @vMDoctorSpecialist.itemMedical.PriceMin</small></p>
             </div>
         </div>
     </div>
@@ -77,9 +90,19 @@
                             <li class="mb-2">
                                 @item.MedicalFacilityName, @item.Location
                                 <br />
-                                <small>@item.Specialization | 2019 - Sekarang</small>
+                                <small>@item.Specialization | @item.StartDate.Year - 
+                                    @if(item.EndDate?.Year >= DateTime.Now.Year)
+                                    {
+                                        <span>Sekarang</span>
+                                    }
+                                    else
+                                    {
+                                        <span>@item.EndDate?.Year</span>
+                                        
+                                    }
+                                </small>
                             </li>
-                            
+                                                      
                         }
                     </ul>
                 </div>
@@ -106,52 +129,62 @@
 
         <!-- Right Section -->
         <div class="col-xl-8">
-            <div class="card">
                 <div class="card-header h6 bg-primary text-white">
                     Lokasi Praktek
                 </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h5 class="card-title">RS Mitra</h5>
-                            <p class="card-text"><small>Poliklinik Anak</small></p>
-                            <div>
-                                <i class="bi bi-pin-map me-3"></i>
-                                <span>
-                                    <small>Jl. Kebenaran Kavling 3S Kecamatan, Kota</small>
-                                </span>
+            @foreach(var item in vMDoctorSpecialist.RiwayatPraktek)
+            {
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="card-title">@item.MedicalFacilityName</h5>
+                                <p class="card-text"><small>@item.Specialization</small></p>
+                                <div>
+                                    <i class="bi bi-pin-map me-3"></i>
+                                    <span>
+                                        <small>@item.FullAddress, @item.Location</small>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <p>
-                                <small>Biaya Konsultasi mulai dari</small><br>
-                                Rp300.000
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer text-body-secondary">
-                    <button id="btn-change" class="btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        <p id="bi-down"><i class="bi bi-chevron-down me-3"></i><small>Lihat jadwal praktek</small></p>
-                        <p id="bi-up"><i class="bi bi-chevron-up me-3"></i><small>Sembunyikan jadwal praktek</small></p>
-                    </button>
-                    <div class="collapse" id="collapseExample">
-                        <div class="card card-body pb-0 mb-0" style="box-shadow:none">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <ul>
-                                        <li>Senin   :18.00 - 21.00</li>
-                                        <li>Selasa  :09.00 - 12.00</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4">
-                                    <a href="#" class="btn btn-primary">Buat Janji</a>
-                                </div>
+                            <div class="col-md-4">
+                                <p>
+                                    <small>Biaya Konsultasi mulai dari</small><br>
+                                    Rp @item.PriceStartFrom?.ToString("#,#0")
+                                </p>
                             </div>
                         </div>
                     </div>
+                    <div class="card-footer text-body-secondary">
+                        <button id="btn-change" class="btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#@item.MedicalFacilityId" aria-expanded="false" aria-controls="collapseExample">
+                            <p id="bi-down"><i class="bi bi-chevron-down me-3"></i><small>Lihat jadwal praktek</small></p>
+                            <p id="bi-up"><i class="bi bi-chevron-up me-3"></i><small>Sembunyikan jadwal praktek</small></p>
+                        </button>
+                        <div class="collapse" id="@item.MedicalFacilityId">
+                            <div class="card card-body pb-0 mb-0" style="box-shadow:none">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        @foreach(var items in vMDoctorSpecialist.JadwalPraktek)
+                                        {    
+                                            if(item.MedicalFacilityId == items.JadwalPraktekId)
+                                            {   
+                                            <ul>
+                                                <li>@items.Day   <span>@items.TimeScheduleStart - @items.TimeScheduleEnd</span></li>
+                                            </ul>
+                                            }
+                                        }
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="#" class="btn btn-primary">Buat Janji</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            }
+            
         </div>
     </div>
 </section>

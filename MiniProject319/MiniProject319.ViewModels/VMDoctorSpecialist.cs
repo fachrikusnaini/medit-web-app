@@ -25,8 +25,10 @@ namespace MiniProject319.ViewModels
         public long? DeletedBy { get; set; }
         public DateTime? DeletedOn { get; set; }
         public bool IsDelete { get; set; }
+        public VMItemMedical? itemMedical { get; set; }
         public List<VMTindakanMedis>? ListTindakan { get; set; }
         public List<VMRiwayatPraktek>? RiwayatPraktek { get; set; }
+        public List<VMJadwalPraktek>? JadwalPraktek { get; set; }
         public List<VMPendidikanDokter>? PendidikanDokter { get; set; }
     }
 }

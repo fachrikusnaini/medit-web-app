@@ -1,6 +1,7 @@
 ﻿@using MiniProject319.ViewModels;
 @{
     List<VMListDoctor> vMListDoctors = Model;
+
 }
 
 <div class="pagetitle">
@@ -34,8 +35,15 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">@item.NameDoctor</h5>
-                        <p class="card-text"><small class="text-body-secondary">@item.NameSpecialist | 5 Tahun</small></p>
-                        <p class="card-text">RS Mitra - Bekasi</p>
+                        <p class="card-text"><small class="text-body-secondary">@item.NameSpecialist | @item.RiwayatPraktek.Where(a => a.DoctorId == item.DoctorId).Max(a => a.LamaBekerja) Tahun</small></p>
+                        @foreach(var items in item.RiwayatPraktek)
+                        {
+                            if(items.DoctorId == item.DoctorId)
+                            {
+                                
+                            <p class="card-text">@items.MedicalFacilityName - @items.Location</p>
+                            }
+                        }
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary">Buat Janji</button>
                             <button class="btn btn-outline-primary">Chat</button>

@@ -16,8 +16,8 @@ namespace MiniProject319.DataModels
         [StringLength(50)]
         [Unicode(false)]
         public string? Name { get; set; }
-        [Column("medical_facility_category_id")]
-        public long? MedicalFacilityCategoryId { get; set; }
+        [Column("medical_item_category_id")]
+        public long? MedicalItemCategoryId { get; set; }
         [Column("composition", TypeName = "text")]
         public string? Composition { get; set; }
         [Column("medical_item_segmentation_id")]
