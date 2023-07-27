@@ -4,6 +4,7 @@
 
 
 @{
+    string NameRole = Context.Session.GetString("NameRole") ?? "";
     int IdRole = Context.Session.GetInt32("RoleId") ?? 0;
     List<VMMenu> vMMenus = await authService.MenuAccess(IdRole);
 }
@@ -34,16 +35,22 @@
                     </li>
                 }
                 <li class="nav-item">
-                    <a class="nav-link collapsed as-toggle" asp-controller="Pasien" asp-action="Index">
-                        <i class="bi bi-person"></i>
-                        <span>Profile</span>
-                    </a>
-
-                </li><!-- End Profile Page Nav -->
-                <li class="nav-item">
                     <a class="nav-link collapsed as-toggle" asp-controller="Mspecialization" asp-action="Index">
                         <i class="bi bi-person"></i>
-                        <span>Spesialisasi Dokter</span>
+                        <span>Spesialis Docter</span>
+                    </a>
+                </li><!-- End Profile Page Nav -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed as-toggle" asp-controller="Pasien" asp-action="Index">
+                        <i class="bi bi-person"></i>
+                        <span>Profile Pasien</span>
+                    </a>
+                </li><!-- End Profile Page Nav -->
+                
+                <li class="nav-item">
+                    <a class="nav-link collapsed as-toggle" asp-controller="DoctorProfile" asp-action="Index">
+                        <i class="bi bi-person"></i>
+                        <span>Profile Doctor</span>
                     </a>
                 </li><!-- End Profile Page Nav -->
 

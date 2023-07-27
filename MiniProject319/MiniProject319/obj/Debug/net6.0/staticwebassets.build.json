@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gZqKDqgaQv2g1ozaTlAeGhas292oQ0HmY71YeOmPd+U=",
+  "Hash": "j9aFxS9XSsNM3nh3GG+lQaR/SI0uCOdy4C8ZclLAIvY=",
   "Source": "MiniProject319",
   "BasePath": "_content/MiniProject319",
   "Mode": "Default",
@@ -13479,6 +13479,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\NiceAdmin\\pages-register.html"
+    },
+    {
+      "Identity": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\plugins\\SweetAlert2\\SweetAlert2.js",
+      "SourceId": "MiniProject319",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\",
+      "BasePath": "_content/MiniProject319",
+      "RelativePath": "NiceAdmin/plugins/SweetAlert2/SweetAlert2.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\NiceAdmin\\plugins\\SweetAlert2\\SweetAlert2.js"
     },
     {
       "Identity": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\plugins\\toastr\\toastr.css",

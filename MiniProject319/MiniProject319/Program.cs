@@ -12,6 +12,7 @@ builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<RoleService>();
 builder.Services.AddScoped<MspecializationService>();
 builder.Services.AddScoped<PasienService>();
+builder.Services.AddScoped<DoctorService>();
 
 // Add session
 builder.Services.AddDistributedMemoryCache();

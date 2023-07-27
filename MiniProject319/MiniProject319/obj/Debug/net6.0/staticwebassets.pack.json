@@ -2929,6 +2929,10 @@
       "PackagePath": "staticwebassets\\NiceAdmin\\pages-register.html"
     },
     {
+      "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\plugins\\SweetAlert2\\SweetAlert2.js",
+      "PackagePath": "staticwebassets\\NiceAdmin\\plugins\\SweetAlert2\\SweetAlert2.js"
+    },
+    {
       "Id": "D:\\Batch_319\\MiniProject\\MiniProject319\\MiniProject319\\wwwroot\\NiceAdmin\\plugins\\toastr\\toastr.css",
       "PackagePath": "staticwebassets\\NiceAdmin\\plugins\\toastr\\toastr.css"
     },

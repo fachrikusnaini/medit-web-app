@@ -38,6 +38,7 @@ namespace MiniProject319.Controllers
             if (user != null)
             {
                 respon.Message = $"Hello, {user.Email} Welcome to Medical.IT";
+                HttpContext.Session.SetString("NameRole", user.NameRole);
                 HttpContext.Session.SetString("email", user.Email);
                 HttpContext.Session.SetInt32("RoleId", user.RoleId == null ? 0 : Convert.ToInt32(user.RoleId));
 
