@@ -1,0 +1,91 @@
+﻿@using MiniProject319.ViewModels
+@using MiniProject319.DataModels
+
+@model MCustomerRelation
+
+@{
+   
+    ViewData["Title"] = "Tambah Data";
+}
+
+<div class="h4 md-4">@ViewData["Title"]</div>
+
+<div class="card">
+    <div class="card-body">
+
+        <form asp-action="Create" method="post" id="form_input">
+
+            <div class="mb-4 row">
+                <label for="Name" class="col-sm-3.5 col-form-label">Name Category</label>
+                <div class="col-sm-8.5">
+                    <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name">
+                    <span id="validate_NameCategory" class="text-danger"></span>
+                </div>
+            </div>
+
+           
+            <br>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Input</button>
+                    <a class="btn btn-dark" asp-controller="Hubungan" asp-action="Index">Back</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script>
+    $("#form_input").validate({
+        errorClass: "text-danger",
+        rules: {
+            Name: {
+                required: true,
+                minlength: 5,
+            },
+        },
+        messages: {
+            Name: {
+                required: "Inputkan Data Anda",
+                minlength: "Nama Harus Lebih Dari 5 Huruf",
+            },
+
+        },
+        submitHandler: function (form) {
+            //console.log('test')
+
+            var dataForm = $(form).serialize()
+
+            $.ajax({
+                url: "/Hubungan/Create",
+                type: "post",
+                data: dataForm,
+                dataType: "json",
+                success: function (respon) {
+                    var data = respon.dataRespon
+                    if (data.success) {
+                        $("#modal").modal("hide")
+
+                        toastr.success(
+                            data.message,
+                            '',
+                            {
+                                timeOut: 500,
+                                fadeOut: 500,
+                                onHidden: function () {
+                                    window.location.reload()
+                                }
+                            }
+                        )
+                    }
+                    else {
+                        toastr.errorClass(data.message)
+                    }
+                }
+
+            })
+        }
+
+    })
+</script>

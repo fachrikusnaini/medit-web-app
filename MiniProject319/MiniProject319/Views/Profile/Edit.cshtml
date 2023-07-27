@@ -9,41 +9,32 @@
               <h5 class="card-title">Data Pribadi</h5>
 
               <!-- General Form Elements -->
-              <form>
+        <form asp-action="Edit" method="post" id="form_input">
             <input type="hidden" id="Id" name="Id" value="@Model.Id" />
+            <input type="hidden" id="BiodataId" name="BiodataId" value="@Model.BiodataId" />
+            <input type="hidden" id="RoleId" name="RoleId" value="@Model.RoleId" />
+            <input type="hidden" id="CustomerId" name="CustomerId" value="@Model.CustomerId" />
                 <div class="row mb-3">
-                  <label for="NameUser" class="col-sm-8 col-form-label">Nama Lengkap</label>
+                  <label for="Fullname" class="col-sm-8 col-form-label">Nama Lengkap</label>
                   <div class="col-sm-13">
-                    <input type="text" class="form-control" id="NameUser" name="NameUser" value="@Model.Fullname">
+                    <input type="text" class="form-control" id="Fullname" name="Fullname" value="@Model.Fullname">
                   </div>
                 </div>
 
 
-                             @*   <div class="row mb-3">
-                                    <label for="DoBUser" class="col-sm-2 col-form-label">Tanggal Lahir</label>
-                                    <div class="col-sm-10">
-                    <input type="text" class="form-control" id="DoBUser" name="DoBUser" value="@Model.Dob?.ToString("dd MMMM yyyy")" placeholder="23 Juli 2023">
-                    <input type="date" class="form-control" id="DoBUser" name="DoBUser">@Model.Dob?.ToString("dd MMMM yyyy")</input>
+                                <div class="row mb-3">
+                <label for="Dob" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                                    <div class="col-sm-13">
+                    <input type="date" class="form-control" id="Dob" name="Dob" value="@Model.Dob?.ToString("yyyy-MM-dd")">
+                  
                                     </div>
-                                </div>*@
+                                </div>
 
-            <div class="row mb-3">
-                <label for="DoBUser" class="col-sm-2 col-form-label">Tanggal Lahir</label>
-                <div class="col-sm-10 input-group">
-                    @{
-                        string formattedDate = Model.Dob?.ToString("yyyy-MM-dd"); // Format the date as "2000-10-02" for input field
-                        string displayedDate = Model.Dob?.ToString("dd MMMM yyyy"); // Format the date as "02 October 2000" for display
-                    }
-                    <input type="text" class="form-control" id="DoBUserDisplay" value="@displayedDate" readonly>
-                    <input type="date" class="form-control d-none" id="DoBUser" name="DoBUser" value="@formattedDate">
-                    <span class="input-group-text" onclick="toggleDatePicker()"><i class="bi bi-calendar"></i></span>
-                </div>
-            </div>
 
                 <div class="row mb-3">
-                  <label for="NoHP" class="col-sm-2 col-form-label">Number</label>
+                <label for="MobilePhone" class="col-sm-2 col-form-label">Number</label>
                   <div class="col-sm-13">
-                    <input type="number" class="form-control" id="NoHP" name="NoHP" value="@Model.MobilePhone">
+                    <input type="number" class="form-control" id="MobilePhone" name="MobilePhone" value="@Model.MobilePhone">
                 </div>
                 </div>
          <br />
@@ -64,16 +55,83 @@
 
 
 <script>
-    function toggleDatePicker() {
-        var inputDate = document.getElementById("DoBUser");
-        var inputDateDisplay = document.getElementById("DoBUserDisplay");
+    $("#form_input").validate({
+        errorClass: "text-danger",
+        rules: 
+        {
+            Fullname:
+            {
+                required: true,
+            },
+            Dob:
+            {
+                required: true,
+                //Date : true,
+            },
+            MobilePhone:
+            {
+                required: true,
+                number: true,
+            },
 
-        if (inputDateDisplay.classList.contains("d-none")) {
-            inputDateDisplay.classList.remove("d-none");
-            inputDate.classList.add("d-none");
-        } else {
-            inputDateDisplay.classList.add("d-none");
-            inputDate.classList.remove("d-none");
+        },
+        messages:
+        {
+            Fullname:
+            {
+                required: "Input Nama Anda ",
+            },
+            Dob: {
+                required: "Inputkan Tanggal Lahir Anda",
+                //Date: "",
+            },
+            MobilePhone: {
+                required: "Inputkan Nomor anda",
+                number: "Please fill Number only",
+            },
+          
+        },
+
+        submitHandler: function (form) 
+        {
+              var dataForm = $(form).serialize()
+                //debugger
+            //var Fullname = $("#Fullname").val()
+            //    var id = $("#Id").val()
+            //var Dob = $("#Dob").val()
+            //var MobilePhone = $("#MobilePhone").val()
+
+            $.ajax({
+                url: "/Profile/Edit",
+                type: "post",
+                data: dataForm,
+                dataType: "json",
+                success: function (respon) {
+                    var data = respon.dataRespon
+                    if (data.success) {
+                        $("#modal").modal("hide")
+
+                        toastr.success(
+                            data.message,
+                            '',
+                            {
+                                timeout: 500,
+                                fadeout: 500,
+                                onHidden: function () {
+                                    window.location.reload()
+                                }
+                            }
+                        )
+                    }
+                    else {
+                        toastr.errorClass(data.message)
+                    }
+                }
+            })
         }
-    }
+     )}
+
+
+
+
 </script>

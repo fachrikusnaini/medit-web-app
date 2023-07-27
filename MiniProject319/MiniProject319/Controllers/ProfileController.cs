@@ -17,7 +17,7 @@ namespace MiniProject319.Controllers
         public async Task<IActionResult> Index(int id)
         {
             VMUser data = await dataService.GetDataById(1);
-            return PartialView(data);
+            return View(data);
         }
 
         public async Task<IActionResult> Edit(int id)
@@ -31,10 +31,12 @@ namespace MiniProject319.Controllers
         public async Task<IActionResult> Edit(VMUser dataparam)
         {
             dataparam.ModifiedBy = dataparam.Id;
+            dataparam.ModifiedOn = DateTime.Now;
             VMResponse respon = await dataService.Edit(dataparam);
             if (respon.Success)
             {
-                return Json(new { dataRespon = respon });
+                return RedirectToAction("Index"); //jikalau tidak menggunakan json
+               // return Json(new { dataRespon = respon });
             }
             return PartialView(dataparam);
         }

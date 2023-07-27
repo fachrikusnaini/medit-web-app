@@ -9,6 +9,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<PasienService>();
 builder.Services.AddScoped<DataService>();
+builder.Services.AddScoped<HubunganService>();
 
 
 //Add connection string

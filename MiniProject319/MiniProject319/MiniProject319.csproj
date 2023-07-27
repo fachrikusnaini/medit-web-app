@@ -7,6 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Controllers\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Controllers\.vs\Controllers\FileContentIndex\2d1c27ec-f966-49dc-8b20-4f6fa89b6dcb.vsidx" />
+    <None Include="Controllers\.vs\Controllers\FileContentIndex\read.lock" />
+    <None Include="Controllers\.vs\slnx.sqlite" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.2.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.20">
       <PrivateAssets>all</PrivateAssets>
@@ -23,6 +33,11 @@
   <ItemGroup>
     <ProjectReference Include="..\MiniProject319.DataModels\MiniProject319.DataModels.csproj" />
     <ProjectReference Include="..\MiniProject319.ViewModels\MiniProject319.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\.vs\Controllers\FileContentIndex\merges\" />
+    <Folder Include="Controllers\.vs\Controllers\v17\" />
   </ItemGroup>
 
 </Project>

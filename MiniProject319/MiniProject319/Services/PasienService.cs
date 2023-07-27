@@ -32,12 +32,21 @@ namespace MiniProject319.Services
         {
             List<VMPasien> data = new List<VMPasien>();
             string apiResponse = await client.GetStringAsync(RouteAPI + $"apiPasien/GetDataById/{id}");
-            data = JsonConvert.DeserializeObject<List<VMPasien>>(apiResponse);
+            data = JsonConvert.DeserializeObject<List<VMPasien>>(apiResponse)!;
 
             return data;
 
         }
 
+        public async Task<List<VMPasien>> GetDataByIdParent(int id)
+        {
+            List<VMPasien> data = new List<VMPasien>();
+            string apiResponse = await client.GetStringAsync(RouteAPI + $"apiPasien/GetDataByIdParent/{id}");
+            data = JsonConvert.DeserializeObject<List<VMPasien>>(apiResponse)!;
+
+            return data;
+
+        }
 
     }
 }

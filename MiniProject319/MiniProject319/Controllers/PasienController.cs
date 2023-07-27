@@ -38,7 +38,7 @@ namespace MiniProject319.Controllers
             ViewBag.CurrentFilter = searchString;
 
 
-            List<VMPasien> data = await pasienService.GetDataById(1);
+            List<VMPasien> data = await pasienService.GetDataByIdParent(2);
             if (!string.IsNullOrEmpty(searchString))
             {
 
@@ -58,5 +58,14 @@ namespace MiniProject319.Controllers
 
             return PartialView(PaginatedList<VMPasien>.CreateAsync(data, pageNumber ?? 1, pageSize ?? 3));
         }
+
+        //public async Task<IActionResult> Edit(int id)
+        //{
+        //    VMPasien data = new VMPasien();
+        //    data = await PasienService.GetDataById(id);
+        //    return PartialView(data);
+        //}
+
+
     }
 }

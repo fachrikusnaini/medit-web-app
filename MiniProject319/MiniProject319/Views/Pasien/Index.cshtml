@@ -2,7 +2,8 @@
 @using MiniProject319.ViewModels;
 
 
-@model PaginatedList<VMPasien>
+@*@model PaginatedList<VMPasien>*@
+
 
 
 <!DOCTYPE html>
@@ -26,8 +27,8 @@
 
     <!-- JQUERY -->
     @*    <script src="~/adminmart/assets/libs/jquery/dist/jquery.min.js"></script>*@
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+ @*   <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>*@
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -67,12 +68,21 @@
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
 
-        <div class="search-bar">
-            <form class="search-form d-flex align-items-center" method="POST" action="#">
-                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-            </form>
-        </div><!-- End Search Bar -->
+        <form asp-action="Index" asp-route-pageSize="@ViewBag.CurrentPageSize">
+            <div class="input-group w-100">
+                <input type="text" name="searchString" value="@ViewBag.CurrentFilter" class="form-control" placeholder="Search..">
+                <div class="input-group-prepend">
+                    <button type="submit" class="input-group-text" title="Search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                <div class="input-group-prepend">
+                    <a class="input-group-text" asp-action="Index" title="Reset">
+                        <i class="fa fa-refresh"></i>
+                    </a>
+                </div>
+            </div>
+        </form>
 
        
 
@@ -298,65 +308,7 @@
                                         <br />
                                         <br />
 
-                                     @*   <div class="row">
-                                            <div class="col-lg-3 col-md-4 label ">Nama Lengkap</div>
-                                            <div class="col-lg-9 col-md-8">Manggil Nama dr DATABASE m_biodata</div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-4 label">Tanggal Lahir</div>
-                                            <div class="col-lg-9 col-md-8">Manggil tgl lahir dr DB m_cutomer</div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-4 label">Nomor Handphone</div>
-                                            <div class="col-lg-9 col-md-8">Manggil no hp dr DB m_biodata</div>
-                                        </div>
-                                        <br />
-
-                                        <h5 class="card-title">Data Akun</h5>
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-4 label">Email</div>
-                                                <div class="col-lg-6 col-md-8 d-flex align-items-center">
-                                                    <input type="text" class="form-control flex-grow-1" value="Manggil dr DB m_user">
-                                                    <i class="bi bi-pencil-square"></i>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-4 label">Password</div>
-                                                <div class="col-lg-6 col-md-8 d-flex align-items-center">
-                                                    <input type="password" class="form-control flex-grow-1" value="Manggil dr DB m_user">
-                                                    <i class="bi bi-pencil-square bi-lg"></i>
-                                                </div>
-                                            </div>
-                                        </div>*@
-
-                                  @*      <button type="submit" id="btn_multiple_delete" class="btn btn-danger" disabled><i class="bi bi-trash"></i></button>
-                                        <button type="submit" id="btn_create" class="btn btn-primary">Create</button>*@
-
-                                    @*    <div class="d-flex justify-content-between">
-                                            <button type="submit" id="btn_multiple_delete" class="btn btn-danger" disabled>
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-
-                                            <div class="col-2">
-
-                                                <form asp-action="Index" id="form_pagesize">
-                                                    <select name="PageSize" id="PageSize"
-                                                            class="form-control">
-                                                        <option value="3">3</option>
-                                                        <option value="5">5</option>
-                                                        <option value="10">10</option>
-                                                    </select>
-                                                </form>
-                                            </div>
-
-                                            <button type="submit" id="btn_create" class="btn btn-primary ml-auto">
-                                                <i class="bi bi-plus"></i> 
-                                            </button>
-                                        </div>*@
+                                    
 
                                         <div class="d-flex justify-content-between">
                                             <button type="submit" id="btn_multiple_delete" class="btn btn-danger" disabled>
@@ -375,7 +327,7 @@
                                                         <option value="5">5</option>
                                                         <option value="10">10</option>
                                                     </select>
-                                                <button type="submit" id="btn_create" class="btn btn-primary me-2">
+                                                    <button type="submit" id="btn_create" class="btn btn-primary me-2" style="margin-left: 10px;">
                                                     <i class="bi bi-plus"></i>
                                                 </button>
                                                 </form>
@@ -394,66 +346,44 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach (var pasien in Model)
+                                                {
+                                                    
+                                                
                                                 <tr>
-                                                    <td> <input type="checkbox" onchange="selectedItem()" class="mychecked" value=""></td>
-                                                    <td>Data</td>
+                                       
+
+                                                        <!-- Di dalam tabel -->
+                                                        <td>
+                                                            <input type="checkbox" onchange="selectedItem()" class="mychecked" value="@pasien.Id">
+                                                        </td>
+                                                        <td>
+                                                            @if (pasien.Dob != null)
+                                                            {
+                                                                @pasien.Fullname
+                                                                int umur = DateTime.Now.Year - pasien.Dob.Year;
+                                                                <div style="font-size: 11px; ">
+                                                                        @umur Tahun, @pasien.Name
+                                                                </div>
+                                                            }
+                                                        </td>
+                                                      
+                                                     
+
+
                                                     <td>
                                                         <div class="d-flex justify-content-end">
-                                                            <a class="btn btn-success btn_edit"><i class="bi bi-pencil"></i></a>
+                                                            <a class="btn btn-success btn_edit" style="margin-right: 10px;"><i class="bi bi-pencil"></i></a>
                                                             <a class="btn btn-danger btn_delete"><i class="bi bi-trash"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
+                                                }
                                             </tbody>
 
                                         </table>
 
-                                        <table class="table table-hover mb-3">
-                                            <thead>
-                                                <tr>
-                                                    <th></th>
-                                                    <th></th>
-                                                    <th> </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td> <input type="checkbox" onchange="selectedItem()" class="mychecked" value=""></td>
-                                                    <td>Data</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <a class="btn btn-success btn_edit"><i class="bi bi-pencil"></i></a>
-                                                            <a class="btn btn-danger btn_delete"><i class="bi bi-trash"></i></a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-
-                                        </table>
-
-                                        <table class="table table-hover mb-3">
-                                            <thead>
-                                                <tr>
-                                                    <th></th>
-                                                    <th></th>
-                                                    <th> </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td> <input type="checkbox" onchange="selectedItem()" class="mychecked" value=""></td>
-                                                    <td>Data</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <a class="btn btn-success btn_edit"><i class="bi bi-pencil"></i></a>
-                                                            <a class="btn btn-danger btn_delete"><i class="bi bi-trash"></i></a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-
-                                        </table>
-
+                                   
 
 
                                         <br />
