@@ -1,4 +1,6 @@
 ﻿using System.Data.SqlTypes;
+using System.Text.RegularExpressions;
+using Humanizer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
@@ -19,6 +21,25 @@ namespace MiniProject319.api.Controllers
             this.db = _db;
         }
 
+        [HttpGet("GetCariDokter")]
+        public VMCariDokter GetCariDokter()
+        {
+            VMCariDokter data = (from a in db.MDoctors
+                                 join b in db.TCurrentDoctorSpecializations on a.Id equals b.DoctorId
+                                 join c in db.MSpecializations on b.SpecializationId equals c.Id
+                                 select new VMCariDokter
+                                 {
+                                     SpecializationId = c.Id,
+                                     SpecializationName = c.Name
+                                 }).FirstOrDefault()!;
+
+            return data;
+        }
+
+
+
+
+
         [HttpGet("GetAllDataDoctor")]
         public List<VMListDoctor> GetAllDataDoctor()
         {
@@ -26,7 +47,7 @@ namespace MiniProject319.api.Controllers
                                        join b in db.MDoctors on a.DoctorId equals b.Id
                                        join c in db.MBiodata on b.BiodataId equals c.Id
                                        join d in db.MSpecializations on a.SpecializationId equals d.Id
-                                       where a.IsDelete == false && b.IsDelete == false && c.IsDelete == false && d.IsDelete == false
+                                       where a.IsDelete == false && b.IsDelete == false && c.IsDelete == false && d.IsDelete == false 
                                        select new VMListDoctor
                                        {
                                            DoctorId = b.Id,

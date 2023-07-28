@@ -32,5 +32,14 @@ namespace MiniProject319.Services
 
             return data;
         }
+
+        public async Task<VMCariDokter> GetCariDoctor()
+        {
+            VMCariDokter data = new VMCariDokter();
+            string apiRespon = await client.GetStringAsync(RouteApi + $"apiDoctorProfile/GetCariDoctor");
+            data = JsonConvert.DeserializeObject<VMCariDokter>(apiRespon)!;
+
+            return data;
+        }
     }
 }

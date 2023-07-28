@@ -14,6 +14,7 @@ namespace MiniProject319.ViewModels
         public long? MedicalFacilityId { get; set; }
         public string? MedicalFacilityName { get; set; }
         public string Specialization { get; set; } = null!;
+        public string? SpecialistName { get; set; }
         public string? Location { get; set; }
         public string? FullAddress { get; set; }
         public DateTime StartDate { get; set; }

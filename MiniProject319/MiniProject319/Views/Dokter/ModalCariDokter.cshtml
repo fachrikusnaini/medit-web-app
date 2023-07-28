@@ -1,4 +1,11 @@
-﻿
+﻿@using MiniProject319.ViewModels;
+@{
+    //List<VMListDoctor> vMListDoctors = Model;
+    //List<VMRiwayatPraktek> vMListRiwayat = Model;
+    VMCariDokter vMCariDokter = Model;
+}
+
+
 <div class="modal-header">
     <h3 class="modal-title">Cari Dokter</h3>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -6,41 +13,36 @@
 <div class="modal-body">
     @*<p class="text-secondary"><small>Masukan minimal 1 kata kunci untuk pencarian dokter anda!</small></p>*@
 
-    <form class="row g-3 needs-validation" id="form_login">
+    <form class="row g-3 needs-validation" asp-controller="Dokter" asp-action="ListDokter" asp-route-pageSize="@ViewBag.CurrentPageSize">
 
         <div class="col-12">
             <label for="doctorname" class="form-label">Nama Dokter</label>
-            <input type="text" name="doctorname" class="form-control" id="doctorname" placeholder="select doctor name">
+            <input type="text" name="searchNameDoctor" class="form-control" id="doctorname" placeholder="select doctor name" value="@ViewBag.CurrentFilter">
         </div>
-
-        @*<div class="col-12">
-            <label class="form-label">Location</label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-        </div>*@
 
         <div class="col-12">
             <div class="row">
                 <div class="col">
-                    <label class="form-label">Spesialisasi/ Sub-spesialisasi*</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <label class="form-label">Specialist/ Sub-specialist*</label>
+                    <select class="form-select" aria-label="Default select example" name="searchString">
+                        <option selected>Select specialist</option>
+                        @foreach(VMListDoctor item in Model)
+                        {
+                        <option value="@item.NameSpecialist">@item.NameSpecialist</option>
+                        }
                     </select>
                 </div>
                 <div class="col">
                     <label class="form-label">Location</label>
                     <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option selected>Select location</option>
+                        @foreach (VMListDoctor item in Model)
+                        {
+
+                            <option value="x">@item.RiwayatPraktek.SelectMany(a => a.Location).First()</option>
+                                                      
+                            
+                        }
                     </select>
                 </div>
             </div>
@@ -49,10 +51,13 @@
         <div class="col-12 mb-4">
             <label class="form-label">Tindakan Medis</label>
             <select class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected>Select tindakan medis</option>
+                @*@foreach (var item in vMListDoctors)
+                {
+
+                  <option value="@item.TindakanName">@item.TindakanName</option>
+ 
+                }*@
             </select>
         </div>
 
@@ -69,7 +74,7 @@
     </form>
 </div>
 
-<script>
+@*<script>
     $("#form_login").validate({
         submitHandler: function (form) {
 
@@ -105,4 +110,4 @@
             })
         }
     })
-</script>
+</script>*@

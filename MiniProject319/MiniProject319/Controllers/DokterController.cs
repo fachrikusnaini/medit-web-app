@@ -19,15 +19,57 @@ namespace MiniProject319.Controllers
             return View();
         }
 
-        public async Task<IActionResult> ListDokter()
+        public async Task<IActionResult> ListDokter(string searchString,
+                                                    string searchName,
+                                                    string searchLocation,
+                                                    string searchTindakan,
+                                                    string currentFilter,
+                                                    int? pageNumber,
+                                                    int? pageSize)
         {
+            ViewBag.CurrentPageSize = pageSize;
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
+
             List<VMListDoctor> data = await doctorService.GetAllDataDoctor();
-            return View(data);
+
+            //if (!string.IsNullOrEmpty(searchString))
+            //{
+                if (!string.IsNullOrEmpty(searchName))
+                {
+                    data = data.Where(a => a.NameSpecialist.ToLower().Contains(searchString.ToLower())
+                    && a.NameDoctor.ToLower().Contains(searchName.ToLower())).ToList();
+                }
+                if (!string.IsNullOrEmpty(searchLocation))
+                {
+                    data = data.Where(a => a.NameSpecialist.ToLower().Contains(searchString.ToLower())
+                    && a.LocationName.ToLower().Contains(searchLocation.ToLower())).ToList();
+                }
+                if (!string.IsNullOrEmpty(searchTindakan))
+                {
+                    data = data.Where(a => a.NameSpecialist.ToLower().Contains(searchString.ToLower())
+                    && a.TindakanName.ToLower().Contains(searchTindakan.ToLower())).ToList();
+                }
+
+
+            //}
+            return View(PageInatedList<VMListDoctor>.CreateAsync(data, pageNumber ?? 1, pageSize ?? 2));
         }
 
-        public IActionResult ModalCariDokter()
+        public async Task<IActionResult> ModalCariDokter()
         {
-            return PartialView();
+            //List<VMListDoctor> data = await doctorService.GetAllDataDoctor();
+            VMCariDokter data = await doctorService.GetCariDoctor();
+            return PartialView(data);
         }
 
         public async Task<IActionResult> DetailDokter()
