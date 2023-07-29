@@ -10,9 +10,7 @@ namespace MiniProject319.ViewModels
     {
         public long LocationId { get; set; }
 
-        public string? NameLocation { get; set; }
-
-
+        public string? LocationName { get; set; }
 
     }
 }

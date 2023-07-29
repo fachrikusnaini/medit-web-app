@@ -24,14 +24,46 @@ namespace MiniProject319.api.Controllers
         [HttpGet("GetCariDokter")]
         public VMCariDokter GetCariDokter()
         {
-            VMCariDokter data = (from a in db.MDoctors
-                                 join b in db.TCurrentDoctorSpecializations on a.Id equals b.DoctorId
-                                 join c in db.MSpecializations on b.SpecializationId equals c.Id
-                                 select new VMCariDokter
+            VMCariDokter data = (/*from a in db.MDoctors*/
+                                 //join b in db.MBiodata on a.BiodataId equals b.Id
+                                 //where a.IsDelete == false && b.IsDelete == false
+                                new VMCariDokter
                                  {
-                                     SpecializationId = c.Id,
-                                     SpecializationName = c.Name
-                                 }).FirstOrDefault()!;
+
+                                     GetSpecialists = (from a in db.TCurrentDoctorSpecializations
+                                                       join b in db.MDoctors on a.DoctorId equals b.Id
+                                                       join c in db.MBiodata on b.BiodataId equals c.Id
+                                                       join d in db.MSpecializations on a.SpecializationId equals d.Id
+                                                       where a.IsDelete == false && b.IsDelete == false && c.IsDelete == false && d.IsDelete == false
+                                                       select new VMGetSpecialist
+                                                       {
+                                                           SpecialistId = d.Id,
+                                                           SpecialistName = d.Name
+
+                                                       }).ToList(),
+
+                                     GetLocations = (from b in db.MMedicalFacilities 
+                                                     join c in db.MMedicalFacilityCategories on b.MedicalFacilityCategoryId equals c.Id
+                                                     join d in db.MLocations on b.LocationId equals d.Id
+                                                     where b.IsDelete == false && c.IsDelete == false && d.IsDelete == false
+                                                     select new VMGetLocation
+                                                     {
+                                                         LocationId = d.Id,
+                                                         LocationName = d.Name
+
+                                                     }).ToList(),
+
+                                     GetTreatments =(from a in db.TDoctorTreatments
+                                                     join b in db.MDoctors on a.DoctorId equals b.Id
+                                                     where a.IsDelete == false && b.IsDelete == false
+                                                     select new VMGetTreatment
+                                                     {
+                                                         TreatmentId = a.Id,
+                                                         TreatmentName = a.Name
+                                                         
+                                                     }).ToList()
+
+                                 });
 
             return data;
         }

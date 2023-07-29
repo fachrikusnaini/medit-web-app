@@ -1,7 +1,5 @@
 ﻿@using MiniProject319.ViewModels;
 @{
-    //List<VMListDoctor> vMListDoctors = Model;
-    //List<VMRiwayatPraktek> vMListRiwayat = Model;
     VMCariDokter vMCariDokter = Model;
 }
 
@@ -26,9 +24,9 @@
                     <label class="form-label">Specialist/ Sub-specialist*</label>
                     <select class="form-select" aria-label="Default select example" name="searchString">
                         <option selected>Select specialist</option>
-                        @foreach(VMListDoctor item in Model)
+                        @foreach(var item in vMCariDokter.GetSpecialists)
                         {
-                        <option value="@item.NameSpecialist">@item.NameSpecialist</option>
+                        <option value="@item?.SpecialistName">@item?.SpecialistName</option>
                         }
                     </select>
                 </div>
@@ -36,12 +34,11 @@
                     <label class="form-label">Location</label>
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Select location</option>
-                        @foreach (VMListDoctor item in Model)
+                        @foreach (var item in vMCariDokter.GetLocations)
                         {
 
-                            <option value="x">@item.RiwayatPraktek.SelectMany(a => a.Location).First()</option>
-                                                      
-                            
+                            <option value="@item?.LocationName">@item?.LocationName</option>
+      
                         }
                     </select>
                 </div>
@@ -52,12 +49,12 @@
             <label class="form-label">Tindakan Medis</label>
             <select class="form-select" aria-label="Default select example">
                 <option selected>Select tindakan medis</option>
-                @*@foreach (var item in vMListDoctors)
+                @foreach (var item in vMCariDokter.GetTreatments)
                 {
 
-                  <option value="@item.TindakanName">@item.TindakanName</option>
+                  <option value="@item?.TreatmentName">@item?.TreatmentName</option>
  
-                }*@
+                }
             </select>
         </div>
 

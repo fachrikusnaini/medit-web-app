@@ -67,7 +67,6 @@ namespace MiniProject319.Controllers
 
         public async Task<IActionResult> ModalCariDokter()
         {
-            //List<VMListDoctor> data = await doctorService.GetAllDataDoctor();
             VMCariDokter data = await doctorService.GetCariDoctor();
             return PartialView(data);
         }
