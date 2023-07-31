@@ -15,7 +15,7 @@ namespace MiniProject319.Controllers
         }
         public async Task<IActionResult> Detail()
         {
-            int IdDoctor = HttpContext.Session.GetInt32("BiodataId") ?? 0;
+            int IdDoctor = HttpContext.Session.GetInt32("DoctorId") ?? 0;
             //int IdDoctor = 1;
             VMDoctorSpecialist data = await doctorService.GetProfileDoctor(IdDoctor);
             return View(data);

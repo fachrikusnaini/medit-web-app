@@ -36,8 +36,10 @@ namespace MiniProject319.Controllers
                 respon.Message = $"Hello, {user.Email} welcome to medit";
                 HttpContext.Session.SetString("Email", user.Email);
                 HttpContext.Session.SetString("Name", user.Name);
+                HttpContext.Session.SetString("ImagePath", user.ImagePath);
                 HttpContext.Session.SetInt32("RoleId", user.RoleId == null ? 0 : Convert.ToInt32(user.RoleId));
                 HttpContext.Session.SetInt32("BiodataId", user.BiodataId == null ? 0 : Convert.ToInt32(user.BiodataId));
+                HttpContext.Session.SetInt32("DoctorId", user.DoctorId == null ? 0 : Convert.ToInt32(user.DoctorId));
 
 
             }

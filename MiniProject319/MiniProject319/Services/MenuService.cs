@@ -24,5 +24,14 @@ namespace MiniProject319.Services
 
             return data;
         }
+
+        public async Task<List<VMListMenu>> GetPublicMenu()
+        {
+            List<VMListMenu> data = new List<VMListMenu>();
+            string apiRespon = await client.GetStringAsync(RouteApi + $"apiMenu/GetPublicMenu");
+            data = JsonConvert.DeserializeObject<List<VMListMenu>>(apiRespon)!;
+
+            return data;
+        }
     }
 }

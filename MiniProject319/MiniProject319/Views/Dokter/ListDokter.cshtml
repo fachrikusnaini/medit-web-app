@@ -4,7 +4,7 @@
     bool isLogin = false;
 }
 
-<div class="pagetitle">
+<div class="pagetitle mb-5">
     <h1>List Dokter</h1>
     <nav>
         <ol class="breadcrumb">
@@ -12,74 +12,90 @@
             <li class="breadcrumb-item active">Data Dokter</li>
         </ol>
     </nav>
-    <div>
-    <p>Hasil Pencarian Berdasarkan kata kunci: </p><button class="btn btn-outline-secondary">Lokasi Jabodetabek</button>
-    <p>Spesialiasi/ Sub-spesialisasi: </p><button class="btn btn-outline-secondary">Anak</button>
+
+    <div class="row justify-content-between">
+        <div class="col">
+            <small>Hasil Pencarian Berdasarkan kata kunci: </small>
+            <button class="btn btn-outline-secondary btn-sm">Lokasi Jabodetabek</button>
+            <br />
+            <small>Spesialiasi/ Sub-spesialisasi: </small>
+            <button class="btn btn-outline-secondary btn-sm">Anak</button>
+        </div>
+
+        <div class="col text-end">
+            <a class="btn btn-outline-secondary" id="reset_pencarian">
+                Ulangi Pencarian
+            </a>
+        </div>
     </div>
-        <a class="btn btn-outline-secondary" id="reset_pencarian">
-            Ulangi Pencarian
-        </a>
+
 </div><!-- End Page Title -->
 
 <div class="card pt-4">
     <div class="card-body">
-        <div class="row row-cols-auto gap-2">
+        <div class="row row-cols-auto gap-2 justify-content-between">
             @foreach (var item in vMListDoctors)
             {
                 int BiodataId = Context.Session.GetInt32("Biodata") ?? 0;
 
-                <div class="card mb-3 w-45">
-                    @*<div class="row g-0">*@
-                    <!-- Image -->
-                    @*<div class="col-md-4">
-                <img src="~/assets/img/image.png"
-                class="card-img img-fluid rounded-start"
-                alt="image"
-                style="object-fit: cover; width: 100%; height: 100%; border-bottom-right-radius: 0px; border-top-right-radius: 0px;">
-                </div>*@
-
-                    <!-- Caption -->
-                    @*<div class="col-md-8">*@
+                <div class="card p-3 mb-0" style="min-width:450px">
                     <div class="card-body">
-                        <h5 class="card-title">@item.NameDoctor</h5>
-                        <p class="card-text"><small class="text-body-secondary">@item.NameSpecialist | @item.RiwayatPraktek.Where(a => a.DoctorId == item.DoctorId).Max(a => a.LamaBekerja) Tahun</small></p>
-                        @foreach (var items in item.RiwayatPraktek)
-                        {
-                            if (items.DoctorId == item.DoctorId)
-                            {
+                        <div class="row">
+                            <div class="col-8">
+                                <h5 class="card-title pb-0">@item.NameDoctor</h5>
+                                <p class="card-text">
+                                    <small class="text-body-secondary">
+                                        @item.NameSpecialist |
+                                        @item.RiwayatPraktek.Where(a => a.DoctorId == item.DoctorId).Max(a => a.LamaBekerja) Tahun
+                                    </small>
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <img src="~/assets/img/@item.ImagePath" alt="Profile" class="rounded-circle" style="max-height:120px">
+                            </div>
+                        </div>
 
-                                <p class="card-text">@items.MedicalFacilityName - @items.Location</p>
-                            }
-                        }
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary">Buat Janji</button>
-                            @if (isLogin == true)
-                            {
-                                <button class="btn btn-outline-primary">Chat</button>
-                            }
-                            else
-                            {
-                                <button class="btn btn-outline-secondary" disabled>Offline</button>
-                            }
+                        <div class="row mt-3">
+                            <div class="col-8">
+                                @foreach (var items in item.RiwayatPraktek)
+                                {
+                                    if (items.DoctorId == item.DoctorId)
+                                    {
+                                        <p class="card-text">@items.MedicalFacilityName - @items.Location</p>
+                                    }
+                                }
+                            </div>
+                            <div class="col-4">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">Buat Janji</button>
+                                    @if (isLogin == true)
+                                    {
+                                        <button class="btn btn-outline-primary">Chat</button>
+                                    }
+                                    else
+                                    {
+                                        <button class="btn btn-outline-secondary" disabled>Offline</button>
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <a dataid="@item.DoctorId" class="btn" id="btn_detail">Info lebih lengkap...</a>
+                    <div class="card-footer bg-secondary-subtle" style="padding:20px">
+                        <a dataid="@item.DoctorId" class="btn p-0" id="btn_detail">Info lebih lengkap...</a>
                     </div>
-                    @*</div>*@
-                    @*</div>*@
+
                 </div>
             }
         </div>
     </div>
-    <div class="card-footer">
+    <div class="card-footer" style="padding:20px">
         Menampilkan @Model.PageIndex dari @Model.TotalPages
         @{
             var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
             var nextDisabled = !Model.HasNextPage ? "disabled" : "";
         }
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
+        <nav aria-label="Page navigation example" class="mt-2">
+            <ul class="pagination mb-0">
                 <li class="page-item">
                     <a class="page-link @prevDisabled"
                        asp-action="ListDokter"
@@ -87,23 +103,24 @@
                        asp-route-pageNumber="@(Model.PageIndex - 1)"
                        asp-route-currentFilter="@ViewBag.CurrentFilter"
                        asp-route-pageSize="@ViewBag.CurrentPageSize">
-                       Previous
-                   </a>
+                        Previous
+                    </a>
                 </li>
-               
-                <li class="page-item @nextDisabled"><a class="page-link" asp-action="ListDokter"
-                   asp-route-sortOrder="@ViewBag.CurrentSort"
-                   asp-route-pageNumber="@(Model.PageIndex + 1)"
-                   asp-route-currentFilter="@ViewBag.CurrentFilter"
-                   asp-route-pageSize="@ViewBag.CurrentPageSize">
-                   Next
-                   </a>
+
+                <li class="page-item @nextDisabled">
+                    <a class="page-link" asp-action="ListDokter"
+                       asp-route-sortOrder="@ViewBag.CurrentSort"
+                       asp-route-pageNumber="@(Model.PageIndex + 1)"
+                       asp-route-currentFilter="@ViewBag.CurrentFilter"
+                       asp-route-pageSize="@ViewBag.CurrentPageSize">
+                        Next
+                    </a>
                 </li>
             </ul>
         </nav>
     </div>
 </div>
-    
+
 
 
 
@@ -112,15 +129,14 @@
         $("#modal-body").empty()
         $("#modal-body").load("/Dokter/ModalCariDokter")
         $("#verticalycentered").modal("show")
-    });*@
+        });*@
 
-    $("#btn_detail").click(function () {
-        var id = $(this).attr("dataid")
-        @*$("#main").empty()
-        $("#main").load("/Dokter/DetailDokter?id=" + id)*@
-            $(".modal-content").empty()
-        $(".modal-content").load("/Dokter/DetailDokter?id=" + id)
-        $(".modal").modal("show")
-    })
+        $("#btn_detail").click(function () {
+            var id = $(this).attr("dataid")
+
+            $("#modal-body-xl").empty()
+            $("#modal-body-xl").load("/Dokter/DetailDokter?id=" + id)
+            $("#modal2").modal("show")
+        })
 
 </script>

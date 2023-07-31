@@ -17,6 +17,34 @@
       "PackagePath": "staticwebassets\\assets\\img\\card.jpg"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\carousel-1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\carousel-1.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\carousel-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\carousel-2.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\carousel-3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\carousel-3.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\dr.elvin.png",
+      "PackagePath": "staticwebassets\\assets\\img\\dr.elvin.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\dr.intan.png",
+      "PackagePath": "staticwebassets\\assets\\img\\dr.intan.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\dr.tatjana.png",
+      "PackagePath": "staticwebassets\\assets\\img\\dr.tatjana.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\erwan.png",
+      "PackagePath": "staticwebassets\\assets\\img\\erwan.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\favicon-medit.png",
       "PackagePath": "staticwebassets\\assets\\img\\favicon-medit.png"
     },
@@ -47,6 +75,10 @@
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\messages-3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\messages-3.jpg"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\mimin.png",
+      "PackagePath": "staticwebassets\\assets\\img\\mimin.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\new-favicon-medit.png",

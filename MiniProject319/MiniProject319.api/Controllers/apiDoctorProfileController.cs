@@ -85,6 +85,8 @@ namespace MiniProject319.api.Controllers
                                            DoctorId = b.Id,
                                            NameDoctor = c.Fullname,
 
+                                           ImagePath = c.ImagePath,
+
                                            SpecializationId = d.Id,
                                            NameSpecialist = d.Name,
 

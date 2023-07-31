@@ -41,16 +41,27 @@
 
 </head>
 
+
         <body>
             <partial name="_Header" />
             <partial name="_Sidebar" />
 
-
+        @if(RoleId != 0)
+        {
             <main id="main" class="main">
 
                 @RenderBody()
 
             </main>
+        }else
+        {
+            <main id="main" class="main" style="margin-left:0">
+
+                @RenderBody()
+
+            </main>
+        }
+
 
 
             <!-- ======= Footer ======= -->

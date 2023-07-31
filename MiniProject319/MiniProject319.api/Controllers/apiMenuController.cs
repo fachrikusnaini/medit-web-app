@@ -16,13 +16,35 @@ namespace MiniProject319.api.Controllers
             this.db = _db;
         }
 
+        [HttpGet("GetPublicMenu")]
+        public List<VMListMenu> GetPublicMenu()
+        {
+            List<VMListMenu> data = (from a in db.MMenuRoles
+                                     join b in db.MMenus on a.MenuId equals b.Id
+                                     join c in db.MRoles on a.RoleId equals c.Id
+                                     where b.IsDelete == false
+                                     && a.IsDelete == false && c.IsDelete == false && c.Name == "Public"
+                                     select new VMListMenu
+                                     {
+                                         MenuId = b.Id,
+                                         MenuName = b.Name,
+
+                                         RoleId = c.Id,
+                                         RoleName = c.Name,
+
+
+                                     }).ToList();
+
+            return data;
+        }
+
         [HttpGet("GetListMenu/{IdRole}")]
         public List<VMListMenu> GetListMenu(int IdRole)
         {
             List<VMListMenu> data = (from a in db.MMenuRoles
                                      join b in db.MMenus on a.MenuId equals b.Id
                                      join c in db.MRoles on a.RoleId equals c.Id
-                                     where b.ParentId != 0 && b.IsDelete == false
+                                     where b.IsDelete == false
                                      && a.IsDelete == false && a.RoleId == IdRole
                                      select new VMListMenu
                                      {

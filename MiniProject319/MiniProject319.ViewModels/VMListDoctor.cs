@@ -12,6 +12,7 @@ namespace MiniProject319.ViewModels
     {
         public long? DoctorId { get; set; }
         public string? NameDoctor { get; set; }
+        public string? ImagePath { get; set; }
         public long? SpecializationId { get; set; }
         public string? NameSpecialist { get; set; }
         public long LocationId { get; set; }
