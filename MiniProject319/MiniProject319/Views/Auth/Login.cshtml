@@ -46,7 +46,7 @@
 
                             <div class='form-check clearfix my-4'>
                                 <div class="float-right">
-                                    <a href="#" id="btn_register" class='float-right'>
+                                    <a href="#" id="btn_register2" class='float-right'>
                                         <small>Don't have an account??</small>
                                     </a>
                                 </div>
@@ -75,9 +75,15 @@
     </div>
 </div>
 <script>
-    $("#btn_register").click(function () {
+    $("#btn_register2").click(function () {
         $("#modal_body").empty()
         $("#modal_body").load("/Auth/Register")
+        $("#modal").modal("show")
+    })
+
+    $("#btn_forget_password").click(function () {
+        $("#modal_body").empty()
+        $("#modal_body").load("/Auth/ForgotPassword")
         $("#modal").modal("show")
     })
 

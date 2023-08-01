@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/DD26BolY7wpJl6mBsC6l43/bcRkJKcMZ067FmrmG64=",
+  "Hash": "9S9EJ+3Etx7tIuBeu5/niW66uziDueSSXA3+XIyOFKQ=",
   "Source": "MiniProject319",
   "BasePath": "_content/MiniProject319",
   "Mode": "Default",
@@ -471,6 +471,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\main.js"
     },
     {
+      "Identity": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\assets\\plugins\\sweetalert2.rar",
+      "SourceId": "MiniProject319",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\",
+      "BasePath": "_content/MiniProject319",
+      "RelativePath": "assets/plugins/sweetalert2.rar",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\plugins\\sweetalert2.rar"
+    },
+    {
       "Identity": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\assets\\plugins\\sweetalert2\\sweetalert2.all.js",
       "SourceId": "MiniProject319",
       "SourceType": "Discovered",
@@ -571,6 +588,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\plugins\\sweetalert2\\sweetalert2.min.js"
+    },
+    {
+      "Identity": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\assets\\plugins\\toastr.rar",
+      "SourceId": "MiniProject319",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\",
+      "BasePath": "_content/MiniProject319",
+      "RelativePath": "assets/plugins/toastr.rar",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\plugins\\toastr.rar"
     },
     {
       "Identity": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\assets\\plugins\\toastr\\toastr.css",
@@ -9037,6 +9071,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\temp\\assets\\images\\auth\\logo-medit.png"
+    },
+    {
+      "Identity": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\temp\\assets\\images\\auth\\new-favicon-medit.png",
+      "SourceId": "MiniProject319",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\",
+      "BasePath": "_content/MiniProject319",
+      "RelativePath": "temp/assets/images/auth/new-favicon-medit.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\temp\\assets\\images\\auth\\new-favicon-medit.png"
+    },
+    {
+      "Identity": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\temp\\assets\\images\\auth\\new-logo-medit.png",
+      "SourceId": "MiniProject319",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\",
+      "BasePath": "_content/MiniProject319",
+      "RelativePath": "temp/assets/images/auth/new-logo-medit.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\temp\\assets\\images\\auth\\new-logo-medit.png"
     },
     {
       "Identity": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\temp\\assets\\images\\auth\\register-bg.jpg",

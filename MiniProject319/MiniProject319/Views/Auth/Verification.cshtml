@@ -15,6 +15,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <form asp-action="Register" method="post" enctype="multipart/form-data" id="form_verification">
+                        <input type="hidden" id="Email" value="@Model.Email" name="Email" />
                         <span class="text-secondary mb-3">Masukkan kode OTP yang telah dikirimkan ke email Anda.</span>
                         <div class="form-group">
                             <label hidden class="text-secondary required" for="Token"></label>
@@ -22,12 +23,15 @@
                             <span id="validate_Token" class="text-danger"></span>
                         </div>
                         <div class="clearfix mt-5 text-center">
-                            <label class="text-secondary">Kirim ulang kode OTP dalam</label>
-                        </div>
-                        <div class="clearfix mt-5 text-center">
                             <button class="btn btn-primary btn-rounded" id="btn_verification">Konfirmasi OTP</button>
                         </div>
                     </form>
+                    <div class="clearfix mt-5 text-center">
+                        <label class="text-secondary" id="countdown_time">Kirim ulang kode OTP dalam</label>
+                        <span class="timer">
+                            <span id="counter"></span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -36,6 +40,53 @@
     </div>
 </div>
 <script>
+    function countdown() {
+        var seconds = 5;
+        function tick() {
+            var counter = document.getElementById("counter");
+            seconds--;
+            counter.innerHTML =
+                "0:" + (seconds < 10 ? "0" : "") + String(seconds);
+            if (seconds > 0) {
+                setTimeout(tick, 1000);
+            } else {
+                document.getElementById("countdown_time").innerHTML = `
+                    <div>
+                        <button class="btn btn-primary btn-rounded">
+                        <small>Resend OTP</small>
+                        </button>
+                    </div>
+                    `;
+                document.getElementById("counter").innerHTML = "";
+
+            }
+        }
+        tick();
+    }
+    countdown();
+
+    $("#countdown_time").click(function (form) {
+
+        var email = $("#Email").val()
+
+        $.ajax({
+            url: "/Auth/ResendOTPDaftar",
+            type: "post",
+            data: {
+                email: email,
+            },
+            dataType: "json",
+            success: function (response) {
+                if (response.dataResponse.success) {
+                    $("#modal_body").empty()
+                    $("#modal_body").load("/Auth/Verification")
+                    $("#modal").modal("show")
+                    return true;
+                }
+            }
+        })
+    })
+
     $("#form_verification").validate({
         errorClass: "text-danger",
         rules: {
@@ -62,10 +113,9 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    if (response) {
-                        $("#validate_Token").text("Token invalid, please check again!!")
-
-                        return true
+                    if (!response.dataResponse.success) {
+                        $("#validate_Token").text(response.dataResponse.message);
+                        return true;
                     }
                     else {
                         $("#modal_body").empty()

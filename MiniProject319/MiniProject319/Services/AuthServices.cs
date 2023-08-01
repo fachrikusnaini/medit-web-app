@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System.Text;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 using MailKit.Net.Smtp;
+using MiniProject319.DataModels;
 
 namespace MiniProject319.Services
 {
@@ -88,11 +89,129 @@ namespace MiniProject319.Services
             }
             return response;
         }
-        public async Task<bool> CheckOTP(string token)
+        //public async Task<bool> CheckOTP(string token)
+        //{
+        //    string apiResponse = await _httpClient.GetStringAsync(RouteAPI + $"apiAuth/CheckOTP/{token}");
+        //    bool isExist = JsonConvert.DeserializeObject<bool>(apiResponse);
+        //    return isExist;
+        //}
+
+        public async Task<VMResponse> CheckOTP(string token)
         {
-            string apiResponse = await _httpClient.GetStringAsync(RouteAPI + $"apiAuth/CheckOTP/{token}");
-            bool isExist = JsonConvert.DeserializeObject<bool>(apiResponse);
-            return isExist;
+            string json = JsonConvert.SerializeObject(token);
+            StringContent content = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+            var request = await _httpClient.PostAsync(RouteAPI + $"apiAuth/CheckOTP/{token}", content);
+
+
+            if (request.IsSuccessStatusCode)
+            {
+                var apiResponse = await request.Content.ReadAsStringAsync();
+                response = JsonConvert.DeserializeObject<VMResponse>(apiResponse)!;
+            }
+            else
+            {
+                response.Success = false;
+                response.Message = $"{request.StatusCode} : {request.ReasonPhrase}";
+            }
+            return response;
+        }
+        public async Task<VMResponse> CheckEmail(string email)
+        {
+            string json = JsonConvert.SerializeObject(email);
+            StringContent content = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+            var request = await _httpClient.PostAsync(RouteAPI + $"apiAuth/CheckEmail/{email}", content);
+
+
+            if (request.IsSuccessStatusCode)
+            {
+                var apiResponse = await request.Content.ReadAsStringAsync();
+                response = JsonConvert.DeserializeObject<VMResponse>(apiResponse)!;
+            }
+            else
+            {
+                response.Success = false;
+                response.Message = $"{request.StatusCode} : {request.ReasonPhrase}";
+            }
+            return response;
+        }
+
+        public async Task<VMResponse> ForgotPassword(VMm_user dataParam)
+        {
+            string json = JsonConvert.SerializeObject(dataParam);
+            StringContent content = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+            var request = await _httpClient.PostAsync(RouteAPI + $"apiAuth/ForgotPassword", content);
+
+
+            if (request.IsSuccessStatusCode)
+            {
+                var apiResponse = await request.Content.ReadAsStringAsync();
+                response = JsonConvert.DeserializeObject<VMResponse>(apiResponse)!;
+            }
+            else
+            {
+                response.Success = false;
+                response.Message = $"{request.StatusCode} : {request.ReasonPhrase}";
+            }
+            return response;
+        }
+        public async Task<VMResponse> SetPassword_ForgotPassword(VMm_user dataParam)
+        {
+            string json = JsonConvert.SerializeObject(dataParam);
+            StringContent content = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+            var request = await _httpClient.PostAsync(RouteAPI + $"apiAuth/SetPassword_ForgotPassword", content);
+
+
+            if (request.IsSuccessStatusCode)
+            {
+                var apiResponse = await request.Content.ReadAsStringAsync();
+                response = JsonConvert.DeserializeObject<VMResponse>(apiResponse)!;
+            }
+            else
+            {
+                response.Success = false;
+                response.Message = $"{request.StatusCode} : {request.ReasonPhrase}";
+            }
+            return response;
+        }
+
+        public async Task<VMResponse> ResendOTP(VMm_user dataParam)
+        {
+            string json = JsonConvert.SerializeObject(dataParam);
+            StringContent content = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+            var request = await _httpClient.PostAsync(RouteAPI + $"apiAuth/ResendOTP", content);
+
+
+            if (request.IsSuccessStatusCode)
+            {
+                var apiResponse = await request.Content.ReadAsStringAsync();
+                response = JsonConvert.DeserializeObject<VMResponse>(apiResponse)!;
+            }
+            else
+            {
+                response.Success = false;
+                response.Message = $"{request.StatusCode} : {request.ReasonPhrase}";
+            }
+            return response;
+        }
+
+        public async Task<VMResponse> ResendOTPDaftar(VMm_user dataParam)
+        {
+            string json = JsonConvert.SerializeObject(dataParam);
+            StringContent content = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+            var request = await _httpClient.PostAsync(RouteAPI + $"apiAuth/ResendOTPDaftar", content);
+
+
+            if (request.IsSuccessStatusCode)
+            {
+                var apiResponse = await request.Content.ReadAsStringAsync();
+                response = JsonConvert.DeserializeObject<VMResponse>(apiResponse)!;
+            }
+            else
+            {
+                response.Success = false;
+                response.Message = $"{request.StatusCode} : {request.ReasonPhrase}";
+            }
+            return response;
         }
     }
 }

@@ -101,6 +101,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
     },
     {
+      "Id": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\assets\\plugins\\sweetalert2.rar",
+      "PackagePath": "staticwebassets\\assets\\plugins\\sweetalert2.rar"
+    },
+    {
       "Id": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\assets\\plugins\\sweetalert2\\sweetalert2.all.js",
       "PackagePath": "staticwebassets\\assets\\plugins\\sweetalert2\\sweetalert2.all.js"
     },
@@ -123,6 +127,10 @@
     {
       "Id": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\assets\\plugins\\sweetalert2\\sweetalert2.min.js",
       "PackagePath": "staticwebassets\\assets\\plugins\\sweetalert2\\sweetalert2.min.js"
+    },
+    {
+      "Id": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\assets\\plugins\\toastr.rar",
+      "PackagePath": "staticwebassets\\assets\\plugins\\toastr.rar"
     },
     {
       "Id": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\assets\\plugins\\toastr\\toastr.css",
@@ -2115,6 +2123,14 @@
     {
       "Id": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\temp\\assets\\images\\auth\\logo-medit.png",
       "PackagePath": "staticwebassets\\temp\\assets\\images\\auth\\logo-medit.png"
+    },
+    {
+      "Id": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\temp\\assets\\images\\auth\\new-favicon-medit.png",
+      "PackagePath": "staticwebassets\\temp\\assets\\images\\auth\\new-favicon-medit.png"
+    },
+    {
+      "Id": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\temp\\assets\\images\\auth\\new-logo-medit.png",
+      "PackagePath": "staticwebassets\\temp\\assets\\images\\auth\\new-logo-medit.png"
     },
     {
       "Id": "E:\\BATCH 319\\MINI PROJECT\\MiniProject319\\MiniProject319\\wwwroot\\temp\\assets\\images\\auth\\register-bg.jpg",

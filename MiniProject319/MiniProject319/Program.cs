@@ -10,6 +10,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<RoleServices>();
 builder.Services.AddScoped<AuthServices>();
+builder.Services.AddScoped<BankServices>();
+builder.Services.AddScoped<PaymentServices>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 
 //Add Session

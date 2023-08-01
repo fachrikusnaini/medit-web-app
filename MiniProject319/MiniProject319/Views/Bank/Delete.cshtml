@@ -1,0 +1,53 @@
+﻿@using MiniProject319.DataModels;
+@model MBank
+
+@{
+    ViewData["Title"] = "Delete Form";
+}
+
+<div class="h4 mb-4">
+    Apakah kamu yakin ingin menghapus "@Model.Name" "@Model.VaCode" ?
+</div>
+<form asp-action="Delete" method="POST" id="form_delete">
+    <input type="hidden" class="form-control" id="Id" value="@Model.Id" name="Id" readonly>
+    <div class="d-flex justify-content-center">
+        <div class="form-group row mb-6 col-sm-5">
+            <button type="submit" class="btn btn-outline-danger btn-rounded ml-2 mb-3">Submit</button>
+            <a class="btn btn-outline-primary btn-rounded ml-2" asp-controller="Bank" asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</form>
+
+<script>
+    $("#form_delete").validate({
+        submitHandler: function (form) {
+            var id = $("#Id").val()
+
+            $.ajax({
+                url: "/Bank/Delete",
+                type: "post",
+                data: { id: id },
+                dataType: "json",
+                success: function (response) {
+                    var data = response.dataResponse
+                    if (data.success) {
+                        $("#modal").modal("hide")
+
+                        toastr.success(
+                            data.message,
+                            '', {
+                            timeOut: 1500,
+                            fadeOut: 1500,
+                            onHidden: function () {
+                                window.location.reload();
+                            }
+                        })
+                    } else {
+                        toastr.errorClass(data.message)
+                    }
+                }
+            })
+        }
+    })
+
+</script>

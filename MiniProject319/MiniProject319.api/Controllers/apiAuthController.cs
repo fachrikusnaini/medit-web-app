@@ -9,6 +9,8 @@ using MiniProject319.ViewModels;
 using Org.BouncyCastle.Asn1.Ocsp;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 using MailKit.Net.Smtp;
+using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MiniProject319.api.Controllers
 {
@@ -80,119 +82,6 @@ namespace MiniProject319.api.Controllers
             return data;
         }
 
-        //[HttpPost("Register")]
-        //public VMResponse Register(VMm_user data)
-        //{
-        //    MRole role = db.MRoles.Where(a => a.Id == data.RoleId).FirstOrDefault()!;
-        //    MBiodatum biodata = new MBiodatum()
-        //    {
-               
-        //        Fullname = data.Fullname,
-        //        MobilePhone = data.MobilePhone,
-        //        CreatedBy = idUser,
-        //        CreatedOn = DateTime.Now,
-        //    };
-        //    MUser user = new MUser()
-        //    {
-        //        Email = data.Email,
-        //        Password = data.Password,
-        //        //BiodataId = biodata.Id,
-        //        RoleId = data.RoleId,
-        //        CreatedOn = DateTime.Now,
-        //        IsLocked = true,
-        //        IsDelete = false,
-        //        CreatedBy = idUser
-
-        //    };
-        //    if (data.RoleId == 1)
-        //    {
-        //        MAdmin admin = new MAdmin()
-        //        {
-        //            BiodataId = biodata.Id,
-        //            IsDelete = false,
-        //            CreatedBy = idUser,
-        //            CreatedOn = DateTime.Now
-        //        };
-
-        //        try
-        //        {
-        //            db.MBiodata.Add(biodata);
-        //            db.SaveChanges();
-        //            user.BiodataId = biodata.Id;
-        //            admin.BiodataId = biodata.Id;
-        //            db.MUsers.Add(user);
-        //            db.MAdmins.Add(admin);
-        //            db.SaveChanges();
-
-        //            response.Message = "Data successfully added";
-        //        }
-        //        catch (Exception e)
-        //        {
-
-        //            response.Success = false;
-        //            response.Message = "Failed saved : " + e.Message;
-        //        }
-        //    }
-        //    if (data.RoleId == 2)
-        //    {
-        //        MCustomer costumer = new MCustomer()
-        //        {
-        //            BiodataId = biodata.Id,
-        //            IsDelete = false,
-        //            CreatedBy = idUser,
-        //            CreatedOn = DateTime.Now
-        //        };
-
-        //        try
-        //        {
-        //            db.MBiodata.Add(biodata);
-        //            db.SaveChanges();
-        //            user.BiodataId = biodata.Id;
-        //            costumer.BiodataId = biodata.Id;
-        //            db.MUsers.Add(user);
-        //            db.MCustomers.Add(costumer);
-        //            db.SaveChanges();
-
-        //            response.Message = "Data successfully added";
-        //        }
-        //        catch (Exception e)
-        //        {
-
-        //            response.Success = false;
-        //            response.Message = "Failed saved : " + e.Message;
-        //        }
-        //    }
-        //    if (data.RoleId == 3)
-        //    {
-        //        var doctor = new MDoctor()
-        //        {
-        //            BiodataId = biodata.Id,
-        //            IsDelete = false,
-        //            CreatedBy = idUser,
-        //            CreatedOn = DateTime.Now
-        //        };
-
-        //        try
-        //        {
-        //            db.MBiodata.Add(biodata);
-        //            db.SaveChanges();
-        //            user.BiodataId = biodata.Id;
-        //            doctor.BiodataId = biodata.Id;
-        //            db.MUsers.Add(user);
-        //            db.MDoctors.Add(doctor);
-        //            db.SaveChanges();
-
-        //            response.Message = "Data successfully added";
-        //        }
-        //        catch (Exception e)
-        //        {
-
-        //            response.Success = false;
-        //            response.Message = "Failed saved : " + e.Message;
-        //        }
-        //    }
-        //    return response;
-        //}
         [HttpGet("CheckRegisterByEmail/{email}/{id}")]
         public bool CheckName(string email, int id)
         {
@@ -264,7 +153,7 @@ namespace MiniProject319.api.Controllers
             TToken token = new TToken()
             {
                 Token = randomNumber.ToString(),
-                ExpiredOn = currentTime.AddMinutes(10),
+                ExpiredOn = currentTime.AddSeconds(30),
                 CreatedOn = DateTime.Now,
                 IsExpired = false,
                 IsDelete = false,
@@ -346,12 +235,6 @@ namespace MiniProject319.api.Controllers
             MUser user = db.MUsers.Where(a => a.Email == data.Email && a.IsDelete == false).FirstOrDefault()!;
             user.RoleId = data.RoleId;
             user.IsLocked = false;
-
-            //db.MBiodata.Add(biodata);
-            //db.SaveChanges();
-            //user.BiodataId = biodata.Id;
-            //db.MUsers.Update(user);
-            //db.SaveChanges();
 
             if (data.RoleId == 1)
             {
@@ -440,17 +323,246 @@ namespace MiniProject319.api.Controllers
             return response;
         }
 
-        [HttpGet("CheckOTP/{token}")]
-        public bool CheckOTP(string token)
+        [HttpPost("CheckOTP/{token}")]
+        public VMResponse CheckOTP(string token)
         {
             TToken data = new TToken();
+            DateTime date2 = DateTime.Now;
 
-            data = db.TTokens.Where(a =>a.IsDelete == false && a.Token == token).FirstOrDefault()!;
+            data = db.TTokens.Where(a => a.IsDelete == false && a.Token == token).FirstOrDefault()!;
+
+
             if (data == null)
             {
-                return true;
+                response.Message = "Invalid Code OTP";
+                response.Success = false;
             }
-            return false;
+            else if (data.ExpiredOn < date2)
+            {
+                response.Message = "Expired Code OTP";
+                response.Success = false;
+
+            }
+            //data.IsExpired = true;
+            //db.Update(data);
+            //db.SaveChanges();
+
+            return response;
+        }
+
+        [HttpPost("CheckEmail/{email}")]
+        public VMResponse CheckEmail(string email)
+        {
+            MUser data = new MUser();
+
+            data = db.MUsers.Where(a => a.IsDelete == false && a.Email == email && a.IsLocked == false).FirstOrDefault()!;
+
+
+            if (data == null)
+            {
+                response.Message = "Email tidak terdaftar";
+                response.Success = false;
+            }
+            return response;
+        }
+
+        [HttpPost("ForgotPassword")]
+        public VMResponse ForgotPassword(VMm_user dataParam)
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(100000, 999999);
+            DateTime currentTime = DateTime.Now;
+
+            MUser userResult = db.MUsers.Where(a => a.IsDelete == false && a.Email == dataParam.Email && a.IsLocked == false).FirstOrDefault()!;
+            userResult.ModifiedBy = idUser;
+            userResult.ModifiedOn = DateTime.Now;
+            
+
+            TToken tokenResult = db.TTokens.Where(a => a.IsDelete == false && a.Email == dataParam.Email).FirstOrDefault()!;
+            tokenResult.Token = randomNumber.ToString();
+            tokenResult.ExpiredOn = currentTime.AddSeconds(30);
+            tokenResult.IsExpired = false;
+            tokenResult.UsedFor = "Forgot Password";
+            tokenResult.CreatedBy = idUser;
+            tokenResult.CreatedOn = DateTime.Now;
+            tokenResult.ModifiedBy = idUser;
+            tokenResult.ModifiedOn = DateTime.Now;
+            tokenResult.IsDelete = false;
+
+
+            var emailVerif = new MimeMessage();
+            emailVerif.From.Add(MailboxAddress.Parse(configuration.GetSection("EmailUsername").Value));
+            emailVerif.To.Add(MailboxAddress.Parse(userResult.Email));
+            emailVerif.Subject = "Register User";
+            emailVerif.Body = new TextPart(TextFormat.Html)
+            {
+                Text = @"This your Code OTP : " + tokenResult.Token
+            };
+
+            using var smtp = new SmtpClient();
+            smtp.Connect(configuration.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
+            smtp.Authenticate(configuration.GetSection("EmailUsername").Value, configuration.GetSection("EmailPassword").Value);
+            smtp.Send(emailVerif);
+            smtp.Disconnect(true);
+
+
+            try
+            {
+                db.MUsers.Update(userResult);
+                db.SaveChanges();
+                db.TTokens.Update(tokenResult);
+                db.SaveChanges();
+
+                response.Message = "Data successfully Updated";
+                response.Entity = userResult;
+            }
+            catch (Exception e)
+            {
+                response.Success = false;
+                response.Message = "Failed saved : " + e.Message;
+            }
+            return response;
+        }
+
+        [HttpPost("SetPassword_ForgotPassword")]
+        public VMResponse SetPassword_ForgotPassword (VMm_user data)
+        {
+
+            TResetPassword dataResetPassword = new TResetPassword();
+            MUser user = db.MUsers.Where(a => a.IsDelete == false && a.Email == data.Email && a.IsLocked == false).FirstOrDefault()!;
+            
+            dataResetPassword.OldPassword = user.Password;
+            dataResetPassword.NewPassword = data.Password;
+            dataResetPassword.ResetFor = "Forgot Password";
+            dataResetPassword.CreatedBy = idUser;
+            dataResetPassword.CreatedOn = DateTime.Now;
+            dataResetPassword.IsDelete = false;
+
+            db.TResetPasswords.Add(dataResetPassword);
+            db.SaveChanges();
+
+            user.Password = data.Password;
+            try
+            {
+
+                db.MUsers.Update(user);
+                db.SaveChanges();
+
+
+                response.Message = "Data successfully added";
+            }
+            catch (Exception e)
+            {
+                response.Success = false;
+                response.Message = "Failed saved : " + e.Message;
+            }
+            return response;
+        }
+        [HttpPost("ResendOTP")]
+        public VMResponse ResendOTP(VMm_user dataParam)
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(100000, 999999);
+            DateTime currentTime = DateTime.Now;
+
+            MUser userResult = db.MUsers.Where(a => a.IsDelete == false && a.Email == dataParam.Email && a.IsLocked == false).FirstOrDefault()!;
+
+
+            TToken tokenResult = db.TTokens.Where(a => a.IsDelete == false && a.Email == dataParam.Email).FirstOrDefault()!;
+            tokenResult.Token = randomNumber.ToString();
+            tokenResult.ExpiredOn = currentTime.AddSeconds(30);
+            tokenResult.IsExpired = false;
+            tokenResult.ModifiedBy = idUser;
+            tokenResult.ModifiedOn = DateTime.Now;
+            tokenResult.IsDelete = false;
+
+
+            var emailVerif = new MimeMessage();
+            emailVerif.From.Add(MailboxAddress.Parse(configuration.GetSection("EmailUsername").Value));
+            emailVerif.To.Add(MailboxAddress.Parse(userResult.Email));
+            emailVerif.Subject = "Register User";
+            emailVerif.Body = new TextPart(TextFormat.Html)
+            {
+                Text = @"This your Resend Code OTP : " + tokenResult.Token
+            };
+
+            using var smtp = new SmtpClient();
+            smtp.Connect(configuration.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
+            smtp.Authenticate(configuration.GetSection("EmailUsername").Value, configuration.GetSection("EmailPassword").Value);
+            smtp.Send(emailVerif);
+            smtp.Disconnect(true);
+
+
+            try
+            {
+                db.TTokens.Update(tokenResult);
+                db.SaveChanges();
+
+                response.Message = "Data successfully Updated";
+                //response.Entity = userResult;
+            }
+            catch (Exception e)
+            {
+                response.Success = false;
+                response.Message = "Failed saved : " + e.Message;
+            }
+            return response;
+        }
+
+        [HttpPost("ResendOTPDaftar")]
+        public VMResponse ResendOTPDaftar(VMm_user dataParam)
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(100000, 999999);
+            DateTime currentTime = DateTime.Now;
+
+            MUser userResult = db.MUsers.Where(a => a.IsDelete == false && a.Email == dataParam.Email).FirstOrDefault()!;
+
+
+            TToken tokenResult = db.TTokens.Where(a => a.IsDelete == false && a.Email == dataParam.Email).FirstOrDefault()!;
+            //TToken tokenResult = new TToken();
+            tokenResult.Token = randomNumber.ToString();
+            tokenResult.ExpiredOn = currentTime.AddSeconds(30);
+            tokenResult.IsExpired = false;
+            tokenResult.ModifiedBy = idUser;
+            tokenResult.ModifiedOn = DateTime.Now;
+            tokenResult.IsDelete = false;
+
+
+
+
+            var emailVerif = new MimeMessage();
+            emailVerif.From.Add(MailboxAddress.Parse(configuration.GetSection("EmailUsername").Value));
+            emailVerif.To.Add(MailboxAddress.Parse(userResult.Email));
+            emailVerif.Subject = "Register User";
+            emailVerif.Body = new TextPart(TextFormat.Html)
+            {
+                Text = @"This your Resend Code OTP : " + tokenResult.Token
+            };
+
+            using var smtp = new SmtpClient();
+            smtp.Connect(configuration.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
+            smtp.Authenticate(configuration.GetSection("EmailUsername").Value, configuration.GetSection("EmailPassword").Value);
+            smtp.Send(emailVerif);
+            smtp.Disconnect(true);
+
+
+            try
+            {
+                db.TTokens.Update(tokenResult);
+                db.SaveChanges();
+                //db.TTokens.Update(tokenResult);
+                //db.SaveChanges();
+
+                response.Message = "Data successfully Updated";
+                //response.Entity = userResult;
+            }
+            catch (Exception e)
+            {
+                response.Success = false;
+                response.Message = "Failed saved : " + e.Message;
+            }
+            return response;
         }
     }
 }

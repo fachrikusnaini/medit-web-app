@@ -1,0 +1,40 @@
+﻿<form asp-action="Resend_OTP" method="post" enctype="multipart/form-data" id="form_resendOTP">
+
+</form>
+
+<script>
+    submitHandler: function (form) {
+        var formData = new FormData();
+        var dataForm = $(form).serializeArray();
+
+        $.each(dataForm, function (key, input) {
+            formData.append(input.name, input.value)
+        })
+
+
+        $.ajax({
+            url: "/Auth/Resend_OTP",
+            type: "post",
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            success: function (response) {
+                var data = response.dataResponse
+                if (data.success) {
+
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'Resend OTP dikirimkan ke Email',
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(function () {
+                        location.reload();
+                    });
+                } else {
+                    toastr.errorClass(data.message)
+                }
+            }
+        })
+</script>

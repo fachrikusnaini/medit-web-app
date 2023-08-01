@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using MiniProject319.api.Services.EmailService;
 using MiniProject319.DataModels;
 using MiniProject319.Models;
@@ -34,8 +35,9 @@ namespace MiniProject319.Controllers
         public async Task<IActionResult> Register()
         {
             VMm_user data = new VMm_user();
-            return View(data);
+            return PartialView(data);
         }
+
         [HttpPost]
         public async Task<IActionResult> Register(VMm_user dataParam)
         {
@@ -50,16 +52,16 @@ namespace MiniProject319.Controllers
 
         }
 
-        public async Task<IActionResult> Verification()
+        public async Task<IActionResult> Verification(VMm_user dataParam)
         {
-            VMm_user data = new VMm_user();
-            return View(data);
+            dataParam.Email = HttpContext.Session.GetString("Email");
+            return PartialView(dataParam);
         }
 
         public async Task<IActionResult> SetPassword()
         {
             VMm_user data = new VMm_user();
-            return View(data);
+            return PartialView(data);
         }
 
         [HttpPost]
@@ -81,7 +83,7 @@ namespace MiniProject319.Controllers
             VMm_user data = new VMm_user();
             List<MRole> listRole = await roleServices.GetAllData();
             ViewBag.ListRole = listRole;
-            return View(data);
+            return PartialView(data);
         }
 
         [HttpPost]
@@ -101,9 +103,93 @@ namespace MiniProject319.Controllers
 
         public async Task<JsonResult> CheckOTP(string token)
         {
-            bool isExist = await authServices.CheckOTP(token);
-            return Json(isExist);
+            VMResponse response = await authServices.CheckOTP(token);
+            return Json(new { dataResponse = response });
         }
 
+        public IActionResult Verification_Forgot_Password(VMm_user data)
+        {
+            //VMm_user data = new VMm_user();
+            data.Email = HttpContext.Session.GetString("Email");
+            data.IsLocked = HttpContext.Session.GetString("IsLocked") == "True" ? true : false;
+            return PartialView(data);
+        }
+        public IActionResult ForgotPassword()
+        {
+            VMm_user data = new VMm_user();
+            return PartialView(data);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(VMm_user dataParam)
+        {
+
+            HttpContext.Session.SetString("Email", dataParam.Email);
+            HttpContext.Session.SetString("IsLocked", dataParam.IsLocked.ToString());
+            VMResponse response = await authServices.ForgotPassword(dataParam);
+
+            return Json(new { dataResponse = response });
+        }
+
+        public async Task<JsonResult> CheckEmail(string email)
+        {
+            VMResponse response = await authServices.CheckEmail(email);
+            return Json(new { dataResponse = response });
+        }
+        public IActionResult SetPassword_ForgotPassword(VMm_user dataParam)
+        {
+            dataParam.Email = HttpContext.Session.GetString("Email");
+            dataParam.IsLocked = HttpContext.Session.GetString("IsLocked") == "True" ? true : false;
+            return PartialView(dataParam);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Submit_ForgotPassword(VMm_user dataParam)
+        {
+            VMResponse response = await authServices.SetPassword_ForgotPassword(dataParam);
+
+            if (response.Success)
+            {
+                //dataParam.Email = HttpContext.Session.GetString("Email");
+                //dataParam.IsLocked = HttpContext.Session.GetString("IsLocked") == "True" ? true: false;
+                return Json(new { dataResponse = response });
+            }
+            return View(dataParam);
+
+        }
+
+        //public IActionResult ResendOTP(VMm_user dataParam)
+        //{
+        //    dataParam.Email = HttpContext.Session.GetString("Email");
+        //    dataParam.IsLocked = HttpContext.Session.GetString("IsLocked") == "True" ? true : false;
+        //    return PartialView(dataParam);
+        //}
+        //[HttpPost]
+        //public async Task<IActionResult> Resend_OTP(VMm_user dataParam)
+        //{
+        //    VMResponse response = await authServices.ResendOTP(dataParam);
+
+        //    if (response.Success)
+        //    {
+        //        //dataParam.Email = HttpContext.Session.GetString("Email");
+        //        //dataParam.IsLocked = HttpContext.Session.GetString("IsLocked") == "True" ? true: false;
+        //        return Json(new { dataResponse = response });
+        //    }
+        //    return View(dataParam);
+
+        //}
+
+        public async Task<JsonResult> ResendOTP(VMm_user dataParam)
+        {
+            VMResponse response = await authServices.ResendOTP(dataParam);
+            return Json(new { dataResponse = response });
+        }
+
+        public async Task<JsonResult> ResendOTPDaftar(VMm_user dataParam)
+        {
+            VMResponse response = await authServices.ResendOTPDaftar(dataParam);
+            return Json(new { dataResponse = response });
+        }
     }
 }
