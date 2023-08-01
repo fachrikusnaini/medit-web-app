@@ -36,7 +36,7 @@ namespace MiniProject319.Services
         public async Task<VMCariDokter> GetCariDoctor()
         {
             VMCariDokter data = new VMCariDokter();
-            string apiRespon = await client.GetStringAsync(RouteApi + $"apiDoctorProfile/GetCariDoctor");
+            string apiRespon = await client.GetStringAsync(RouteApi + $"apiDoctorProfile/GetCariDokter");
             data = JsonConvert.DeserializeObject<VMCariDokter>(apiRespon)!;
 
             return data;

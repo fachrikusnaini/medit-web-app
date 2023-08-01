@@ -21,6 +21,7 @@ namespace MiniProject319.ViewModels
         public long TindakanId { get; set; }
         public string? TindakanName { get; set; }
         public List<VMRiwayatPraktek>? RiwayatPraktek { get; set; }
+        public List<VMTindakanMedis>? ListTindakan { get; set; }
 
     }
 }

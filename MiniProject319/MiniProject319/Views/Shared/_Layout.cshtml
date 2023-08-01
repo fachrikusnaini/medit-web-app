@@ -48,11 +48,19 @@
 
         @if(RoleId != 0)
         {
-            <main id="main" class="main">
+            <main id="main" class="main" style="margin-left:300px">
 
                 @RenderBody()
 
             </main>
+
+            <!-- ======= Footer ======= -->
+            <footer id="footer" class="footer" style="margin-left:300px">
+            <div class="container p-0" style="padding-left:30px!important">
+                    &copy; Copyright <strong><span>Medit Corp</span></strong>. All Rights Reserved
+                </div>
+            </footer>
+            <!-- End Footer -->
         }else
         {
             <main id="main" class="main" style="margin-left:0">
@@ -60,17 +68,15 @@
                 @RenderBody()
 
             </main>
-        }
-
-
 
             <!-- ======= Footer ======= -->
-            <footer id="footer" class="footer">
-                <div class="container">
+            <footer id="footer" class="footer" style="margin-left:0">
+            <div class="container p-0" style="padding-left:30px!important">
                     &copy; Copyright <strong><span>Medit Corp</span></strong>. All Rights Reserved
                 </div>
             </footer>
             <!-- End Footer -->
+        }
         
             <!-- Modal -->
             <div class="modal fade" id="verticalycentered" tabindex="-1">
@@ -81,9 +87,9 @@
                 </div>
             </div>
 
-            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
+            <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modal-detail">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content" id="modal-body-lg">
                         ...
                     </div>
                 </div>

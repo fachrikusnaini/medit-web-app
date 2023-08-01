@@ -2,6 +2,7 @@
 @using System.Collections.Generic;
 
 @{
+    Layout = null;
     VMDoctorSpecialist vMDoctorSpecialist = Model;
 
     //int lamabekerja = 0;
@@ -27,167 +28,169 @@
     }
 </style>
 
+<div class="container p-5">
 
 <!-- Content -->
-<div class="pagetitle">
-    <h1>Detail Dokter</h1>
-    <nav>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
-            <li class="breadcrumb-item active">Detail Dokter</li>
-        </ol>
-    </nav>
-</div><!-- End Page Title -->
+        <div class="modal-header">
+            <h1>Detail Dokter</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
-<div class="row">
-    <div class="col-xl-4">
-        <div class="p-4 " style="width: 17rem">
-            <img class="card-img-top rounded-circle" src="~/assets/img/@vMDoctorSpecialist.ImagePath" alt="Card image cap">
-        </div>
-    </div>
-    <div class="col-xl-8 d-flex align-items-center">
-        <div class="row row-cols-auto d-flex justify-content-between align-items-start" style="width: 100%;">
-            <div class="col-8">
-                <h2 class="card-title"
-                    style="margin-bottom:0; padding-bottom:0; font-size:24px; font-weight:600; padding:0">
-                    @vMDoctorSpecialist.Fullname
-                </h2>
-                <p class="card-text"><small>@vMDoctorSpecialist.SpecialistName | @vMDoctorSpecialist.RiwayatPraktek.Max(a => a.LamaBekerja) Tahun</small></p>
+        </div><!-- End Page Title -->
+
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="p-4 " style="width: 17rem">
+                    <img class="card-img-top rounded-circle" src="~/assets/img/@vMDoctorSpecialist.ImagePath" alt="Card image cap">
+                </div>
             </div>
-
-            <div class="col-auto">
-                <button class="btn btn-outline-primary">Chat</button>
-                <p><small>Rp @vMDoctorSpecialist.itemMedical.PriceMin</small></p>
-            </div>
-        </div>
-    </div>
-</div><!-- End section -->
-
-
-<section class="section profile">
-    <div class="row">
-        <!-- left section -->
-        <div class="col-xl-4">
-            <div class="card">
-                <div class="card-header h6 bg-primary text-white">Tentang Saya</div>
-
-                <div class="card-body">
-                    <div class="card-title" style="font-size:medium">Tindakan Medis</div>
-                    <ul>
-                        @foreach (var item in vMDoctorSpecialist.ListTindakan)
-                        {
-                           <li>@item.Name</li>
-                        } 
-                    </ul>
-                </div>
-
-                <div class="card-body">
-                    <div class="card-title" style="font-size:medium">Riwayat Praktek</div>
-                    <ul>
-                        @foreach (var item in vMDoctorSpecialist.RiwayatPraktek)
-                        {
-                            
-                            <li class="mb-2">
-                                @item.MedicalFacilityName, @item.Location
-                                <br />
-                                <small>@item.Specialization | @item.StartDate.Year - 
-                                    @if(item.EndDate?.Year >= DateTime.Now.Year)
-                                    {
-                                        <span>Sekarang</span>
-                                    }
-                                    else
-                                    {
-                                        <span>@item.EndDate?.Year</span>
-                                        
-                                    }
-                                </small>
-                            </li>
-                                                      
-                        }
-                    </ul>
-                </div>
-
-                <div class="card-body">
-                    <div class="card-title" style="font-size:medium">Pendidikan</div>
-                    <ul>
-                        
-                        @foreach (var item in vMDoctorSpecialist.PendidikanDokter)
-                        {
-                            
-                            <li class="mb-2">
-                                @item.InstitutionName
-                                <br />
-                                <small>@item.EndYear - @item.Major</small>
-                            </li>
-                        }
-                        
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Right Section -->
-        <div class="col-xl-8">
-                <div class="card-header h6 bg-primary text-white">
-                    Lokasi Praktek
-                </div>
-            @foreach(var item in vMDoctorSpecialist.RiwayatPraktek)
-            {
-                <div class="card">
-
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5 class="card-title">@item.MedicalFacilityName</h5>
-                                <p class="card-text"><small>@item.Specialization</small></p>
-                                <div>
-                                    <i class="bi bi-pin-map me-3"></i>
-                                    <span>
-                                        <small>@item.FullAddress, @item.Location</small>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <p>
-                                    <small>Biaya Konsultasi mulai dari</small><br>
-                                    Rp @item.PriceStartFrom?.ToString("#,#0")
-                                </p>
-                            </div>
-                        </div>
+            <div class="col-xl-8 d-flex align-items-center">
+                <div class="row row-cols-auto d-flex justify-content-between align-items-start" style="width: 100%;">
+                    <div class="col-8">
+                        <h2 class="card-title"
+                            style="margin-bottom:0; padding-bottom:0; font-size:24px; font-weight:600; padding:0">
+                            @vMDoctorSpecialist.Fullname
+                        </h2>
+                        <p class="card-text text-body-tertiary"><small>@vMDoctorSpecialist.SpecialistName | @vMDoctorSpecialist.RiwayatPraktek.Max(a => a.LamaBekerja) Tahun</small></p>
                     </div>
-                    <div class="card-footer text-body-secondary">
-                        <button id="btn-change" class="btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#@item.MedicalFacilityId" aria-expanded="false" aria-controls="collapseExample">
-                            <p id="bi-down"><i class="bi bi-chevron-down me-3"></i><small>Lihat jadwal praktek</small></p>
-                            <p id="bi-up"><i class="bi bi-chevron-up me-3"></i><small>Sembunyikan jadwal praktek</small></p>
-                        </button>
-                        <div class="collapse" id="@item.MedicalFacilityId">
-                            <div class="card card-body pb-0 mb-0" style="box-shadow:none">
+
+                    <div class="col-auto">
+                        <button class="btn btn-outline-primary">Chat</button>
+                        <p><small>Rp @vMDoctorSpecialist.itemMedical.PriceMin</small></p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End section -->
+
+
+        <section class="section profile">
+            <div class="row">
+                <!-- left section -->
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-header h6 bg-primary text-white">Tentang Saya</div>
+
+                        <div class="card-body">
+                            <div class="card-title" style="font-size:medium">Tindakan Medis</div>
+                            <ul>
+                                @foreach (var item in vMDoctorSpecialist.ListTindakan)
+                                {
+                                   <li>@item.Name</li>
+                                } 
+                            </ul>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="card-title" style="font-size:medium">Riwayat Praktek</div>
+                            <ul>
+                                @foreach (var item in vMDoctorSpecialist.RiwayatPraktek)
+                                {
+                            
+                                    <li class="mb-2">
+                                        @item.MedicalFacilityName, @item.Location
+                                        <br />
+                                        <small class="text-body-tertiary">
+                                            @item.Specialization | @item.StartDate.Year -
+                                            @if(item.EndDate?.Year >= DateTime.Now.Year)
+                                            {
+                                                <span>Sekarang</span>
+                                            }
+                                            else
+                                            {
+                                                <span>@item.EndDate?.Year</span>
+                                        
+                                            }
+                                        </small>
+                                    </li>
+                                                      
+                                }
+                            </ul>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="card-title" style="font-size:medium">Pendidikan</div>
+                            <ul>
+                        
+                                @foreach (var item in vMDoctorSpecialist.PendidikanDokter)
+                                {
+
+                                    <li>
+                                        @item.InstitutionName
+                                        <br />
+                                        <small class="mb-2 text-body-tertiary">@item.EndYear - @item.Major</small>
+                                    </li>
+                                }
+                        
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="col-xl-8">
+                        <div class="card-header h6 bg-primary text-white">
+                            Lokasi Praktek
+                        </div>
+                    @foreach(var item in vMDoctorSpecialist.RiwayatPraktek)
+                    {
+                        <div class="card">
+
+                            <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        @foreach(var items in vMDoctorSpecialist.JadwalPraktek)
-                                        {    
-                                            if(item.MedicalFacilityId == items.JadwalPraktekId)
-                                            {   
-                                            <ul>
-                                                <li>@items.Day   <span>@items.TimeScheduleStart - @items.TimeScheduleEnd</span></li>
-                                            </ul>
-                                            }
-                                        }
+                                        <h5 class="card-title mb-0 pb-0" style="font-size:24px; font-weight:600">@item.MedicalFacilityName</h5>
+                                        <p class="card-text text-body-tertiary"><small>@item.Specialization</small></p>
+                                        <div class="mt-5">
+                                            <i class="bi bi-pin-map me-3"></i>
+                                            <span>
+                                                <small>@item.FullAddress, @item.Location</small>
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <a href="#" class="btn btn-primary">Buat Janji</a>
+                                    <div class="col-md-4 pt-3">
+                                        <p>
+                                            <small class="text-body-tertiary">Biaya Konsultasi mulai dari</small><br>
+                                            <b>Rp @item.PriceStartFrom?.ToString("#,#0")</b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-body-secondary">
+                                <button id="btn-change" class="btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#@item.MedicalFacilityId" aria-expanded="false" aria-controls="collapseExample">
+                                    <p id="bi-down"><i class="bi bi-chevron-down me-3"></i><small>Lihat jadwal praktek</small></p>
+                                    <p id="bi-up"><i class="bi bi-chevron-up me-3"></i><small>Sembunyikan jadwal praktek</small></p>
+                                </button>
+                                <div class="collapse" id="@item.MedicalFacilityId">
+                                    <div class="card card-body pb-0 mb-0" style="box-shadow:none">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                @foreach(var items in vMDoctorSpecialist.JadwalPraktek)
+                                                {    
+                                                    if(item.MedicalFacilityId == items.JadwalPraktekId)
+                                                    {   
+                                                    <ul>
+                                                        <li>@items.Day   <span>@items.TimeScheduleStart - @items.TimeScheduleEnd</span></li>
+                                                    </ul>
+                                                    }
+                                                }
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a href="#" class="btn btn-primary">Buat Janji</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            }
+                    }
             
-        </div>
-    </div>
-</section>
+                </div>
+            </div>
+        </section>
+
+</div>
+
+
 
 <script>
     $("#btn-change").click(function () {

@@ -38,12 +38,14 @@ namespace MiniProject319.Controllers
                 searchString = currentFilter;
             }
 
-            ViewBag.CurrentFilter = searchString;
+            ViewBag.CurrentFilter = searchName;
+            ViewBag.SpecialistSelection = searchString;
+            ViewBag.SearchLocation = searchLocation;
+            ViewBag.SearchTindakan = searchTindakan;
 
             List<VMListDoctor> data = await doctorService.GetAllDataDoctor();
 
-            //if (!string.IsNullOrEmpty(searchString))
-            //{
+            
                 if (!string.IsNullOrEmpty(searchName))
                 {
                     data = data.Where(a => a.NameSpecialist.ToLower().Contains(searchString.ToLower())
@@ -52,23 +54,23 @@ namespace MiniProject319.Controllers
                 if (!string.IsNullOrEmpty(searchLocation))
                 {
                     data = data.Where(a => a.NameSpecialist.ToLower().Contains(searchString.ToLower())
-                    && a.LocationName.ToLower().Contains(searchLocation.ToLower())).ToList();
+                    && a.RiwayatPraktek.Where(b => a.DoctorId == b.DoctorId && b.Location.ToLower().Contains(searchLocation.ToLower())).Any()).ToList();
                 }
                 if (!string.IsNullOrEmpty(searchTindakan))
                 {
                     data = data.Where(a => a.NameSpecialist.ToLower().Contains(searchString.ToLower())
-                    && a.TindakanName.ToLower().Contains(searchTindakan.ToLower())).ToList();
+                    && a.ListTindakan.Where(b => b.Name.ToLower().Contains(searchTindakan.ToLower())).Any()).ToList();
                 }
 
 
-            //}
+            
             return View(PageInatedList<VMListDoctor>.CreateAsync(data, pageNumber ?? 1, pageSize ?? 2));
         }
 
         public async Task<IActionResult> ModalCariDokter()
         {
-            //VMCariDokter data = await doctorService.GetCariDoctor();
-            return PartialView();
+            VMCariDokter data = await doctorService.GetCariDoctor();
+            return PartialView(data);
         }
 
         public async Task<IActionResult> DetailDokter()

@@ -121,6 +121,21 @@ namespace MiniProject319.api.Controllers
 
                                                              }).ToList(),
 
+                                           ListTindakan = (from a in db.TDoctorTreatments
+                                                           join b in db.MDoctors on a.DoctorId equals b.Id
+                                                           where a.IsDelete == false && b.IsDelete == false
+                                                           select new VMTindakanMedis
+                                                           {
+
+                                                               DoctorId = b.Id,
+                                                               Name = a.Name,
+
+                                                               CreatedBy = a.CreatedBy,
+                                                               CreatedOn = a.CreatedOn
+
+                                                           }).ToList()
+
+
                                        }).ToList();
 
             return data;

@@ -1,7 +1,7 @@
-﻿@*@using MiniProject319.ViewModels;
+﻿@using MiniProject319.ViewModels;
 @{
     VMCariDokter vMCariDokter = Model;
-}*@
+}
 
 
 <div class="modal-header">
@@ -14,8 +14,8 @@
     <form class="row g-3 needs-validation" asp-controller="Dokter" asp-action="ListDokter" asp-route-pageSize="@ViewBag.CurrentPageSize">
 
         <div class="col-12">
-            <label for="doctorname" class="form-label">Nama Dokter</label>
-            <input type="text" name="searchName" class="form-control" id="doctorname" placeholder="select doctor name" value="@ViewBag.CurrentFilter">
+            <label for="searchName" class="form-label">Nama Dokter</label>
+            <input type="text" name="searchName" class="form-control" id="searchName" placeholder="select doctor name" value="@ViewBag.CurrentFilter">
         </div>
 
         <div class="col-12">
@@ -23,23 +23,23 @@
                 <div class="col">
                     <label class="form-label">Specialist/ Sub-specialist*</label>
                     <select class="form-select" aria-label="Default select example" name="searchString">
-                        <option selected>Select specialist</option>
-                        @*@foreach(var item in vMCariDokter.GetSpecialists)
+                        <option value="">Select specialist</option>
+                        @foreach(var item in vMCariDokter.GetSpecialists)
                         {
                         <option value="@item?.SpecialistName">@item?.SpecialistName</option>
-                        }*@
+                        }
                     </select>
                 </div>
                 <div class="col">
                     <label class="form-label">Location</label>
                     <select class="form-select" aria-label="Default select example" name="searchLocation">
-                        <option selected>Select location</option>
-                       @* @foreach (var item in vMCariDokter.GetLocations)
+                        <option value="">Select location</option>
+                        @foreach (var item in vMCariDokter.GetLocations)
                         {
 
                             <option value="@item?.LocationName">@item?.LocationName</option>
       
-                        }*@
+                        }
                     </select>
                 </div>
             </div>
@@ -48,13 +48,13 @@
         <div class="col-12 mb-4">
             <label class="form-label">Tindakan Medis</label>
             <select class="form-select" aria-label="Default select example" name="searchTindakan">
-                <option selected>Select tindakan medis</option>
-                @*@foreach (var item in vMCariDokter.GetTreatments)
+                <option value="">Select tindakan medis</option>
+                @foreach (var item in vMCariDokter.GetTreatments)
                 {
 
                   <option value="@item?.TreatmentName">@item?.TreatmentName</option>
  
-                }*@
+                }
             </select>
         </div>
 
@@ -71,40 +71,3 @@
     </form>
 </div>
 
-@*<script>
-    $("#form_login").validate({
-        submitHandler: function (form) {
-
-            var email = $("#email").val()
-
-            $.ajax({
-                url: "/Auth/LoginSubmit",
-                data: { email: email },
-                type: "post",
-                dataType: "json",
-                success: function (respon) {
-                    var data = respon.dataRespon
-                    //debugger;
-
-                    if (data.success) {
-                        $("#verticalycentered").modal("hide")
-                        toastr.success(
-                            data.message,
-                            '',
-                            {
-                                timeOut: 2000,
-                                fadeOut: 2000,
-                                onHidden: function () {
-                                    window.location.reload()
-                                }
-                            }
-                        )
-                    } else {
-
-                        toastr.errorClass(data.message)
-                    }
-                }
-            })
-        }
-    })
-</script>*@

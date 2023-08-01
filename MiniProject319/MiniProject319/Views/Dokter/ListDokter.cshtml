@@ -15,17 +15,46 @@
 
     <div class="row justify-content-between">
         <div class="col">
-            <small>Hasil Pencarian Berdasarkan kata kunci: </small>
-            <button class="btn btn-outline-secondary btn-sm">Lokasi Jabodetabek</button>
+            <div>
+                <small>Hasil Pencarian Berdasarkan kata kunci: </small>
+                @if (ViewBag.CurrentFilter != null)
+                {
+                    <button class="btn btn-outline-secondary btn-sm">@ViewBag.CurrentFilter</button>
+                }
+                @if (ViewBag.SearchLocation != null)
+                {
+                    <button class="btn btn-outline-secondary btn-sm">@ViewBag.SearchLocation</button>
+                }
+                @if (ViewBag.SearchTindakan != null)
+                {
+                    <button class="btn btn-outline-secondary btn-sm">@ViewBag.SearchLocation</button>
+                }
+            </div>
+            
             <br />
-            <small>Spesialiasi/ Sub-spesialisasi: </small>
-            <button class="btn btn-outline-secondary btn-sm">Anak</button>
+
+            <div>
+                <small>Spesialiasi/ Sub-spesialisasi: </small>
+                @if (ViewBag.SpecialistSelection != null)
+                {
+                    <button class="btn btn-outline-secondary btn-sm">@ViewBag.SpecialistSelection</button>
+                }
+            </div>
         </div>
 
         <div class="col text-end">
-            <a class="btn btn-outline-secondary" id="reset_pencarian">
-                Ulangi Pencarian
-            </a>
+            @if (ViewBag.SpecialistSelection != null)
+            {
+                <a class="btn btn-outline-secondary" id="reset_pencarian" asp-controller="Dokter" asp-action="ListDokter">
+                    Ulangi Pencarian
+                </a>
+            }
+            else
+            {
+                <a class="btn btn-outline-secondary" id="search_doctor">
+                    Cari Dokter
+                </a>
+            }
         </div>
     </div>
 
@@ -34,57 +63,70 @@
 <div class="card pt-4">
     <div class="card-body">
         <div class="row row-cols-auto gap-2 justify-content-between">
-            @foreach (var item in vMListDoctors)
+            @if(vMListDoctors.Count > 0)
             {
-                int BiodataId = Context.Session.GetInt32("Biodata") ?? 0;
+                @foreach (var item in vMListDoctors)
+                {
+                    @*int BiodataId = Context.Session.GetInt32("Biodata") ?? 0;*@
 
-                <div class="card p-3 mb-0" style="min-width:450px">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-8">
-                                <h5 class="card-title pb-0">@item.NameDoctor</h5>
-                                <p class="card-text">
-                                    <small class="text-body-secondary">
-                                        @item.NameSpecialist |
-                                        @item.RiwayatPraktek.Where(a => a.DoctorId == item.DoctorId).Max(a => a.LamaBekerja) Tahun
-                                    </small>
-                                </p>
+                    <div class="card p-3 mb-0" style="min-width:530px">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h5 class="card-title pb-0" style="font-size:20px; font-weight:600">@item.NameDoctor</h5>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary">
+                                            @item.NameSpecialist |
+                                            @item.RiwayatPraktek.Where(a => a.DoctorId == item.DoctorId).Max(a => a.LamaBekerja) Tahun
+                                        </small>
+                                    </p>
+                                </div>
+                                <div class="col-4">
+                                    <img src="~/assets/img/@item.ImagePath" alt="Profile" class="rounded-circle" style="max-height:120px">
+                                </div>
                             </div>
-                            <div class="col-4">
-                                <img src="~/assets/img/@item.ImagePath" alt="Profile" class="rounded-circle" style="max-height:120px">
-                            </div>
-                        </div>
 
-                        <div class="row mt-3">
-                            <div class="col-8">
-                                @foreach (var items in item.RiwayatPraktek)
-                                {
-                                    if (items.DoctorId == item.DoctorId)
+                            <div class="row mt-3">
+                                <div class="col-8">
+                                    @foreach (var items in item.RiwayatPraktek)
                                     {
-                                        <p class="card-text">@items.MedicalFacilityName - @items.Location</p>
+                                        if (items.DoctorId == item.DoctorId)
+                                        {
+                                            <p class="card-text mb-0 text-body-secondary">
+                                                <i class="bi bi-hospital"></i>
+                                                <small>@items.MedicalFacilityName - @items.Location</small>
+                                            </p>
+                                        }
                                     }
-                                }
-                            </div>
-                            <div class="col-4">
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-primary">Buat Janji</button>
-                                    @if (isLogin == true)
-                                    {
-                                        <button class="btn btn-outline-primary">Chat</button>
-                                    }
-                                    else
-                                    {
-                                        <button class="btn btn-outline-secondary" disabled>Offline</button>
-                                    }
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-primary">Buat Janji</button>
+                                        @if (isLogin == true)
+                                        {
+                                            <button class="btn btn-outline-primary">Chat</button>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-outline-secondary" disabled>Offline</button>
+                                        }
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer bg-secondary-subtle" style="padding:20px">
-                        <a dataid="@item.DoctorId" class="btn p-0" id="btn_detail">Info lebih lengkap...</a>
-                    </div>
+                        <div class="card-footer bg-primary" style="padding:20px">
+                            <a dataid="@item.DoctorId" class="btn p-0 text-white btn_detail">Info lebih lengkap...</a>
+                        </div>
 
+                    </div>
+                }
+            }
+            else
+            {
+                <div>
+                    <p class="text-danger"><b>Data Tidak Ditemukan!</b><br /><small class="text-black">Silahkan ulangi pencarian yaa..</small></p>
                 </div>
+                
             }
         </div>
     </div>
@@ -125,18 +167,24 @@
 
 
 <script>
-    @*$("#cari_dokter").click(function () {
+
+    $("#search_doctor").click(function () {
+        //alert("Hello World!")
+
         $("#modal-body").empty()
         $("#modal-body").load("/Dokter/ModalCariDokter")
         $("#verticalycentered").modal("show")
-        });*@
+    })
 
-        $("#btn_detail").click(function () {
-            var id = $(this).attr("dataid")
 
-            $("#modal-body-xl").empty()
-            $("#modal-body-xl").load("/Dokter/DetailDokter?id=" + id)
-            $("#modal2").modal("show")
-        })
+    $(".btn_detail").click(function () {
+        var id = $(this).attr("dataid")
+
+        //alert("Data id = " + id)
+
+        $("#modal-body-lg").empty()
+        $("#modal-body-lg").load("/Dokter/DetailDokter?id=" + id)
+        $("#modal-detail").modal("show")
+    })
 
 </script>

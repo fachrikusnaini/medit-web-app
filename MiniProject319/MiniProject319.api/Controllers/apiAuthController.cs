@@ -25,8 +25,8 @@ namespace MiniProject319.api.Controllers
             data = (from u in db.MUsers
                     join r in db.MRoles on u.RoleId equals r.Id
                     join b in db.MBiodata on u.BiodataId equals b.Id
-                    join a in db.MDoctors on b.Id equals a.BiodataId into md
-                    from mdoc in md.DefaultIfEmpty()
+                    //join a in db.MDoctors on b.Id equals a.BiodataId into md
+                    //from mdoc in md.DefaultIfEmpty()
                     where u.Email == email && u.IsDelete == false && r.IsDelete == false && b.IsDelete == false
                     select new VMTblUsers
                     {
@@ -36,7 +36,7 @@ namespace MiniProject319.api.Controllers
                         Name = b.Fullname,
 
                         ImagePath = b.ImagePath,
-                        DoctorId = mdoc.Id,
+                        //DoctorId = mdoc.Id,
 
                         RoleId = r.Id,
                         RoleName = r.Name,
