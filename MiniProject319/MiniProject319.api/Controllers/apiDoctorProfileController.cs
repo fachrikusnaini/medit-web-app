@@ -1,4 +1,5 @@
 ﻿using System.Data.SqlTypes;
+using System.Drawing;
 using System.Text.RegularExpressions;
 using Humanizer;
 using Microsoft.AspNetCore.Http;
@@ -15,6 +16,8 @@ namespace MiniProject319.api.Controllers
     public class apiDoctorProfileController : ControllerBase
     {
         private readonly DB_SpecificationContext db;
+        int idUserUpdate = 7;
+        private VMResponse respon = new VMResponse();
 
         public apiDoctorProfileController(DB_SpecificationContext _db)
         {
@@ -67,9 +70,6 @@ namespace MiniProject319.api.Controllers
 
             return data;
         }
-
-
-
 
 
         [HttpGet("GetAllDataDoctor")]
@@ -286,6 +286,44 @@ namespace MiniProject319.api.Controllers
                                              }).FirstOrDefault()!;
 
             return data;
+        }
+
+
+        [HttpPut("Edit")]
+        public VMResponse Edit(MBiodatum data)
+        {
+            MBiodatum dt = db.MBiodata.Where(a => a.Id == data.Id).FirstOrDefault();
+
+            if (dt != null)
+            {
+                
+                if (data.ImagePath != null)
+                {
+                    dt.ImagePath = data.ImagePath;
+                }
+                dt.ModifiedBy = idUserUpdate;
+                dt.ModifiedOn = DateTime.Now;
+
+                try
+                {
+                    db.Update(dt);
+                    db.SaveChanges();
+
+                    respon.Message = "Data success edited";
+                }
+                catch (Exception e)
+                {
+                    respon.Success = false;
+                    respon.Message = e.Message;
+                }
+            }
+            else
+            {
+                respon.Success = false;
+                respon.Message = "data not found";
+            }
+
+            return respon;
         }
     }
 }

@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\image.png"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\img-default.png",
+      "PackagePath": "staticwebassets\\assets\\img\\img-default.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\logo-medit.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-medit.png"
     },
@@ -1767,6 +1771,22 @@
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\dr.elvin.png",
+      "PackagePath": "staticwebassets\\images\\dr.elvin.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\dr.intan.png",
+      "PackagePath": "staticwebassets\\images\\dr.intan.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\dr.tatjana.png",
+      "PackagePath": "staticwebassets\\images\\dr.tatjana.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\img-default.png",
+      "PackagePath": "staticwebassets\\images\\img-default.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\js\\site.js",

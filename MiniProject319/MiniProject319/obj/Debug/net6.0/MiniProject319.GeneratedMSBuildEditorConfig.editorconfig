@@ -24,6 +24,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yUHJvZmlsZVxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/DoctorProfile/EditFoto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yUHJvZmlsZVxFZGl0Rm90by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/Dokter/DetailDokter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdGVyXERldGFpbERva3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -102,10 +106,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/Shared/_Sidebar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlYmFyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/Shared/_SidebarConnect.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlYmFyQ29ubmVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/BATCH_319/miniproject-banu/medit-web-app/MiniProject319/MiniProject319/Views/Shared/_SidebarOld.cshtml]

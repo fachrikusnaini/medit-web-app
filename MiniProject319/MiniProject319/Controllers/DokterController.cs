@@ -45,7 +45,10 @@ namespace MiniProject319.Controllers
 
             List<VMListDoctor> data = await doctorService.GetAllDataDoctor();
 
-            
+                if(!string.IsNullOrEmpty(searchString))
+                {
+                    data = data.Where(a => a.NameSpecialist.ToLower().Contains(searchString.ToLower())).ToList();
+                }
                 if (!string.IsNullOrEmpty(searchName))
                 {
                     data = data.Where(a => a.NameSpecialist.ToLower().Contains(searchString.ToLower())
@@ -59,7 +62,7 @@ namespace MiniProject319.Controllers
                 if (!string.IsNullOrEmpty(searchTindakan))
                 {
                     data = data.Where(a => a.NameSpecialist.ToLower().Contains(searchString.ToLower())
-                    && a.ListTindakan.Where(b => b.Name.ToLower().Contains(searchTindakan.ToLower())).Any()).ToList();
+                    && a.ListTindakan.Where(b => a.DoctorId == b.DoctorId && b.Name.ToLower().Contains(searchTindakan.ToLower())).Any()).ToList();
                 }
 
 
@@ -75,9 +78,9 @@ namespace MiniProject319.Controllers
 
         public async Task<IActionResult> DetailDokter()
         {
-            //int IdDoctor = HttpContext.Session.GetInt32("BiodataId") ?? 0;
-            int id = 1;
-            VMDoctorSpecialist data = await doctorService.GetProfileDoctor(id);
+            int IdDoctor = HttpContext.Session.GetInt32("BiodataId") ?? 0;
+            //int id = 1;
+            VMDoctorSpecialist data = await doctorService.GetProfileDoctor(IdDoctor);
             return View(data);
         }
     }

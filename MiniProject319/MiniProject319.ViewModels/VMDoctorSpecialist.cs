@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace MiniProject319.ViewModels
 {
@@ -25,6 +26,7 @@ namespace MiniProject319.ViewModels
         public long? DeletedBy { get; set; }
         public DateTime? DeletedOn { get; set; }
         public bool IsDelete { get; set; }
+        public IFormFile ImageFile { get; set; }
         public VMItemMedical? itemMedical { get; set; }
         public List<VMTindakanMedis>? ListTindakan { get; set; }
         public List<VMRiwayatPraktek>? RiwayatPraktek { get; set; }

@@ -1,4 +1,6 @@
-﻿using MiniProject319.ViewModels;
+﻿using System.Drawing;
+using System.Text;
+using MiniProject319.ViewModels;
 using Newtonsoft.Json;
 
 namespace MiniProject319.Services
@@ -8,6 +10,7 @@ namespace MiniProject319.Services
         private static readonly HttpClient client = new HttpClient();
         private IConfiguration configuration;
         private string RouteApi = "";
+        private VMResponse respon = new VMResponse();
 
         public DoctorService(IConfiguration _configuration)
         {
@@ -40,6 +43,33 @@ namespace MiniProject319.Services
             data = JsonConvert.DeserializeObject<VMCariDokter>(apiRespon)!;
 
             return data;
+        }
+
+        public async Task<VMResponse> Edit(VMDoctorSpecialist data)
+        {
+            //proses convert dari object ke string
+            string json = JsonConvert.SerializeObject(data);
+
+            //proses mengubah string menjadi json 
+            StringContent content = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+
+            //memanggil API
+            var request = await client.PutAsync(RouteApi + "apiDoctorProfile/Edit", content);
+
+            if (request.IsSuccessStatusCode)
+            {
+                //membaca respon dari API
+                var apiRespon = await request.Content.ReadAsStringAsync();
+
+                respon = JsonConvert.DeserializeObject<VMResponse>(apiRespon)!;
+            }
+            else
+            {
+                respon.Success = false;
+                respon.Message = $"{request.StatusCode} : {request.ReasonPhrase}";
+            }
+
+            return respon;
         }
     }
 }

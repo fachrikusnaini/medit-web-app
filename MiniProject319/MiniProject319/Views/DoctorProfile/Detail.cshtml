@@ -22,7 +22,7 @@
                     <div class="position-relative">
                         <img src="~/assets/img/@vMDoctorSpecialist.ImagePath" alt="Profile" class="rounded-circle">
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light">
-                            <i class="bi bi-pencil" style="color:black" href="#"></i>
+                            <i class="bi bi-pencil" style="color:black" id="edit_foto"></i>
                         </span>
                     </div>
 
@@ -156,9 +156,11 @@
 </section>
 
 <script>
-    //$(document).ready(function () {
-    //    $('#rateMe2').mdbRate();
-    //});
+    $("#edit_foto").click(function () {
+        $("#modal-body").empty()
+        $("#modal-body").load("/DoctorProfile/EditFoto")
+        $("#verticalycentered").modal("show")
+    });
 </script>
 
 
