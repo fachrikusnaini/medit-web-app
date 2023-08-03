@@ -72,32 +72,47 @@ namespace MiniProject319.api.Controllers
             return response;
         }
 
-        [HttpGet("CheckNameIsExist/{name}/{id}")]
-        public bool CheckNameIsExist(string name, int id)
+        [HttpPost("CheckNameIsExist")]
+        public VMResponse CheckNameIsExist(VMPayment dataParam)
         {
-            MPaymentMethod data = new MPaymentMethod();
 
-            if (id == 0)
+            if (dataParam.Id == 0)
             {
-                data = db.MPaymentMethods.Where(
-                    a =>
-                    a.Name == name && a.IsDelete == false
-                    ).FirstOrDefault()!;
+                List<MPaymentMethod> data = db.MPaymentMethods.Where(
+                    a => a.IsDelete == false &&
+                    a.Name == dataParam.Name
+                    ).ToList()!;
+
+                foreach (var database in data)
+                {
+                    if (database.Name == dataParam.Name)
+                    {
+                        response.Message = "Nama Pembayaran sudah ada";
+                        response.Success = false;
+                    }
+                }
             }
             else
             {
-                data = db.MPaymentMethods.Where(
-                    a =>
-                    a.Name == name && a.IsDelete == false && a.Id != id
+                MPaymentMethod data = db.MPaymentMethods.Where(
+                    a => a.IsDelete == false &&
+                    a.Name == dataParam.Name
                     ).FirstOrDefault()!;
-            }
 
-            if (data != null)
-            {
-                return true;
+                if (data.Id != dataParam.Id)
+                {
+                    if (data.Name == dataParam.Name && data.Id == dataParam.Id)
+                    {
+                        return response;
+                    }
+                    else if (data.Name == dataParam.Name)
+                    {
+                        response.Message = "Nama pembayaran sudah ada";
+                        response.Success = false;
+                    }
+                }
             }
-
-            return false;
+            return response;
         }
 
         [HttpPost("Edit")]

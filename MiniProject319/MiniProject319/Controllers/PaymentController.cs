@@ -63,10 +63,10 @@ namespace MiniProject319.Controllers
             return PartialView();
         }
 
-        public async Task<JsonResult> CheckNameIsExist(string name, int id)
+        public async Task<JsonResult> CheckNameIsExist(VMPayment dataParam)
         {
-            bool isExist = await paymentServices.CheckNameIsExist(name.ToString(),  id);
-            return Json(isExist);
+            VMResponse response = await paymentServices.CheckNameIsExist(dataParam);
+            return Json(new { dataResponse = response });
         }
 
         [HttpPost]

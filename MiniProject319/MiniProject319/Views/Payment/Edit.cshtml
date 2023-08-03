@@ -16,7 +16,7 @@
                 <label for="Name" class="col-sm-3 col-form-label">Nama Bank: </label>
                 <div class="col-sm-9">
                     <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name">
-                    <span id="validate_Name" class="text-danger"></span>
+                    <span id="validate_isExist" class="text-danger"></span>
                 </div>
             </div>
             <div class="d-flex justify-content-center">
@@ -55,12 +55,11 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    if (response) {
-                        $("#validate_Name").text("Name Bank sudah ada")
+                    if (!response.dataResponse.success) {
+                        $("#validate_isExist").text(response.dataResponse.message);
 
                         return true
                     } else {
-
                         functionSubmit(form);
                     }
                 }

@@ -329,19 +329,23 @@ namespace MiniProject319.api.Controllers
             TToken data = new TToken();
             DateTime date2 = DateTime.Now;
 
-            data = db.TTokens.Where(a => a.IsDelete == false && a.Token == token).FirstOrDefault()!;
+            data = db.TTokens.Where(a => a.IsDelete == false && a.Token == token && a.IsExpired == false).FirstOrDefault()!;
 
 
             if (data == null)
             {
-                response.Message = "Invalid Code OTP";
+                response.Message = "Kode OTP salah";
                 response.Success = false;
             }
             else if (data.ExpiredOn < date2)
             {
-                response.Message = "Expired Code OTP";
+                response.Message = "Kode OTP sudah kadaluarsa";
                 response.Success = false;
 
+            } else if (data.IsExpired == true)
+            {
+                response.Message = "Kode OTP sudah Expired";
+                response.Success = false;
             }
             //data.IsExpired = true;
             //db.Update(data);
@@ -469,12 +473,23 @@ namespace MiniProject319.api.Controllers
 
 
             TToken tokenResult = db.TTokens.Where(a => a.IsDelete == false && a.Email == dataParam.Email).FirstOrDefault()!;
-            tokenResult.Token = randomNumber.ToString();
-            tokenResult.ExpiredOn = currentTime.AddSeconds(30);
-            tokenResult.IsExpired = false;
-            tokenResult.ModifiedBy = idUser;
-            tokenResult.ModifiedOn = DateTime.Now;
-            tokenResult.IsDelete = false;
+            tokenResult.IsExpired = true;
+
+            db.TTokens.Update(tokenResult);
+            db.SaveChanges();
+
+            TToken dataTokenNew = new TToken();
+
+            dataTokenNew.Email = userResult.Email;
+            dataTokenNew.UserId = userResult.Id;
+            dataTokenNew.Token = randomNumber.ToString();
+            dataTokenNew.ExpiredOn = currentTime.AddSeconds(30);
+            dataTokenNew.IsExpired = false;
+            dataTokenNew.CreatedOn = DateTime.Now;
+            dataTokenNew.CreatedBy = idUser;
+            dataTokenNew.ModifiedBy = idUser;
+            dataTokenNew.ModifiedOn = DateTime.Now;
+            dataTokenNew.IsDelete = false;
 
 
             var emailVerif = new MimeMessage();
@@ -483,7 +498,7 @@ namespace MiniProject319.api.Controllers
             emailVerif.Subject = "Register User";
             emailVerif.Body = new TextPart(TextFormat.Html)
             {
-                Text = @"This your Resend Code OTP : " + tokenResult.Token
+                Text = @"This your Resend Code OTP : " + dataTokenNew.Token
             };
 
             using var smtp = new SmtpClient();
@@ -495,11 +510,10 @@ namespace MiniProject319.api.Controllers
 
             try
             {
-                db.TTokens.Update(tokenResult);
+                db.TTokens.Add(dataTokenNew);
                 db.SaveChanges();
 
-                response.Message = "Data successfully Updated";
-                //response.Entity = userResult;
+                response.Message = "Check your email for code OTP";
             }
             catch (Exception e)
             {
@@ -520,13 +534,22 @@ namespace MiniProject319.api.Controllers
 
 
             TToken tokenResult = db.TTokens.Where(a => a.IsDelete == false && a.Email == dataParam.Email).FirstOrDefault()!;
-            //TToken tokenResult = new TToken();
-            tokenResult.Token = randomNumber.ToString();
-            tokenResult.ExpiredOn = currentTime.AddSeconds(30);
-            tokenResult.IsExpired = false;
-            tokenResult.ModifiedBy = idUser;
-            tokenResult.ModifiedOn = DateTime.Now;
-            tokenResult.IsDelete = false;
+            tokenResult.IsExpired = true;
+
+            db.TTokens.Update(tokenResult);
+            db.SaveChanges();
+
+            TToken tokenNew = new TToken();
+            tokenNew.Email = userResult.Email;
+            tokenNew.UserId = userResult.Id;
+            tokenNew.Token = randomNumber.ToString();
+            tokenNew.ExpiredOn = currentTime.AddSeconds(30);
+            tokenNew.IsExpired = false;
+            tokenNew.ModifiedBy = idUser;
+            tokenNew.ModifiedOn = DateTime.Now;
+            tokenNew.CreatedOn = DateTime.Now;
+            tokenNew.CreatedBy = idUser;
+            tokenNew.IsDelete = false;
 
 
 
@@ -537,7 +560,7 @@ namespace MiniProject319.api.Controllers
             emailVerif.Subject = "Register User";
             emailVerif.Body = new TextPart(TextFormat.Html)
             {
-                Text = @"This your Resend Code OTP : " + tokenResult.Token
+                Text = @"This your Resend Code OTP : " + tokenNew.Token
             };
 
             using var smtp = new SmtpClient();
@@ -549,12 +572,10 @@ namespace MiniProject319.api.Controllers
 
             try
             {
-                db.TTokens.Update(tokenResult);
+                db.TTokens.Add(tokenNew);
                 db.SaveChanges();
-                //db.TTokens.Update(tokenResult);
-                //db.SaveChanges();
 
-                response.Message = "Data successfully Updated";
+                response.Message = "Check your email for code OTP";
                 //response.Entity = userResult;
             }
             catch (Exception e)

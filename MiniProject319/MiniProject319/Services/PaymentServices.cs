@@ -26,11 +26,31 @@ namespace MiniProject319.Services
 
             return data;
         }
-        public async Task<bool> CheckNameIsExist(string name, int id)
+        public async Task<VMResponse> CheckNameIsExist(VMPayment dataParam)
         {
-            string apiResponse = await _httpClient.GetStringAsync(RouteAPI + $"apiPayment/CheckNameIsExist/{name}/{id}");
-            bool isExist = JsonConvert.DeserializeObject<bool>(apiResponse);
-            return isExist;
+            //process conver from object to string
+            string json = JsonConvert.SerializeObject(dataParam);
+
+            //process change string to be json then send by Request Body
+            StringContent content = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+
+            //process call API and sending Body Request
+            var request = await _httpClient.PostAsync(RouteAPI + "apiPayment/CheckNameIsExist", content);
+
+            if (request.IsSuccessStatusCode)
+            {
+                //process reading response from API
+                var apiResponse = await request.Content.ReadAsStringAsync();
+
+                //process conver from API to Object
+                response = JsonConvert.DeserializeObject<VMResponse>(apiResponse)!;
+            }
+            else
+            {
+                response.Success = false;
+                response.Message = $"{request.StatusCode} : {request.ReasonPhrase}";
+            }
+            return response;
         }
 
         public async Task<VMResponse> Create(MPaymentMethod data)
