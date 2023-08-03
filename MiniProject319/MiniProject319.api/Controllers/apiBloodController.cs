@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MiniProject319.DataModels;
 using MiniProject319.ViewModels;
+using Newtonsoft.Json;
 
 namespace MiniProject319.api.Controllers
 {
@@ -32,10 +33,32 @@ namespace MiniProject319.api.Controllers
             return result;
         }
 
+        [HttpGet("CheckDarah/{code}/{id}")]
+        public bool CheckDarah(string code, int id)
+        {
+
+            MBloodGroup data = new MBloodGroup();
+            if (id == 0)
+            {
+                data = db.MBloodGroups.Where(a => a.Code == code && a.IsDelete == false).FirstOrDefault();
+            }
+            else
+            {
+                data = db.MBloodGroups.Where(a => a.Code == code && a.IsDelete == false && a.Id != id).FirstOrDefault();
+
+            }
+            if (data != null)
+            {
+                return true;
+            }
+            return false;
+
+        }
+
         [HttpPost("Save")]
         public VMResponse Save(MBloodGroup data)
         {
-            data.Code = data.Code ?? "";
+            data.Code = data.Code;
             data.Description = data.Description ;
             data.CreatedBy = IdUser;
             data.CreatedOn = DateTime.Now;
@@ -63,7 +86,7 @@ namespace MiniProject319.api.Controllers
 
             if (dt != null)
             {
-                data.Code = data.Code ?? "";
+                dt.Code = data.Code ?? "";
                 dt.Description = data.Description;
                 dt.ModifiedBy = IdUser;
                 dt.ModifiedOn = DateTime.Now;

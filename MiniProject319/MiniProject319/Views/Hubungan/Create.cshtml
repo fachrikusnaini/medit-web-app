@@ -16,10 +16,10 @@
         <form asp-action="Create" method="post" id="form_input">
 
             <div class="mb-4 row">
-                <label for="Name" class="col-sm-3.5 col-form-label">Name Category</label>
+                <label for="Name" class="col-sm-3.5 col-form-label">Name Relation</label>
                 <div class="col-sm-8.5">
                     <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name">
-                    <span id="validate_NameCategory" class="text-danger"></span>
+                    <span id="validate_NameRelation" class="text-danger"></span>
                 </div>
             </div>
 
@@ -42,25 +42,45 @@
         rules: {
             Name: {
                 required: true,
-                minlength: 5,
             },
         },
         messages: {
             Name: {
-                required: "Inputkan Data Anda",
-                minlength: "Nama Harus Lebih Dari 5 Huruf",
-            },
+                required: "Inputkan Data Hubungan Relasi",
 
         },
+        },
         submitHandler: function (form) {
-            //console.log('test')
-
+            //console.log('tes')
             var dataForm = $(form).serialize()
+            //debugger
+            var name = $("#Name").val()
+            var id = $("#Id").val()
+
+            $.ajax({
+                url: "/Hubungan/CheckRelationIsExist",
+                type: "get", //atau method :"get"  (sama aja inimah)
+                data: { name: name, id: id },
+                dataType: "json",
+                success: function (respon) {
+                    if (respon) {
+                        $("#validate_NameRelation").text("Relation Name is Exists")
+                        return true
+                    }
+                    else {
+                        fungsiSubmit(dataForm)
+                    }
+                }
+            })
+        }
+    })
+    function fungsiSubmit(dataParam) {
+            //console.log('test')
 
             $.ajax({
                 url: "/Hubungan/Create",
                 type: "post",
-                data: dataForm,
+                data: dataParam,
                 dataType: "json",
                 success: function (respon) {
                     var data = respon.dataRespon
@@ -87,5 +107,4 @@
             })
         }
 
-    })
 </script>

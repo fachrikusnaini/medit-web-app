@@ -1,0 +1,208 @@
+﻿@using MiniProject319.ViewModels;
+@using MiniProject319.DataModels;
+
+@model PaginatedList<MBloodGroup>
+
+<section class="section profile">
+
+
+
+
+    <div class="col-md-12">
+        <br />
+
+
+        <div class="card">
+            <div class="card-body pt-3">
+                <!-- Bordered Tabs -->
+
+                <div class="tab-content pt-2">
+
+                    <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="d-flex align-items-center">
+                                    <h5 class="card-title">
+                                        Blood Type
+                                    </h5>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tab-content pt-2">
+
+                                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                                    <div class="container">
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <form asp-action="Index" asp-route-pageSize="@ViewBag.CurrentPageSize">
+                                                    <div class="input-group">
+                                                        <input type="text" name="searchString" value="@ViewBag.CurrentFilter" class="form-control" placeholder="Search..">
+                                                        <div class="input-group-prepend">
+                                                            <button type="submit" class="btn btn-outline-secondary" title="Search">
+                                                                <i class="bi bi-search"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="input-group-prepend">
+                                                            <a class="btn btn-outline-secondary" asp-action="Index" title="Reset">
+                                                                <i class="bi bi-arrow-repeat"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div class="col-md-8">
+                                                <div class="d-flex align-items-center justify-content-end mt-2">
+                                                    <!-- Wrap the buttons and dropdown in a flex container -->
+                                                    <form asp-action="Index" id="form_pagesize" class="d-flex align-items-center mb-0">
+                                                        <!-- add "d-flex align-items-center" classes for vertical alignment -->
+                                                        <select name="PageSize" id="PageSize" class="form-control form-control-sm">
+                                                            <!-- use "form-control-sm" class to reduce the size of the dropdown -->
+                                                            <option value="3">3</option>
+                                                            <option value="5">5</option>
+                                                            <option value="10">10</option>
+                                                        </select>
+                                                    </form>
+                                                    <button id="btn_create" class="btn btn-primary ms-2">
+                                                        <!-- Use ms-2 class to add a margin on the left side -->
+                                                        <i class="bi bi-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <table class="table table-hover mb-3">
+                                            <thead>
+                                                <tr>
+
+                                                    <th>Code</th>
+                                                    <th>Description</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @if (Model.Count != 0)
+                                                {
+
+
+                                                    @foreach (var pasien in Model)
+                                                    {
+
+
+                                                        <tr>
+
+
+                                                            <!-- Di dalam tabel -->
+
+                                                            <td> @pasien.Code</td>
+                                                            <td> @pasien.Description</td>
+
+                                                            <td>
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a class="btn btn-success btn_edit" style="margin-right: 10px;" dataid="@pasien.Id"><i class="bi bi-pencil"></i></a>
+                                                                    <a class="btn btn-danger btn_delete" dataid="@pasien.Id"><i class="bi bi-trash"></i></a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                }
+
+                                                else
+                                                {
+                                                    <tr>
+                                                        <td class="text-center" colspan="2">
+                                                            <i> Tidak ada data yang mengandung kata @ViewBag.CurrentFilter</i>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+
+                                        </table>
+
+                                    </div>
+                                </div>
+                                <br />
+                                <br />
+                            </div>
+
+                        </div><!-- End Bordered Tabs -->
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        @{
+            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+        }
+        <div class="row">
+
+            <div class="col-10">
+                entries from @Model.TotalData data
+
+                <a asp-action="Index"
+                   asp-route-sortOrder="@ViewBag.CurrentSort"
+                   asp-route-pageNumber="@(Model.PageIndex - 1)"
+                   asp-route-currentFilter="@ViewBag.CurrentFilter"
+                   asp-route-pageSize="@ViewBag.CurrentPageSize"
+                   class="btn btn-info float-right @prevDisabled">
+                    Previous
+                </a>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@ViewBag.CurrentSort"
+                   asp-route-pageNumber="@(Model.PageIndex + 1)"
+                   asp-route-currentFilter="@ViewBag.CurrentFilter"
+                   asp-route-pageSize="@ViewBag.CurrentPageSize"
+                   class="btn btn-info float-right @nextDisabled">
+                    Next
+                </a>
+
+            </div>
+        </div>
+        @* </div>
+        </div>*@
+    </div>
+
+</section>
+
+
+
+        <script>
+            $("#PageSize").val(@ViewBag.CurrentPageSize)
+                $("#PageSize").change(function () {
+                $("#form_pagesize").submit();
+            })
+
+            $("#btn_create").click(function () {
+
+                $("#modal_body").empty()
+                $("#modal_body").load("/Darah/Create")
+                $("#modal").modal("show")
+            })
+
+            $(".btn_edit").click(function () {
+
+                var id = $(this).attr("dataid")
+
+                $("#modal_body").empty()
+                $("#modal_body").load("/Darah/Edit?id=" + id)
+                $("#modal").modal("show")
+            })
+
+            $(".btn_delete").click(function () {
+                var id = $(this).attr("dataid")
+
+                $("#modal_body").empty()
+                $("#modal_body").load("/Darah/Delete?id=" + id)
+                $("#modal").modal("show")
+            })
+
+        </script>

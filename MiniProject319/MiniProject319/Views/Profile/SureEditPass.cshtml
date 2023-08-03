@@ -1,0 +1,118 @@
+﻿@using MiniProject319.ViewModels
+@model VMUser
+
+@{
+    ViewData["Title"] = "Masukkan Password Baru";
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">@ViewData["Title"]</div>
+        <form asp-action="SureEditP" method="post" id="form_input">
+            <input type="hidden" class="form-control" id="Id" name="Id" value="@Model.Id">
+
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="password" class="form-control" id="Password" name="Password" placeholder="New Password" onchange="checkNewPasswordMatch()">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><span class="bi bi-lock"></span></span>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="password" class="form-control" id="re_password" name="re_password" placeholder="Retype password" onchange="checkNewPasswordMatch()">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><span class="bi bi-lock"></span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Input</button>
+                    <a class="btn btn-dark" asp-controller="Profile" asp-action="Index">Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    $("#form_input").validate({
+        errorClass: "text-danger",
+        rules: {
+            Password: {
+                required: true,
+                minlength: 8, // Minimum password length should be 8 characters
+                // Custom validation method to check if the password contains at least one lowercase, one uppercase, and one special character
+                strongPassword: true
+            },
+            re_password: {
+                equalTo: "#Password" // Ensure that the re_password field matches the Password field
+            }
+        },
+        messages: {
+            Password: {
+                required: "Please enter a password",
+                minlength: "Password must be at least 8 characters long"
+            },
+            re_password: {
+                equalTo: "Passwords do not match"
+            }
+        },
+        submitHandler: function (form) {
+            var dataForm = $(form).serialize();
+            submitPasswordChange(dataForm);
+        }
+    });
+
+    // Custom validation method to check if the password contains at least one lowercase, one uppercase, and one special character
+    $.validator.addMethod("strongPassword", function (value, element) {
+        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@@$,.\s!%*?&])[A-Za-z\d@@$,.\s!%*?&]{8,}$/.test(value);
+    }, "Harap Menggunakan huruf Besar,Kecil,Digit dan Special(@@$!%*?&)");
+
+
+    function checkNewPasswordMatch() {
+        var newPassword = $("#Password").val();
+        var rePassword = $("#re_password").val();
+
+        if (newPassword && newPassword !== rePassword) {
+            toastr.error("Passwords do not match");
+        } else {
+            toastr.clear();
+        }
+    }
+
+    // Function to handle the form submission for SureEditP
+    function submitPasswordChange(dataParam) {
+        $.ajax({
+            url: '/Profile/SureEditP',
+            type: "post",
+            data: dataParam,
+            dataType: "json",
+            success: function (respon) {
+                var data = respon.dataRespon;
+                if (data.success) {
+                    $("#modal_sm").modal("hide");
+                    toastr.success(
+                        data.message,
+                        '',
+                        {
+                            timeOut: 500,
+                            fadeOut: 500,
+                            onHidden: function () {
+                                window.location.reload();
+                            }
+                        }
+                    );
+                }
+                else {
+                    // Use toastr.error to display the error message
+                    toastr.error(data.message);
+                }
+            }
+        });
+    }
+</script>

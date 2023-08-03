@@ -31,11 +31,12 @@ namespace MiniProject319.Controllers
             else
             {
                 searchString = currentFilter;
+
             }
 
             ViewBag.CurrentFilter = searchString;
 
-            List<MCustomerRelation> data = await hubunganService.GetAllData();
+            List<VMCustomerRelation> data = await hubunganService.GetAllData();
 
             if (!string.IsNullOrEmpty(searchString))
             {
@@ -54,7 +55,13 @@ namespace MiniProject319.Controllers
 
 
 
-            return View(PaginatedList<MCustomerRelation>.CreateAsync(data, pageNumber ?? 1, pageSize ?? 3));
+            return View(PaginatedList<VMCustomerRelation>.CreateAsync(data, pageNumber ?? 1, pageSize ?? 3));
+        }
+
+        public async Task<JsonResult> CheckRelationIsExist(string name, int id)
+        {
+            bool isExist = await hubunganService.CheckRelation(name, id);
+            return Json(isExist);
         }
 
         public IActionResult Create()
@@ -79,7 +86,7 @@ namespace MiniProject319.Controllers
 
         public async Task<JsonResult> CheckNameIsExist(string name, int id)
         {
-            bool isExist = await hubunganService.CheckByName(name, id);
+            bool isExist = await hubunganService.CheckRelation(name, id);
             return Json(isExist);
         }
 
@@ -98,10 +105,10 @@ namespace MiniProject319.Controllers
             VMResponse respon = await hubunganService.Edit(dataParam);
             if (respon.Success)
             {
-                //return Json(new { dataRespon = respon });
-                return RedirectToAction("Index");
+                return Json(new { dataRespon = respon });
+                //return RedirectToAction("Index");
             }
-            return View(dataParam);
+            return PartialView(dataParam);
         }
 
         public async Task<IActionResult> Delete(int id)
@@ -113,7 +120,7 @@ namespace MiniProject319.Controllers
         [HttpPost]
         public async Task<IActionResult> SureDelete(int id)
         {
-            int createBy = IdUser;
+            int deletedby = IdUser;
             VMResponse respon = await hubunganService.Delete(id);
 
             if (respon.Success)

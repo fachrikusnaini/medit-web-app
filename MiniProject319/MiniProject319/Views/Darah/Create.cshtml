@@ -1,0 +1,126 @@
+﻿@using MiniProject319.ViewModels
+@using MiniProject319.DataModels
+
+@model MBloodGroup
+
+@{
+
+    ViewData["Title"] = "Tambah Data";
+}
+
+<div class="h4 md-4">@ViewData["Title"]</div>
+
+<div class="card">
+    <div class="card-body">
+
+        <form asp-action="Create" method="post" id="form_input">
+
+            <div class="mb-4 row">
+                <label for="Code" class="col-sm-3.5 col-form-label">Blood Code</label>
+                <div class="col-sm-8.5">
+                    <input type="text" class="form-control" id="Code" name="Code" value="@Model.Code">
+                    <span id="validate_Code" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mb-4 row">
+                <label for="Description" class="col-sm-3.5 col-form-label">Description </label>
+                <div class="col-sm-8.5">
+                    <input type="text" class="form-control" id="Description" name="Description" value="@Model.Description">
+                    
+                </div>
+            </div>
+
+
+            <br>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Input</button>
+                    <a class="btn btn-dark" asp-controller="Darah" asp-action="Index">Back</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script>
+    $("#form_input").validate
+    ({
+        errorClass: "text-danger",
+        rules: {
+            Code: {
+                required: true,
+                maxlength: 5,
+            },
+
+        },
+        messages: {
+            Code: {
+                required: "Inputkan Golongan Darah",
+                maxlength: "Maksimal 5 Karakter",
+
+            },
+        },
+            submitHandler: function (form) {
+                //console.log('tes')
+                var dataForm = $(form).serialize()
+                //debugger
+                var code = $("#Code").val()
+                var id = $("#Id").val()
+
+                $.ajax({
+                    url: "/Darah/CheckDarahIsExist",
+                    type: "get", //atau method :"get"  (sama aja inimah)
+                    data: { code: code, id: id },
+                    dataType: "json",
+                    success: function (respon) {
+                        if (respon) {
+                            $("#validate_Code").text("Code is Exists")
+                            return true
+                        }
+                        else {
+                            fungsiSubmit(dataForm)
+                        }
+                    }
+                })
+            }
+        })
+    function fungsiSubmit(dataParam) {
+                //console.log('test')
+
+
+                $.ajax({
+                    url: "/Darah/Create",
+                    type: "post",
+            data: dataParam,
+                    dataType: "json",
+                    success: function (respon) {
+                        var data = respon.dataRespon
+                        if (data.success) {
+                            $("#modal").modal("hide")
+
+                            toastr.success(
+                                data.message,
+                                '',
+                                {
+                                    timeOut: 500,
+                                    fadeOut: 500,
+                                    onHidden: function () 
+                                    {
+                                        window.location.reload()
+                                    }
+                                }
+                            )
+                        }
+                        else 
+                        {
+                          toastr.errorClass(data.message)
+                        }
+                    }
+
+                })
+            }
+
+  
+</script>

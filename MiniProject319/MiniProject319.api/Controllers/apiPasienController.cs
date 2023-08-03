@@ -79,9 +79,9 @@ namespace MiniProject319.api.Controllers
         }
 
         [HttpGet("GetDataById/{id}")]
-        public List<VMPasien> GetDataById(int id)
+        public VMPasien GetDataById(int id)
         {
-            List<VMPasien> data = (from cm in db.MCustomerMembers
+            VMPasien data = (from cm in db.MCustomerMembers
                                    join c in db.MCustomers on cm.CustomerId equals c.Id
                                    join cr in db.MCustomerRelations on cm.CustomerRelationId equals cr.Id
                                    join bg in db.MBloodGroups on c.BloodGroupId equals bg.Id
@@ -104,8 +104,8 @@ namespace MiniProject319.api.Controllers
                                        Name = cr.Name,
 
                                        CreatedBy = c.Id
-                                   }).ToList();
-            return data;
+                                   }).FirstOrDefault()!;
+            return (data);
         }
 
 
@@ -150,7 +150,7 @@ namespace MiniProject319.api.Controllers
                 db.Add(mCustomerMember);
                 db.SaveChanges();
 
-                respon.Message = "Saved ya guys";
+                respon.Message = "Data Saved";
             }
             catch (Exception e)
             {
@@ -269,6 +269,8 @@ namespace MiniProject319.api.Controllers
             }
             else
             {
+                respon.Success = false;
+                respon.Message = "Data Not Found";
 
             }
             return respon;

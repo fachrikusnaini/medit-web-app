@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l2m04J2uKArXhLLhPpgPhZxT9My/xPAav3Cu9m3N6VI=",
+  "Hash": "Qf6k01+71g6wWYmABWjjy7ovP6jEM6cdbOFC/s19ysI=",
   "Source": "MiniProject319",
   "BasePath": "_content/MiniProject319",
   "Mode": "Default",
@@ -10419,6 +10419,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\messages-3.jpg"
+    },
+    {
+      "Identity": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\new-favicon-medit.png",
+      "SourceId": "MiniProject319",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\",
+      "BasePath": "_content/MiniProject319",
+      "RelativePath": "assets/img/new-favicon-medit.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\new-favicon-medit.png"
+    },
+    {
+      "Identity": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\new-logo-medit.png",
+      "SourceId": "MiniProject319",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\",
+      "BasePath": "_content/MiniProject319",
+      "RelativePath": "assets/img/new-logo-medit.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\new-logo-medit.png"
     },
     {
       "Identity": "E:\\Xsis\\Mini Project\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\assets\\img\\news-1.jpg",

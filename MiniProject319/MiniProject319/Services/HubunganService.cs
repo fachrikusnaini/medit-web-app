@@ -18,12 +18,12 @@ namespace MiniProject319.Services
             this.RouteAPI = this.configuration["RouteAPI"];
         }
 
-        public async Task<List<MCustomerRelation>> GetAllData()
+        public async Task<List<VMCustomerRelation>> GetAllData()
         {
-            List<MCustomerRelation> data = new List<MCustomerRelation>();
+            List<VMCustomerRelation> data = new List<VMCustomerRelation>();
 
             string apiResponse = await client.GetStringAsync(RouteAPI + "apiHubungan/GetAllData");
-            data = JsonConvert.DeserializeObject<List<MCustomerRelation>>(apiResponse);
+            data = JsonConvert.DeserializeObject<List<VMCustomerRelation>>(apiResponse);
 
             return data;
         }
@@ -37,9 +37,9 @@ namespace MiniProject319.Services
             return data;
         }
 
-        public async Task<bool> CheckByName(string name, int id)
+        public async Task<bool> CheckRelation(string name, int id)
         {
-            string apiResponse = await client.GetStringAsync(RouteAPI + $"apiHubungan/CheckByName/{name}/{id}");
+            string apiResponse = await client.GetStringAsync(RouteAPI + $"apiHubungan/CheckRelation/{name}/{id}");
             bool isexist = JsonConvert.DeserializeObject<bool>(apiResponse);
 
             return isexist;

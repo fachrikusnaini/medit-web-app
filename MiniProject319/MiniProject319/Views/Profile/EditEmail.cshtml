@@ -3,7 +3,7 @@
 
 @model VMUser
 
-<!--Start Form-->
+@*<!--Start Form-->
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">Ubah E-mail</h5>
@@ -15,7 +15,7 @@
                 <p>Masukkan alamat E-mail yang baru</p>
                 <label for="Email" class="col-sm-8 col-form-label">Email</label>
                 <div class="col-sm-13">
-                    <input type="text" class="form-control" id="Email" name="Email" value="@Model.Email">
+                    <input type="text" class="form-control" id="Email" name="Email" value="">
                 </div>
             </div>
 
@@ -32,5 +32,113 @@
         </form><!-- End General Form Elements -->
 
     </div>
-</div>
+</div>*@
 <!--END FORM-->
+
+<style>
+    .required:after {
+        content: "*";
+        color: red;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-8">
+            <h4 class="text-primary"><b>Daftar</b></h4>
+            <div class="container-fluid">
+                <div class="row">
+                    <form asp-action="Register" method="post" enctype="multipart/form-data" id="form_register">
+                        <input type="text" class="form-control border-info" id="Id" name="Id" value="@Model.Id" >
+                        <span class="text-secondary mb-3">Masukkan email Anda. Kami akan melakukan pengecekan.</span>
+                        <div class="form-group">
+                            <label class="text-secondary required" for="Email">Email</label>
+                            <input type="text" class="form-control border-info" id="Email" name="Email" value="@Model.Email">
+                            <span id="validate_Email" class="text-danger"></span>
+                        </div>
+                        <div class="clearfix mt-5 text-center">
+                            <button class="btn btn-primary btn-rounded" id="btn_verification">Kirim OTP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+<script>
+    $("#form_register").validate({
+        errorClass: "text-danger",
+        rules: {
+            Email: {
+                required: true,
+                email: true,
+            },
+        },
+        messages: {
+            Email: {
+                required: "Please fill Email",
+                email: "Please enter a valid email address",
+            },
+
+        },
+        submitHandler: function (form) {
+
+            var email = $("#Email").val()
+            var id = $("#Id").val()
+
+            $.ajax({
+                url: "/Profile/CheckEmail",
+                type: "get",
+                //method:"get"
+                data: {
+                    email: email,
+                    id: id
+                },
+                dataType: "json",
+                success: function (response) {
+                    if (response) {
+                        $("#validate_Email").text("Email is already exists")
+
+                        return true
+                    }
+                    else {
+
+                        functionSubmit(form);
+                    }
+                }
+            })
+        }
+    })
+
+    function functionSubmit(form) {
+
+        var formData = new FormData();
+        var dataForm = $(form).serializeArray();
+
+        $.each(dataForm, function (key, input) {
+            formData.append(input.name, input.value)
+        })
+
+        $.ajax({
+            url: "/Profile/EditEmail",
+            type: "post",
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            success: function (response) {
+                var data = response.dataResponse
+                if (data.success) {
+                    $("#modal_body").empty()
+                    $("#modal_body").load("/Profile/Verification")
+                    $("#modal").modal("show")
+                } else {
+                    toastr.errorClass(data.message)
+                }
+            }
+        })
+    }
+</script>

@@ -33,8 +33,9 @@
 
                 <div class="row mb-3">
                 <label for="MobilePhone" class="col-sm-2 col-form-label">Number</label>
-                  <div class="col-sm-13">
-                    <input type="number" class="form-control" id="MobilePhone" name="MobilePhone" value="@Model.MobilePhone">
+                <div class="input-group flex-nowrap mb-2">
+                    <span class="input-group-text border-info bg-secondary" id="addon-wrapping">+62</span>
+                    <input type="text" class="form-control" id="MobilePhone" name="MobilePhone" value="@Model.MobilePhone" aria-describedby="addon-wrapping">
                 </div>
                 </div>
          <br />

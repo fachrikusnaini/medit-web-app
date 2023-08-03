@@ -506,3 +506,11 @@ E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\obj\Debug\net6.
 E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\obj\Debug\net6.0\MiniProject319.pdb
 E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\obj\Debug\net6.0\MiniProject319.genruntimeconfig.cache
 E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\obj\Debug\net6.0\ref\MiniProject319.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\bin\Debug\net6.0\MailKit.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\bin\Debug\net6.0\MimeKit.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\bin\Debug\net6.0\System.Formats.Asn1.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll

@@ -1,0 +1,78 @@
+﻿@using MiniProject319.ViewModels
+@using MiniProject319.DataModels
+
+@model VMPasien
+
+@{
+
+    ViewData["Title"] = "Multiple Delete Data";
+}
+
+
+<div class="card">
+    <div class="card-body">
+        <form asp-action="SureMultipleDelete" method="post" id="form_delete">
+
+
+         
+
+
+            <h3>Sure wanna delete this pasien : </h3> <br />
+
+            @foreach (var item in ViewBag.listName)
+            {
+                <h3>@item</h3>
+            }
+            <br />
+            <p>Riwayat medis pasien akan tetap tersimpan, </p>
+            <p>namun anda tidak dapat lagi membuat janji </p>
+            <p>dokter/chat online untuk pasien ini </p><br />
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-danger">Yes</button>
+                <a asp-asp-controller="Pasien" asp-action="Index" class="btn-light">No</a>
+            </div>
+
+        </form>
+
+      
+
+    </div>
+</div>
+
+
+<script>
+    $("#form_delete").validate({
+        submitHandler: function (form) {
+
+            $.ajax({
+                url: "/Pasien/SureMultipleDelete",
+                type: "post",
+                data: { listI d: listId },
+                dataType: "json",
+                success: function (respon) {
+                    var data = respon.dataRespon
+                    if (data.success) {
+                        $("#modal").modal("hide")
+
+                        toastr.success(
+                            data.message,
+                            "",
+                            {
+                                timeout: 500,
+                                fadeout: 500,
+                                onHidden: function () {
+                                    window.location.reload()
+                                }
+                            }
+                        )
+                    }
+                    else {
+                        toastr.errorClass(data.message)
+                    }
+                }
+            })
+        }
+    })
+
+</script>

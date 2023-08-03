@@ -16,6 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\Xsis\Mini Project\medit-web-app\MiniProject319\MiniProject319
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Darah/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFyYWhcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Darah/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFyYWhcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Darah/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFyYWhcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Darah/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFyYWhcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,8 +56,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHVidW5nYW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Pasien/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzaWVuXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Pasien/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzaWVuXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Pasien/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzaWVuXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Pasien/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzaWVuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Pasien/MultipleDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzaWVuXE11bHRpcGxlRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Profile/Edit.cshtml]
@@ -58,6 +90,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Profile/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Profile/SureEditPass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxTdXJlRWRpdFBhc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Profile/Verification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxWZXJpZmljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Shared/Error.cshtml]

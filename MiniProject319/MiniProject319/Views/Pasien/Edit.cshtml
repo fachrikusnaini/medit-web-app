@@ -1,0 +1,84 @@
+﻿@using MiniProject319.ViewModels
+@model VMPasien;
+
+@{
+    ViewData["Title"] = "Edit Pasien";
+}
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">@ViewData["Title"]</div>
+        <form asp-action="Edit" method="post" id="form_input">
+            <input type="hidden" id="Id" name="Id" value="@Model.Id" />
+
+            <input type="hidden" id="ParentBiodataId" name="ParentBiodataId" value="@Model.ParentBiodataId" />
+
+            <div class="mb-4 row">
+                <label for="FullName" class="col-sm-4 col-form-label">NamaLengkap</label>
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="FullName" name="FullName" value="@Model.Fullname" required>
+                    <span id="validate_Fullname" class="text-black-danger"></span>
+                </div>
+            </div>
+            <div class="mb-4 row">
+                <label for="Dob" class="col-sm-4 col-form-label">Tanggal Lahir</label>
+                <div class="col-sm-12">
+                    <input type="date" class="form-control" id="Dob" name="Dob" value="@Model.Dob?.ToString("yyyy-MM-dd")" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="height">Height</label>
+                    <input type="number" class="form-control" id="height" name="Height" value="@Model.Height" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="weight">Weight</label>
+                    <input type="number" class="form-control" id="weight" name="Weight" value="@Model.Weight" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Code">Type Darah</label>
+                    @Html.DropDownList("BloodGroupId", new SelectList(ViewBag.bloodGroups, "Id", "Code"), "-- Pilih Golongan Darah --", new { @class = "form-control" })
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="Rhtype">Rh Type</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="RhesusType" name="RhesusType" value="Rh+" @(Model.RhesusType == "Rh+" ? "checked" : "") required>
+                        <label class="form-check-label" for="Rh+">Rh+</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="RhesusType" name="RhesusType" value="Rh-" @(Model.RhesusType == "Rh-" ? "checked" : "") required>
+                        <label class="form-check-label" for="Rh-">Rh-</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Gender">Gender</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="Gender" name="Gender" value="P" @(Model.Gender == "P" ? "checked" : "") required>
+                        <label class="form-check-label" for="Pria">Pria</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="Gender" name="Gender" value="W" @(Model.Gender == "W" ? "checked" : "") required>
+                        <label class="form-check-label" for="Wanita">Wanita</label>
+                    </div>
+                </div>
+                <div class="mb-4 row">
+                    <label for="Name" class="col-sm-4 col-form-label">Relasi</label>
+                    <div class="col-sm-12">
+                        @Html.DropDownList("CustomerRelationId", new SelectList(ViewBag.customerRelations, "Id", "Name"), "-- Pilih Relasi --", new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Input</button>
+                    <a class="btn btn-dark" asp-controller="Pasien" asp-action="Index">Back</a>
+                    <span asp-validation-for="Fullname" class="text-danger"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

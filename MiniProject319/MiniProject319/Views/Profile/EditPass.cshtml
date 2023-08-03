@@ -10,19 +10,26 @@
 
         <!-- General Form Elements -->
         <form>
-            <input type="hidden" id="Id" name="Id" value="@Model.Id" />
+            <input type="hidden" class="form-control" id="Id" name="Id" value="@Model.Id" />
+
             <div class="row mb-3">
                 <p>Masukkan Password anda saat ini untuk mengubah password</p>
-                <label for="Pass" class="col-sm-8 col-form-label">Password</label>
+                <label for="Password" class="col-sm-8 col-form-label">Password</label>
                 <div class="col-sm-13">
-                    <input type="password" class="form-control" id="Pass" name="Pass" >
+                    @*<input type="password" class="form-control" id="Pass" name="Pass" >*@
+                    <input type="password" class="form-control" id="Password" name="Password" placeholder="Old Password" onchange="checkPasswordMatch()">
+                    <div class="input-group-append">
+                    </div>
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label for="Re-Pass" class="col-sm-8 col-form-label">Masukan ulang Password</label>
+                <label for="re_password" class="col-sm-8 col-form-label">Masukan ulang Password</label>
                 <div class="col-sm-13">
-                    <input type="password" class="form-control" id="Re-Pass" name="Re-Pass" >
+                   @* <input type="password" class="form-control" id="Re-Pass" name="Re-Pass" >*@
+                    <input type="password" class="form-control" id="re_password" name="re_password" placeholder="Retype password" onchange="checkPasswordMatch()">
+                    <div class="input-group-append">
+                    </div>
                 </div>
             </div>
 
@@ -32,7 +39,7 @@
             <div class="row mb-3">
                 <div class="col-sm-10">
                     <button class="btn btn-dark=" asp-controller="Profile" asp-action="Index">Batal</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="btn_editp">Submit</button>
                 </div>
             </div>
 
@@ -41,3 +48,43 @@
     </div>
 </div>
 <!--END FORM-->
+
+<script>
+    $(document).ready(function () {
+        $("#btn_editp").click(function (e) {
+            e.preventDefault();
+            checkPasswordMatch();
+        });
+    });
+
+    function checkPasswordMatch() {
+        var password = $("#Password").val();
+        var rePassword = $("#re_password").val();
+
+        if (password && password === rePassword) {
+            $.ajax({
+                url: '/Profile/CheckPasswordIsExist', //ini belum ada CHECKPWISEXIST
+                type: 'post',
+                data: {
+                    password: password,
+                    id: @Model.Id
+                        },
+                dataType: 'json'
+            })
+                .done(function (result) {
+                    if (result) {
+                        // Pindahkan kode untuk membuka modal langsung ke sini
+                        var id = @Model.Id;
+                        $("#modal_body").empty();
+                        $("#modal_body").load("/Profile/SureEditPass?id=" + id);
+                        $("#modal").modal("show");
+                    } else {
+                        toastr.error("Invalid old password");
+                    }
+                })
+        } else {
+            // Show password error message
+            toastr.error("Passwords do not match");
+        }
+    }
+</script>

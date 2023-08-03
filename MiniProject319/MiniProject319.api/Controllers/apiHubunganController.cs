@@ -19,9 +19,24 @@ namespace MiniProject319.api.Controllers
         }
 
         [HttpGet("GetAllData")]
-        public List<MCustomerRelation> GetAllData()
+        //public List<MCustomerRelation> GetAllData()
+        //{
+        //    List<MCustomerRelation> data = db.MCustomerRelations.Where(a => a.IsDelete == false).ToList();
+        //    return data;
+        //}
+        public List<VMCustomerRelation> GetAllData()
         {
-            List<MCustomerRelation> data = db.MCustomerRelations.Where(a => a.IsDelete == false).ToList();
+            List<VMCustomerRelation> data = (from Cr in db.MCustomerRelations
+                                             join u in db.MUsers on Cr.ModifiedBy equals u.Id into tu from tuser in tu.DefaultIfEmpty()
+                                             join b in db.MBiodata on tuser.BiodataId equals b.Id into tb from tbio in tb.DefaultIfEmpty()
+                                             where Cr.IsDelete == false 
+                                             select new VMCustomerRelation
+                                             {
+                                                 Id = Cr.Id,
+                                                 Name = Cr.Name,
+                                                 Fullname = tbio.Fullname ?? "Data Belum Diedit"
+
+                                             }).ToList();
             return data;
         }
 
@@ -31,6 +46,28 @@ namespace MiniProject319.api.Controllers
         {
             MCustomerRelation result = db.MCustomerRelations.Where(a => a.Id == id).FirstOrDefault();
             return result;
+        }
+
+        [HttpGet("CheckRelation/{Name}/{id}")]
+        public bool CheckRelation(string name, int id)
+        {
+
+            MCustomerRelation data = new MCustomerRelation();
+            if (id == 0)
+            {
+                data = db.MCustomerRelations.Where(a => a.Name == name && a.IsDelete == false).FirstOrDefault()!;
+            }
+            else
+            {
+                data = db.MCustomerRelations.Where(a => a.Name == name && a.IsDelete == false && a.Id != id).FirstOrDefault()!;
+
+            }
+            if (data != null)
+            {
+                return true;
+            }
+            return false;
+
         }
 
         [HttpPost("Save")]
