@@ -239,33 +239,60 @@ namespace MiniProject319.api.Controllers
                 }
             }else
             {
-                MBank data = db.MBanks.Where(
+                //MBank data = db.MBanks.Where(
+                //    a => a.IsDelete == false &&
+                //    a.Name == dataParam.Name ||
+                //    a.VaCode == dataParam.VaCode
+                //    ).FirstOrDefault()!;
+
+                List<MBank> data = db.MBanks.Where(
                     a => a.IsDelete == false &&
                     a.Name == dataParam.Name ||
                     a.VaCode == dataParam.VaCode
-                    ).FirstOrDefault()!;
+                    ).ToList()!;
 
-                if (data.Id != dataParam.Id)
+                foreach (var database in data)
                 {
-                    if (data.Name == dataParam.Name && data.VaCode == dataParam.VaCode && data.Id == dataParam.Id)
+                    if (database.Id == dataParam.Id)
                     {
-                        return response;
+                        if (database.Name == dataParam.Name && database.VaCode == dataParam.VaCode)
+                        {
+                            return response;
+                        }
+                        else if (database.Name == dataParam.Name && database.Id != dataParam.Id)
+                        {
+                            response.Message = "Nama bank sudah ada";
+                            response.Success = false;
+                        }
+                        else if (database.VaCode == dataParam.VaCode && database.Id != dataParam.Id)
+                        {
+                            response.Message = "Kode VA sudah ada";
+                            response.Success = false;
+                        }
                     }
-                    else if (data.Name == dataParam.Name && data.VaCode == dataParam.VaCode)
+                    if (database.Id != dataParam.Id)
                     {
-                        response.Message = "Nama bank dan Kode VA sudah ada";
-                        response.Success = false;
+                        if (database.Name == dataParam.Name && database.VaCode == dataParam.VaCode && database.Id == dataParam.Id)
+                        {
+                            return response;
+                        }
+                        else if (database.Name == dataParam.Name && database.VaCode == dataParam.VaCode)
+                        {
+                            response.Message = "Nama bank dan Kode VA sudah ada";
+                            response.Success = false;
+                        }
+                        else if (database.Name == dataParam.Name)
+                        {
+                            response.Message = "Nama bank sudah ada";
+                            response.Success = false;
+                        }
+                        else if (database.VaCode == dataParam.VaCode)
+                        {
+                            response.Message = "Kode VA sudah ada";
+                            response.Success = false;
+                        }
                     }
-                    else if (data.Name != dataParam.Name)
-                    {
-                        response.Message = "Nama bank sudah ada";
-                        response.Success = false;
-                    }
-                    else if (data.VaCode != dataParam.VaCode)
-                    {
-                        response.Message = "Kode VA sudah ada";
-                        response.Success = false;
-                    }
+
                 }
 
             }

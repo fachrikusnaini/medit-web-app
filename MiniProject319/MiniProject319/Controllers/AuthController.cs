@@ -159,27 +159,6 @@ namespace MiniProject319.Controllers
 
         }
 
-        //public IActionResult ResendOTP(VMm_user dataParam)
-        //{
-        //    dataParam.Email = HttpContext.Session.GetString("Email");
-        //    dataParam.IsLocked = HttpContext.Session.GetString("IsLocked") == "True" ? true : false;
-        //    return PartialView(dataParam);
-        //}
-        //[HttpPost]
-        //public async Task<IActionResult> Resend_OTP(VMm_user dataParam)
-        //{
-        //    VMResponse response = await authServices.ResendOTP(dataParam);
-
-        //    if (response.Success)
-        //    {
-        //        //dataParam.Email = HttpContext.Session.GetString("Email");
-        //        //dataParam.IsLocked = HttpContext.Session.GetString("IsLocked") == "True" ? true: false;
-        //        return Json(new { dataResponse = response });
-        //    }
-        //    return View(dataParam);
-
-        //}
-
         public async Task<JsonResult> ResendOTP(VMm_user dataParam)
         {
             VMResponse response = await authServices.ResendOTP(dataParam);
