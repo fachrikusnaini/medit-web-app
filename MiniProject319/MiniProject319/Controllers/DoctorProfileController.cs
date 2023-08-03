@@ -10,9 +10,10 @@ namespace MiniProject319.Controllers
         private readonly DoctorService doctorService;
         private readonly IWebHostEnvironment webHostEnvironment;
 
-        public DoctorProfileController(DoctorService _doctorService)
+        public DoctorProfileController(DoctorService _doctorService, IWebHostEnvironment _webHostEnvirontment)
         {
             this.doctorService = _doctorService;
+            this.webHostEnvironment = _webHostEnvirontment;
         }
         public async Task<IActionResult> Detail()
         {
@@ -60,7 +61,9 @@ namespace MiniProject319.Controllers
 
             if (respon.Success)
             {
+                HttpContext.Session.SetString("ImagePath", dataParam.ImagePath);
                 return Json(new { dataRespon = respon });
+                
             }
 
             return View(dataParam);

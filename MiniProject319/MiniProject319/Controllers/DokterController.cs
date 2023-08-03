@@ -76,11 +76,9 @@ namespace MiniProject319.Controllers
             return PartialView(data);
         }
 
-        public async Task<IActionResult> DetailDokter()
+        public async Task<IActionResult> DetailDokter(int id)
         {
-            int IdDoctor = HttpContext.Session.GetInt32("BiodataId") ?? 0;
-            //int id = 1;
-            VMDoctorSpecialist data = await doctorService.GetProfileDoctor(IdDoctor);
+            VMDoctorSpecialist data = await doctorService.GetProfileDoctor(id);
             return View(data);
         }
     }

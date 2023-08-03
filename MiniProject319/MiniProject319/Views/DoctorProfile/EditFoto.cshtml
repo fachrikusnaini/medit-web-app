@@ -10,7 +10,9 @@
 <div class="modal-body">
     <form class="row g-3" id="form_edit" enctype="multipart/form-data" method="post">
 
-
+            <input type="hidden" name="Id" id="Id" value="@vMDoctorSpecialist.BiodataId" />
+            <input type="hidden" name="BiodataId" id="BiodataId" value="@vMDoctorSpecialist.BiodataId" />
+            
             <div class="col">
                 <div class="mb-3">
                     <label for="formFile" class="form-label small">Pilih dan upload foto terbaikmu!</label>
@@ -51,7 +53,7 @@
             if (file.length > 0) {
                 formData.append("ImageFile", file[0])
             }
-            alert("Hello Worlds!")
+            //alert("Hello Worlds!")
 
             $.ajax({
                 url: '/DoctorProfile/EditFoto',

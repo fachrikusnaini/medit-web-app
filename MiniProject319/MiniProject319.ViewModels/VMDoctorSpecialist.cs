@@ -9,6 +9,7 @@ namespace MiniProject319.ViewModels
 {
     public class VMDoctorSpecialist
     {
+        public long? Id { get; set; }
         public long? DoctorId { get; set; }
         public long? BiodataId { get; set; }
         public string? Str { get; set; }
@@ -17,16 +18,9 @@ namespace MiniProject319.ViewModels
         public string? Fullname { get; set; }
         public string? MobilePhone { get; set; }
         public int? CountAppointment { get; set; }
-        public byte[]? Image { get; set; }
+        public int? CountChat { get; set; }
         public string? ImagePath { get; set; }
-        public long CreatedBy { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public long? ModifiedBy { get; set; }
-        public DateTime? ModifiedOn { get; set; }
-        public long? DeletedBy { get; set; }
-        public DateTime? DeletedOn { get; set; }
-        public bool IsDelete { get; set; }
-        public IFormFile ImageFile { get; set; }
+        public IFormFile? ImageFile { get; set; }
         public VMItemMedical? itemMedical { get; set; }
         public List<VMTindakanMedis>? ListTindakan { get; set; }
         public List<VMRiwayatPraktek>? RiwayatPraktek { get; set; }

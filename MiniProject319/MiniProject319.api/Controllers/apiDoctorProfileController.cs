@@ -114,7 +114,7 @@ namespace MiniProject319.api.Controllers
                                                                  PriceStartFrom = otp.PriceStartFrom ?? 0,
                                                                  PriceUntilFrom = otp.PriceUntilFrom ?? 0,
 
-                                                                 LamaBekerja = Convert.ToInt32(Convert.ToDateTime(a.EndDate).Year - a.StartDate.Year),
+                                                                 LamaBekerja = Convert.ToInt32(DateTime.Now.Year - a.StartDate.Year),
 
                                                                  CreatedBy = a.CreatedBy,
                                                                  CreatedOn = a.CreatedOn
@@ -164,8 +164,8 @@ namespace MiniProject319.api.Controllers
                                                  MobilePhone = c.MobilePhone,
                                                  ImagePath = c.ImagePath,
 
-                                                 CreatedBy = a.CreatedBy,
-                                                 CreatedOn = a.CreatedOn,
+                                                 //CreatedBy = a.CreatedBy,
+                                                 //CreatedOn = a.CreatedOn,
 
                                                  itemMedical = (from a in db.MMedicalItems
                                                                 join b in db.MMedicalItemCategories on a.MedicalItemCategoryId equals b.Id
@@ -201,6 +201,20 @@ namespace MiniProject319.api.Controllers
                                                                          CreatedOn = a.CreatedOn,
 
                                                                      }).Count(),
+
+                                                 CountChat = (from a in db.TCustomerChatHistories
+                                                              join b in db.TCustomerChats on a.CustomerChatId equals b.Id
+                                                              join c in db.MDoctors on b.DoctorId equals c.Id into md from mdoc in md.DefaultIfEmpty()
+                                                              where a.IsDelete == false && b.IsDelete == false && mdoc.IsDelete == false && mdoc.Id == IdDoctor
+                                                              select new VMKonsultasi
+                                                              {
+                                                                  Id = a.Id,
+                                                                  DoctorId = mdoc.Id,
+
+                                                                  CustomerChatId = b.Id,
+                                                                  ChatContent = a.ChatContent
+
+                                                              }).Count(),
 
                                                  ListTindakan = (from a in db.TDoctorTreatments
                                                                  join b in db.MDoctors on a.DoctorId equals b.Id
@@ -240,7 +254,12 @@ namespace MiniProject319.api.Controllers
                                                                        PriceStartFrom = otp.PriceStartFrom ?? 0,
                                                                        PriceUntilFrom = otp.PriceUntilFrom ?? 0,
 
-                                                                       LamaBekerja = Convert.ToInt32(Convert.ToDateTime(a.EndDate).Year - a.StartDate.Year),
+                                                                       //LamaBekerja = Convert.ToInt32(Convert.ToDateTime(a.EndDate).Year - a.StartDate.Year),
+                                                                       //LamaBekerja = Convert.ToInt32(Convert.ToDateTime(a.EndDate).Year) <= DateTime.Now.Year ?
+                                                                       //             Convert.ToInt32(Convert.ToDateTime(a.EndDate).Year - a.StartDate.Year) :
+                                                                       //             Convert.ToInt32(DateTime.Now.Year - a.StartDate.Year),
+
+                                                                       LamaBekerja = Convert.ToInt32(DateTime.Now.Year - a.StartDate.Year),
 
                                                                        CreatedBy = a.CreatedBy,
                                                                        CreatedOn = a.CreatedOn
