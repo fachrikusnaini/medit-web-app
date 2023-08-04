@@ -153,6 +153,7 @@ namespace MiniProject319.api.Controllers
             {
                 Token = randomNumber.ToString(),
                 ExpiredOn = currentTime.AddSeconds(30),
+                UsedFor = "Ubah Email",
                 CreatedOn = DateTime.Now,
                 IsExpired = false,
                 IsDelete = false,
@@ -162,7 +163,7 @@ namespace MiniProject319.api.Controllers
             var emailVerif = new MimeMessage();
             emailVerif.From.Add(MailboxAddress.Parse(configuration.GetSection("EmailUsername").Value));
             emailVerif.To.Add(MailboxAddress.Parse(user?.Email));
-            emailVerif.Subject = "Register User";
+            emailVerif.Subject = "Edit Email";
             emailVerif.Body = new TextPart(TextFormat.Html)
             {
                 Text = @"This your Code OTP : " + token.Token
@@ -196,22 +197,6 @@ namespace MiniProject319.api.Controllers
             return respon;
         }
 
-        //[HttpPost("CheckEmail/{email}")]
-        //public VMResponse CheckEmail(string email)
-        //{
-        //    MUser data = new MUser();
-
-        //    data = db.MUsers.Where(a => a.IsDelete == false && a.Email == email).FirstOrDefault()!;
-
-
-        //    if (data == null)
-        //    {
-        //        respon.Message = "Email tidak terdaftar";
-        //        respon.Success = false;
-        //    }
-        //    return respon;
-        //}
-
         [HttpGet("CheckEmail/{email}/{id}")]
         public bool CheckEmail(string email, int id)
         {
@@ -234,14 +219,11 @@ namespace MiniProject319.api.Controllers
 
         }
 
-        [HttpPost("CheckOTP/{token}")]
-        public VMResponse CheckOTP(string token)
+        [HttpGet("CheckOTP/{token}/{id}")]
+        public bool CheckOTP(string token, int id)
         {
-            TToken data = new TToken();
+            TToken data = db.TTokens.Where(a => a.Token == token && a.UserId == id).FirstOrDefault();
             DateTime date2 = DateTime.Now;
-
-            data = db.TTokens.Where(a => a.IsDelete == false && a.Token == token).FirstOrDefault()!;
-
 
             if (data == null)
             {
@@ -254,68 +236,51 @@ namespace MiniProject319.api.Controllers
                 respon.Success = false;
 
             }
-            //data.IsExpired = true;
-            //db.Update(data);
-            //db.SaveChanges();
-
-            return respon;
-        }
-
-        //try
-        //{
-
-        //    MUser mUser = new MUser();
-        //    mUser.Email = data.Email;
-        //    mUser.ModifiedBy = IdUser;
-        //    mUser.ModifiedOn = DateTime.Now;
-        //    mUser.IsLocked = true;
-        //    mUser.IsDelete = false;
-
-
-
-        //    db.Update(mUser);
-        //    db.SaveChanges();
-
-        //    TToken tToken = new TToken();
-        //    tToken.Email = data.Email;
-        //    tToken.UserId = data.Id;
-        //    tToken.Token = randomNumber.ToString();
-        //    tToken.ExpiredOn = currentTime.AddSeconds(30);
-        //    tToken.IsExpired = false;
-        //    tToken.CreatedBy = IdUser;
-        //    tToken.CreatedOn = DateTime.Now;
-        //    tToken.IsDelete = false;
-
-        //    db.Add(tToken);
-        //    db.SaveChanges();
-
-
-
-        //    respon.Message = "Data Saved";
-        //}
-        //catch (Exception e)
-        //{
-        //    respon.Success = false;
-        //    respon.Message = "failed save: " + e.Message;
-        //}
-        //return respon;
-
-        [HttpGet("CheckByPassword/{password}/{id}")]
-        public bool CheckByPassword(string password, int id)
-        {
-            MUser data = new MUser();
-
-            if (id == 0)
+            else if (data.IsExpired == true)
             {
-                data = db.MUsers.FirstOrDefault(a => a.Password == password && !a.IsDelete);
+                respon.Success = false;
+                respon.Message = "OTP Already Used";
             }
             else
             {
-                data = db.MUsers.FirstOrDefault(a => a.Password == password && !a.IsDelete && a.Id == id);
+                try
+                {
+                    db.SaveChanges();
+                    respon.Message = "Data Saved";
+                }
+                catch (Exception)
+                {
+                    respon.Success = false;
+                    respon.Message = "Data Save Failed";
+               
+                }
             }
-
-            return data != null;
+            return true;
         }
+
+
+        [HttpGet("CheckPassword/{Password}/{id}")]
+        public bool CheckPassword(string password, int id)
+        {
+
+            MUser data = new MUser();
+            if (id == 0)
+            {
+                data = db.MUsers.Where(a => a.Password == password && a.IsDelete == false).FirstOrDefault()!;
+            }
+            else
+            {
+                data = db.MUsers.Where(a => a.Password == password && a.IsDelete == false && a.Id == id).FirstOrDefault()!;
+
+            }
+            if (data != null)
+            {
+                return true;
+            }
+            return false;
+
+        }
+
         [HttpPut("SureEditP")]
         public VMResponse SureEditP(MUser data)
         {
@@ -373,61 +338,6 @@ namespace MiniProject319.api.Controllers
             return respon;
         }
 
-        [HttpGet("CheckPassword/{Password}/{id}")]
-        public bool CheckPassword(string password, int id)
-        {
-
-            MUser data = new MUser();
-            if (id == 0)
-            {
-                data = db.MUsers.Where(a => a.Password == password && a.IsDelete == false).FirstOrDefault()!;
-            }
-            else
-            {
-                data = db.MUsers.Where(a => a.Password == password && a.IsDelete == false && a.Id != id).FirstOrDefault()!;
-
-            }
-            if (data != null)
-            {
-                return true;
-            }
-            return false;
-
-        }
-
-
-        //INI Belum dipakai
-        [HttpPut("EditPass")]
-        public VMResponse EditPass(VMUser data)
-        {
-            MUser du = db.MUsers.Where(a => a.Id == data.Id).FirstOrDefault()!;
-            if (du != null)
-            {
-                du.Password = data.Password;
-                du.ModifiedBy = data.Id;
-                du.ModifiedOn = DateTime.Now;
-
-                try
-                {
-                    db.Update(du);
-                    db.SaveChanges();
-                    respon.Message = "Password Updated";
-
-                }
-                catch (Exception e)
-                {
-                    respon.Success = false;
-                    respon.Message = "Update Failed" + e.Message;
-
-                }
-            }
-            else
-            {
-                respon.Success = false;
-                respon.Message = "Password Tidak Ada";
-            }
-            return respon;
-        }
 
     }
 }

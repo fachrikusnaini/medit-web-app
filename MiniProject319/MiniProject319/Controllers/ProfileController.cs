@@ -18,7 +18,7 @@ namespace MiniProject319.Controllers
 
         public async Task<IActionResult> Index(int id)
         {
-            VMUser data = await dataService.GetDataById(1);
+            VMUser data = await dataService.GetDataById(3);
             return View(data);
         }
 
@@ -37,8 +37,8 @@ namespace MiniProject319.Controllers
             VMResponse respon = await dataService.Edit(dataparam);
             if (respon.Success)
             {
-                return RedirectToAction("Index"); //jikalau tidak menggunakan json
-               // return Json(new { dataRespon = respon });
+               // return RedirectToAction("Index"); //jikalau tidak menggunakan json
+                return Json(new { dataRespon = respon });
             }
             return PartialView(dataparam);
         }
@@ -50,31 +50,61 @@ namespace MiniProject319.Controllers
             return PartialView(data);
         }
 
-        public async Task<IActionResult> Verification()
+    public async Task<IActionResult> OTPInput(int id, string email)
         {
-            VMUser data = new VMUser();
+            HttpContext.Session.SetString("NewEmail", email);
+            VMUser data = await dataService.GetDataById(id);
             return PartialView(data);
         }
 
-        public async Task<JsonResult> CheckOTP(string token)
+        [HttpPost]
+        public async Task<IActionResult> OTPInput(MUser dataParam)
         {
-            VMResponse response = await dataService.CheckOTP(token);
-            return Json(new { dataResponse = response });
+            dataParam.Email = HttpContext.Session.GetString("NewEmail");
+            VMResponse respon = await dataService.EditMail(dataParam);
+
+            if (respon.Success)
+            {
+                return Json(new { dataRespon = respon });
+            }
+            return View(dataParam);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(VMUser dataParam)
+        public async Task<IActionResult> VerifyOTP(MUser dataParam)
         {
-            VMResponse response = await dataService.Register(dataParam);
+            dataParam.ModifiedBy = IdUser;
 
-            if (response.Success)
+            VMResponse respon = await dataService.CheckOTP(dataParam);
+
+            if (respon.Success)
             {
-                HttpContext.Session.SetString("Email", dataParam.Email);
-                return Json(new { dataResponse = response });
+                return Json(new { dataRespon = respon });
             }
-            return View(dataParam);
 
+            return View(dataParam);
         }
+
+
+        //public async Task<JsonResult> CheckOTP(string token)
+        //{
+        //    VMResponse response = await dataService.CheckOTP(token);
+        //    return Json(new { dataResponse = response });
+        //}
+
+        //[HttpPost]
+        //public async Task<IActionResult> Register(VMUser dataParam)
+        //{
+        //    VMResponse response = await dataService.Register(dataParam);
+
+        //    if (response.Success)
+        //    {
+        //        HttpContext.Session.SetString("Email", dataParam.Email);
+        //        return Json(new { dataResponse = response });
+        //    }
+        //    return View(dataParam);
+
+        //}
         
 
         public async Task<IActionResult> EditPass(int id)
@@ -109,12 +139,12 @@ namespace MiniProject319.Controllers
             return Json(isExist);
         }
 
-        public async Task<JsonResult> CheckEmail(string email, int id)
+        public async Task<JsonResult> CheckEmailIsExist(string email, int id)
         {
             //VMResponse response = await dataService.CheckEmail(email, id);
             //return Json(new { dataResponse = response });
-            bool isExis = await dataService.CheckEmail(email, id);
-            return Json(isExis);
+            bool isExist = await dataService.CheckEmail(email, id);
+            return Json(isExist);
         }
 
     }

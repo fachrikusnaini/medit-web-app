@@ -5,6 +5,26 @@
     ViewData["Title"] = "Masukkan Password Baru";
 }
 
+<style>
+    .toast-error 
+    {
+        background-color: #dc3545; /* Merah */
+        color: #fff; /* Teks putih */
+    }
+
+        /* Override close button color */
+        .toast-error .toast-close-button 
+        {
+            color: #fff; /* Teks putih */
+        }
+
+        /* Override title color */
+        .toast-error .toast-title 
+        {
+            color: #fff; /* Teks putih */
+        }
+</style>
+
 <div class="card">
     <div class="card-body">
         <div class="card-title">@ViewData["Title"]</div>
@@ -15,7 +35,7 @@
                 <div class="input-group">
                     <input type="password" class="form-control" id="Password" name="Password" placeholder="New Password" onchange="checkNewPasswordMatch()">
                     <div class="input-group-append">
-                        <span class="input-group-text"><span class="bi bi-lock"></span></span>
+                        <span class="input-group-text"><span class="bi bi-lock" onclick="myFunction()"></span></span>
                     </div>
                 </div>
             </div>
@@ -24,11 +44,11 @@
                 <div class="input-group">
                     <input type="password" class="form-control" id="re_password" name="re_password" placeholder="Retype password" onchange="checkNewPasswordMatch()">
                     <div class="input-group-append">
-                        <span class="input-group-text"><span class="bi bi-lock"></span></span>
+                        <span class="input-group-text"><span class="bi bi-lock" onclick="myFunctionr()"></span></span>
                     </div>
                 </div>
             </div>
-
+            <br />
             <div class="form-group row">
                 <div class="col-sm-10">
                     <button type="submit" class="btn btn-primary">Input</button>
@@ -40,6 +60,24 @@
 </div>
 
 <script>
+
+     function myFunction() {
+        var x = document.getElementById("Password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+    function myFunctionr() {
+        var x = document.getElementById("re_password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+
     $("#form_input").validate({
         errorClass: "text-danger",
         rules: {
@@ -79,7 +117,7 @@
         var rePassword = $("#re_password").val();
 
         if (newPassword && newPassword !== rePassword) {
-            toastr.error("Passwords do not match");
+            toastr.error("Passwords do not match", "Error");
         } else {
             toastr.clear();
         }
@@ -95,7 +133,7 @@
             success: function (respon) {
                 var data = respon.dataRespon;
                 if (data.success) {
-                    $("#modal_sm").modal("hide");
+                    $("#modal").modal("hide");
                     toastr.success(
                         data.message,
                         '',
@@ -110,9 +148,11 @@
                 }
                 else {
                     // Use toastr.error to display the error message
-                    toastr.error(data.message);
+                    toastr.error(data.message, "Error");
                 }
             }
         });
     }
+
+   
 </script>

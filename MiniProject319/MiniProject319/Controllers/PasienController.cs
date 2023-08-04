@@ -128,8 +128,8 @@ namespace MiniProject319.Controllers
             VMResponse respon = await pasienService.Edit(dataParam);
             if (respon.Success)
             {
-                //return Json(new { dataRespon = respon });
-                return RedirectToAction("Index");
+                return Json(new { dataRespon = respon });
+                //return RedirectToAction("Index");
             }
             return PartialView(dataParam);
         }
@@ -163,7 +163,7 @@ namespace MiniProject319.Controllers
                 VMPasien data = await pasienService.GetDataById(item);
                 listName.Add(data.Fullname);
             }
-            //ViewBag.ListId = listId;
+            ViewBag.ListId = listId;
             ViewBag.ListName = listName;
 
             return PartialView();

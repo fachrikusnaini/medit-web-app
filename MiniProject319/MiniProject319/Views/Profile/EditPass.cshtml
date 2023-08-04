@@ -3,6 +3,22 @@
 
 @model VMUser
 
+<style>
+    .toast-error {
+        background-color: #dc3545; /* Merah */
+        color: #fff; /* Teks putih */
+    }
+
+        /* Override close button color */
+        .toast-error .toast-close-button {
+            color: #fff; /* Teks putih */
+        }
+
+        /* Override title color */
+        .toast-error .toast-title {
+            color: #fff; /* Teks putih */
+        }
+</style>
 <!--Start Form-->
 <div class="card">
     <div class="card-body">
@@ -15,23 +31,32 @@
             <div class="row mb-3">
                 <p>Masukkan Password anda saat ini untuk mengubah password</p>
                 <label for="Password" class="col-sm-8 col-form-label">Password</label>
-                <div class="col-sm-13">
-                    @*<input type="password" class="form-control" id="Pass" name="Pass" >*@
-                    <input type="password" class="form-control" id="Password" name="Password" placeholder="Old Password" onchange="checkPasswordMatch()">
-                    <div class="input-group-append">
+                <div class="col-sm-12">
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="Password" name="Password" placeholder="Old Password" onchange="checkPasswordMatch()">
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <a class="bi bi-lock bi-lg" onclick="myFunction()"></a>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label for="re_password" class="col-sm-8 col-form-label">Masukan ulang Password</label>
-                <div class="col-sm-13">
-                   @* <input type="password" class="form-control" id="Re-Pass" name="Re-Pass" >*@
-                    <input type="password" class="form-control" id="re_password" name="re_password" placeholder="Retype password" onchange="checkPasswordMatch()">
-                    <div class="input-group-append">
+                <div class="col-sm-12">
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="re_password" name="re_password" placeholder="Retype password" onchange="checkPasswordMatch()">
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <a class="bi bi-lock bi-lg" onclick="myFunctionr()"></a>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
+
 
 
             <br />
@@ -50,20 +75,40 @@
 <!--END FORM-->
 
 <script>
+
+    function myFunction() {
+        var x = document.getElementById("Password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+    function myFunctionr() {
+        var x = document.getElementById("re_password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+
     $(document).ready(function () {
         $("#btn_editp").click(function (e) {
             e.preventDefault();
             checkPasswordMatch();
+
         });
     });
 
     function checkPasswordMatch() {
         var password = $("#Password").val();
         var rePassword = $("#re_password").val();
+       
 
-        if (password && password === rePassword) {
+        if ( password == rePassword) {
             $.ajax({
-                url: '/Profile/CheckPasswordIsExist', //ini belum ada CHECKPWISEXIST
+                url: '/Profile/CheckPasswordIsExist', 
                 type: 'post',
                 data: {
                     password: password,
@@ -76,15 +121,17 @@
                         // Pindahkan kode untuk membuka modal langsung ke sini
                         var id = @Model.Id;
                         $("#modal_body").empty();
-                        $("#modal_body").load("/Profile/SureEditPass?id=" + id);
+                        $("#modal_body").load("/Profile/SureEditP?id=" + id);
                         $("#modal").modal("show");
                     } else {
-                        toastr.error("Invalid old password");
+                        toastr.error("Invalid old password", "Error", { "timeOut": 5000, "extendedTimeout": 1000 });
                     }
                 })
         } else {
             // Show password error message
-            toastr.error("Passwords do not match");
+            toastr.error("Passwords do not match", "Error", { "timeOut": 5000, "extendedTimeout": 1000 });
         }
     }
+
+    
 </script>

@@ -92,12 +92,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Profile/SureEditPass.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxTdXJlRWRpdFBhc3MuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Profile/Verification.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxWZXJpZmljYXRpb24uY3NodG1s
+[E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Profile/SureEditP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxTdXJlRWRpdFAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Xsis/Mini Project/medit-web-app/MiniProject319/MiniProject319/Views/Shared/Error.cshtml]

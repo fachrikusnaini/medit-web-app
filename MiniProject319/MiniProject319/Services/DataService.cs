@@ -86,11 +86,11 @@ namespace MiniProject319.Services
             return respon;
         }
 
-        public async Task<VMResponse> CheckOTP(string token)
+        public async Task<VMResponse> CheckOTP(MUser dataParam)
         {
-            string json = JsonConvert.SerializeObject(token);
+            string json = JsonConvert.SerializeObject(dataParam);
             StringContent content = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
-            var request = await client.PostAsync(RouteAPI + $"apiProfile/CheckOTP/{token}", content);
+            var request = await client.PostAsync(RouteAPI + $"apiProfile/CheckOTP", content);
 
 
             if (request.IsSuccessStatusCode)
@@ -108,35 +108,19 @@ namespace MiniProject319.Services
 
         public async Task<bool> CheckEmail(string email, int id)
         {
-            //string json = JsonConvert.SerializeObject(email);
-            //StringContent content = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
-            //var request = await client.PostAsync(RouteAPI + $"apiProfile/CheckEmail/{email}", content);
-
-
-            //if (request.IsSuccessStatusCode)
-            //{
-            //    var apiResponse = await request.Content.ReadAsStringAsync();
-            //    respon = JsonConvert.DeserializeObject<VMResponse>(apiResponse)!;
-            //}
-            //else
-            //{
-            //    respon.Success = false;
-            //    respon.Message = $"{request.StatusCode} : {request.ReasonPhrase}";
-            //}
-            //return respon;
 
             string apiResponse = await client.GetStringAsync(RouteAPI + $"apiProfile/CheckEmail/{email}/{id}");
-            bool isExis = JsonConvert.DeserializeObject<bool>(apiResponse);
-
-            return isExis;
+            bool isExist = JsonConvert.DeserializeObject<bool>(apiResponse);
+            
+            return isExist;
         }
 
         public async Task<bool> CheckPassword(string password, int id)
         {
             string apiResponse = await client.GetStringAsync(RouteAPI + $"apiProfile/CheckPassword/{password}/{id}");
-            bool isexist = JsonConvert.DeserializeObject<bool>(apiResponse);
+            bool isExist = JsonConvert.DeserializeObject<bool>(apiResponse);
 
-            return isexist;
+            return isExist;
         }
 
         public async Task<VMResponse> SureEditP(MUser dataParam)
@@ -167,6 +151,36 @@ namespace MiniProject319.Services
 
             return respon;
         }
+
+        public async Task<VMResponse> EditMail(MUser dataParam)
+        {
+            // Proses convert dari objek ke string
+            string json = JsonConvert.SerializeObject(dataParam);
+
+            // Preses convert string menjadi Json lalu dikirim sbagai request body
+            StringContent content = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+
+            // Proses memanggil api dan mengirimkan body
+            var request = await client.PutAsync(RouteAPI + "apiProfile/EditMail", content);
+
+            if (request.IsSuccessStatusCode)
+            {
+                // Proses membaca respon membca api
+                var apiRespon = await request.Content.ReadAsStringAsync();
+
+                // Proses Convert hasil respon dari api ke objeck
+                respon = JsonConvert.DeserializeObject<VMResponse>(apiRespon);
+            }
+            else
+            {
+                respon.Success = false;
+                respon.Message = $"{request.StatusCode} : {request.ReasonPhrase}";
+
+            }
+
+            return respon;
+        }
+
 
 
     }

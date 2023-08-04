@@ -25,7 +25,7 @@
                                 <div class="row mb-3">
                 <label for="Dob" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                     <div class="col-sm-13">
-                    <input type="date" class="form-control" id="Dob" name="Dob" value="@Model.Dob?.ToString("yyyy-MM-dd")">
+                    <input type="date" class="form-control" id="Dob" name="Dob" value="@Model.Dob?.ToString("yyyy-MM-dd")" max="@DateTime.Now.ToString("yyyy-MM-dd")">
                   
                                     </div>
                                 </div>
@@ -35,7 +35,7 @@
                 <label for="MobilePhone" class="col-sm-2 col-form-label">Number</label>
                 <div class="input-group flex-nowrap mb-2">
                     <span class="input-group-text border-info bg-secondary" id="addon-wrapping">+62</span>
-                    <input type="text" class="form-control" id="MobilePhone" name="MobilePhone" value="@Model.MobilePhone" aria-describedby="addon-wrapping">
+                    <input type="tel" class="form-control" id="MobilePhone" name="MobilePhone" value="@Model.MobilePhone" aria-describedby="addon-wrapping" inputmode="numeric" pattern="[0-9]*" maxlength="15">
                 </div>
                 </div>
          <br />
@@ -56,56 +56,117 @@
 
 
 <script>
+    //$("#form_input").validate({
+    //    errorClass: "text-danger",
+    //    rules: 
+    //    {
+    //        Fullname:
+    //        {
+    //            required: true,
+    //        },
+    //        Dob:
+    //        {
+    //            required: true,
+    //            //Date : true,
+    //        },
+    //        MobilePhone:
+    //        {
+    //            required: true,
+    //            number: true,
+    //        },
+
+    //    },
+    //    messages:
+    //    {
+    //        Fullname:
+    //        {
+    //            required: "Input Nama Anda ",
+    //        },
+    //        Dob: {
+    //            required: "Inputkan Tanggal Lahir Anda",
+    //            //Date: "",
+    //        },
+    //        MobilePhone: {
+    //            required: "Inputkan Nomor anda",
+    //            number: "Please fill Number only",
+    //        },
+          
+    //    },
+
+    //    submitHandler: function (form) 
+    //    {
+    //          var dataForm = $(form).serialize()
+    //          debugger
+         
+    //        $.ajax({
+    //            url: "/Profile/Edit",
+    //            type: "post",
+    //            data: dataForm,
+    //            dataType: "json",
+    //            success: function (respon) {
+    //                var data = respon.dataRespon
+    //                if (data.success) {
+    //                    $("#modal").modal("hide")
+                        
+    //                    toastr.success(
+    //                        data.message,
+    //                        '',
+    //                        {
+    //                            timeout: 500,
+    //                            fadeout: 500,
+    //                            onHidden: function () {
+    //                                window.location.reload()
+    //                            }
+    //                        }
+    //                    )
+    //                }
+    //                else {
+    //                    toastr.errorClass(data.message)
+    //                      }
+    //            }
+    //        })
+    //    }
+    // )}
+
     $("#form_input").validate({
         errorClass: "text-danger",
-        rules: 
-        {
-            Fullname:
-            {
+        rules: {
+            Fullname: {
                 required: true,
             },
-            Dob:
-            {
+            Dob: {
                 required: true,
-                //Date : true,
-            },
-            MobilePhone:
-            {
+            },          
+            MobilePhone: {
                 required: true,
                 number: true,
             },
 
         },
-        messages:
-        {
-            Fullname:
-            {
-                required: "Input Nama Anda ",
+        messages: {
+            Fullname: {
+                required: "Input Ur Name",
             },
+
             Dob: {
-                required: "Inputkan Tanggal Lahir Anda",
-                //Date: "",
+                required: "Input Ur Date of Birth",
             },
+
             MobilePhone: {
-                required: "Inputkan Nomor anda",
-                number: "Please fill Number only",
-            },
-          
+                required: "Inpu Ur Mobile Phone Number",
+                number:  "Number Input Only"
+            }, 
+
         },
-
-        submitHandler: function (form) 
-        {
-              var dataForm = $(form).serialize()
-                //debugger
-            //var Fullname = $("#Fullname").val()
-            //    var id = $("#Id").val()
-            //var Dob = $("#Dob").val()
-            //var MobilePhone = $("#MobilePhone").val()
-
+        submitHandler: function (form) {
+            //console.log('tes')
+            var dataparam = $(form).serialize()
+            //debugger
+            
             $.ajax({
                 url: "/Profile/Edit",
                 type: "post",
-                data: dataForm,
+                data: dataparam,
                 dataType: "json",
                 success: function (respon) {
                     var data = respon.dataRespon
@@ -116,8 +177,8 @@
                             data.message,
                             '',
                             {
-                                timeout: 500,
-                                fadeout: 500,
+                                timeOut: 500,
+                                fadeOut: 500,
                                 onHidden: function () {
                                     window.location.reload()
                                 }
@@ -128,9 +189,10 @@
                         toastr.errorClass(data.message)
                     }
                 }
+
             })
         }
-     )}
+    })
 
 
 
