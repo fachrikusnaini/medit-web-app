@@ -3,7 +3,7 @@
 
 @model PaginatedList<MPaymentMethod>
 @{
-    ViewData["Title"] = "TUTORIAL PAYMENT";
+    ViewData["Title"] = "CARA PEMBAYARAN";
 }
 <main id="main" class="main">
     <section class="section dashboard">
@@ -18,7 +18,7 @@
                             <div class="col-12">
                                 <div class="d-flex justify-content-between">
                                     <input type="text" class="form-control border-info" id="searchString" name="searchString"
-                                           value="@ViewBag.currentFilter" placeholder="Search.." />
+                                           value="@ViewBag.currentFilter" placeholder="Cari.." />
                                     <div class="input-group-prepend">
                                         <div class="input-group-text border-info" style="cursor:pointer" id="btn_search"><i class="bi bi-search"></i></div>
                                     </div>
@@ -48,7 +48,7 @@
                                             NAMA
                                         </a>
                                     </th>
-                                    <th>Action</th>
+                                    <th>AKSI</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -63,8 +63,8 @@
                                                 <td>@i</td>
                                                 <td>@item.Name</td>
                                                 <td>
-                                                    <a class="btn btn-outline-primary btn_edit" dataid="@item.Id">Edit</a>
-                                                    <a class="btn btn-outline-danger btn_delete" dataid="@item.Id">Delete</a>
+                                                    <a class="btn btn-outline-primary btn_edit" dataid="@item.Id">Ubah</a>
+                                                    <a class="btn btn-outline-danger btn_delete" dataid="@item.Id">Hapus</a>
                                                 </td>
                                             </tr>
                                         }
@@ -72,7 +72,7 @@
                                     else
                                     {
                                         <tr>
-                                            <td>Data not found @ViewBag.currentFilter</td>
+                                            <td>Data <span class="text-secondary">@ViewBag.currentFilter</span> tidak ditemukan</td>
                                         </tr>
                                     }
                                 }
@@ -90,14 +90,14 @@
                                         var nextDisabled = !Model.HasNextPage ? "disabled" : "";
                                     }
                                     <div class="w-30">
-                                        Page @Model.PageIndex of @Model.TotalPages
+                                        Halaman @Model.PageIndex of @Model.TotalPages
                                         <a asp-action="Index"
                                            asp-route-sortOrder="@ViewBag.CurrentSort"
                                            asp-route-pageNumber="@(Model.PageIndex - 1)"
                                            asp-route-currentFilter="@ViewBag.CurrentFilter"
                                            asp-route-showData="@ViewBag.currentShowData"
                                            class="btn btn-primary @prevDisabled">
-                                            Previous
+                                            Sebelumnya
                                         </a>
                                         <a asp-action="Index"
                                            asp-route-sortOrder="@ViewBag.CurrentSort"
@@ -105,7 +105,7 @@
                                            asp-route-currentFilter="@ViewBag.CurrentFilter"
                                            asp-route-showData="@ViewBag.currentShowData"
                                            class="btn btn-primary @nextDisabled">
-                                            Next
+                                            Selanjutnya
                                         </a>
                                     </div>
                                 </div>

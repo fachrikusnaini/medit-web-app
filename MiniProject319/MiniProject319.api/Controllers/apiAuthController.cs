@@ -139,6 +139,19 @@ namespace MiniProject319.api.Controllers
             int randomNumber = random.Next(100000, 999999);
             DateTime currentTime = DateTime.Now;
 
+            List<TToken> tokenResult = db.TTokens.Where(
+                a => a.IsDelete == false &&
+                a.Email == data.Email
+                ).ToList();
+
+            foreach (var database in tokenResult)
+            {
+                database.IsExpired = true;
+
+                db.TTokens.Update(database);
+                db.SaveChanges();
+            }
+
             MUser user = new MUser()
             {
                 Email = data.Email,
@@ -155,6 +168,7 @@ namespace MiniProject319.api.Controllers
                 Token = randomNumber.ToString(),
                 ExpiredOn = currentTime.AddSeconds(30),
                 CreatedOn = DateTime.Now,
+                UsedFor = "Pendaftaran Akun",
                 IsExpired = false,
                 IsDelete = false,
                 CreatedBy = idUser
@@ -223,6 +237,19 @@ namespace MiniProject319.api.Controllers
         [HttpPost("Biodata")]
         public VMResponse Biodata(VMm_user data)
         {
+
+            List<TToken> tokenResult = db.TTokens.Where(
+                a => a.IsDelete == false &&
+                a.Email == data.Email
+                ).ToList();
+
+            foreach (var database in tokenResult)
+            {
+                database.IsExpired = true;
+
+                db.TTokens.Update(database);
+                db.SaveChanges();
+            }
 
             MBiodatum biodata = new MBiodatum()
             {
@@ -339,6 +366,10 @@ namespace MiniProject319.api.Controllers
             }
             else if (data.ExpiredOn < date2)
             {
+                data.IsExpired = true;
+                db.Update(data);
+                db.SaveChanges();
+
                 response.Message = "Kode OTP sudah kadaluarsa";
                 response.Success = false;
 
@@ -347,9 +378,6 @@ namespace MiniProject319.api.Controllers
                 response.Message = "Kode OTP sudah Expired";
                 response.Success = false;
             }
-            //data.IsExpired = true;
-            //db.Update(data);
-            //db.SaveChanges();
 
             return response;
         }
@@ -377,6 +405,7 @@ namespace MiniProject319.api.Controllers
             int randomNumber = random.Next(100000, 999999);
             DateTime currentTime = DateTime.Now;
 
+
             MUser userResult = db.MUsers.Where(a => a.IsDelete == false && a.Email == dataParam.Email && a.IsLocked == false).FirstOrDefault()!;
             userResult.ModifiedBy = idUser;
             userResult.ModifiedOn = DateTime.Now;
@@ -387,8 +416,6 @@ namespace MiniProject319.api.Controllers
             tokenResult.ExpiredOn = currentTime.AddSeconds(30);
             tokenResult.IsExpired = false;
             tokenResult.UsedFor = "Forgot Password";
-            tokenResult.CreatedBy = idUser;
-            tokenResult.CreatedOn = DateTime.Now;
             tokenResult.ModifiedBy = idUser;
             tokenResult.ModifiedOn = DateTime.Now;
             tokenResult.IsDelete = false;
@@ -435,6 +462,20 @@ namespace MiniProject319.api.Controllers
             TResetPassword dataResetPassword = new TResetPassword();
             MUser user = db.MUsers.Where(a => a.IsDelete == false && a.Email == data.Email && a.IsLocked == false).FirstOrDefault()!;
             
+            List<TToken> tokenResult = db.TTokens.Where(
+                a => a.IsDelete == false &&
+                a.Email == data.Email &&
+                a.UserId == user.Id
+                ).ToList();
+
+            foreach (var database in tokenResult)
+            {
+                database.IsExpired = true;
+
+                db.TTokens.Update(database);
+                db.SaveChanges();
+            }
+
             dataResetPassword.OldPassword = user.Password;
             dataResetPassword.NewPassword = data.Password;
             dataResetPassword.ResetFor = "Forgot Password";
@@ -472,11 +513,20 @@ namespace MiniProject319.api.Controllers
             MUser userResult = db.MUsers.Where(a => a.IsDelete == false && a.Email == dataParam.Email && a.IsLocked == false).FirstOrDefault()!;
 
 
-            TToken tokenResult = db.TTokens.Where(a => a.IsDelete == false && a.Email == dataParam.Email).FirstOrDefault()!;
-            tokenResult.IsExpired = true;
+            List<TToken> tokenResult = db.TTokens.Where(
+                a => a.IsDelete == false && 
+                a.Email == dataParam.Email && 
+                a.UserId == userResult.Id
+                ).ToList();
 
-            db.TTokens.Update(tokenResult);
-            db.SaveChanges();
+            foreach (var database in tokenResult)
+            {
+                database.IsExpired = true;
+
+                db.TTokens.Update(database);
+                db.SaveChanges();
+            }
+
 
             TToken dataTokenNew = new TToken();
 
@@ -487,8 +537,7 @@ namespace MiniProject319.api.Controllers
             dataTokenNew.IsExpired = false;
             dataTokenNew.CreatedOn = DateTime.Now;
             dataTokenNew.CreatedBy = idUser;
-            dataTokenNew.ModifiedBy = idUser;
-            dataTokenNew.ModifiedOn = DateTime.Now;
+            dataTokenNew.UsedFor = "Reset Password";
             dataTokenNew.IsDelete = false;
 
 
@@ -532,12 +581,19 @@ namespace MiniProject319.api.Controllers
 
             MUser userResult = db.MUsers.Where(a => a.IsDelete == false && a.Email == dataParam.Email).FirstOrDefault()!;
 
+            List<TToken> tokenResult = db.TTokens.Where(
+                a => a.IsDelete == false &&
+                a.Email == dataParam.Email &&
+                a.UserId == userResult.Id
+                ).ToList();
 
-            TToken tokenResult = db.TTokens.Where(a => a.IsDelete == false && a.Email == dataParam.Email).FirstOrDefault()!;
-            tokenResult.IsExpired = true;
+            foreach (var database in tokenResult)
+            {
+                database.IsExpired = true;
 
-            db.TTokens.Update(tokenResult);
-            db.SaveChanges();
+                db.TTokens.Update(database);
+                db.SaveChanges();
+            }
 
             TToken tokenNew = new TToken();
             tokenNew.Email = userResult.Email;
@@ -545,10 +601,9 @@ namespace MiniProject319.api.Controllers
             tokenNew.Token = randomNumber.ToString();
             tokenNew.ExpiredOn = currentTime.AddSeconds(30);
             tokenNew.IsExpired = false;
-            tokenNew.ModifiedBy = idUser;
-            tokenNew.ModifiedOn = DateTime.Now;
             tokenNew.CreatedOn = DateTime.Now;
             tokenNew.CreatedBy = idUser;
+            tokenNew.UsedFor = "Pendaftaran Akun";
             tokenNew.IsDelete = false;
 
 
@@ -576,7 +631,6 @@ namespace MiniProject319.api.Controllers
                 db.SaveChanges();
 
                 response.Message = "Check your email for code OTP";
-                //response.Entity = userResult;
             }
             catch (Exception e)
             {

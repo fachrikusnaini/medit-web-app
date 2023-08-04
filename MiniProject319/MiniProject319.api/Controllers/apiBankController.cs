@@ -211,90 +211,51 @@ namespace MiniProject319.api.Controllers
         [HttpPost("CheckIsExist")]
         public VMResponse CheckIsExist(VMBank dataParam)
         {
-            if (dataParam.Id == 0)
-            {
-                List<MBank> data = db.MBanks.Where(
-                    a => a.IsDelete == false && 
-                    a.Name == dataParam.Name ||
-                    a.VaCode == dataParam.VaCode
-                    ).ToList()!;
 
-                foreach(var database in data)
+            List<MBank> data = db.MBanks.Where(
+                a => a.IsDelete == false &&
+                a.Name == dataParam.Name ||
+                a.VaCode == dataParam.VaCode
+                ).ToList()!;
+
+            foreach (var database in data)
+            {
+                if (dataParam.Id == 0)
                 {
-                    if (database.Name == dataParam.Name && database.VaCode == dataParam.VaCode)
+                    if (database.Name == dataParam.Name && database.VaCode == dataParam.VaCode && database.IsDelete == false)
                     {
                         response.Message = "Kode VA dan Nama Bank sudah ada";
                         response.Success = false;
                     }
-                    else if (database.Name == dataParam.Name)
+                    else if (database.Name == dataParam.Name && database.IsDelete == false)
                     {
                         response.Message = "Nama bank sudah ada";
                         response.Success = false;
                     }
-                    else if(database.VaCode == dataParam.VaCode)
+                    else if (database.VaCode == dataParam.VaCode && database.IsDelete == false)
                     {
-                            response.Message = "Kode VA sudah ada";
-                            response.Success = false;
+                        response.Message = "Kode VA sudah ada";
+                        response.Success = false;
                     }
                 }
-            }else
-            {
-                //MBank data = db.MBanks.Where(
-                //    a => a.IsDelete == false &&
-                //    a.Name == dataParam.Name ||
-                //    a.VaCode == dataParam.VaCode
-                //    ).FirstOrDefault()!;
-
-                List<MBank> data = db.MBanks.Where(
-                    a => a.IsDelete == false &&
-                    a.Name == dataParam.Name ||
-                    a.VaCode == dataParam.VaCode
-                    ).ToList()!;
-
-                foreach (var database in data)
+                else if (database.Id != dataParam.Id)
                 {
-                    if (database.Id == dataParam.Id)
+                    if (database.Name == dataParam.Name && database.VaCode == dataParam.VaCode && database.IsDelete == false)
                     {
-                        if (database.Name == dataParam.Name && database.VaCode == dataParam.VaCode)
-                        {
-                            return response;
-                        }
-                        else if (database.Name == dataParam.Name && database.Id != dataParam.Id)
-                        {
-                            response.Message = "Nama bank sudah ada";
-                            response.Success = false;
-                        }
-                        else if (database.VaCode == dataParam.VaCode && database.Id != dataParam.Id)
-                        {
-                            response.Message = "Kode VA sudah ada";
-                            response.Success = false;
-                        }
+                        response.Message = "Nama bank dan Kode VA sudah ada";
+                        response.Success = false;
                     }
-                    if (database.Id != dataParam.Id)
+                    else if (database.Name == dataParam.Name && database.IsDelete == false)
                     {
-                        if (database.Name == dataParam.Name && database.VaCode == dataParam.VaCode && database.Id == dataParam.Id)
-                        {
-                            return response;
-                        }
-                        else if (database.Name == dataParam.Name && database.VaCode == dataParam.VaCode)
-                        {
-                            response.Message = "Nama bank dan Kode VA sudah ada";
-                            response.Success = false;
-                        }
-                        else if (database.Name == dataParam.Name)
-                        {
-                            response.Message = "Nama bank sudah ada";
-                            response.Success = false;
-                        }
-                        else if (database.VaCode == dataParam.VaCode)
-                        {
-                            response.Message = "Kode VA sudah ada";
-                            response.Success = false;
-                        }
+                        response.Message = "Nama bank sudah ada";
+                        response.Success = false;
                     }
-
+                    else if (database.VaCode == dataParam.VaCode && database.IsDelete == false)
+                    {
+                        response.Message = "Kode VA sudah ada";
+                        response.Success = false;
+                    }
                 }
-
             }
             return response;
         }

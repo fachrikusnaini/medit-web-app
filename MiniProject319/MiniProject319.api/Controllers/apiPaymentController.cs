@@ -76,38 +76,26 @@ namespace MiniProject319.api.Controllers
         public VMResponse CheckNameIsExist(VMPayment dataParam)
         {
 
-            if (dataParam.Id == 0)
-            {
-                List<MPaymentMethod> data = db.MPaymentMethods.Where(
-                    a => a.IsDelete == false &&
-                    a.Name == dataParam.Name
-                    ).ToList()!;
+            List<MPaymentMethod> data = db.MPaymentMethods.Where(
+                a => a.IsDelete == false &&
+                a.Name == dataParam.Name
+                ).ToList()!;
 
-                foreach (var database in data)
+            foreach(var database in data)
+            {
+                if(dataParam.Id == 0)
                 {
                     if (database.Name == dataParam.Name)
                     {
                         response.Message = "Nama Pembayaran sudah ada";
                         response.Success = false;
                     }
-                }
-            }
-            else
-            {
-                MPaymentMethod data = db.MPaymentMethods.Where(
-                    a => a.IsDelete == false &&
-                    a.Name == dataParam.Name
-                    ).FirstOrDefault()!;
-
-                if (data.Id != dataParam.Id)
+                } 
+                else if (database.Id != dataParam.Id)
                 {
-                    if (data.Name == dataParam.Name && data.Id == dataParam.Id)
+                    if (database.Name == dataParam.Name)
                     {
-                        return response;
-                    }
-                    else if (data.Name == dataParam.Name)
-                    {
-                        response.Message = "Nama pembayaran sudah ada";
+                        response.Message = "Nama Pembayaran sudah ada";
                         response.Success = false;
                     }
                 }
