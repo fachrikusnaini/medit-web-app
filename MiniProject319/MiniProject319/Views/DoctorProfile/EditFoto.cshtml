@@ -11,7 +11,7 @@
 </div>
 <div class="modal-body ">
 
-    <form class="needs-validation row g-3" id="form_edit" enctype="multipart/form-data" method="post" asp-action="EditFoto" asp-controller="DoctorProfile">
+    <form asp-action="EditFoto" method="post" class="needs-validation row g-3" id="form_edit" enctype="multipart/form-data">
 
         <input type="hidden" name="Id" id="Id" value="@Model.BiodataId" />
         <input type="hidden" name="BiodataId" id="BiodataId" value="@Model.BiodataId" />
@@ -41,27 +41,29 @@
 <script>
     $("#form_edit").validate({
 
-        errorClass: "text-danger",
+        errorClass: "text-danger small",
         rules:{
             ImageFile:{
                 required: true,
-                typeFile: "jpg|jpeg|png",
-                uploadFile: true
+                typefiles: "jpg|jpeg|png",
+                //uploadFile: true,
             }
         },
         messages:{
             ImageFile:{
                 required: "Tolong Masukan File Foto",
-                typeFile: "Tolong Upload png|jpg|jpeg",
-                uploadFile: "Tolong Upload File Max Size 1MB",
+                typefiles: "Tolong Upload png|jpg|jpeg",
+                //uploadFile: "Tolong Upload File Max Size 1MB"
             }
         },
+
         submitHandler: function(form) {
 
-            alert("hello world!")
-            var formData = new FormData();
+            //alert("hello world!")
 
-            var dataForm = $(form).serializeArray();
+            var formData = new FormData()
+
+            var dataForm = $(form).serializeArray()
 
 
             $.each(dataForm, function (key, input) {
@@ -106,9 +108,9 @@
             })
         }
         
-    })
+    });
 
-    jQuery.validator.addMethod("typeFile", function (value, element, param) {
+    jQuery.validator.addMethod("typefiles", function (value, element, param) {
         return value.match(new RegExp("." + param + "$"));
     });
 
