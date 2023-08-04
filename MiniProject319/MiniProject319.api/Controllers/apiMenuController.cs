@@ -41,20 +41,32 @@ namespace MiniProject319.api.Controllers
         [HttpGet("GetListMenu/{IdRole}")]
         public List<VMListMenu> GetListMenu(int IdRole)
         {
-            List<VMListMenu> data = (from a in db.MMenuRoles
-                                     join b in db.MMenus on a.MenuId equals b.Id
-                                     join c in db.MRoles on a.RoleId equals c.Id
-                                     where b.IsDelete == false
-                                     && a.IsDelete == false && a.RoleId == IdRole
+            List<VMListMenu> data = (from parent in db.MMenus
+                                     join a in db.MMenuRoles on parent.Id equals a.MenuId
+                                     join b in db.MRoles on a.RoleId equals b.Id
+                                     where a.IsDelete == false && b.IsDelete == false && parent.IsDelete == false
+                                     && b.Id == IdRole && parent.ParentId == 0
                                      select new VMListMenu
                                      {
-                                         MenuId = b.Id,
-                                         MenuName = b.Name,
+                                         MenuId = parent.Id,
+                                         MenuName = parent.Name,
                                          
-                                         RoleId = c.Id,
-                                         RoleName = c.Name,
+                                         RoleId = b.Id,
+                                         RoleName = b.Name,
 
-                                         Parent_Id = b.Id
+                                         ListChild = (from child in db.MMenus
+                                                      join c in db.MMenuRoles on child.Id equals c.MenuId
+                                                      where child.IsDelete == false && c.IsDelete == false
+                                                      && child.ParentId == parent.Id
+                                                      select new VMListMenu
+                                                      {
+                                                          MenuId = child.ParentId,
+                                                          MenuName = child.Name,
+
+                                                          RoleId = c.RoleId
+
+                                                      }).ToList()
+
 
                                      }).ToList();
 

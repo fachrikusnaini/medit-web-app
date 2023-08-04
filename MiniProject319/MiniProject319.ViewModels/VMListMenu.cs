@@ -13,13 +13,7 @@ namespace MiniProject319.ViewModels
         public string? MenuName { get; set; }
         public long? RoleId { get; set; }
         public string? RoleName { get; set; }
-        public long? Parent_Id { get; set; }
-        public long CreatedBy { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public long? ModifiedBy { get; set; }
-        public DateTime? ModifiedOn { get; set; }
-        public long? DeletedBy { get; set; }
-        public DateTime? DeletedOn { get; set; }
-        public bool IsDelete { get; set; }
+        public List<VMListMenu> ListChild { get; set; }
+        
     }
 }

@@ -1,45 +1,64 @@
 ﻿@using MiniProject319.ViewModels;
-@{
+@model VMDoctorSpecialist
+
+@*@{
     VMDoctorSpecialist vMDoctorSpecialist = Model;
-}
+}*@
 
 <div class="modal-header">
     <h3 class="modal-title">Edit Foto</h3>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
-<div class="modal-body">
-    <form class="row g-3" id="form_edit" enctype="multipart/form-data" method="post">
+<div class="modal-body ">
 
-            <input type="hidden" name="Id" id="Id" value="@vMDoctorSpecialist.BiodataId" />
-            <input type="hidden" name="BiodataId" id="BiodataId" value="@vMDoctorSpecialist.BiodataId" />
+    <form class="needs-validation row g-3" id="form_edit" enctype="multipart/form-data" method="post" asp-action="EditFoto" asp-controller="DoctorProfile">
+
+        <input type="hidden" name="Id" id="Id" value="@Model.BiodataId" />
+        <input type="hidden" name="BiodataId" id="BiodataId" value="@Model.BiodataId" />
             
-            <div class="col">
-                <div class="mb-3">
-                    <label for="formFile" class="form-label small">Pilih dan upload foto terbaikmu!</label>
-                    <input class="form-control" type="file" id="ImageFile" name="ImageFile" value="@vMDoctorSpecialist.ImagePath" accept=".jpg, .jpeg, .png">
-                </div>
-                <button class="btn btn-primary w-100" type="submit">Upload Foto</button>
+        <div class="col">
+            <div class="mb-3">
+                <label for="ImageFile" class="form-label small">Pilih dan upload foto terbaikmu!</label>
+                <input class="form-control" type="file" id="ImageFile" name="ImageFile" value="@Model.ImagePath">
             </div>
+            <button class="btn btn-primary w-100" type="submit">Upload Foto</button>
+        </div>
 
-            <div class="col text-end">
-                @if(vMDoctorSpecialist.ImagePath != null)
-                {
-                    <img src="~/images/@vMDoctorSpecialist.ImagePath" class="rounded" alt="...">
-                }
-                else
-                {
-                    <img src="~/images/img-default.png" class="rounded" alt="...">
-                }
-            </div>
-
-        
+        <div class="col text-end">
+            @if(Model.ImagePath != null)
+            {
+                <img src="~/images/@Model.ImagePath" class="rounded" alt="...">
+            }
+            else
+            {
+                <img src="~/images/img-default.png" class="rounded" alt="...">
+            }
+        </div>
     </form>
+    
 </div>
 
 <script>
     $("#form_edit").validate({
-        submitHandler: function fungsiSubmit(form) {
 
+        errorClass: "text-danger",
+        rules:{
+            ImageFile:{
+                required: true,
+                typeFile: "jpg|jpeg|png",
+                uploadFile: true
+            }
+        },
+        messages:{
+            ImageFile:{
+                required: "Tolong Masukan File Foto",
+                typeFile: "Tolong Upload png|jpg|jpeg",
+                uploadFile: "Tolong Upload File Max Size 1MB",
+            }
+        },
+        submitHandler: function(form) {
+
+            alert("hello world!")
             var formData = new FormData();
 
             var dataForm = $(form).serializeArray();
@@ -47,23 +66,24 @@
 
             $.each(dataForm, function (key, input) {
                 formData.append(input.name, input.value)
-            })
+            });
 
             var file = $("#ImageFile").prop("files")
             if (file.length > 0) {
                 formData.append("ImageFile", file[0])
             }
-            //alert("Hello Worlds!")
 
             $.ajax({
-                url: '/DoctorProfile/EditFoto',
+                url: "/DoctorProfile/EditFoto",
                 type: "post",
                 data: formData,
                 dataType: "json",
                 contentType: false,
                 processData: false,
                 success: function (respon) {
+
                     var data = respon.dataRespon
+
                     if (data.success) {
                         $("#modal").modal("hide")
 
@@ -80,27 +100,29 @@
                         )
                     }
                     else {
-                        toastr.errorClass(data.message)
+                        toastr.error(data.message)
                     }
                 }
             })
         }
+        
+    })
 
-        //jQuery.validator.addMethod("typeFile", function (value, element, param) {
-        //    return value.match(new RegExp("." + param + "$"));
-        //});
+    jQuery.validator.addMethod("typeFile", function (value, element, param) {
+        return value.match(new RegExp("." + param + "$"));
+    });
 
         //jQuery.validator.addMethod("uploadFile", function (val, element) {
 
-        //    var size = element.files[0].size;
+            //    var size = element.files[0].size;
 
-        //    if (size > 1048576)// checks the file more than 1 MB
-        //    {
-        //        return false;
-        //    } else {
-        //        return true;
-        //    }
-        //}
-    })
+            //    if (size > 1048576)// checks the file more than 1 MB
+            //    {
+            //        return false;
+            //    } else {
+            //        return true;
+            //    }
+            //}, "File type error!")
+
 </script>
 

@@ -19,13 +19,38 @@
                     <span>List Menu</span>
                 </a>
             </li>
-            @foreach (var item in vMListMenu)
+            @foreach (var parent in vMListMenu)
             {
-                <li class="nav-item">
-                    <a class="nav-link collapsed">
-                        <i class="bi bi-menu-button-wide"></i><span>@item.MenuName</span>
-                    </a>
-                </li>
+                if(parent.ListChild.Count > 0)
+                { 
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse">
+                            <i class="bi bi-menu-button-wide"></i><span>@parent.MenuName</span>
+                        </a>
+                        <ul id="forms-nav" class="nav-content collapse">
+
+                            @foreach (var menuChild in parent.ListChild)
+                            {
+
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        @menuChild.MenuName
+                                    </a>
+                                </li>
+
+                            }
+
+                        </ul>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link collapsed">
+                            <i class="bi bi-menu-button-wide"></i><span>@parent.MenuName</span>
+                        </a>
+                    </li>
+                }
             }
 
             <li><hr class="nav-divider" /></li>

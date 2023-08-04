@@ -79,7 +79,9 @@ namespace MiniProject319.api.Controllers
                                        join b in db.MDoctors on a.DoctorId equals b.Id
                                        join c in db.MBiodata on b.BiodataId equals c.Id
                                        join d in db.MSpecializations on a.SpecializationId equals d.Id
-                                       where a.IsDelete == false && b.IsDelete == false && c.IsDelete == false && d.IsDelete == false 
+                                       //join e in db.TDoctorOffices on b.Id equals e.DoctorId
+                                       //join m in db.MMedicalFacilities on e.MedicalFacilityId equals m.Id
+                                       where a.IsDelete == false && b.IsDelete == false && c.IsDelete == false && d.IsDelete == false /*&& e.IsDelete == false && m.IsDelete == false*/
                                        select new VMListDoctor
                                        {
                                            DoctorId = b.Id,
@@ -90,10 +92,12 @@ namespace MiniProject319.api.Controllers
                                            SpecializationId = d.Id,
                                            NameSpecialist = d.Name,
 
+                                           //MedicalFacilityId = m.Id,
+
                                            RiwayatPraktek = (from a in db.TDoctorOffices
                                                              join b in db.MMedicalFacilities on a.MedicalFacilityId equals b.Id
                                                              join c in db.MMedicalFacilityCategories on b.MedicalFacilityCategoryId equals c.Id
-                                                             join d in db.MLocations on b.LocationId equals d.Id
+                                                             join d in db.MLocations on b.LocationId equals d.Id into mloc from tl in mloc.DefaultIfEmpty()
                                                              join e in db.TDoctorOfficeTreatments on a.Id equals e.DoctorOfficeId into te
                                                              from ot in te.DefaultIfEmpty()
                                                              join f in db.TDoctorOfficeTreatmentPrices on ot.Id equals f.Id into tf
@@ -105,7 +109,7 @@ namespace MiniProject319.api.Controllers
                                                                  MedicalFacilityId = b.Id,
                                                                  MedicalFacilityName = b.Name,
                                                                  Specialization = a.Specialization,
-                                                                 Location = d.Name,
+                                                                 Location = tl.Name,
                                                                  FullAddress = b.FullAddress,
                                                                  StartDate = a.StartDate,
                                                                  EndDate = a.EndDate,
