@@ -152,19 +152,21 @@ namespace MiniProject319.api.Controllers
                 db.SaveChanges();
             }
 
-            MUser user = new MUser()
-            {
-                Email = data.Email,
-                CreatedOn = DateTime.Now,
-                IsLocked = true,
-                IsDelete = false,
-                CreatedBy = idUser
-            };
+            //MUser user = new MUser()
+            //{
+            //    Email = data.Email,
+            //    CreatedOn = DateTime.Now,
+            //    IsLocked = true,
+            //    IsDelete = false,
+            //    CreatedBy = idUser
+            //};
 
 
 
             TToken token = new TToken()
             {
+                Email = data.Email,
+                UserId = data.Id,
                 Token = randomNumber.ToString(),
                 ExpiredOn = currentTime.AddSeconds(30),
                 CreatedOn = DateTime.Now,
@@ -177,7 +179,7 @@ namespace MiniProject319.api.Controllers
 
             var emailVerif = new MimeMessage();
             emailVerif.From.Add(MailboxAddress.Parse(configuration.GetSection("EmailUsername").Value));
-            emailVerif.To.Add(MailboxAddress.Parse(user?.Email));
+            emailVerif.To.Add(MailboxAddress.Parse(token?.Email));
             emailVerif.Subject = "Register User";
             emailVerif.Body = new TextPart(TextFormat.Html)
             {
@@ -193,10 +195,10 @@ namespace MiniProject319.api.Controllers
 
             try
             {
-                db.MUsers.Add(user);
-                db.SaveChanges();
-                token.Email = user.Email;
-                token.UserId = user.Id;
+                //db.MUsers.Add(user);
+                //db.SaveChanges();
+                //token.Email = user.Email;
+                //token.UserId = user.Id;
                 db.TTokens.Add(token);
                 db.SaveChanges();
 
@@ -218,11 +220,24 @@ namespace MiniProject319.api.Controllers
 
             try
             {
-                MUser user = db.MUsers.Where(a => a.Email == data.Email && a.IsDelete == false).FirstOrDefault()!;
+                TToken token = db.TTokens.Where(a => a.Email == data.Email && a.IsDelete == false).FirstOrDefault()!;
 
+
+                MUser user = new MUser();
                 user.Password = data.Password;
+                user.Email = token.Email;
+                user.CreatedBy = idUser;
+                user.CreatedOn = DateTime.Now;
+                user.IsDelete = false;
+                user.IsLocked = true;
+                
 
-                db.MUsers.Update(user);
+                token.UserId = user.Id;
+
+                db.TTokens.Update(token);
+                db.SaveChanges();
+
+                db.MUsers.Add(user);
                 db.SaveChanges();
                 response.Message = "Data successfully added";
             }
@@ -356,7 +371,7 @@ namespace MiniProject319.api.Controllers
             TToken data = new TToken();
             DateTime date2 = DateTime.Now;
 
-            data = db.TTokens.Where(a => a.IsDelete == false && a.Token == token && a.IsExpired == false).FirstOrDefault()!;
+            data = db.TTokens.Where(a => a.IsDelete == false && a.Token == token).FirstOrDefault()!;
 
 
             if (data == null)
@@ -364,7 +379,7 @@ namespace MiniProject319.api.Controllers
                 response.Message = "Kode OTP salah";
                 response.Success = false;
             }
-            else if (data.ExpiredOn < date2)
+            else if (date2 > data.ExpiredOn)
             {
                 data.IsExpired = true;
                 db.Update(data);
@@ -375,7 +390,7 @@ namespace MiniProject319.api.Controllers
 
             } else if (data.IsExpired == true)
             {
-                response.Message = "Kode OTP sudah Expired";
+                response.Message = "Kode OTP sudah tidak berlaku";
                 response.Success = false;
             }
 

@@ -56,6 +56,14 @@
               "target": "Package",
               "version": "[5.2.9, )"
             },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Microsoft.NETCore.DotNetAppHost": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"

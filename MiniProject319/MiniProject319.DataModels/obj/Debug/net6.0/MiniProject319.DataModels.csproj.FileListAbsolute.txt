@@ -1,4 +1,5 @@
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.deps.json
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.runtimeconfig.json
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.dll
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.pdb
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.csproj.AssemblyReference.cache
@@ -9,6 +10,5 @@ E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.dll
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\refint\MiniProject319.DataModels.dll
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.pdb
-E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\ref\MiniProject319.DataModels.dll
-E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\bin\Debug\net6.0\MiniProject319.DataModels.runtimeconfig.json
 E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\MiniProject319.DataModels.genruntimeconfig.cache
+E:\BATCH 319\MINI PROJECT\MiniProject319\MiniProject319.DataModels\obj\Debug\net6.0\ref\MiniProject319.DataModels.dll

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>E:\Publish MedIT\MedIT-web</_PublishTargetUrl>
+    <History>True|2023-08-08T01:52:46.0057490Z;False|2023-08-07T12:34:05.9572309+07:00;False|2023-08-07T12:33:16.9586503+07:00;False|2023-08-07T12:13:00.7317041+07:00;False|2023-08-07T12:10:25.5984728+07:00;False|2023-08-07T12:06:57.5511870+07:00;False|2023-08-07T12:06:09.7313938+07:00;False|2023-08-07T12:04:36.6002329+07:00;False|2023-08-07T11:57:09.6568781+07:00;False|2023-08-07T11:44:17.8180677+07:00;False|2023-08-07T11:43:08.7242130+07:00;False|2023-08-07T11:41:24.9330198+07:00;False|2023-08-07T11:40:52.0190902+07:00;False|2023-08-07T11:37:28.4230381+07:00;False|2023-08-07T11:36:06.9126559+07:00;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+</Project>

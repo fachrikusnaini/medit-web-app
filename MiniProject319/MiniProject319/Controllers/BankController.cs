@@ -63,17 +63,17 @@ namespace MiniProject319.Controllers
             return PartialView();
         }
 
-        public async Task<JsonResult> CheckNameIsExist(string name, int id)
-        {
-            bool isExist = await bankServices.CheckNameIsExist(name, id);
-            return Json(isExist);
-        }
+        //public async Task<JsonResult> CheckNameIsExist(string name, int id)
+        //{
+        //    bool isExist = await bankServices.CheckNameIsExist(name, id);
+        //    return Json(isExist);
+        //}
 
-        public async Task<JsonResult> CheckCodeIsExist(string kodeva, int id)
-        {
-            bool isExist = await bankServices.CheckCodeIsExist(kodeva, id);
-            return Json(isExist);
-        }
+        //public async Task<JsonResult> CheckCodeIsExist(string kodeva, int id)
+        //{
+        //    bool isExist = await bankServices.CheckCodeIsExist(kodeva, id);
+        //    return Json(isExist);
+        //}
 
         [HttpPost]
         public async Task <IActionResult> Create(MBank data)
