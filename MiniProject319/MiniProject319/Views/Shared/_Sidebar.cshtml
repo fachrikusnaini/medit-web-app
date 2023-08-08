@@ -25,7 +25,7 @@
                 { 
                     <li class="nav-item">
                         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse">
-                            <i class="bi bi-menu-button-wide"></i><span>@parent.MenuName</span>
+                            <i class="bi bi-menu-button-wide"></i><span>@parent.MenuName</span><i class="bi bi-chevron-down ms-auto"></i>
                         </a>
                         <ul id="forms-nav" class="nav-content collapse">
 
@@ -57,7 +57,7 @@
 
             <li class="nav-item">
                 <a class="nav-link collapsed" asp-controller="Dokter" asp-action="ListDokter">
-                    <i class="bi bi-menu-button-wide"></i><span>Daftar Nama Dokter</span>
+                    <i class="bi bi-people"></i><span>Daftar Nama Dokter</span>
                 </a>
             </li>
 
@@ -74,13 +74,15 @@
 
     </aside>
 
-    <script>
-        $("#cari_dokter").click(function () {
+    @*<script>
+        $("#search_doctor").click(function () {
+            //alert("Hello World!")
+
             $("#modal-body").empty()
             $("#modal-body").load("/Dokter/ModalCariDokter")
             $("#verticalycentered").modal("show")
-        });
-    </script>
+        })
+    </script>*@
 
 
 }

@@ -753,7 +753,6 @@ C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319\obj\De
 C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319\obj\Debug\net6.0\staticwebassets.build.json
 C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319\obj\Debug\net6.0\staticwebassets.development.json
 C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319\obj\Debug\net6.0\scopedcss\Views\Shared\_LayoutOld.cshtml.rz.scp.css
 C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319\obj\Debug\net6.0\scopedcss\bundle\MiniProject319.styles.css
 C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319\obj\Debug\net6.0\scopedcss\projectbundle\MiniProject319.bundle.scp.css
 C:\BATCH_319\miniproject-banu\medit-web-app\MiniProject319\MiniProject319\obj\Debug\net6.0\MiniProject319.csproj.CopyComplete

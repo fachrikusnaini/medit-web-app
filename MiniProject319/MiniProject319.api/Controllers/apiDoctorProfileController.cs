@@ -62,7 +62,9 @@ namespace MiniProject319.api.Controllers
                                                      select new VMGetTreatment
                                                      {
                                                          TreatmentId = a.Id,
-                                                         TreatmentName = a.Name
+                                                         TreatmentName = a.Name,
+
+                                                         
                                                          
                                                      }).ToList()
 
@@ -76,15 +78,15 @@ namespace MiniProject319.api.Controllers
         public List<VMListDoctor> GetAllDataDoctor()
         {
             List<VMListDoctor> data = (from a in db.TCurrentDoctorSpecializations
-                                       join b in db.MDoctors on a.DoctorId equals b.Id
-                                       join c in db.MBiodata on b.BiodataId equals c.Id
+                                       join bd in db.MDoctors on a.DoctorId equals bd.Id
+                                       join c in db.MBiodata on bd.BiodataId equals c.Id
                                        join d in db.MSpecializations on a.SpecializationId equals d.Id
                                        //join e in db.TDoctorOffices on b.Id equals e.DoctorId
                                        //join m in db.MMedicalFacilities on e.MedicalFacilityId equals m.Id
-                                       where a.IsDelete == false && b.IsDelete == false && c.IsDelete == false && d.IsDelete == false /*&& e.IsDelete == false && m.IsDelete == false*/
+                                       where a.IsDelete == false && bd.IsDelete == false && c.IsDelete == false && d.IsDelete == false /*&& e.IsDelete == false && m.IsDelete == false*/
                                        select new VMListDoctor
                                        {
-                                           DoctorId = b.Id,
+                                           DoctorId = bd.Id,
                                            NameDoctor = c.Fullname,
 
                                            ImagePath = c.ImagePath,
@@ -94,48 +96,49 @@ namespace MiniProject319.api.Controllers
 
                                            //MedicalFacilityId = m.Id,
 
-                                           RiwayatPraktek = (from a in db.TDoctorOffices
-                                                             join b in db.MMedicalFacilities on a.MedicalFacilityId equals b.Id
+                                           RiwayatPraktek = (from ab in db.TDoctorOffices
+                                                             join b in db.MMedicalFacilities on ab.MedicalFacilityId equals b.Id
                                                              join c in db.MMedicalFacilityCategories on b.MedicalFacilityCategoryId equals c.Id
                                                              join d in db.MLocations on b.LocationId equals d.Id into mloc from tl in mloc.DefaultIfEmpty()
-                                                             join e in db.TDoctorOfficeTreatments on a.Id equals e.DoctorOfficeId into te
+                                                             join e in db.TDoctorOfficeTreatments on ab.Id equals e.DoctorOfficeId into te
                                                              from ot in te.DefaultIfEmpty()
-                                                             join f in db.TDoctorOfficeTreatmentPrices on ot.Id equals f.Id into tf
+                                                             join f in db.TDoctorOfficeTreatmentPrices on ot.Id equals f.DoctorOfficeTreatmentId into tf
                                                              from otp in tf.DefaultIfEmpty()
-                                                             where a.IsDelete == false && b.IsDelete == false && c.IsDelete == false && d.IsDelete == false
+                                                             where a.IsDelete == false && b.IsDelete == false && c.IsDelete == false && d.IsDelete == false && ot.IsDelete == false && otp.IsDelete == false
+                                                             && ab.DoctorId == bd.Id
                                                              select new VMRiwayatPraktek
                                                              {
                                                                  DoctorId = a.DoctorId,
                                                                  MedicalFacilityId = b.Id,
                                                                  MedicalFacilityName = b.Name,
-                                                                 Specialization = a.Specialization,
+                                                                 Specialization = ab.Specialization,
                                                                  Location = tl.Name,
                                                                  FullAddress = b.FullAddress,
-                                                                 StartDate = a.StartDate,
-                                                                 EndDate = a.EndDate,
+                                                                 StartDate = ab.StartDate,
+                                                                 EndDate = ab.EndDate,
 
                                                                  Price = otp.Price ?? 0,
                                                                  PriceStartFrom = otp.PriceStartFrom ?? 0,
                                                                  PriceUntilFrom = otp.PriceUntilFrom ?? 0,
 
-                                                                 LamaBekerja = Convert.ToInt32(DateTime.Now.Year - a.StartDate.Year),
+                                                                 LamaBekerja = Convert.ToInt32(DateTime.Now.Year - ab.StartDate.Year),
 
-                                                                 CreatedBy = a.CreatedBy,
-                                                                 CreatedOn = a.CreatedOn
+                                                                 //CreatedBy = a.CreatedBy,
+                                                                 //CreatedOn = a.CreatedOn
 
                                                              }).ToList(),
 
                                            ListTindakan = (from a in db.TDoctorTreatments
-                                                           join b in db.MDoctors on a.DoctorId equals b.Id
-                                                           where a.IsDelete == false && b.IsDelete == false
+                                                           //join bc in db.MDoctors on a.DoctorId equals bc.Id
+                                                           where a.IsDelete == false && a.DoctorId == bd.Id
                                                            select new VMTindakanMedis
                                                            {
 
-                                                               DoctorId = b.Id,
+                                                               DoctorId = a.DoctorId,
                                                                Name = a.Name,
 
-                                                               CreatedBy = a.CreatedBy,
-                                                               CreatedOn = a.CreatedOn
+                                                               //CreatedBy = a.CreatedBy,
+                                                               //CreatedOn = a.CreatedOn
 
                                                            }).ToList()
 
@@ -168,8 +171,6 @@ namespace MiniProject319.api.Controllers
                                                  MobilePhone = c.MobilePhone,
                                                  ImagePath = c.ImagePath,
 
-                                                 //CreatedBy = a.CreatedBy,
-                                                 //CreatedOn = a.CreatedOn,
 
                                                  itemMedical = (from a in db.MMedicalItems
                                                                 join b in db.MMedicalItemCategories on a.MedicalItemCategoryId equals b.Id
@@ -230,8 +231,8 @@ namespace MiniProject319.api.Controllers
                                                                      DoctorId = b.Id,
                                                                      Name = a.Name,
 
-                                                                     CreatedBy = a.CreatedBy,
-                                                                     CreatedOn = a.CreatedOn
+                                                                     //CreatedBy = a.CreatedBy,
+                                                                     //CreatedOn = a.CreatedOn
 
                                                                  }).ToList(),
 
@@ -265,15 +266,15 @@ namespace MiniProject319.api.Controllers
 
                                                                        LamaBekerja = Convert.ToInt32(DateTime.Now.Year - a.StartDate.Year),
 
-                                                                       CreatedBy = a.CreatedBy,
-                                                                       CreatedOn = a.CreatedOn
+                                                                       //CreatedBy = a.CreatedBy,
+                                                                       //CreatedOn = a.CreatedOn
                                                                    }).ToList(),
 
                                                  JadwalPraktek = (from a in db.TDoctorOffices
                                                                   join b in db.MMedicalFacilities on a.MedicalFacilityId equals b.Id
                                                                   join c in db.MMedicalFacilitySchedules on b.Id equals c.MedicalFacilityId
                                                                   where a.IsDelete == false && b.IsDelete == false && c.IsDelete == false
-                                                                  && a.DoctorId == IdDoctor /*&& a.MedicalFacilityId == b.Id && c.MedicalFacilityId == b.Id*/
+                                                                  && a.DoctorId == IdDoctor
                                                                   select new VMJadwalPraktek
                                                                   {
                                                                       JadwalPraktekId = c.MedicalFacilityId ?? 0,
@@ -315,7 +316,7 @@ namespace MiniProject319.api.Controllers
         [HttpPut("Edit")]
         public VMResponse Edit(MBiodatum data)
         {
-            MBiodatum dt = db.MBiodata.Where(a => a.Id == data.Id).FirstOrDefault();
+            MBiodatum dt = db.MBiodata.Where(a => a.Id == data.Id).FirstOrDefault()!;
 
             if (dt != null)
             {

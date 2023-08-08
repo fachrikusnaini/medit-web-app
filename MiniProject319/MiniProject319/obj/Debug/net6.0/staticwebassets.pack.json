@@ -1777,8 +1777,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\0ad0f85b-f49f-4a55-89f4-9bb03403c419_dokter-2.png",
+      "PackagePath": "staticwebassets\\images\\0ad0f85b-f49f-4a55-89f4-9bb03403c419_dokter-2.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\0b70044c-3715-441d-8026-09c7264db4b8_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\0b70044c-3715-441d-8026-09c7264db4b8_dokter-3.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\103bcaf5-fe27-4718-8515-02947d9d8664_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\103bcaf5-fe27-4718-8515-02947d9d8664_dokter-3.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\14ad09b8-fbf6-45e2-a9a0-d749cebb194f_dokter-1.png",
       "PackagePath": "staticwebassets\\images\\14ad09b8-fbf6-45e2-a9a0-d749cebb194f_dokter-1.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\14c6c3a5-cd60-48e5-bf5f-1d7870855040_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\14c6c3a5-cd60-48e5-bf5f-1d7870855040_dokter-3.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\15a86859-8585-4ca8-82b2-2bba373ffce8_dokter-4.png",
@@ -1797,8 +1813,16 @@
       "PackagePath": "staticwebassets\\images\\20343a88-190c-4b35-abe9-50d12d7951e2_dokter-4.png"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\218fcf6d-6e39-4366-9fa7-3f656ecf5d7a_dokter-4.png",
+      "PackagePath": "staticwebassets\\images\\218fcf6d-6e39-4366-9fa7-3f656ecf5d7a_dokter-4.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\21b552eb-f3f6-4b6e-95e1-c5e5d50ba66a_index.html",
       "PackagePath": "staticwebassets\\images\\21b552eb-f3f6-4b6e-95e1-c5e5d50ba66a_index.html"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\24ec2a19-fa57-4ec1-b3be-ead0f043dc7c_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\24ec2a19-fa57-4ec1-b3be-ead0f043dc7c_dokter-3.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\2941fd72-98ff-43b5-86c4-bae1ed6e9877_dokter-3.png",
@@ -1807,6 +1831,10 @@
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\2b89eac5-51ac-4c85-9cb0-46486492eb57_dokter-2.png",
       "PackagePath": "staticwebassets\\images\\2b89eac5-51ac-4c85-9cb0-46486492eb57_dokter-2.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\2b9853c3-a6c4-4ac7-b1fb-a677c189a5d1_dokter-4.png",
+      "PackagePath": "staticwebassets\\images\\2b9853c3-a6c4-4ac7-b1fb-a677c189a5d1_dokter-4.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\2e7aa0d5-05d4-4c81-b156-21c90f72ef13_dokter-1.png",
@@ -1841,16 +1869,52 @@
       "PackagePath": "staticwebassets\\images\\4dbb1e60-07ac-4f06-8b54-2cef2f11bdfe_index.html"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\50124ba9-efbd-490f-8b84-4d3df3604cc0_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\50124ba9-efbd-490f-8b84-4d3df3604cc0_dokter-3.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\568ad6af-f99f-4608-a034-5183aa3b3110_dokter-4.png",
+      "PackagePath": "staticwebassets\\images\\568ad6af-f99f-4608-a034-5183aa3b3110_dokter-4.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\583c6b7f-4a4c-4702-bcd0-15efd330cff7_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\583c6b7f-4a4c-4702-bcd0-15efd330cff7_dokter-3.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\591d53de-c146-4c17-b173-4772ee89acea_dokter-2.png",
       "PackagePath": "staticwebassets\\images\\591d53de-c146-4c17-b173-4772ee89acea_dokter-2.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\6171e8f1-1ca3-4b70-a92e-b62b93d1b744_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\6171e8f1-1ca3-4b70-a92e-b62b93d1b744_dokter-3.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\63068507-501c-4c11-9901-f55ec362acdf_dokter-4.png",
+      "PackagePath": "staticwebassets\\images\\63068507-501c-4c11-9901-f55ec362acdf_dokter-4.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\6371f175-3a76-49f6-b48e-485eaf9fcc2e_dokter-2.png",
       "PackagePath": "staticwebassets\\images\\6371f175-3a76-49f6-b48e-485eaf9fcc2e_dokter-2.png"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\642eb1fc-b35b-431c-b969-4e2c8de19d48_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\642eb1fc-b35b-431c-b969-4e2c8de19d48_dokter-3.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\65f10bf8-ed42-494f-ab18-d18992afa222_dokter-5.png",
       "PackagePath": "staticwebassets\\images\\65f10bf8-ed42-494f-ab18-d18992afa222_dokter-5.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\6a65289f-39b8-41a5-8d3c-dffbbef1f954_dokter-4.png",
+      "PackagePath": "staticwebassets\\images\\6a65289f-39b8-41a5-8d3c-dffbbef1f954_dokter-4.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\6bc4d253-a051-4447-9837-c0475dae9819_dokter-4.png",
+      "PackagePath": "staticwebassets\\images\\6bc4d253-a051-4447-9837-c0475dae9819_dokter-4.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\6bda7246-c154-471b-957b-d384e9bc7ae8_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\6bda7246-c154-471b-957b-d384e9bc7ae8_dokter-3.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\6e1b3c9d-60f0-4d62-977b-564df40744a5_dokter-1.png",
@@ -1861,8 +1925,20 @@
       "PackagePath": "staticwebassets\\images\\6f67544d-7422-4b73-9765-7909c8023408_dokter-4.png"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\71e43265-fff6-40cd-a063-c6d70178ebba_dokter-1.png",
+      "PackagePath": "staticwebassets\\images\\71e43265-fff6-40cd-a063-c6d70178ebba_dokter-1.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\79412f22-05ea-41ac-a56e-326c52b4a65e_dokter-4.png",
       "PackagePath": "staticwebassets\\images\\79412f22-05ea-41ac-a56e-326c52b4a65e_dokter-4.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\86712005-863f-498c-9b2b-1c93dbffa0c5_dokter-4.png",
+      "PackagePath": "staticwebassets\\images\\86712005-863f-498c-9b2b-1c93dbffa0c5_dokter-4.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\874c90df-c553-4576-a2fb-49d89b2e860a_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\874c90df-c553-4576-a2fb-49d89b2e860a_dokter-3.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\87ae8de6-0ea2-48b0-ab42-2a1dcc374ec3_dokter-2.png",
@@ -1877,8 +1953,24 @@
       "PackagePath": "staticwebassets\\images\\8cf4d663-89d4-48e6-99c1-a1ea1abce487_dokter-3.png"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\8f03c9b1-255c-4189-9bde-976d84af3b99_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\8f03c9b1-255c-4189-9bde-976d84af3b99_dokter-3.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\90696b12-7b2d-4058-a55f-fc4a6160c654_dokter-2.png",
+      "PackagePath": "staticwebassets\\images\\90696b12-7b2d-4058-a55f-fc4a6160c654_dokter-2.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\967198f7-c5db-41e7-887a-75c9a448adab_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\967198f7-c5db-41e7-887a-75c9a448adab_dokter-3.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\a0a27700-adec-44d7-bffb-2fb7e0d4c8fa_dokter-2.png",
       "PackagePath": "staticwebassets\\images\\a0a27700-adec-44d7-bffb-2fb7e0d4c8fa_dokter-2.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\a1d5dfd8-059e-44bc-85f8-19dc7d9d2d3e_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\a1d5dfd8-059e-44bc-85f8-19dc7d9d2d3e_dokter-3.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\a68ae8a4-77c2-4c07-9029-ac50bd273723_Desain tanpa judul.gif",
@@ -1889,8 +1981,24 @@
       "PackagePath": "staticwebassets\\images\\ac778cac-9c80-4465-8df6-8b907932e211_dokter-2.png"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\b2597ff0-494e-4c90-a1c8-8feaa4889542_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\b2597ff0-494e-4c90-a1c8-8feaa4889542_dokter-3.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\b36fd73b-a193-41c3-aecc-46842af4d8bc_dokter-2.png",
+      "PackagePath": "staticwebassets\\images\\b36fd73b-a193-41c3-aecc-46842af4d8bc_dokter-2.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\b3871e6a-a676-4627-8d40-7a3956385354_dokter-2.png",
       "PackagePath": "staticwebassets\\images\\b3871e6a-a676-4627-8d40-7a3956385354_dokter-2.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\b6055ae9-be6f-4bfd-a145-589034c5bdc2_dokter-4.png",
+      "PackagePath": "staticwebassets\\images\\b6055ae9-be6f-4bfd-a145-589034c5bdc2_dokter-4.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\b9ee7a8e-92bb-4227-b025-180b43837cac_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\b9ee7a8e-92bb-4227-b025-180b43837cac_dokter-3.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\bb3ee561-b92e-4d6b-9ec0-4277cd194181_dokter-2.png",
@@ -1903,6 +2011,10 @@
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\c1258c0e-c1a1-408c-8765-765b4899742f_dokter-5.png",
       "PackagePath": "staticwebassets\\images\\c1258c0e-c1a1-408c-8765-765b4899742f_dokter-5.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\c65b8703-d5cb-4c92-9a92-bf6c6dc4d428_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\c65b8703-d5cb-4c92-9a92-bf6c6dc4d428_dokter-3.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\cf8e5aa5-76c5-47db-b908-47067623d4b6_dokter-2.png",
@@ -1945,8 +2057,20 @@
       "PackagePath": "staticwebassets\\images\\dr.tatjana.png"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\e06c1d65-bf53-47f9-a676-a524bb795e0e_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\e06c1d65-bf53-47f9-a676-a524bb795e0e_dokter-3.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\e0e42ecf-a35d-4fc2-8dbf-b8a4cf13a0e1_dokter-5.png",
       "PackagePath": "staticwebassets\\images\\e0e42ecf-a35d-4fc2-8dbf-b8a4cf13a0e1_dokter-5.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\ea3ee81d-2376-42d5-9e27-9fe0224dda0d_dokter-4.png",
+      "PackagePath": "staticwebassets\\images\\ea3ee81d-2376-42d5-9e27-9fe0224dda0d_dokter-4.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\eccba491-7bda-47da-9d02-db207e8ddcd5_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\eccba491-7bda-47da-9d02-db207e8ddcd5_dokter-3.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\f021e151-deda-445b-91a5-88ac33d990fe_dokter-3.png",
@@ -1957,8 +2081,24 @@
       "PackagePath": "staticwebassets\\images\\f02d3e80-baa0-4d30-8839-462b3da3c8f9_dokter-4.png"
     },
     {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\f0bd129c-0abb-400c-973a-62825af91e10_dokter-4.png",
+      "PackagePath": "staticwebassets\\images\\f0bd129c-0abb-400c-973a-62825af91e10_dokter-4.png"
+    },
+    {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\f1cc4439-e9c2-4251-a30f-2c5d337a0b20_dokter-5.png",
       "PackagePath": "staticwebassets\\images\\f1cc4439-e9c2-4251-a30f-2c5d337a0b20_dokter-5.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\f5ac4fad-df52-4222-941a-12aa86f593c8_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\f5ac4fad-df52-4222-941a-12aa86f593c8_dokter-3.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\f8041cab-9224-4265-9678-82fad5b3dc06_dokter-1.png",
+      "PackagePath": "staticwebassets\\images\\f8041cab-9224-4265-9678-82fad5b3dc06_dokter-1.png"
+    },
+    {
+      "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\fc213ee3-5c98-45a8-9b65-4a0f1ee9ff94_dokter-3.png",
+      "PackagePath": "staticwebassets\\images\\fc213ee3-5c98-45a8-9b65-4a0f1ee9ff94_dokter-3.png"
     },
     {
       "Id": "C:\\BATCH_319\\miniproject-banu\\medit-web-app\\MiniProject319\\MiniProject319\\wwwroot\\images\\img-default.png",

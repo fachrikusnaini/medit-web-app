@@ -67,7 +67,7 @@ namespace MiniProject319.Controllers
 
 
             
-            return View(PageInatedList<VMListDoctor>.CreateAsync(data, pageNumber ?? 1, pageSize ?? 2));
+            return View(PageInatedList<VMListDoctor>.CreateAsync(data, pageNumber ?? 1, pageSize ?? 4));
         }
 
         public async Task<IActionResult> ModalCariDokter()

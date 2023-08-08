@@ -1,10 +1,6 @@
 ﻿@using MiniProject319.ViewModels;
 @model VMDoctorSpecialist
 
-@*@{
-    VMDoctorSpecialist vMDoctorSpecialist = Model;
-}*@
-
 <div class="modal-header">
     <h3 class="modal-title">Edit Foto</h3>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -46,14 +42,14 @@
             ImageFile:{
                 required: true,
                 typefiles: "jpg|jpeg|png",
-                //uploadFile: true,
+                uploadFile: true,
             }
         },
         messages:{
             ImageFile:{
-                required: "Tolong Masukan File Foto",
-                typefiles: "Tolong Upload png|jpg|jpeg",
-                //uploadFile: "Tolong Upload File Max Size 1MB"
+                required: "Pilih filenya dulu yaa..",
+                typefiles: "Tolong, format filenya png|jpg|jpeg",
+                uploadFile: "Tolong Upload File Max Size 1MB",
             }
         },
 
@@ -114,17 +110,17 @@
         return value.match(new RegExp("." + param + "$"));
     });
 
-        //jQuery.validator.addMethod("uploadFile", function (val, element) {
+    jQuery.validator.addMethod("uploadFile", function (val, element) {
 
-            //    var size = element.files[0].size;
+            var size = element.files[0].size;
 
-            //    if (size > 1048576)// checks the file more than 1 MB
-            //    {
-            //        return false;
-            //    } else {
-            //        return true;
-            //    }
-            //}, "File type error!")
+            if (size > 1048576)// checks the file more than 1 MB
+            {
+                return false;
+            } else {
+                return true;
+            }
+    }, "File type error!")
 
 </script>
 

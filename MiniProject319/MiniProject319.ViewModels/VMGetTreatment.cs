@@ -8,6 +8,7 @@ namespace MiniProject319.ViewModels
 {
     public class VMGetTreatment
     {
+        //public long? SpecialistId { get; set; }
         public long? TreatmentId { get; set; }
         public string TreatmentName { get; set; }
     }
